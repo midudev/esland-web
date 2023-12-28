@@ -20,5 +20,22 @@
   "BENTO_TITLE_4": "DISFRUTA DEL REDDIT DE LA COMUNIDAD",
   "BENTO_CONTENT_4": "Este año, el reddit no formará parte de las votaciones de los premios, pero sí que <strong>formará parte de la comunidad</strong> El subreddit oficial de los Premios ESLAND está abierto para ti. Comparte tus clips, opiniones e <strong>interactúa con toda la comunidad</strong> del streaming hispanohablante.",
   "VIDEO_ALT": "Esland - Premios a la comunidad hispanohablante de Streaming",
-  "PREFOOTER_VIDEO_TITLE": "Guía de la 3ª Edición de los premios ESLAND"
+  "PREFOOTER_VIDEO_TITLE": "Guía de la 3ª Edición de los premios ESLAND",
+  "FOOTER": {
+    "DISCLAIMER": "© ESLAND 2021 - 2024 Todos los derechos reservados. - Esta no es la web oficial, desarrollada por @midudev para fines educativos",
+    "LEGAL": {
+      "TITLE": "Legal",
+      "NOTICE": "Aviso Legal",
+      "PRIVACY": "Privacidad",
+      "COOKIES": "Cookies",
+      "PRIVACY_POLICY": "Política de Privacidad",
+      "TOS": "Términos y Condiciones"
+    },
+    "WEB_MAP": {
+      "TITLE": "Mapa Web",
+      "HOME": "Inicio",
+      "INFO": "Info",
+      "ARCHIVE": "Archivo"
+    }
+  }
 }
