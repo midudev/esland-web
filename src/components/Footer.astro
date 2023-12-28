@@ -65,8 +65,8 @@ const i18n = getI18N({ currentLocale })
           <h2 class="mb-6 text-sm font-semibold uppercase text-white">
             {i18n.FOOTER.LEGAL.TITLE}
           </h2>
-          <ul class="text-gray-400 font-medium">
-            <li class="mb-4">
+          <ul class="text-gray-400 font-medium flex flex-col gap-2">
+            <li>
               <a href="https://flowbite.com/" class="hover:underline"
                 >{i18n.FOOTER.LEGAL.NOTICE}</a
               >
@@ -87,8 +87,8 @@ const i18n = getI18N({ currentLocale })
           <h2 class="mb-6 text-sm font-semibold uppercase text-white">
             {i18n.FOOTER.WEB_MAP.TITLE}
           </h2>
-          <ul class="text-gray-400 font-medium">
-            <li class="mb-4">
+          <ul class="text-gray-400 font-medium flex flex-col gap-2">
+            <li>
               <a href="/" class="hover:underline">{i18n.FOOTER.WEB_MAP.HOME}</a>
             </li>
             <li>
@@ -104,19 +104,15 @@ const i18n = getI18N({ currentLocale })
           </ul>
         </div>
         <div>
-          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
-            {i18n.FOOTER.LEGAL.TITLE}
+          <h2 class="mb-0 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.PRODUCED_BY}
           </h2>
-          <ul class="text-gray-400 font-medium">
-            <li class="mb-4">
-              <a href="#" class="hover:underline"
-                >{i18n.FOOTER.LEGAL.PRIVACY_POLICY}</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:underline">{i18n.FOOTER.LEGAL.TOS}</a>
-            </li>
-          </ul>
+          <a href="https://www.ubiq.ad/" target="_blank" rel="noreferrer">
+            <img
+              src="https://premiosesland.com/assets/UBIQ_LOGO.c719aeaa.svg"
+              alt="Logo Ubiq"
+            />
+          </a>
         </div>
       </div>
     </div>
