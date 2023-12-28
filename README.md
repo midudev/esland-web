@@ -15,6 +15,14 @@
         Getting Started
     </a>
     <span>&nbsp;✦&nbsp;</span>
+    <a href="#-commands">
+        Commands
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-license">
+        License
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
     <a href="https://www.youtube.com/c/midudev">
         YouTube
     </a>
@@ -98,11 +106,11 @@ pnpm dev
 
 ## 🧞 Commands
 
-|    | Command   | Action                                       |
-| :-- | :-------- | :------------------------------------------- |
-| ⚙️  | `dev` or `start`     | Starts local dev server at `localhost:3000`.  |
-| ⚙️  | `build`   | Build your production site to `./dist/`.      |
-| ⚙️  | `preview` | Preview your build locally, before deploying. |
+|     | Command          | Action                                        |
+| :-- | :--------------- | :-------------------------------------------- |
+| ⚙️  | `dev` or `start` | Starts local dev server at `localhost:3000`.  |
+| ⚙️  | `build`          | Build your production site to `./dist/`.      |
+| ⚙️  | `preview`        | Preview your build locally, before deploying. |
 
 ## 🔑 License
 
