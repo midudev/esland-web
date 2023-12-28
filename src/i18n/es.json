@@ -1,9 +1,24 @@
 {
   "SEO_TITLE": "Premios ESLAND 2024 - Celebrando lo mejor del streaming y los creadores de contenido",
   "SEO_DESCRIPTION": "Descubre a los mejores creadores de contenido de España, Latinoamérica y Andorra. ¡Vota por tus favoritos! Celebra la innovación y el talento de Twitch, YouTube y más",
+  "HEADER_1": "INFO",
+  "HEADER_2": "ARCHIVO",
+  "HEADER_BUTTON": "ESLAND: EL DOCUMENTAL",
   "INTRO_TITLE": "Bienvenidos/as",
   "INTRO_TITLE_AFTER_BR": "a los Premios ESLAND",
   "INTRO_DESCRIPTION_1": "El cine tiene los Oscars, la música tiene los Grammy y <strong>el streaming tiene los ESLAND</strong>. Los premios que celebran la creatividad y el talento de los mejores creadores de contenido de <strong>la comunidad hispanohablante</strong>",
   "INTRO_DESCRIPTION_2": "España, Latinoamérica y Andorra unidas por creadores, creadoras y sus comunidades, para recordar y revivir <strong>algunos de los mejores momentos del año.</strong>",
-  "INTRO_DESCRIPTION_3": "Tras dos galas celebradas, una en el Palau de la Música Catalana de Barcelona, y otra en el Auditorio Nacional de la Ciudad de México, solo queda esperar a <strong>la tercera edición en Andorra.</strong>"
+  "INTRO_DESCRIPTION_3": "Tras dos galas celebradas, una en el Palau de la Música Catalana de Barcelona, y otra en el Auditorio Nacional de la Ciudad de México, solo queda esperar a <strong>la tercera edición en Andorra.</strong>",
+  "BENTO_TITLE_1": "ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND",
+  "BENTO_CONTENT_1": "Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará varias semanas antes de la ansiada gala. <strong> Directos especiales, colaboraciones, conciertos y mucho más</strong> en lo que será una auténtica fiesta dedicada a la creación de contenido.",
+  "BENTO_TITLE_2": "LA ALFOMBRA BLANCA",
+  "BENTO_SUBTITLE_2": "16 de febrero de 2024",
+  "BENTO_CONTENT_2": "Una gala de premios llena de <strong>contenido de primer nivel</strong> y <strong>muchas sorpresas</strong>, en la que descubrirán los ganadores de esta tercera edición de los Premios ESLAND.",
+  "BENTO_TITLE_3": "LA GALA",
+  "BENTO_SUBTITLE_3": "17 de febrero de 2024",
+  "BENTO_CONTENT_3": "Este año, el momento de la alfombra azul será sustituido y mejorado, gracias a los increíbles paisajes andorranos, por una <strong> alfombra blanca en plena nieve</strong>, situada en las <strong>pistas de esquí de Andorra</strong>.",
+  "BENTO_TITLE_4": "DISFRUTA DEL REDDIT DE LA COMUNIDAD",
+  "BENTO_CONTENT_4": "Este año, el reddit no formará parte de las votaciones de los premios, pero sí que <strong>formará parte de la comunidad</strong> El subreddit oficial de los Premios ESLAND está abierto para ti. Comparte tus clips, opiniones e <strong>interactúa con toda la comunidad</strong> del streaming hispanohablante.",
+  "VIDEO_ALT": "Esland - Premios a la comunidad hispanohablante de Streaming",
+  "PREFOOTER_VIDEO_TITLE": "Guía de la 3ª Edición de los premios ESLAND"
 }
