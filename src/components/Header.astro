@@ -6,15 +6,15 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header class="fixed w-screen py-4 z-10 backdrop-blur-sm top-0 px-8 lg:px-0">
+<header class="fixed w-screen py-4 z-50 backdrop-blur-sm top-0 px-8 lg:px-0">
   <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
     <a href="/" class="col-span-1">
       <Logo class="w-12" />
     </a>
     <nav class="col-span-1 justify-self-center">
       <ul class="flex gap-4">
-        <li>{i18n.HEADER_1}</li>
-        <li>{i18n.HEADER_2}</li>
+        <li><a class="hover:underline" href="#">{i18n.HEADER_1}</a></li>
+        <li><a class="hover:underline" href="#">{i18n.HEADER_2}</a></li>
       </ul>
     </nav>
     <a
