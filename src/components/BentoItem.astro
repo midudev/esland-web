@@ -1,0 +1,46 @@
+---
+interface Props {
+  class?: string
+  title: string
+  subtitle?: string
+}
+
+const { title, subtitle } = Astro.props
+---
+
+<article
+  class={`
+  ${Astro.props.class}
+  col-span-5
+  relative rounded-xl
+  backdrop-blur-md
+  border border-black/10
+  shadow-inner shadow-white/10
+  overflow-hidden
+  group
+`}
+>
+  <div
+    class="absolute z-10 bottom-0 top-0 w-full h-full
+    bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80"
+  >
+  </div>
+
+  <slot name="image" />
+
+  <div
+    class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end h-full"
+  >
+    <h2 class="text-3xl font-semibold text-balance text-white mb-4">{title}</h2>
+
+    {
+      subtitle && (
+        <h3 class="text-3xl font-semibold text-sky-200/80 -mt-4 mb-4">
+          {subtitle}
+        </h3>
+      )
+    }
+
+    <slot name="content" />
+  </div>
+</article>
