@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "0.3.4",
     "@astrojs/tailwind": "5.1.0",
+    "@astrojs/vercel": "6.1.1",
     "@fontsource-variable/onest": "5.0.2",
     "@justinribeiro/lite-youtube": "1.5.0",
     "astro": "4.0.8",
