@@ -1,13 +1,13 @@
 ---
-import Header from "../components/Header.astro"
-import "@fontsource-variable/onest"
+import Header from '@components/Header.astro';
+import '@fontsource-variable/onest';
 
 interface Props {
-  description: string
-  title: string
+  description: string;
+  title: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -31,7 +31,7 @@ const { description, title } = Astro.props
   }
 
   html {
-    font-family: "Onest Variable", system-ui, sans-serif;
+    font-family: 'Onest Variable', system-ui, sans-serif;
     background: #151a36;
   }
 
