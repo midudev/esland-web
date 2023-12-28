@@ -1,8 +1,9 @@
 <div align="center">
+<img src="public/logo.svg" height="50px"/> 
 <h3>
- La página de los Esland reimaginada
+ The ESLAND page reimagined
 </h3>
-<p>Creada para fines didacticos y educativos.</p>
+<p>Created for didactic and educational purposes.</p>
 </div>
 
 <div align="center">
@@ -37,15 +38,15 @@
 </div>
 
 > [!WARNING]
-> This page is not official, it is a project for educational purposes. The official page is [**premiosesland.com**](https://premiosesland.com/).
+> This page is not official. The official page is [**premiosesland.com**](https://premiosesland.com/).
 
 ## 🛠️ Stack
 
 - [**Astro**](https://astro.build/) - The web framework for content-driven websites.
 - [**Typescript**](https://www.typescriptlang.org/) - JavaScript with syntax for types.
 - [**Tailwindcss**](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [**tailwind]
-
+- [**tailwindcss-animated**](https://github.com/new-data-services/tailwindcss-animated) - Extended animation utilities for Tailwind CSS.
+- [**fontsource**](https://fontsource.org/) - Self-host Open Source fonts in neatly bundled NPM packages.
 
 ## 🚀 Getting Started
 
@@ -95,3 +96,14 @@ pnpm dev
   <img src="https://contrib.rocks/image?repo=midudev/esland-web" />
 </a>
 
+## 🧞 Commands
+
+|    | Command   | Action                                       |
+| :-- | :-------- | :------------------------------------------- |
+| ⚙️  | `dev` or `start`     | Starts local dev server at `localhost:3000`.  |
+| ⚙️  | `build`   | Build your production site to `./dist/`.      |
+| ⚙️  | `preview` | Preview your build locally, before deploying. |
+
+## 🔑 License
+
+[MIT](#) - Created by [**midu.dev**](https://midu.dev).
