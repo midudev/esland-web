@@ -11,7 +11,7 @@ const i18n = getI18N({ currentLocale })
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0 flex flex-col">
         <a href="https://premiosesland.com/" class="flex items-center -mt-14">
-          <Logo class="w-64 h-auto" />
+          <Logo class="w-24 h-auto" />
         </a>
         <div class="flex justify-center mt-6 gap-x-4">
           <a href="#" class="text-white hover:text-yellow-300">
@@ -62,7 +62,9 @@ const i18n = getI18N({ currentLocale })
       </div>
       <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
         <div>
-          <h2 class="mb-6 text-sm font-semibold uppercase text-white">{i18n.FOOTER.LEGAL.TITLE}</h2>
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.LEGAL.TITLE}
+          </h2>
           <ul class="text-gray-400 font-medium">
             <li class="mb-4">
               <a href="https://flowbite.com/" class="hover:underline"
@@ -82,32 +84,34 @@ const i18n = getI18N({ currentLocale })
           </ul>
         </div>
         <div>
-          <h2
-            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-          >
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
             {i18n.FOOTER.WEB_MAP.TITLE}
           </h2>
           <ul class="text-gray-400 font-medium">
             <li class="mb-4">
-              <a href="/" class="hover:underline">{i18n.FOOTER.WEB_MAP.HOME }</a>
+              <a href="/" class="hover:underline">{i18n.FOOTER.WEB_MAP.HOME}</a>
             </li>
             <li>
-              <a href="/info" class="hover:underline">{i18n.FOOTER.WEB_MAP.INFO}</a>
+              <a href="/info" class="hover:underline"
+                >{i18n.FOOTER.WEB_MAP.INFO}</a
+              >
             </li>
             <li>
-              <a href="/archivo" class="hover:underline">{i18n.FOOTER.WEB_MAP.ARCHIVE}</a>
+              <a href="/archivo" class="hover:underline"
+                >{i18n.FOOTER.WEB_MAP.ARCHIVE}</a
+              >
             </li>
           </ul>
         </div>
         <div>
-          <h2
-            class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
-          >
-           {i18n.FOOTER.LEGAL.TITLE}
+          <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+            {i18n.FOOTER.LEGAL.TITLE}
           </h2>
           <ul class="text-gray-400 font-medium">
             <li class="mb-4">
-              <a href="#" class="hover:underline">{i18n.FOOTER.LEGAL.PRIVACY_POLICY}</a>
+              <a href="#" class="hover:underline"
+                >{i18n.FOOTER.LEGAL.PRIVACY_POLICY}</a
+              >
             </li>
             <li>
               <a href="#" class="hover:underline">{i18n.FOOTER.LEGAL.TOS}</a>
@@ -116,15 +120,15 @@ const i18n = getI18N({ currentLocale })
         </div>
       </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <hr class="my-6 sm:mx-auto border-white/10 lg:my-8" />
     <div class="sm:flex sm:items-center sm:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+      <span class="text-sm sm:text-center text-gray-400"
         >{i18n.FOOTER.DISCLAIMER}
       </span>
       <div class="flex mt-4 sm:justify-center sm:mt-0">
         <a
           href="https://github.com/midudev/esland-web"
-          class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+          class="text-gray-500hover:text-white ms-5"
         >
           <svg
             class="w-4 h-4"
