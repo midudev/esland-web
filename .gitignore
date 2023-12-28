@@ -24,5 +24,5 @@ pnpm-debug.log*
 .idea
 
 package-lock.json
-pnpm-lock.json
 yarn.lock
+bun.lockb
