@@ -1,5 +1,9 @@
 ---
 import BentoItem from "./BentoItem.astro"
+import { getI18N } from "../i18n/"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <section
@@ -11,7 +15,7 @@ import BentoItem from "./BentoItem.astro"
 >
   <BentoItem
     class="col-span-10 md:col-span-4"
-    title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND"
+    title={i18n.BENTO_TITLE_1}
   >
     <div
       slot="image"
@@ -22,17 +26,12 @@ import BentoItem from "./BentoItem.astro"
     >
     </div>
 
-    <p slot="content" class="max-w-xl">
-      Una nueva edición <strong>cargada de novedades</strong> y contenido, que
-      empezará varias semanas antes de la ansiada gala. <strong
-        >Directos especiales, colaboraciones, conciertos y mucho más</strong
-      > en lo que será una auténtica fiesta dedicada a la creación de contenido.
-    </p>
+    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_1} />
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
-    title="LA ALFOMBRA BLANCA"
-    subtitle="16 de febrero de 2024"
+    title={i18n.BENTO_TITLE_2}
+    subtitle={i18n.BENTO_SUBTITLE_2}
   >
     <div
       slot="image"
@@ -42,16 +41,12 @@ import BentoItem from "./BentoItem.astro"
       style="background-image: url('/grefg.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      Una gala de premios llena de <strong>contenido de primer nivel</strong> y
-      <strong>muchas sorpresas</strong>, en la que se descubrirán los ganadores
-      de esta tercera edición de los Premios ESLAND.
-    </p>
+    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_2} />
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
-    title="LA GALA"
-    subtitle="17 de febrero de 2024"
+    title={i18n.BENTO_TITLE_3}
+    subtitle={i18n.BENTO_SUBTITLE_3}
   >
     <div
       slot="image"
@@ -61,16 +56,11 @@ import BentoItem from "./BentoItem.astro"
       style="background-image: url('/pistas.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      Este año, el momento de la alfombra azul será sustituido y mejorado,
-      gracias a los increíbles paisajes andorranos, por una <strong
-        >alfombra blanca en plena nieve</strong
-      >, situada en las <strong>pistas de esquí de Andorra</strong>.
-    </p>
+    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_3} />
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-4"
-    title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+    title={i18n.BENTO_TITLE_4}
   >
     <div
       slot="image"
@@ -80,12 +70,6 @@ import BentoItem from "./BentoItem.astro"
       style="background-image: url('/laptop.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl">
-      Este año, el reddit no formará parte de las votaciones de los premios,
-      pero sí que <strong>formará parte de la comunidad</strong>. El subreddit
-      oficial de los Premios ESLAND está abierto para ti. Comparte tus clips,
-      opiniones e <strong>interactúa con toda la comunidad</strong> del
-      streaming hispanohablante.
-    </p>
+    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_4} />
   </BentoItem>
 </section>

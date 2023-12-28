@@ -1,9 +1,23 @@
 {
   "SEO_TITLE": "Premis ESLAND 2024 - Celebrant el millor del streaming i els creadors de contingut",
   "SEO_DESCRIPTION": "Descobreix els millors creadors de contingut d'Espanya, Llatinoamèrica i Andorra. Vota pels teus favorits! Celebra la innovació i el talent de Twitch, YouTube i més",
+  "HEADER_1": "INFORMACIÓ",
+  "HEADER_2": "ARXIU",
+  "HEADER_BUTTON": "ESLAND: EL DOCUMENTAL",
   "INTRO_TITLE": "Benvinguts/des",
   "INTRO_TITLE_AFTER_BR": "als Premis ESLAND",
   "INTRO_DESCRIPTION_1": "El cinema té els Oscars, la música té els Grammy i <strong>el streaming té els ESLAND</strong>. Els premis que celebren la creativitat i el talent dels millors creadors de contingut de <strong>la comunitat hispanoparlant</strong>",
   "INTRO_DESCRIPTION_2": "Espanya, Llatinoamèrica i Andorra unides per creadors, creadores i les seves comunitats, per recordar i reviure <strong>alguns dels millors moments de l'any.</strong>",
-  "INTRO_DESCRIPTION_3": "Després de dues gal·les celebrades, una al Palau de la Música Catalana de Barcelona, i una al Auditorio Nacional de la Ciudad de México, només queda esperar a <strong>la tercera edició a Andorra.</strong>"
+  "INTRO_DESCRIPTION_3": "Després de dues gal·les celebrades, una al Palau de la Música Catalana de Barcelona, i una al Auditorio Nacional de la Ciudad de México, només queda esperar a <strong>la tercera edició a Andorra.</strong>",
+  "BENTO_TITLE_1": "ANDORRA: EL CÈNIT DELS PREMIS ESLAND",
+  "BENTO_CONTENT_1": "Una nova edició <strong>plena de novetats</strong> i contingut, que començarà diverses setmanes abans de la desitjada gala. <strong>Directes especials, col·laboracions, concerts i molt més</strong> en el que serà una autèntica festa dedicada a la creació de contingut.",
+  "BENTO_TITLE_2": "LA CATIFA BLANCA",
+  "BENTO_SUBTITLE_2": "16 de febrer de 2024",
+  "BENTO_CONTENT_2": "Una gala de premis plena de <strong> contingut de primer nivell</strong> i <strong>moltes sorpreses</strong>, on es descobriran els guanyadors d'aquesta tercera edició dels Premis ESLAND.",
+  "BENTO_TITLE_3": "LA GALA",
+  "BENTO_SUBTITLE_3": "17 de febrer de 2024",
+  "BENTO_CONTENT_3": "Enguany, el moment de la catifa blava serà substituït i millorat, gràcies als increïbles paisatges andorrans, per una <strong>catifa blanca en plena neu</strong>, situada a les <strong>pistes d'esquí d'Andorra</strong>.",
+  "BENTO_TITLE_4": "GAUDEIX DEL REDDIT DE LA COMUNITAT",
+  "BENTO_CONTENT_4": "Enguany, el reddit no formarà part de les votacions dels premis, però sí que <strong>formarà part de la comunitat</strong>. El subreddit oficial dels Premis ESLAND està obert per a tu. Comparteix els teus clips, opinions i <strong>interactua amb tota la comunitat</strong> del streaming en espanyol.",
+  "VIDEO_ALT": "Esland - Premis a la comunitat hispanoparlant de Streaming"
 }
