@@ -72,6 +72,9 @@ git clone git@github.com:midudev/esland-web.git
 # Install bun for MacOS, WSL & Linux:
 curl -fsSL https://bun.sh/install | bash
 
+# Install bun for Windows:
+powershell -c "iwr bun.sh/install.ps1|iex"
+
 # Install with bun:
 bun install
 ```
