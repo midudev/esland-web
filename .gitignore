@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # misc
 .idea
+
+package-lock.json
+pnpm-lock.json
+yarn.lock
