@@ -119,10 +119,8 @@ pnpm dev
 
 [MIT](#) - Created by [**midu.dev**](https://midu.dev).
 
-## ✅ Todo
+## ✅ Por hacer...
 
 - [ ] Afinar el Header y añadirle una animación con el scroll
-- [ ] La internacionalización Español/Catalan
-- [ ] Footer
 - [ ] Afinar el responsive
 - [ ] Las páginas extra
