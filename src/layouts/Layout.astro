@@ -51,6 +51,19 @@ const { currentLocale } = Astro
     font-weight: 700;
   }
 
+  .text__glowing {
+    transition: text-shadow 0.3s ease; 
+  }
+
+  .text__glowing:hover {
+    text-shadow: 
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #fff,
+      0 0 80px #fff,
+      0 0 120px #fff;
+  }
+
   #header-nav {
     animation: blur linear both;
     animation-timeline: scroll();
