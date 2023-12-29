@@ -1,13 +1,15 @@
 ---
-import Logo from "./Logo.astro"
+import Logo from "./Logo.astro";
 
-import { getI18N } from "../i18n/"
+import { getI18N } from "../i18n/";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<section class="text-xl text-left px-20 max-w-[70ch] text-pretty mx-auto my-24">
+<section
+  class="text-xl text-left px-6 sm:px-20 max-w-[70ch] text-pretty mx-auto my-24"
+>
   <Logo class="w-16 text-white m-auto mb-10" />
   <h1
     class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide"
