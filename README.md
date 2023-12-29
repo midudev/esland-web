@@ -124,3 +124,4 @@ pnpm dev
 - [ ] Afinar el Header y añadirle una animación con el scroll
 - [ ] Afinar el responsive
 - [ ] Las páginas extra
+- [ ] Añadir el efecto hover sobre los enlaces de Nav Bar
