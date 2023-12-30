@@ -1,25 +1,25 @@
 ---
-import { getI18N } from "@/i18n/"
+import { getI18N } from '@/i18n/'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<div class="w-full relative h-[80vh] md:h-full md:aspect-video">
+<div class='relative h-[80vh] w-full md:aspect-video md:h-full'>
   <img
-    class="absolute top-10 z-10 w-[1000px] left-0 right-0 m-auto"
+    class='absolute left-0 right-0 top-10 z-10 m-auto w-[1000px]'
     alt={i18n.VIDEO_ALT}
-    src="/logo-home.svg"
+    src='/logo-home.svg'
   />
   <video
-    class="w-full h-full object-cover object-top animate-ease-in-out animate-fade animate-duration-1000 cp-v"
-    src="/video.webm"
+    class='cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out'
+    src='/video.webm'
     autoplay
     loop
     muted></video>
   <video
-    class="absolute -bottom-48 blur-3xl -z-40"
-    src="/video.webm"
+    class='absolute -bottom-48 -z-40 blur-3xl'
+    src='/video.webm'
     autoplay
     loop
     muted></video>
