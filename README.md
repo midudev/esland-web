@@ -125,3 +125,4 @@ pnpm dev
 - [ ] Afinar el responsive
 - [ ] Las páginas extra
 - [ ] Añadir el efecto hover sobre los enlaces de Nav Bar
+- [ ] Poner el fondo oscuro al Header
