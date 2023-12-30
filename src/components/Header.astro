@@ -6,9 +6,9 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<header id="header-nav" class="fixed w-screen z-50 top-0 lg:px-0">
+<header id="header-nav" class="fixed w-full z-50 top-0 px-6">
   <div
-    class="grid [grid-template-columns:40px_repeat(2,1fr)] sm:grid-cols-3 max-w-7xl mx-auto p-1 items-center justify-between"
+    class="grid [grid-template-columns:40px_repeat(2,1fr)] sm:grid-cols-3 max-w-7xl mx-auto py-1 items-center justify-between"
   >
     <a href="/" class="col-span-1">
       <Logo class="w-10 h-auto" />
@@ -19,7 +19,7 @@ const i18n = getI18N({ currentLocale });
     </nav>
     <a
       href="#"
-      class="border text-xs md:text-base rounded-full inline-block border-white px-2 py-2 justify-self-end hover:bg-white hover:text-black duration-300"
+      class="ml-2 border text-xs text-center md:text-base rounded-full inline-block border-white px-2 py-2 justify-self-end hover:bg-white hover:text-black duration-300"
     >
       {i18n.HEADER_BUTTON}
     </a>
