@@ -1,6 +1,6 @@
 ---
-import Header from '@/components/Header.astro'
-import '@fontsource-variable/onest'
+import Header from "@/components/Header.astro"
+import "@fontsource-variable/onest"
 
 interface Props {
   description: string
@@ -14,11 +14,11 @@ const { currentLocale } = Astro
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='robots' content='nofollow, noindex' />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="nofollow, noindex" />
     <title>{title}</title>
   </head>
   <body>
@@ -33,7 +33,7 @@ const { currentLocale } = Astro
   }
 
   html {
-    font-family: 'Onest Variable', system-ui, sans-serif;
+    font-family: "Onest Variable", system-ui, sans-serif;
     background: #151a36;
   }
 
@@ -52,11 +52,11 @@ const { currentLocale } = Astro
   }
 
   .text__glowing {
-    transition: text-shadow 0.3s ease;
+    transition: text-shadow 0.3s ease; 
   }
 
   .text__glowing:hover {
-    text-shadow:
+    text-shadow: 
       0 0 10px #fff,
       0 0 20px #fff,
       0 0 40px #fff,
