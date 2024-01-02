@@ -1,18 +1,18 @@
 ---
-import Logo from "./Logo.astro";
+import Logo from './Logo.astro'
 
-import { getI18N } from "../i18n/";
+import { getI18N } from '../i18n/'
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <section
-  class="text-xl text-left px-6 sm:px-20 max-w-[70ch] text-pretty mx-auto my-24"
+  class='mx-auto my-24 max-w-[70ch] text-pretty px-6 text-left text-xl sm:px-20'
 >
-  <Logo class="w-16 text-white m-auto mb-10" />
+  <Logo class='m-auto mb-10 w-16 text-white' />
   <h1
-    class="text-4xl font-semibold text-center text-wrap mx-auto mb-10 tracking-wide"
+    class='mx-auto mb-10 text-wrap text-center text-4xl font-semibold tracking-wide'
   >
     {i18n.INTRO_TITLE}<br />{i18n.INTRO_TITLE_AFTER_BR}
   </h1>
