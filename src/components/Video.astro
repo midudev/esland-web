@@ -2,8 +2,9 @@
 import { getI18N } from "@/i18n/"
 import Button from "./Button.astro";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <div class="w-full relative h-[80vh] max-w-[100vw] md:h-full md:aspect-video">

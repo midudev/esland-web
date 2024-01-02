@@ -1,11 +1,11 @@
 ---
 interface Props {
-  class?: string
-  title: string
-  subtitle?: string
+  class?: string;
+  title: string;
+  subtitle?: string;
 }
 
-const { title, subtitle } = Astro.props
+const { title, subtitle } = Astro.props;
 ---
 
 <article
@@ -29,9 +29,11 @@ const { title, subtitle } = Astro.props
   <slot name="image" />
 
   <div
-    class="relative select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end h-full"
+    class="relative select-none flex flex-col gap-1 p-2 md:p-6 text-lg z-20 justify-end h-full"
   >
-    <h2 class="text-3xl font-semibold text-balance text-white mb-4 uppercase">{title}</h2>
+    <h2 class="text-3xl font-semibold text-balance text-white mb-4 uppercase">
+      {title}
+    </h2>
 
     {
       subtitle && (

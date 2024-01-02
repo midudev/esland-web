@@ -3,20 +3,21 @@ import Logo from "./Logo.astro"
 import { getI18N } from "../i18n/"
 import Button from "./Button.astro";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<header id="header-nav" class="fixed w-screen py-3 z-50 top-0 px-8 lg:px-0">
-  <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+<header id="header-nav" class="fixed w-full z-50 top-0 px-6">
+  <div
+    class="grid [grid-template-columns:40px_repeat(2,1fr)] sm:grid-cols-3 max-w-7xl mx-auto py-1 items-center justify-between"
+  >
     <a href="/" class="col-span-1">
       <Logo class="w-10 h-auto" />
     </a>
-    <nav class="col-span-1 justify-self-center">
-      <ul class="flex gap-4">
-        <li><a class="text__glowing" href="/info">{i18n.HEADER_1}</a></li>
-        <li><a class="text__glowing" href="/archivo">{i18n.HEADER_2}</a></li>
-      </ul>
+    <nav class="col-span-1 w-full flex gap-2 justify-end md:justify-center">
+      <a class="hover:underline" href="/info">{i18n.HEADER_1}</a>
+      <a class="hover:underline" href="/archivo">{i18n.HEADER_2}</a>
     </nav>
     <Button class="justify-self-end lg:text-base" url="https://www.youtube.com/watch?v=O43x26hiolw">{i18n.HEADER_BUTTON}</Button>
   </div>

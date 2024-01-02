@@ -1,9 +1,9 @@
 ---
-import BentoItem from "./BentoItem.astro"
-import { getI18N } from "@/i18n/"
+import BentoItem from "./BentoItem.astro";
+import { getI18N } from "@/i18n/";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <section
@@ -13,10 +13,7 @@ const i18n = getI18N({ currentLocale })
     mx-auto p-6 md:p-12 lg:p-20
   `}
 >
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title={i18n.BENTO_TITLE_1}
-  >
+  <BentoItem class="col-span-10 md:col-span-4" title={i18n.BENTO_TITLE_1}>
     <div
       slot="image"
       class="absolute left-0 top-0 bottom-0 w-full
@@ -26,7 +23,11 @@ const i18n = getI18N({ currentLocale })
     >
     </div>
 
-    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_1} />
+    <p
+      slot="content"
+      class="text-base md:text-lg max-w-xl"
+      set:html={i18n.BENTO_CONTENT_1}
+    />
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
@@ -41,7 +42,11 @@ const i18n = getI18N({ currentLocale })
       style="background-image: url('/grefg.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_2} />
+    <p
+      slot="content"
+      class="text-base md:text-lg max-w-xl"
+      set:html={i18n.BENTO_CONTENT_2}
+    />
   </BentoItem>
   <BentoItem
     class="col-span-10 md:col-span-6"
@@ -56,12 +61,13 @@ const i18n = getI18N({ currentLocale })
       style="background-image: url('/pistas.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_3} />
+    <p
+      slot="content"
+      class="text-base md:text-lg max-w-xl"
+      set:html={i18n.BENTO_CONTENT_3}
+    />
   </BentoItem>
-  <BentoItem
-    class="col-span-10 md:col-span-4"
-    title={i18n.BENTO_TITLE_4}
-  >
+  <BentoItem class="col-span-10 md:col-span-4" title={i18n.BENTO_TITLE_4}>
     <div
       slot="image"
       class="absolute left-0 top-0 bottom-0 w-full
@@ -70,6 +76,10 @@ const i18n = getI18N({ currentLocale })
       style="background-image: url('/laptop.webp')"
     >
     </div>
-    <p slot="content" class="max-w-xl" set:html={i18n.BENTO_CONTENT_4} />
+    <p
+      slot="content"
+      class="text-base md:text-lg max-w-xl"
+      set:html={i18n.BENTO_CONTENT_4}
+    />
   </BentoItem>
 </section>
