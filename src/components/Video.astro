@@ -10,7 +10,11 @@ const i18n = getI18N({ currentLocale })
   <div
     class='absolute left-1/2 right-0 top-14 z-10 m-auto flex -translate-x-1/2 flex-col items-center'
   >
-    <img alt={i18n.VIDEO_ALT} src='/logo-home.svg' />
+    <img
+      class='block aspect-[343/243] w-full'
+      alt={i18n.VIDEO_ALT}
+      src='/logo-home.svg'
+    />
     <Button url='https://www.youtube.com/watch?v=1YmpPrqKP-g'>
       {i18n.VIDEO_BUTTON}
     </Button>
