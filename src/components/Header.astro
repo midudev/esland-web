@@ -7,22 +7,52 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header id='header-nav' class='fixed top-0 z-50 w-full px-6'>
-  <div
-    class='mx-auto grid max-w-7xl items-center justify-between py-1 [grid-template-columns:40px_repeat(2,1fr)] sm:grid-cols-3'
-  >
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.textContent = menuIcon.textContent === '☰' ? '✕' : '☰';
+    });
+  });
+</script>
+
+<header id='header-nav' class='fixed top-0 z-50 w-full px-6 py-2'>
+  <div class='mx-auto flex items-center justify-between max-w-7xl h-16'>
     <a href='/' class='col-span-1 w-fit'>
       <Logo class='h-auto w-10' />
     </a>
-    <nav class='col-span-1 flex w-full justify-end gap-2 md:justify-center'>
+  
+    <!-- Menú de navegación para pantallas grandes -->
+    <nav class='col-span-1 lg:flex w-full justify-end gap-2 md:justify-center hidden'>
       <a class='hover:underline' href='/info'>{i18n.HEADER_1}</a>
       <a class='hover:underline' href='/archivo'>{i18n.HEADER_2}</a>
     </nav>
-    <Button
-      class='justify-self-end lg:text-base'
-      url='https://www.youtube.com/watch?v=O43x26hiolw'
-    >
+
+    <!-- Botón de menú para pantallas pequeñas -->
+    <button id="menu-toggle" class='lg:hidden text-2xl'>
+      <span id="menu-icon">☰</span>
+    </button>
+
+
+    <Button class='lg:text-base whitespace-nowrap hidden lg:inline-block' url='https://www.youtube.com/watch?v=O43x26hiolw'>
       {i18n.HEADER_BUTTON}
     </Button>
   </div>
+      <!-- Menú de navegación móvil para pantallas pequeñas -->
+  <nav id="mobile-menu" class='lg:hidden hidden w-full flex flex-col text-center text-2xl items-center'>
+    <a class='hover:underline my-4' href='/info'>{i18n.HEADER_1}</a>
+    <a class='hover:underline my-4' href='/archivo'>{i18n.HEADER_2}</a>
+    <Button class='lg:text-base whitespace-nowrap text-center lg:inline-block my-4' url='https://www.youtube.com/watch?v=O43x26hiolw'>
+      {i18n.HEADER_BUTTON}
+    </Button>
+  </nav>
+
+  <Button class='lg:text-base whitespace-nowrap hidden lg:inline-block' url='https://www.youtube.com/watch?v=O43x26hiolw'>
+    {i18n.HEADER_BUTTON}
+  </Button>
+
 </header>
