@@ -1,55 +1,78 @@
 ---
-import Logo from './Logo.astro'
-import { getI18N } from '../i18n/'
-import Button from './Button.astro'
+import Logo from "./Logo.astro"
+import { getI18N } from "../i18n/"
+import Button from "./Button.astro"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
+<header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-2">
+  <div class="mx-auto flex max-w-7xl items-center justify-between">
+    <div class="flex flex-grow basis-0">
+      <a href="/">
+        <Logo class="h-auto w-10" />
+      </a>
+    </div>
 
-    menuToggle.addEventListener('click', function () {
-      mobileMenu.classList.toggle('hidden');
-      menuIcon.textContent = menuIcon.textContent === '☰' ? '✕' : '☰';
-    });
-  });
-</script>
-
-<header id='header-nav' class='fixed top-0 z-50 w-full px-6 py-2'>
-  <div class='mx-auto flex items-center justify-between max-w-7xl h-16'>
-    <a href='/' class='col-span-1 w-fit'>
-      <Logo class='h-auto w-10' />
-    </a>
-  
     <!-- Menú de navegación para pantallas grandes -->
-    <nav class='col-span-1 lg:flex w-full justify-end gap-2 md:justify-center hidden'>
-      <a class='hover:underline' href='/info'>{i18n.HEADER_1}</a>
-      <a class='hover:underline' href='/archivo'>{i18n.HEADER_2}</a>
+    <nav
+      class="hidden md:flex flex-grow basis-0 w-full gap-x-6 text-lg md:justify-center"
+    >
+      <a class="hover:underline" href="/info">{i18n.HEADER_1}</a>
+      <a class="hover:underline" href="/archivo">{i18n.HEADER_2}</a>
     </nav>
 
     <!-- Botón de menú para pantallas pequeñas -->
-    <button id="menu-toggle" class='lg:hidden text-2xl'>
+    <button
+      id="menu-toggle"
+      class="flex flex-grow basis-0 justify-end text-2xl md:hidden z-50"
+    >
       <span id="menu-icon">☰</span>
     </button>
 
-
-    <Button class='lg:text-base whitespace-nowrap hidden lg:inline-block' url='https://www.youtube.com/watch?v=O43x26hiolw'>
-      {i18n.HEADER_BUTTON}
-    </Button>
+    <div
+      class="hidden md:flex-grow md:basis-0 justify-end whitespace-nowrap md:flex md:text-base"
+    >
+      <Button
+        class="md:text-sm lg:text-base md:py-2"
+        url="https://www.youtube.com/watch?v=O43x26hiolw"
+      >
+        {i18n.HEADER_BUTTON}
+      </Button>
+    </div>
   </div>
-      <!-- Menú de navegación móvil para pantallas pequeñas -->
-  <nav id="mobile-menu" class='lg:hidden hidden w-full flex flex-col text-center text-2xl items-center'>
-    <a class='hover:underline my-4' href='/info'>{i18n.HEADER_1}</a>
-    <a class='hover:underline my-4' href='/archivo'>{i18n.HEADER_2}</a>
-    <Button class='lg:text-base whitespace-nowrap text-center my-4 lg:hidden' url='https://www.youtube.com/watch?v=O43x26hiolw'>
+
+  <!-- Menú de navegación móvil para pantallas pequeñas -->
+  <nav
+    id="mobile-menu"
+    class="bg-black/80 backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
+  >
+    <a class="my-4 hover:underline" href="/info">{i18n.HEADER_1}</a>
+    <a class="my-4 hover:underline" href="/archivo">{i18n.HEADER_2}</a>
+    <Button
+      class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
+      url="https://www.youtube.com/watch?v=O43x26hiolw"
+    >
       {i18n.HEADER_BUTTON}
     </Button>
   </nav>
-
-
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle")
+    const mobileMenu = document.getElementById("mobile-menu")
+    const menuIcon = document.getElementById("menu-icon")
+
+    if (!menuToggle || !mobileMenu || !menuIcon) {
+      return
+    }
+
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden")
+      mobileMenu.classList.toggle("flex")
+      menuIcon.textContent = menuIcon.textContent === "☰" ? "✕" : "☰"
+    })
+  })
+</script>

@@ -11,21 +11,21 @@ const { url, target, class: className } = Astro.props
 <a
   href={url}
   target=`${target ?? '_blank'}`
-  rel='noopener noreferrer'
+  rel="noopener noreferrer"
   class:list={[
-    'w-fit',
-    'lg:text-2xl',
-    'font-medium',
-    'text-white',
-    'no-underline',
-    'px-5',
-    'py-3',
-    'border',
-    'border-solid',
-    'border-white',
-    'rounded-full',
-    'uppercase',
-    className
+    className,
+    "w-fit",
+    "lg:text-2xl",
+    "font-medium",
+    "text-white",
+    "no-underline",
+    "px-5",
+    "py-3",
+    "border",
+    "border-solid",
+    "border-white",
+    "rounded-full",
+    "uppercase",
   ]}
 >
   <slot />
