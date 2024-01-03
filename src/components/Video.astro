@@ -10,13 +10,13 @@ const i18n = getI18N({ currentLocale })
   <div
     class="absolute left-1/2 right-0 top-14 z-10 m-auto flex -translate-x-1/2 flex-col items-center w-full"
   >
-    <section class="flex justify-center items-center gap-8 flex-col aspect-[343/350] md:aspect-[343/160] 2xl:aspect-[343/260]">
+    <section class="animate-fade-up flex justify-center items-center gap-8 flex-col aspect-[343/350] md:aspect-[343/160] 2xl:aspect-[343/260]">
       <h1 class="flex items-center gap-5 text-4xl md:text-6xl lg:gap-20 lg:text-8xl font-tomaso">
         <span>E</span><span>S</span><span>L</span><span class="letter-logo" aria-label="A"></span><span>N</span><span>D</span>
       </h1>
       <p class="text-xl lg:text-2xl text-center text-pretty font-jura">PREMIOS A LA COMUNIDAD HISPANOHABLANTE DE STREAMING</p>
     </section>
-    <Button url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
+    <Button class="animate-fade-up" url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
       {i18n.VIDEO_BUTTON}
     </Button>
   </div>
