@@ -4,7 +4,12 @@ import animations from "tailwindcss-animated";
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        tomaso: ['Tomaso', 'sans-serif'],
+        jura: ['Jura', 'sans-serif']
+      }
+    }
   },
   plugins: [
     animations,
