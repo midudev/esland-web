@@ -46,13 +46,10 @@ const i18n = getI18N({ currentLocale })
   <nav id="mobile-menu" class='lg:hidden hidden w-full flex flex-col text-center text-2xl items-center'>
     <a class='hover:underline my-4' href='/info'>{i18n.HEADER_1}</a>
     <a class='hover:underline my-4' href='/archivo'>{i18n.HEADER_2}</a>
-    <Button class='lg:text-base whitespace-nowrap text-center lg:inline-block my-4' url='https://www.youtube.com/watch?v=O43x26hiolw'>
+    <Button class='lg:text-base whitespace-nowrap text-center my-4 lg:hidden' url='https://www.youtube.com/watch?v=O43x26hiolw'>
       {i18n.HEADER_BUTTON}
     </Button>
   </nav>
 
-  <Button class='lg:text-base whitespace-nowrap hidden lg:inline-block' url='https://www.youtube.com/watch?v=O43x26hiolw'>
-    {i18n.HEADER_BUTTON}
-  </Button>
 
 </header>
