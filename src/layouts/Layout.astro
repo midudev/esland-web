@@ -20,6 +20,7 @@ const { currentLocale } = Astro
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='robots' content='nofollow, noindex' />
     <title>{title}</title>
+    <slot name="preload" />
   </head>
   <body>
     <Header />
