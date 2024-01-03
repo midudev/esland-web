@@ -39,5 +39,121 @@
       "ARCHIVE": "Archivo"
     },
     "PRODUCED_BY": "Producido por"
+  },
+  "COOKIES": {
+    "POLICIES": {
+      "TITLE": "Política de Cookies",
+      "DESCRIPTION_1": "Esta Política de cookies es parte integrante del Aviso Legal y la Política de Privacidad de www.premiosesland.com (en adelante, Sitio Web), titularidad de UBIQ S.L.U (en adelante, UBIQ) con domicilio social en la calle Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany, y responsable de las Cookies y del tratamiento de datos personales obtenidos a través de cookies propias y de terceros que se usan en este Sitio Web.",
+      "DESCRIPTION_2": "Este Sitio Web utiliza cookies de terceros en concreto cookies analíticas de Google Analytics para analizar la actividad que realizan los usuarios cuando visitan la web con fines estadísticos.",
+      "DESCRIPTION_3": "Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias en el panel de configuración de cookies. En cualquier momento podrás revocar el consentimiento o modificar tus preferencias de configuración de cookies accediendo nuevamente al panel de configuración. Asimismo, puedes evitar la descarga de cookies o eliminar las instaladas a través de la configuración de tu navegador, evitando que las cookies se almacenen en tu dispositivo. Es muy importante que leas la presente política de cookies.",
+      "DESCRIPTION_4": "Te informamos de la posibilidad de que el rechazo y desactivación de las cookies puede afectar o dificultar la navegación o la prestación de los servicios ofrecidos en este Sitio Web."
+    },
+    "WHAT_IS": {
+      "TITLE": "¿Qué son las cookies?",
+      "DESCRIPTION_1": "Las cookies son identificadores alfanuméricos que contienen información que se instala en el dispositivo del Usuario y se descargan en el navegador Web del Usuario cuando éste visita y accede a una página web. Su finalidad principal es identificar y reconocer de forma unívoca el dispositivo del Usuario cada vez que accede al Sitio Web, además de mejorar la calidad y ofrecer un mejor uso del Sitio Web.",
+      "DESCRIPTION_2": "Se trata de pequeños archivos de texto que quedan almacenados en el disco duro del ordenador y que sirven para identificar al Usuario cuando se conecta nuevamente al sitio web. Su objetivo es registrar la visita del Usuario y guardar cierta información. Su uso es común y frecuente en la web ya que permite a las páginas funcionar de manera más eficiente y conseguir una mayor personalización y análisis sobre el comportamiento del Usuario."
+    },
+    "TYPES": {
+      "TITLE": "¿Qué tipos de cookies existen?",
+      "DESCRIPTION_1_TITLE": "1.- Según la entidad que las gestione:",
+      "DESCRIPTION_1": "Las cookies propias son aquellas que se instalan en el terminal del Usuario desde el dominio gestionado por el responsable de la Web y las cookies de terceros son aquellas que se instalan en el terminal del Usuario desde un dominio gestionado por terceros que tratan los datos obtenidos a través de dichas cookies.",
+      "DESCRIPTION_2_TITLE": "2.- Según el plazo de tiempo que permanezcan activas:",
+      "DESCRIPTION_2": "Las cookies de sesión son aquellas que permanecen activadas y recaban datos mientras el usuario accede a una web y desaparecen al terminar la sesión, y las cookies permanentes son aquellas que siguen activas y de las que se recaba información durante un periodo de tiempo definido por el responsable de la cookie o hasta la su desactivación o eliminación por parte del Usuario.",
+      "DESCRIPTION_3_TITLE": "3.- Cookies técnicas:",
+      "DESCRIPTION_3": "Son aquellas que permiten al Usuario navegar a través una página web y utilizar las diferentes opciones o servicios que se ofrecen, como, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, realizar una solicitud de inscripción, utilizar elementos de seguridad durante la navegación, etc. Al ser necesarias para el funcionamiento de la web, estas cookies estarán activadas y no podrán rechazarse.",
+      "DESCRIPTION_4_TITLE": "4.- Cookies de rendimiento u operativas:",
+      "DESCRIPTION_4": "Este tipo de Cookie recuerda sus preferencias en la navegación por la Web por lo que no tiene que volver a configurar el servicio cada vez que usted visita la Web. A modo de ejemplo, en esta tipología se incluyen: Ajustes de volumen de reproductores de vídeo o sonido. Las velocidades de transmisión de vídeo que sean compatibles con su navegador. Estas cookies pueden desactivarse por el Usuario, si bien ello puede afectar el buen funcionamiento de los servicios de la Web.",
+      "DESCRIPTION_5_TITLE": "5.- Cookies analíticas o de medición:",
+      "DESCRIPTION_5": "Son aquellas que permiten realizar un seguimiento y análisis del comportamiento de los Usuarios de la Web con la finalidad de obtener datos estadísticos y mejorar el funcionamiento de la Web. Cada vez que un Usuario visita una Web, una herramienta de un proveedor externo genera una cookie analítica en el ordenador del Usuario.",
+      "DESCRIPTION_6_TITLE": "6.- Cookies de publicidad:",
+      "DESCRIPTION_6": "Este tipo de cookies permiten obtener información sobre la duración o frecuencia de visualización de posiciones publicitarias, la interacción con las mismas, o los patrones de navegación y/o comportamientos del Usuario ya que ayudan a conformar un perfil de interés publicitario. De este modo, permiten ofrecer publicidad afín a los intereses del Usuario."
+    },
+    "BLOCK": {
+      "TITLE": "RECHAZAR, CONFIGURAR, DESHABILITAR O BLOQUEAR LAS COOKIES:",
+      "DESCRIPTION_1": "Bien en el banner o en el panel de configuración de cookies -siempre activo y accesible- el Usuario tiene la posibilidad de aceptar o rechazar las cookies, así como configurar sus preferencias de aquellas cookies cuyo tratamiento requiera del consentimiento del Usuario.",
+      "DESCRIPTION_2": "El Usuario podrá revocar el consentimiento inicialmente otorgado o modificar sus preferencias, en cualquier momento accediendo al panel de configuración.",
+      "DESCRIPTION_3": "Asimismo, el Usuario puede bloquear y eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de su navegador.",
+      "DESCRIPTION_4": "Se pueden configurar los diferentes navegadores para avisar al Usuario de la recepción de cookies y, si se desea, impedir su instalación en el equipo. Asimismo, el Usuario puede revisar en su navegador qué cookies tiene instaladas y cuál es el plazo de caducidad de las mismas, pudiendo eliminarlas. Puede encontrar información sobre cómo hacerlo, en relación con los navegadores más comunes, en los enlaces que se relacionan a continuación:",
+      "DESCRIPTION_5": "Chrome:",
+      "DESCRIPTION_5_URL": "https://support.google.com/chrome/answer/95647?hl=es",
+      "DESCRIPTION_6": "Para más información sobre la administración de las cookies en Internet Explorer:",
+      "DESCRIPTION_6_URL": "http://windows.microsoft.com/es-es/windows-vista/cookies-frequently-asked-questions",
+      "DESCRIPTION_7": "Para más información sobre la administración de las cookies en Mozilla Firefox:",
+      "DESCRIPTION_7_URL": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias",
+      "DESCRIPTION_8": "Para más información sobre la administración de las cookies en Safari:",
+      "DESCRIPTION_8_URL": "http://www.apple.com/es/privacy/use-of-cookies",
+      "DESCRIPTION_9": "Para más información sobre la administración de las cookies en Opera:",
+      "DESCRIPTION_9_URL": "http://help.opera.com/Windows/11.50/es-ES/cookies.html",
+      "DESCRIPTION_10": "Si desea dejar de ser seguido por Google Analytics visite:",
+      "DESCRIPTION_10_URL": "http://tools.google.com/dlpage/gaoptout",
+      "DESCRIPTION_11": "Chrome:"
+    },
+    "MORE_INFO": {
+      "TITLE": "Para saber más sobre las cookies",
+      "DESCRIPTION_1": "Puede obtener más información sobre la publicidad online basada en el comportamiento y la privacidad online en el siguiente enlace:",
+      "DESCRIPTION_1_URL": "http://www.youronlinechoices.com/es",
+      "DESCRIPTION_2": "Protección de datos de Google Analytics",
+      "DESCRIPTION_2_URL": "http://www.google.com/analytics/learn/privacy.html",
+      "DESCRIPTION_3": "Cómo usa Google Analytics las cookies:",
+      "DESCRIPTION_3_URL": "https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=es#analyticsjs"
+    },
+    "THIRD_PARTY": {
+      "TITLE": "Terceros y Transferencias Internacionales",
+      "DESCRIPTION": "Puede obtener información sobre el tratamiento realizado por terceros y posibles transferencias de datos a otros países que realicen estos terceros identificados en esta política, en los enlaces que se facilitan en la presente política de cookies. Los diferentes mecanismos de regularización de las transferencias internacionales, en el caso de existir, serán informados por dichos terceros."
+    },
+    "UPDATES": {
+      "TITLE": "Actualizaciones y cambios en la política de cookies",
+      "DESCRIPTION": "FAN CONTENT pueden modificar esta Política de Cookies en función de exigencias legislativas, reglamentarias, o con la finalidad de adaptar dicha política a las instrucciones dictadas por la Agencia Española de Protección de Datos y por el Comité Europeo de Protección de Datos, por ello se aconseja a los Usuarios que la visiten periódicamente.",
+      "DATE": "Fecha de la última actualización: 12 del 12 de 2023."
+    },
+    "SITE_COOKIES": {
+      "TITLE": "¿Qué cookies utiliza este Sitio WEB?",
+      "THEAD_NAME": "Nombre",
+      "THEAD_CADUCITY": "Caducidad",
+      "THEAD_PROVIDER": "Proveedor",
+      "THEAD_FINALITY": "Finalidad",
+      "ANALYTICS": [
+        {
+          "NAME": "_ga",
+          "EXPIRE": "2 años",
+          "PROVIDER": {
+            "NAME": "Google",
+            "URL": "https://google.com/"
+          },
+          "OBJECTIVE": "Se usa para distinguir a los usuarios.",
+          "OBJECTIVE_URL": ""
+        },
+        {
+          "NAME": "_gid",
+          "EXPIRE": "24 horas",
+          "PROVIDER": {
+            "NAME": "Google",
+            "URL": "https://google.com/"
+          },
+          "OBJECTIVE": "Se usa para distinguir a los usuarios.",
+          "OBJECTIVE_URL": ""
+        },
+        {
+          "NAME": "_ga_J8PJQBXG7J",
+          "EXPIRE": "2 años",
+          "PROVIDER": {
+            "NAME": "Google",
+            "URL": "https://google.com/"
+          },
+          "OBJECTIVE": "Se usa para mantener el estado de la sesión.",
+          "OBJECTIVE_URL": ""
+        },
+        {
+          "NAME": "_gac_gb_J8PJQBXG7J",
+          "EXPIRE": "90 días",
+          "PROVIDER": {
+            "NAME": "Google",
+            "URL": "https://google.com/"
+          },
+          "OBJECTIVE": "Incluye información relacionada con la campaña. Si has vinculado tus cuentas de Google Analytics y Google Ads, las etiquetas de conversión en sitio web de Google Ads leerán esta cookie, a menos que la inhabilites",
+          "OBJECTIVE_URL": "https://support.google.com/google-ads/answer/7521212?hl=es"
+        }
+      ]
+    }
   }
 }
