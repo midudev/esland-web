@@ -1,34 +1,37 @@
 ---
-import { getI18N } from '@/i18n/'
-import Button from './Button.astro'
+import { getI18N } from "@/i18n/"
+import Button from "./Button.astro"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<div class='relative h-[80vh] w-full max-w-[100vw] md:aspect-video md:h-full'>
+<div class="relative h-[80vh] w-full max-w-[100vw] md:aspect-video md:h-full">
   <div
-    class='absolute left-1/2 right-0 top-14 z-10 m-auto flex -translate-x-1/2 flex-col items-center'
+    class="absolute left-1/2 right-0 top-14 z-10 m-auto flex -translate-x-1/2 flex-col items-center"
   >
     <img
-      class='block aspect-[343/243] w-full'
+      class="block aspect-[343/243] w-full"
       alt={i18n.VIDEO_ALT}
-      src='/logo-home.svg'
+      src="/logo-home.svg"
     />
-    <Button url='https://www.youtube.com/watch?v=1YmpPrqKP-g'>
+    <Button
+      class="animate-fade-up"
+      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
+    >
       {i18n.VIDEO_BUTTON}
     </Button>
   </div>
 
   <video
-    class='cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out'
-    src='/video.webm'
+    class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
+    src="/video.webm"
     autoplay
     loop
     muted></video>
   <video
-    class='absolute -bottom-48 -z-40 blur-3xl'
-    src='/video.webm'
+    class="absolute -bottom-48 -z-40 blur-3xl"
+    src="/video.webm"
     autoplay
     loop
     muted></video>
