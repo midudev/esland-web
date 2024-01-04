@@ -6,20 +6,23 @@ import "photoswipe/style.css"
   {
     Array.from({ length: 9 }).map((_, i) => (
       <a
-        class="group rounded-xl hover:scale-105 transition-all relative"
+        class="group rounded-xl hover:scale-105 transition-all relative aspect-square"
         href={`/archivo-page/first-edition/gallery/img-${i + 1}.jpg`}
         target="_blank"
+        data-cropped="true"
+        data-pswp-width="1152"
+        data-pswp-height="767"
       >
         <img
-          class="blur-lg absolute inset-0 transition group-hover:contrast-150 opacity-70 -z-10"
+          class="rounded-xl aspect-square object-cover"
           loading="lazy"
-          src={`/archivo-page/first-edition/gallery/img-${i + 1}.webp`}
+          src={`/archivo-page/first-edition/gallery/img-${i + 1}-thumb.webp`}
           alt=""
         />
         <img
-          class="rounded-xl"
+          class="blur-lg absolute inset-0 transition group-hover:contrast-150 opacity-70 -z-10 object-cover"
           loading="lazy"
-          src={`/archivo-page/first-edition/gallery/img-${i + 1}.webp`}
+          src={`/archivo-page/first-edition/gallery/img-${i + 1}-thumb.webp`}
           alt=""
         />
       </a>
