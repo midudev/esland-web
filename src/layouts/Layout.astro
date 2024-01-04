@@ -1,6 +1,7 @@
 ---
-import Header from '@/components/Header.astro'
-import '@fontsource-variable/onest'
+import { ViewTransitions } from "astro:transitions"
+import Header from "@/components/Header.astro"
+import "@fontsource-variable/onest"
 
 interface Props {
   description: string
@@ -14,70 +15,77 @@ const { currentLocale } = Astro
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content={description} />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='robots' content='nofollow, noindex' />
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="nofollow, noindex" />
     <title>{title}</title>
+    <link
+      rel="preload"
+      href="/logo.svg"
+      as="image"
+      type="image/svg+xml"
+      crossorigin
+      slot="preload"
+    />
     <slot name="preload" />
+    <ViewTransitions />
   </head>
   <body>
     <Header />
     <slot />
-  </body>
-</html>
-
-<style is:global>
-  :root {
-    color-scheme: dark;
-  }
-
-  html {
-    font-family: 'Onest Variable', system-ui, sans-serif;
-    background: #151a36;
-  }
-
-  p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.4;
-    margin-bottom: 1em;
-    font-weight: 100;
-    font-size: 1em;
-    letter-spacing: 0.5px;
-  }
-
-  p strong {
-    color: white;
-    font-weight: 700;
-  }
-
-  .text__glowing {
-    transition: text-shadow 0.3s ease;
-  }
-
-  .text__glowing:hover {
-    text-shadow:
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #fff,
-      0 0 80px #fff,
-      0 0 120px #fff;
-  }
-
-  #header-nav {
-    animation: blur linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-  }
-
-  @keyframes blur {
-    to {
-      box-shadow:
-        0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-        0px 0px 0 1px rgba(0, 0, 0, 0.3);
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
+  </body><style is:global>
+    :root {
+      color-scheme: dark;
     }
-  }
-</style>
+
+    html {
+      font-family: "Onest Variable", system-ui, sans-serif;
+      background: #151a36;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+      margin-bottom: 1em;
+      font-weight: 100;
+      font-size: 1em;
+      letter-spacing: 0.5px;
+    }
+
+    p strong {
+      color: white;
+      font-weight: 700;
+    }
+
+    .text__glowing {
+      transition: text-shadow 0.3s ease;
+    }
+
+    .text__glowing:hover {
+      text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff,
+        0 0 80px #fff,
+        0 0 120px #fff;
+    }
+
+    #header-nav {
+      animation: blur linear both;
+      animation-timeline: scroll();
+      animation-range: 0 500px;
+    }
+
+    @keyframes blur {
+      to {
+        box-shadow:
+          0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+          0px 0px 0 1px rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+      }
+    }
+  </style>
+</html>
