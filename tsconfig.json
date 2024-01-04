@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "/Users/midudev/Dev/esland-web",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
