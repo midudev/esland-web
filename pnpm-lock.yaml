@@ -9,7 +9,7 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(typescript@5.3.3)
   '@astrojs/preact':
-    specifier: ^3.1.0
+    specifier: 3.1.0
     version: 3.1.0(@babel/core@7.23.6)(preact@10.19.3)(vite@5.0.10)
   '@astrojs/tailwind':
     specifier: 5.1.0
@@ -27,7 +27,7 @@ dependencies:
     specifier: 4.1.0
     version: 4.1.0(typescript@5.3.3)
   preact:
-    specifier: ^10.19.3
+    specifier: 10.19.3
     version: 10.19.3
   tailwindcss:
     specifier: 3.4.0
