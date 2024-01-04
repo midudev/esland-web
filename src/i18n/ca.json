@@ -167,5 +167,9 @@
         }
       ]
     }
+  },
+  "INFO": {
+    "TITLE_HERO_1": "Els premis",
+    "TITLE_HERO_2": "ESLAND"
   }
 }

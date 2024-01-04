@@ -9,7 +9,10 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title="Info" description="Info">
+<Layout
+  title="Acerca de los premios ESLAND"
+  description="Los Premios ESLAND son una iniciativa privada promovida por el célebre streamer TheGrefg y buscan apoyar y reconocer la creación de contenido en el ámbito hispanohablante."
+>
   <HeroContainer img="/info-background.webp">
     <h1 class="text-6xl uppercase font-tomaso tracking tracking-widest">
       {i18n.INFO_TITLE}
