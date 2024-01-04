@@ -15,7 +15,7 @@ for await (const file of glob.scan('.')) {
   const dir = dirname(file);
   const newFilePath = join(dir, newFileName) + '.webp';
   const convert = sharp(file)
-    .trim({ threshold: 0 })
+    // .trim({ threshold: 0 }) // This removes transparent pixels
     .webp({
       lossless: true,
       quality: 100
