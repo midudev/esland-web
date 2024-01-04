@@ -5,10 +5,8 @@ import { rm } from 'node:fs/promises';
 
 const glob = new Glob('public/**/*.{jpg,jpeg,png}');
 
-const shouldRemove = (str: string) => str === "remove" || str === "true" || str === "1" || str === "on";
-const remove = shouldRemove(process.argv[2]);
-
-console.log(process.argv, { remove })
+const shouldRemove = (str: string) => str.startsWith('rm');
+const remove = shouldRemove(process.argv[2].toLowerCase());
 
 for await (const file of glob.scan('.')) {
   console.info(`Converting ${file}`);
