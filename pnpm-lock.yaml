@@ -10,10 +10,10 @@ dependencies:
     version: 0.3.4(typescript@5.3.3)
   '@astrojs/tailwind':
     specifier: 5.1.0
-    version: 5.1.0(astro@4.0.8)(tailwindcss@3.4.0)
+    version: 5.1.0(astro@4.1.0)(tailwindcss@3.4.0)
   '@astrojs/vercel':
-    specifier: 6.1.1
-    version: 6.1.1(astro@4.0.8)
+    specifier: 6.1.2
+    version: 6.1.2(astro@4.1.0)
   '@fontsource-variable/onest':
     specifier: 5.0.2
     version: 5.0.2
@@ -21,8 +21,8 @@ dependencies:
     specifier: 1.5.0
     version: 1.5.0
   astro:
-    specifier: 4.0.8
-    version: 4.0.8(typescript@5.3.3)
+    specifier: 4.1.0
+    version: 4.1.0(typescript@5.3.3)
   tailwindcss:
     specifier: 3.4.0
     version: 3.4.0
@@ -136,13 +136,13 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/tailwind@5.1.0(astro@4.0.8)(tailwindcss@3.4.0):
+  /@astrojs/tailwind@5.1.0(astro@4.1.0)(tailwindcss@3.4.0):
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
     peerDependencies:
       astro: ^3.0.0 || ^4.0.0
       tailwindcss: ^3.0.24
     dependencies:
-      astro: 4.0.8(typescript@5.3.3)
+      astro: 4.1.0(typescript@5.3.3)
       autoprefixer: 10.4.16(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -166,15 +166,15 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@6.1.1(astro@4.0.8):
-    resolution: {integrity: sha512-9y+rCO6LBAKP66/N2yogufTqgvy5cW4LDTFwJj1/DlZtKL+qIhEvp6GpkEbihd0BZdIkBxR/4OhMJBKMDx6ppQ==}
+  /@astrojs/vercel@6.1.2(astro@4.1.0):
+    resolution: {integrity: sha512-8EAPIYNU4y5gReDfX3J7Nq/bl9zdqo8wIRrzedF9bUoeqr9YLQS+a59m9yseTA+poETbUjozIArEW8wexTWlaQ==}
     peerDependencies:
       astro: ^4.0.2
     dependencies:
       '@astrojs/internal-helpers': 0.2.1
       '@vercel/analytics': 1.1.1
       '@vercel/nft': 0.24.4
-      astro: 4.0.8(typescript@5.3.3)
+      astro: 4.1.0(typescript@5.3.3)
       esbuild: 0.19.10
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -1283,12 +1283,18 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: false
 
+  /aria-query@5.3.0:
+    resolution: {integrity: sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==}
+    dependencies:
+      dequal: 2.0.3
+    dev: false
+
   /array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: false
 
-  /astro@4.0.8(typescript@5.3.3):
-    resolution: {integrity: sha512-LwbYUfdrfys5mtI6cA5V8UvPRUVVTRQ68uF1ylrEge6BkPcHHJ7qCYLNdjnNPxZDR9bWi1awILJESB6j+w0P4w==}
+  /astro@4.1.0(typescript@5.3.3):
+    resolution: {integrity: sha512-xbLWqvMn2JFyv7FpzHiXFn17bRS0P/b4cdEPXMMZOpBI9V8ZC33o6Xs+c59/pYSZpYiNd1HTg778XT5MhcpyKw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -1304,6 +1310,8 @@ packages:
       '@babel/types': 7.23.6
       '@types/babel__core': 7.20.5
       acorn: 8.11.2
+      aria-query: 5.3.0
+      axobject-query: 4.0.0
       boxen: 7.1.1
       chokidar: 3.5.3
       ci-info: 4.0.0
@@ -1385,6 +1393,12 @@ packages:
       picocolors: 1.0.0
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
+    dev: false
+
+  /axobject-query@4.0.0:
+    resolution: {integrity: sha512-+60uv1hiVFhHZeO+Lz0RYzsVHy5Wr1ayX0mwda9KPDVLNJgZ1T9Ny7VmFbLDzxsH0D87I86vgj3gFrjTJUYznw==}
+    dependencies:
+      dequal: 2.0.3
     dev: false
 
   /bail@2.0.2:
