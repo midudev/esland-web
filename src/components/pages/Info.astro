@@ -1,54 +1,22 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import HeroContainer from "@/components/HeroContainer.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<Layout title="Info" description="Info">
-  <HeroContainer img="/info-background.webp">
-    <h1 class="text-6xl uppercase mb-20 font-tomaso tracking-widest">
-      Los premios ESLAND
+<Layout
+  title="Acerca de los premios ESLAND"
+  description="Los Premios ESLAND son una iniciativa privada promovida por el célebre streamer TheGrefg y buscan apoyar y reconocer la creación de contenido en el ámbito hispanohablante."
+>
+  <HeroContainer img="/hero-info.webp">
+    <h1
+      class="text-5xl text-center leading-relaxed font-medium mb-20 font-tomaso tracking-widest"
+    >
+      {i18n.INFO.TITLE_HERO_1}<br />{i18n.INFO.TITLE_HERO_2}
     </h1>
   </HeroContainer>
-  <section
-    class="flex justify-center gap-2 bg-gradient-to-r mt-4 from-blue-500 via-blue-600/10 to-transparent p-6"
-  >
-    <img src="/info-img1.webp" alt="" class="aspect-video object-cover" />
-    <div class="p-2 text-white">
-      <p class="text-2xl font-semibold">
-        Un reconocimiento único para creadores, creadoras y comunidades que
-        buscan su lugar en el mundo del entretenimiento en directo.
-      </p><p class="text-current">
-        Los Premios ESLAND son una iniciativa privada promovida por el célebre
-        streamer TheGrefg y buscan apoyar y reconocer la creación de contenido
-        en el ámbito hispanohablante.
-      </p><p class="text-current">
-        ESLAND es el acrónimo de ESPAÑA, LATINOAMÉRICA Y ANDORRA, tres
-        localizaciones geográficas que comparten el idioma que las une más allá
-        de cualquier frontera, ya sea física o virtual.
-      </p>
-    </div>
-  </section>
-  <section
-    class="flex flex-row-reverse justify-center gap-2 bg-gradient-to-r mt-4 from-blue-500 via-blue-600/10 to-transparent p-10"
-  >
-    <img
-      src="/info-img4.webp"
-      alt=""
-      class="aspect-square object-cover w-[500px]"
-    />
-    <div class="p-2 text-white">
-      <p class="text-2xl font-semibold">
-        Un reconocimiento único para creadores, creadoras y comunidades que
-        buscan su lugar en el mundo del entretenimiento en directo.
-      </p><p class="text-current">
-        Los Premios ESLAND son una iniciativa privada promovida por el célebre
-        streamer TheGrefg y buscan apoyar y reconocer la creación de contenido
-        en el ámbito hispanohablante.
-      </p><p class="text-current">
-        ESLAND es el acrónimo de ESPAÑA, LATINOAMÉRICA Y ANDORRA, tres
-        localizaciones geográficas que comparten el idioma que las une más allá
-        de cualquier frontera, ya sea física o virtual.
-      </p>
-    </div>
-  </section>
+  <main></main>
 </Layout>
