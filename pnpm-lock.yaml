@@ -27,7 +27,7 @@ dependencies:
     specifier: 4.1.0
     version: 4.1.0(typescript@5.3.3)
   photoswipe:
-    specifier: ^5.4.3
+    specifier: 5.4.3
     version: 5.4.3
   preact:
     specifier: 10.19.3
