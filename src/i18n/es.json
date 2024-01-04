@@ -155,5 +155,9 @@
         }
       ]
     }
+  },
+  "INFO": {
+    "TITLE_HERO_1": "Los premios",
+    "TITLE_HERO_2": "ESLAND"
   }
 }
