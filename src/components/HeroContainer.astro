@@ -10,4 +10,9 @@ const { img } = Astro.props
   style={`background-image: url('${img}');`}
   class="bg-no-repeat bg-cover cp-v relative h-[90vh] w-full max-w-[100vw]"
 >
+  <div
+    class="absolute inset-0 m-auto w-full h-full flex justify-center flex-col items-center"
+  >
+    <slot />
+  </div>
 </div>

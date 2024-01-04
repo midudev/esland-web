@@ -1,8 +1,29 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import HeroContainer from "@/components/HeroContainer.astro"
+import Button from "../Button.astro"
+
+import { getI18N } from "@/i18n"
+import Numeros from "../Numeros.astro"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 ---
 
 <Layout title="Archivo" description="Archivo">
-  <HeroContainer img="/archivo-background.webp" />
+  <HeroContainer img="/archivo-background.webp">
+    <h1 class="text-6xl uppercase mb-20 font-tomaso tracking-widest">
+      Ediciones anteriores
+    </h1>
+
+    <Button
+      class="animate-fade-up"
+      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
+    >
+      REVIVE LA ÚLTIMA GALA
+    </Button>
+  </HeroContainer>
+  <main>
+    <Numeros />
+  </main>
 </Layout>
