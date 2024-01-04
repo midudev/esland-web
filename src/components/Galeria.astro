@@ -1,0 +1,32 @@
+---
+import "photoswipe/style.css"
+---
+
+<div class="grid grid-cols-3 max-w-6xl gap-6 mx-auto py-20" id="gallery">
+  {
+    Array.from({ length: 9 }).map((_, i) => (
+      <a
+        class="rounded-xl shadow-xl shadow-blue-400/10 hover:shadow-2xl hover:shadow-blue-500/75 overflow-hidden hover:scale-105 transition-all"
+        href={`/archivo-page/first-edition/gallery/img-${i + 1}.jpg`}
+        target="_blank"
+      >
+        <img
+          src={`/archivo-page/first-edition/gallery/img-${i + 1}.webp`}
+          alt=""
+        />
+      </a>
+    ))
+  }
+</div>
+
+<script>
+  import PhotoSwipeLightbox from "photoswipe/lightbox"
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: "#gallery",
+    children: "a",
+    pswpModule: () => import("photoswipe"),
+  })
+
+  lightbox.init()
+</script>

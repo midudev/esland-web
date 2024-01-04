@@ -9,7 +9,7 @@ dependencies:
     specifier: 0.3.4
     version: 0.3.4(typescript@5.3.3)
   '@astrojs/preact':
-    specifier: ^3.1.0
+    specifier: 3.1.0
     version: 3.1.0(@babel/core@7.23.6)(preact@10.19.3)(vite@5.0.10)
   '@astrojs/tailwind':
     specifier: 5.1.0
@@ -26,8 +26,11 @@ dependencies:
   astro:
     specifier: 4.1.0
     version: 4.1.0(typescript@5.3.3)
+  photoswipe:
+    specifier: ^5.4.3
+    version: 5.4.3
   preact:
-    specifier: ^10.19.3
+    specifier: 10.19.3
     version: 10.19.3
   tailwindcss:
     specifier: 3.4.0
@@ -3351,6 +3354,11 @@ packages:
 
   /path-to-regexp@6.2.1:
     resolution: {integrity: sha512-JLyh7xT1kizaEvcaXOQwOc2/Yhw6KZOvPf1S8401UyLk86CU79LN3vl7ztXGm/pZ+YjoyAJ4rxmHwbkBXJX+yw==}
+    dev: false
+
+  /photoswipe@5.4.3:
+    resolution: {integrity: sha512-9UC6oJBK4oXFZ5HcdlcvGkfEHsVrmE4csUdCQhEjHYb3PvPLO3PG7UhnPuOgjxwmhq5s17Un5NUdum01LgBDng==}
+    engines: {node: '>= 0.12.0'}
     dev: false
 
   /picocolors@1.0.0:
