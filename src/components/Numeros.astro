@@ -3,27 +3,39 @@ import { CountUp } from "./CountUp"
 ---
 
 <section class="max-w-6xl mx-auto py-20 px-20">
-  <h2 class="text-6xl font-tomaso text-center text-balance">
+  <h2
+    class="text-4xl lg:text-6xl font-tomaso text-center text-balance mb-10 lg:mb-20"
+  >
     Los ESLAND en números
   </h2>
-  <div>
-    <p>
-      <span class="text-9xl font-bold">
-        <CountUp initial={0} final={227} />
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-10">
+    <div class="flex flex-col justify-center items-center">
+      <span class="number text-7xl font-bold tabular-nums tracking-tighter">
+        <CountUp client:visible initial={0} final={69.9} decimals={1} />M
       </span>
-    </p>
-    <p>noticias en prensa</p>
-  </div>
-  <div>
-    <p>
-      +<span id="#num2">69.9</span>M
-    </p>
-    <p>de visualizaciones</p>
-  </div>
-  <div>
-    <p>
-      +<span id="#num3">3.2</span>M€
-    </p>
-    <p>en medios ganados</p>
+      <span class="uppercase opacity-70">de visualizaciones</span>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <span class="number text-7xl font-bold tabular-nums tracking-tighter">
+        <CountUp client:visible initial={0} final={227} />
+      </span>
+      <span class="uppercase opacity-70">noticias en prensa</span>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+      <span class="number text-7xl font-bold tabular-nums tracking-tighter">
+        <CountUp client:visible initial={0} final={3.2} decimals={1} />M€
+      </span>
+      <span class="uppercase opacity-70">en medios ganados</span>
+    </div>
   </div>
 </section>
+
+<style>
+  .number {
+    text-shadow:
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 20px rgba(255, 255, 255, 0.4),
+      0 0 22px rgba(255, 255, 255, 0.2),
+      0 0 40px rgba(66, 220, 219, 0.1);
+  }
+</style>
