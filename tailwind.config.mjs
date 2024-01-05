@@ -6,10 +6,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        tomaso: ['Tomaso', 'sans-serif'],
-        jura: ['Jura', 'sans-serif']
-      }
-    }
+        tomaso: ["Tomaso", "sans-serif"],
+        jura: ["Jura", "sans-serif"],
+      },
+      colors: {
+        primary: "rgb(253 224 71);",
+      },
+    },
   },
   plugins: [
     animations,
