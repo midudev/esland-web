@@ -85,7 +85,6 @@ for (const { edition: e, maxPhotos, info } of editionsInfo) {
         lossless: true
       }).resize(WIDTH, HEIGHT, {
         fit: 'cover',
-        position: sharp.strategy.entropy,
       }).toFile(thumbnailFilePath);
     }
 
