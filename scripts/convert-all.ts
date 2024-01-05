@@ -5,7 +5,7 @@ import { rm } from 'node:fs/promises';
 
 const glob = new Glob('public/**/*.{jpg,jpeg,png}');
 
-const replaceExtWithDot = (newExtWithDot: string, { inFilePath }: { inFilePath: string }) => join(dirname(inFilePath), basename(extname(inFilePath))) + newExtWithDot;
+const replaceExtWithDot = (newExtWithDot: string, { inFilePath }: { inFilePath: string }) => join(dirname(inFilePath), basename(inFilePath, extname(inFilePath))) + newExtWithDot;
 const shouldRemove = (str: string = '') => str.toLowerCase().startsWith('rm');
 const remove = shouldRemove(process.argv[2]?.toLowerCase());
 
