@@ -1,6 +1,8 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import HeroContainer from '@/components/HeroContainer.astro'
+import Footer from '@/components/Footer.astro'
+
 import { getI18N } from '@/i18n'
 
 const { currentLocale } = Astro
@@ -11,12 +13,63 @@ const i18n = getI18N({ currentLocale })
   title="Acerca de los premios ESLAND"
   description="Los Premios ESLAND son una iniciativa privada promovida por el célebre streamer TheGrefg y buscan apoyar y reconocer la creación de contenido en el ámbito hispanohablante."
 >
-  <HeroContainer img="/hero-info.webp">
-    <h1
-      class="text-5xl text-center leading-relaxed font-medium mb-20 font-tomaso tracking-widest"
-    >
-      {i18n.INFO.TITLE_HERO_1}<br />{i18n.INFO.TITLE_HERO_2}
+  <HeroContainer img="/info-background.webp">
+    <h1 class="text-6xl uppercase font-tomaso tracking tracking-widest">
+      {i18n.INFO_TITLE}
     </h1>
   </HeroContainer>
-  <main></main>
+  <main>
+    <section
+      class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+    >
+      <div class="md:w-1/2 space-y-4">
+        <h1
+          class="mx-auto mb-10 text-wrap text-center text-4xl font-semibold tracking-wide"
+        >
+          {i18n.INFO_TITLE_1}
+        </h1>
+        <p>{i18n.INFO_CONTENT_1_1}</p>
+        <p>{i18n.INFO_CONTENT_1_2}</p>
+      </div>
+      <div class="mt-6 md:mt-0 md:w-1/2">
+        <img
+          class="object-cover w-full h-full rounded-md"
+          height={500}
+          src="/theater.webp"
+          style={{
+            aspectRatio: '812/556',
+            objectFit: 'cover'
+          }}
+          width={500}
+        />
+      </div>
+    </section>
+
+    <section
+      class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+    >
+      <div class="mt-6 md:mt-0 md:w-1/2">
+        <img
+          class="object-cover w-full h-full rounded-md"
+          height={556}
+          src="/trophies.webp"
+          style={{
+            aspectRatio: '812/556',
+            objectFit: 'cover'
+          }}
+          width={812}
+        />
+      </div>
+      <div class="md:w-1/2 space-y-4">
+        <h1
+          class="mx-auto mb-10 text-wrap text-center text-4xl font-semibold tracking-wide"
+        >
+          {i18n.INFO_TITLE_2}
+        </h1>
+        <p set:html={i18n.INFO_CONTENT_2_1} />
+        <p set:html={i18n.INFO_CONTENT_2_2} />
+      </div>
+    </section>
+    <Footer />
+  </main>
 </Layout>
