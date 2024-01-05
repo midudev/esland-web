@@ -1,6 +1,6 @@
 import { getAwardImageURL, getImageURL, getMobileAwardImageURL, getThumbURL } from "./src/all-images-urls-functions";
 import editionsInfo from '../public/archivo-page/editions-info.json';
-import { join, dirname, extname, basename } from 'node:path';
+import { join } from 'node:path';
 import { mkdir } from 'node:fs/promises';
 import sharp from 'sharp';
 
