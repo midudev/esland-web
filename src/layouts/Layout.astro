@@ -1,7 +1,8 @@
 ---
-import { ViewTransitions } from "astro:transitions"
-import Header from "@/components/Header.astro"
-import "@fontsource-variable/onest"
+import { ViewTransitions } from 'astro:transitions'
+import Header from '@/components/Header.astro'
+import '@fontsource-variable/onest'
+import LanguagePicker from '@/components/LanguagePicker.astro'
 
 interface Props {
   description: string
@@ -15,51 +16,54 @@ const { currentLocale } = Astro
 <!doctype html>
 <html lang={currentLocale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="robots" content="nofollow, noindex" />
+    <meta charset='UTF-8' />
+    <meta name='description' content={description} />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='robots' content='nofollow, noindex' />
     <title>{title}</title>
     <link
-      rel="preload"
-      href="/logo.svg"
-      as="image"
-      type="image/svg+xml"
+      rel='preload'
+      href='/logo.svg'
+      as='image'
+      type='image/svg+xml'
       crossorigin
     />
     <link
-      rel="preload"
-      href="/fonts/tomaso.woff2"
-      as="font"
-      type="font/woff2"
+      rel='preload'
+      href='/fonts/tomaso.woff2'
+      as='font'
+      type='font/woff2'
       crossorigin
     />
-    <slot name="preload" />
+    <slot name='preload' />
     <ViewTransitions />
   </head>
 
   <body>
     <Header />
     <slot />
+
+    <LanguagePicker />
+
     <style is:global>
       :root {
         color-scheme: dark;
       }
 
       @font-face {
-        font-family: "Tomaso";
+        font-family: 'Tomaso';
         font-style: normal;
         font-weight: normal;
         font-display: swap;
-        src: url("/fonts/tomaso.woff2") format("woff2");
+        src: url('/fonts/tomaso.woff2') format('woff2');
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
           U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
           U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
       html {
-        font-family: "Onest Variable", system-ui, sans-serif;
+        font-family: 'Onest Variable', system-ui, sans-serif;
         background: #151a36;
       }
 

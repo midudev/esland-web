@@ -1,0 +1,71 @@
+---
+import LanguageFlag from '@/components/LanguageFlag.astro'
+import { DEFAULT_LANGUAGE, LANGUAGES, getI18N } from '@/i18n'
+
+const { currentLocale } = Astro
+
+const i18n = getI18N({ currentLocale })
+
+const { flag, language } =
+  Object.values(LANGUAGES).find(({ key }) => key === currentLocale) ||
+  LANGUAGES[DEFAULT_LANGUAGE.name]
+---
+
+<div
+  class='flex justify-center fixed w-36 h-12 bottom-6 right-5 z-50 bg-black/40 rounded-lg shadow-lg border border-neutral-800'
+>
+  <button
+    id='language'
+    type='button'
+    class='flex items-center gap-2 bg-transparent text-gray-300 focus:outline-none'
+    aria-haspopup='true'
+    aria-expanded='true'
+    title={i18n.SELECT_LANG}
+  >
+    <span class='sr-only'>{language}</span>
+    <LanguageFlag language={language} flag={flag} />
+    {language}
+  </button>
+
+  <div
+    role='menu'
+    class='hidden absolute right-0 bottom-14 w-auto bg-black/40 rounded-lg shadow-lg border border-neutral-800'
+    aria-orientation='vertical'
+    aria-labelledby='language'
+  >
+    <div class='flex justify-center flex-col'>
+      {
+        Object.values(LANGUAGES)
+          .filter(({ key }) => key !== currentLocale)
+          .map(({ key, flag, language }) => (
+            <a
+              class='text-gray-300 flex items-center gap-2 hover:bg-[#151a36] w-full px-2 py-1 rounded-lg'
+              href={key === DEFAULT_LANGUAGE.key ? '/' : `/${key}`}
+              role='menuitem'
+              title={language}
+            >
+              <span class='sr-only'>{language}</span>
+              <LanguageFlag language={language} flag={flag} />
+              {language}
+            </a>
+          ))
+      }
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    document.getElementById('language').addEventListener('click', (e) => {
+      e.target.parentNode
+        .querySelector('[role="menu"]')
+        .classList.toggle('hidden')
+    })
+
+    document.querySelectorAll('[role="menuitem"]').forEach((item) => {
+      item.addEventListener('click', () => {
+        document.querySelector('[role="menu"]').classList.toggle('hidden')
+      })
+    })
+  })
+</script>

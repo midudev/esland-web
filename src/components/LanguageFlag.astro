@@ -1,0 +1,17 @@
+---
+interface Props {
+  flag: string
+  language: string
+}
+
+const { flag, language } = Astro.props
+---
+
+<picture>
+  <img
+    src={`/flags/${flag}.svg`}
+    alt={`${language} - ${flag}`}
+    title={language}
+    class='size-10'
+  />
+</picture>
