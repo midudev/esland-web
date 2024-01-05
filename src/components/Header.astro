@@ -17,10 +17,10 @@ const i18n = getI18N({ currentLocale })
 
     <!-- Menú de navegación para pantallas grandes -->
     <nav
-      class="hidden md:flex flex-grow basis-0 w-full gap-x-6 text-lg md:justify-center font-medium"
+      class="hidden md:flex flex-grow basis-0 w-full gap-x-8 text-lg md:justify-center font-medium"
     >
-      <a class="hover:underline" href="/info">{i18n.HEADER_1}</a>
-      <a class="hover:underline" href="/archivo">{i18n.HEADER_2}</a>
+      <a class="text__glowing" href="/info">{i18n.HEADER_1}</a>
+      <a class="text__glowing" href="/archivo">{i18n.HEADER_2}</a>
     </nav>
 
     <!-- Botón de menú para pantallas pequeñas -->
@@ -48,8 +48,8 @@ const i18n = getI18N({ currentLocale })
     id="mobile-menu"
     class="bg-black/80 backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
-    <a class="my-4 hover:underline" href="/info">{i18n.HEADER_1}</a>
-    <a class="my-4 hover:underline" href="/archivo">{i18n.HEADER_2}</a>
+    <a class="my-4 text__glowing" href="/info">{i18n.HEADER_1}</a>
+    <a class="my-4 text__glowing" href="/archivo">{i18n.HEADER_2}</a>
     <Button
       class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
       url="https://www.youtube.com/watch?v=O43x26hiolw"
