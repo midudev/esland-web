@@ -2,7 +2,9 @@
 import "photoswipe/style.css";
 const { edicion } = Astro.props;
 // Ideally maxPhotos should be taken from the json in public/archivo-page/editions-info.json
-const limit = Object.assign({ "1": { maxPhotos: 73 }, "2": { maxPhotos: 104}})[edicion] ?? {}
+const limit =
+  Object.assign({ "1": { maxPhotos: 73 }, "2": { maxPhotos: 104 } })[edicion] ??
+  {};
 const { maxPhotos = 0 } = limit;
 ---
 
@@ -10,7 +12,7 @@ const { maxPhotos = 0 } = limit;
   {
     Array.from({ length: maxPhotos }).map((_, i) => (
       <a
-        class='rounded-xl transition-all relative aspect-square overflow-hidden group/item'
+        class='rounded-xl transition-all relative aspect-square group/item'
         href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
         target='_blank'
         data-cropped='true'
@@ -30,7 +32,7 @@ const { maxPhotos = 0 } = limit;
           alt=''
         />
         <img
-          class='blur-lg absolute inset-0 transition group-hover/item:contrast-150 opacity-70 -z-10 object-cover'
+          class='blur-lg absolute inset-0 transition group-hover/item:contrast-150 group-hover/item:scale-115 opacity-70 -z-10 object-cover'
           loading='lazy'
           src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb.webp`}
           alt=''
