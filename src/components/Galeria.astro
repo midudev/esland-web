@@ -10,7 +10,7 @@ const { maxPhotos = 0 } = limit;
   {
     Array.from({ length: maxPhotos }).map((_, i) => (
       <a
-        class='group rounded-xl hover:scale-105 transition-all relative aspect-square'
+        class='rounded-xl transition-all relative aspect-square overflow-hidden group/item'
         href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
         target='_blank'
         data-cropped='true'
@@ -18,13 +18,19 @@ const { maxPhotos = 0 } = limit;
         data-pswp-height='767'
       >
         <img
-          class='rounded-xl aspect-square object-cover'
+          class='rounded-xl aspect-square object-cover group-hover/item:hidden'
           loading='lazy'
           src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb.webp`}
           alt=''
         />
         <img
-          class='blur-lg absolute inset-0 transition group-hover:contrast-150 opacity-70 -z-10 object-cover'
+          class='absolute inset-0 rounded-xl aspect-square object-cover z-10 transition-all group/transparent-item group-hover/item:scale-115'
+          loading='lazy'
+          src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb-nobg.webp`}
+          alt=''
+        />
+        <img
+          class='blur-lg absolute inset-0 transition group-hover/item:contrast-150 opacity-70 -z-10 object-cover'
           loading='lazy'
           src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb.webp`}
           alt=''
