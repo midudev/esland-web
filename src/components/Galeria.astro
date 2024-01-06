@@ -1,47 +1,61 @@
 ---
-import "photoswipe/style.css";
-const { edicion } = Astro.props;
-// Ideally maxPhotos should be taken from the json in public/archivo-page/editions-info.json
-const limit = Object.assign({ "1": { maxPhotos: 73 }, "2": { maxPhotos: 104}})[edicion] ?? {}
-const { maxPhotos = 0 } = limit;
+import "photoswipe/style.css"
+import editionsInfo from "@/data/editions-info.json"
+const { edicion } = Astro.props
+const edictionIndex = Number(edicion) - 1
+const { maxPhotos = 0 } = editionsInfo[edictionIndex] ?? {}
 ---
 
-<div class='grid lg:grid-cols-3 grid-cols-2 max-w-6xl lg:gap-8 gap-4 lg:mx-auto mx-4 py-20' id='gallery'>
+<masonry-layout
+  gap="24"
+  maxcolwidth="500"
+  class="max-w-7xl lg:mx-auto mx-4 py-20"
+  id="gallery"
+>
   {
     Array.from({ length: maxPhotos }).map((_, i) => (
       <a
-        class='group rounded-xl hover:scale-105 transition-all relative aspect-square'
+        class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
         href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
-        target='_blank'
-        data-cropped='true'
-        data-pswp-width='1152'
-        data-pswp-height='767'
+        target="_blank"
+        data-cropped="true"
+        data-pswp-width="1152"
+        data-pswp-height="767"
       >
         <img
-          class='rounded-xl aspect-square object-cover'
-          loading='lazy'
-          src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb.webp`}
-          alt=''
+          class="rounded-xl object-cover w-full h-auto"
+          loading="lazy"
+          src={`/archivo-page/${edicion}/gallery/thumbnails/img-${i + 1}.webp`}
+          alt="Fotografía de los premios ESLAND"
         />
         <img
-          class='blur-lg absolute inset-0 transition group-hover:contrast-150 opacity-70 -z-10 object-cover'
-          loading='lazy'
-          src={`/archivo-page/${edicion}/gallery/img-${i + 1}-thumb.webp`}
-          alt=''
+          class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
+          loading="lazy"
+          src={`/archivo-page/${edicion}/gallery/thumbnails/img-${i + 1}.webp`}
+          alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
         />
       </a>
     ))
   }
-</div>
+</masonry-layout>
 
 <script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox";
+  import PhotoSwipeLightbox from "photoswipe/lightbox"
+  import "@appnest/masonry-layout"
 
-  const lightbox = new PhotoSwipeLightbox({
-    gallery: "#gallery",
-    children: "a",
-    pswpModule: () => import("photoswipe"),
-  });
+  document.addEventListener("astro:page-load", () => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: "#gallery",
+      children: "a",
+      pswpModule: () => import("photoswipe"),
+    })
 
-  lightbox.init();
+    lightbox.init()
+  })
 </script>
+
+<style is:global>
+  .pswp {
+    --pswp-bg: #00012a;
+  }
+</style>
