@@ -1,9 +1,10 @@
 ---
 import "photoswipe/style.css"
-import editionsInfo from "@/data/editions-info.json"
+import editionsInfo from "@/data/meta-gallery.json"
+
 const { edicion } = Astro.props
 const edictionIndex = Number(edicion) - 1
-const { maxPhotos = 0 } = editionsInfo[edictionIndex] ?? {}
+const photos = editionsInfo[edictionIndex]
 ---
 
 <masonry-layout
@@ -13,14 +14,14 @@ const { maxPhotos = 0 } = editionsInfo[edictionIndex] ?? {}
   id="gallery"
 >
   {
-    Array.from({ length: maxPhotos }).map((_, i) => (
+    photos.map(({ height, width }, i) => (
       <a
         class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
         href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
         target="_blank"
         data-cropped="true"
-        data-pswp-width="1152"
-        data-pswp-height="767"
+        data-pswp-width={width}
+        data-pswp-height={height}
       >
         <img
           class="rounded-xl object-cover w-full h-auto"
