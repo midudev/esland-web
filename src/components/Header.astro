@@ -60,7 +60,7 @@ const i18n = getI18N({ currentLocale })
 </header>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('astro:page-load', () => {
     const menuToggle = document.getElementById("menu-toggle")
     const mobileMenu = document.getElementById("mobile-menu")
     const menuIcon = document.getElementById("menu-icon")
