@@ -8,7 +8,7 @@ const i18n = getI18N({ currentLocale })
 
 <div class="relative h-[80vh] w-full max-w-[100vw] md:aspect-video md:h-full">
   <div
-    class="absolute left-1/2 right-0 top-14 z-10 m-auto flex -translate-x-1/2 flex-col items-center w-full"
+    class="absolute inset-0 h-full justify-center z-10 m-auto flex flex-col items-center w-full"
   >
     <section
       class="animate-fade-up flex justify-center items-center gap-8 flex-col aspect-[343/350] md:aspect-[343/160] 2xl:aspect-[343/260]"
@@ -20,65 +20,68 @@ const i18n = getI18N({ currentLocale })
           class="letter-logo"
           aria-label="A"></span><span>N</span><span>D</span>
       </h1>
-      <p
-        class="text-xl lg:text-2xl text-center text-pretty font-jura uppercase"
-      >
+
+      <p class="subtitle text-xl lg:text-2xl text-center text-pretty font-jura">
         {i18n.HERO_SUBTITLE}
       </p>
+      <Button
+        class="animate-fade-up"
+        url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
+      >
+        {i18n.VIDEO_BUTTON}
+      </Button>
     </section>
-    <Button
-      class="animate-fade-up"
-      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
-    >
-      {i18n.VIDEO_BUTTON}
-    </Button>
+
+    <video
+      class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
+      src="/video.webm"
+      autoplay
+      loop
+      muted></video>
+    <video
+      class="absolute -bottom-48 -z-40 blur-3xl"
+      src="/video.webm"
+      autoplay
+      loop
+      muted></video>
   </div>
 
-  <video
-    class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
-    src="/video.webm"
-    autoplay
-    loop
-    muted></video>
-  <video
-    class="absolute -bottom-48 -z-40 blur-3xl"
-    src="/video.webm"
-    autoplay
-    loop
-    muted></video>
+  <style>
+    @font-face {
+      font-family: "Jura";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("/fonts/jura.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    .subtitle {
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 .letter-logo {
+      background: url("/logo.svg") no-repeat;
+      width: 50px;
+      height: 46px;
+      background-position: center;
+      background-size: contain;
+      scale: 1.2;
+    }
+
+    @media (width >= 768px) {
+      h1 .letter-logo {
+        width: 100px;
+        height: 66px;
+      }
+    }
+
+    @media (width >= 992px) {
+      h1 .letter-logo {
+        height: 96px;
+      }
+    }
+  </style>
 </div>
-
-<style>
-  @font-face {
-    font-family: "Jura";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/jura.woff2") format("woff2");
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
-      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  h1 .letter-logo {
-    background: url("/logo.svg") no-repeat;
-    width: 50px;
-    height: 46px;
-    background-position: center;
-    background-size: contain;
-    scale: 1.2;
-  }
-
-  @media (width >= 768px) {
-    h1 .letter-logo {
-      width: 100px;
-      height: 66px;
-    }
-  }
-
-  @media (width >= 992px) {
-    h1 .letter-logo {
-      height: 96px;
-    }
-  }
-</style>
