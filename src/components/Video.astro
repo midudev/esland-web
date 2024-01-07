@@ -11,7 +11,7 @@ const i18n = getI18N({ currentLocale })
     class="absolute inset-0 h-full justify-center z-10 m-auto flex flex-col items-center w-full"
   >
     <section
-      class="animate-fade-up flex justify-center items-center gap-8 flex-col aspect-[343/350] md:aspect-[343/160] 2xl:aspect-[343/260]"
+      class="absolute z-10 animate-fade-up flex justify-center items-center gap-8 flex-col"
     >
       <h1
         class="flex items-center gap-5 text-4xl md:text-6xl lg:gap-20 lg:text-8xl font-tomaso"
@@ -24,6 +24,7 @@ const i18n = getI18N({ currentLocale })
       <p class="subtitle text-xl lg:text-2xl text-center text-pretty font-jura">
         {i18n.HERO_SUBTITLE}
       </p>
+
       <Button
         class="animate-fade-up"
         url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
