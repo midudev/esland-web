@@ -1,23 +1,23 @@
 ---
-import { getI18N } from '@/i18n/'
+import { getI18N } from "@/i18n/"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<section class='mx-auto w-full max-w-[1400px] p-6 sm:p-20'>
+<section class="mx-auto w-full max-w-[1400px] p-6 sm:p-20">
   <h3
-    class='mx-auto mb-10 text-balance text-center text-xl font-semibold uppercase tracking-wide md:text-4xl'
+    class="mx-auto mb-10 text-balance text-center text-xl font-semibold uppercase tracking-wide md:text-4xl"
   >
     {i18n.PREFOOTER_VIDEO_TITLE}
   </h3>
 
   <lite-youtube
-    class='rounded-xl shadow-2xl shadow-white/10'
-    videoid='nYPVr2IYTtk'
+    class="rounded-xl shadow-2xl shadow-white/10"
+    videoid="nYPVr2IYTtk"
     videotitle={i18n.PREFOOTER_VIDEO_TITLE}></lite-youtube>
 </section>
 
 <script>
-  import '@justinribeiro/lite-youtube'
+  import "@justinribeiro/lite-youtube"
 </script>
