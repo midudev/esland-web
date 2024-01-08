@@ -12,7 +12,8 @@
     "script:create-thumbs": "bun ./scripts/create-thumbnails-gallery.ts",
     "script:create-meta": "bun ./scripts/create-meta-from-gallery.ts",
     "webp": "bun ./scripts/convert-all.ts",
-    "dl": "bun ./scripts/download-all-images.ts"
+    "dl": "bun ./scripts/download-all-images.ts",
+    "dl:voting": "bun ./scripts/dl-voting.ts"
   },
   "dependencies": {
     "@appnest/masonry-layout": "2.2.3",
