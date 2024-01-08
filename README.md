@@ -123,8 +123,8 @@ pnpm dev
 
 - [ ] Crear página de Aviso Legal
 - [ ] Crear página de Privacidad
-- [ ] Bloquear scroll al abrir el menú mobile
-- [ ] Añadir LanguageSelector en el menú mobile
+- [x] Bloquear scroll al abrir el menú mobile
+- [x] Añadir LanguageSelector en el menú mobile
 - [ ] Mantener la URL al cambiar de idioma en cualquier página
 - [ ] Mejorar diseño de la página "Info"
 - [ ] Añadir sección "Descargas" en la página "Info"
