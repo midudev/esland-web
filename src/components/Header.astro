@@ -23,7 +23,7 @@ const i18n = getI18N({ currentLocale })
     <nav
       class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-lg md:justify-center font-medium items-center"
     >
-      <a class="text__glowing" href="/vota">{i18n.HEADER_VOTE}</a>
+      <a class="text__glowing hidden" href="/vota">{i18n.HEADER_VOTE}</a>
       <a class="text__glowing" href="/info">{i18n.HEADER_INFO}</a>
       <a class="text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</a>
       <LanguageSelector />
@@ -54,8 +54,8 @@ const i18n = getI18N({ currentLocale })
     id="mobile-menu"
     class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
-    <a class="my-4 text__glowing" href="/info">{i18n.HEADER_1}</a>
-    <a class="my-4 text__glowing" href="/archivo">{i18n.HEADER_2}</a>
+    <a class="my-4 text__glowing" href="/info">{i18n.HEADER_INFO}</a>
+    <a class="my-4 text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</a>
     <Button
       class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
       url="https://www.youtube.com/watch?v=O43x26hiolw"
