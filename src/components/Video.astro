@@ -34,55 +34,56 @@ const i18n = getI18N({ currentLocale })
     </section>
 
     <video
+      autoplay
+      loop
+      muted
       class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
-      src="/video.webm"
-      autoplay
-      loop
-      muted></video>
-    <video
-      class="absolute -bottom-48 -z-40 blur-3xl"
-      src="/video.webm"
-      autoplay
-      loop
-      muted></video>
+    >
+      <source src="/video.webm" type="video/webm" />
+      <source src="/video.mp4" type="video/mp4" />
+    </video>
   </div>
-
-  <style>
-    @font-face {
-      font-family: "Jura";
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url("/fonts/jura.woff2") format("woff2");
-      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-        U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
-        U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-    }
-
-    .subtitle {
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    }
-
-    h1 .letter-logo {
-      background: url("/logo.svg") no-repeat;
-      width: 50px;
-      height: 46px;
-      background-position: center;
-      background-size: contain;
-      scale: 1.2;
-    }
-
-    @media (width >= 768px) {
-      h1 .letter-logo {
-        width: 100px;
-        height: 66px;
-      }
-    }
-
-    @media (width >= 992px) {
-      h1 .letter-logo {
-        height: 96px;
-      }
-    }
-  </style>
+  <video class="absolute -bottom-48 -z-40 blur-3xl" autoplay loop muted>
+    <source src="/video.webm" type="video/webm" />
+    <source src="/video.mp4" type="video/mp4" />
+  </video>
 </div>
+
+<style>
+  @font-face {
+    font-family: "Jura";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/jura.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  .subtitle {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+
+  h1 .letter-logo {
+    background: url("/logo.svg") no-repeat;
+    width: 50px;
+    height: 46px;
+    background-position: center;
+    background-size: contain;
+    scale: 1.2;
+  }
+
+  @media (width >= 768px) {
+    h1 .letter-logo {
+      width: 100px;
+      height: 66px;
+    }
+  }
+
+  @media (width >= 992px) {
+    h1 .letter-logo {
+      height: 96px;
+    }
+  }
+</style>
