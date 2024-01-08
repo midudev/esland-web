@@ -121,7 +121,21 @@ pnpm dev
 
 ## ✅ Por hacer...
 
-- [ ] Afinar el Header y añadirle una animación con el scroll
-- [ ] Afinar el responsive
-- [ ] Las páginas extra
-- [ ] Añadir el efecto hover sobre los enlaces de Nav Bar
+- [ ] Crear página de Aviso Legal
+- [ ] Crear página de Privacidad
+- [ ] Bloquear scroll al abrir el menú mobile
+- [ ] Añadir LanguageSelector en el menú mobile
+- [ ] Mantener la URL al cambiar de idioma en cualquier página
+- [ ] Mejorar diseño de la página "Info"
+- [ ] Añadir sección "Descargas" en la página "Info"
+- [ ] Mejorar el SEO en las páginas "Info" y "Archivo"
+- [ ] Traducir el SEO de las páginas "Info" y "Archivo"
+- [ ] Evitar cargar todas las imágenes de la galería
+- [ ] Añadir secciones que faltan de la página "Info"
+- [ ] Mejorar el contador para tener efecto "ease"
+- [ ] Mejorar la precarga de las imágenes de las siguientes secciones en idle
+
+### Lo haremos en directo
+
+- [ ] Añadir sección "Ganadores" en la página "Archivo"
+- [ ] Pestaña para cambiar entre ediciones en la página "Archivo"
