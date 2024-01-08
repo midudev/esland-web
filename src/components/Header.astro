@@ -10,7 +10,7 @@ const i18n = getI18N({ currentLocale })
 
 <header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-2">
   <div class="mx-auto flex max-w-7xl items-center justify-between">
-    <div class="flex flex-grow basis-0">
+    <div class="flex flex-grow basis-0 z-50">
       <a href="/" class="group relative">
         <Logo
           class="h-auto w-10 blur-sm absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -52,7 +52,7 @@ const i18n = getI18N({ currentLocale })
   <!-- Menú de navegación móvil para pantallas pequeñas -->
   <nav
     id="mobile-menu"
-    class="bg-black/80 backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
+    class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
     <a class="my-4 text__glowing" href="/info">{i18n.HEADER_1}</a>
     <a class="my-4 text__glowing" href="/archivo">{i18n.HEADER_2}</a>
@@ -62,6 +62,7 @@ const i18n = getI18N({ currentLocale })
     >
       {i18n.HEADER_BUTTON}
     </Button>
+    <LanguageSelector />
   </nav>
 </header>
 
@@ -76,9 +77,8 @@ const i18n = getI18N({ currentLocale })
     }
 
     menuToggle.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden")
-      mobileMenu.classList.toggle("flex")
-      document.body.classList.toggle('overflow-hidden')
+      mobileMenu.classList.toggle("translate-y-0")
+      document.body.classList.toggle("overflow-hidden")
       menuIcon.textContent = menuIcon.textContent === "☰" ? "✕" : "☰"
     })
   })
