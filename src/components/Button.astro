@@ -13,7 +13,6 @@ const { url, target, class: className } = Astro.props
   target=`${target ?? '_blank'}`
   rel="noopener noreferrer"
   class:list={[
-    className,
     "w-fit",
     "lg:text-2xl",
     "font-medium",
@@ -26,6 +25,7 @@ const { url, target, class: className } = Astro.props
     "border-white",
     "rounded-full",
     "uppercase",
+    className,
   ]}
 >
   <slot />
