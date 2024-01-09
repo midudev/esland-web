@@ -1,26 +1,27 @@
 ---
-import Layout from "@/layouts/Layout.astro"
-import HeroContainer from "@/components/HeroContainer.astro"
-import Button from "../Button.astro"
+import Layout from "@/layouts/Layout.astro";
+import HeroContainer from "@/components/HeroContainer.astro";
+import Button from "../Button.astro";
 
-import { getI18N } from "@/i18n"
-import Numeros from "../Numeros.astro"
-import Galeria from "../Galeria.astro"
+import { getI18N } from "@/i18n";
+import Numeros from "../Numeros.astro";
+import Galeria from "../Galeria.astro";
+import Footer from "../Footer.astro";
 
-const { currentLocale } = Astro
+const { currentLocale } = Astro;
 // const i18n = getI18N({ currentLocale })
 ---
 
 <Layout title="Archivo" description="Archivo">
   <HeroContainer img="/archivo-background.webp">
-    <h1 class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest">
+    <h1
+      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest">
       Ediciones anteriores
     </h1>
 
     <Button
       class="animate-fade-up"
-      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
-    >
+      url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
       REVIVE LA ÚLTIMA GALA
     </Button>
   </HeroContainer>
@@ -28,4 +29,5 @@ const { currentLocale } = Astro
     <Galeria edicion="1" />
     <Numeros />
   </main>
+  <Footer />
 </Layout>
