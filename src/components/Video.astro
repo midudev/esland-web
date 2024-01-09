@@ -21,7 +21,9 @@ const i18n = getI18N({ currentLocale })
           aria-label="A"></span><span>N</span><span>D</span>
       </h1>
 
-      <p class="subtitle text-xl lg:text-2xl text-center text-pretty font-jura">
+      <p
+        class="subtitle text-xl lg:text-2xl text-center text-wrap font-jura px-4"
+      >
         {i18n.HERO_SUBTITLE}
       </p>
 
@@ -37,6 +39,7 @@ const i18n = getI18N({ currentLocale })
       autoplay
       loop
       muted
+      playsinline
       class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
     >
       <source src="/video.webm" type="video/webm" />
