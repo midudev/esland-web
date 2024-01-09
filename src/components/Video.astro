@@ -28,7 +28,7 @@ const i18n = getI18N({ currentLocale })
       </p>
 
       <Button
-        class="animate-fade-up"
+        class="animate-fade-up bg-white text-[#151a36]"
         url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
       >
         {i18n.VIDEO_BUTTON}
@@ -40,6 +40,8 @@ const i18n = getI18N({ currentLocale })
       loop
       muted
       playsinline
+      id="main-video"
+      preload="metadata"
       class="video hidden cp-v h-full w-full object-cover object-top animate-duration-[2s] animate-ease-in-out"
     >
       <source src="/video.webm" type="video/webm" />
@@ -51,6 +53,7 @@ const i18n = getI18N({ currentLocale })
     autoplay
     loop
     muted
+    preload="metadata"
   >
     <source src="/video.webm" type="video/webm" />
     <source src="/video.mp4" type="video/mp4" />
@@ -58,16 +61,31 @@ const i18n = getI18N({ currentLocale })
 </div>
 
 <script>
-  const firstVideo = document.querySelector("video")
-  if (firstVideo) {
-    const videos = document.querySelectorAll("video")
-    firstVideo.addEventListener("loadeddata", () => {
-      videos.forEach((videoEl) => {
-        videoEl.classList.remove("hidden")
-        videoEl.classList.add("animate-fade")
+  document.addEventListener("astro:page-load", () => {
+    const firstVideo = document.querySelector("#main-video") as HTMLMediaElement
+
+    if (firstVideo) {
+      const videos = document.querySelectorAll(
+        ".video"
+      ) as NodeListOf<HTMLMediaElement>
+
+      if (firstVideo.readyState >= 3) {
+        videos.forEach((videoEl) => {
+          videoEl.classList.remove("hidden")
+          videoEl.classList.add("animate-fade")
+        })
+
+        return
+      }
+
+      firstVideo.addEventListener("loadeddata", () => {
+        videos.forEach((videoEl) => {
+          videoEl.classList.remove("hidden")
+          videoEl.classList.add("animate-fade")
+        })
       })
-    })
-  }
+    }
+  })
 </script>
 
 <style>
