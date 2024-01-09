@@ -40,17 +40,35 @@ const i18n = getI18N({ currentLocale })
       loop
       muted
       playsinline
-      class="cp-v h-full w-full animate-fade object-cover object-top animate-duration-1000 animate-ease-in-out"
+      class="video hidden cp-v h-full w-full object-cover object-top animate-duration-[2s] animate-ease-in-out"
     >
       <source src="/video.webm" type="video/webm" />
       <source src="/video.mp4" type="video/mp4" />
     </video>
   </div>
-  <video class="absolute -bottom-48 -z-40 blur-3xl" autoplay loop muted>
+  <video
+    class="video hidden absolute -bottom-48 -z-40 blur-3xl animate-duration-[2s] animate-ease-in-out"
+    autoplay
+    loop
+    muted
+  >
     <source src="/video.webm" type="video/webm" />
     <source src="/video.mp4" type="video/mp4" />
   </video>
 </div>
+
+<script>
+  const firstVideo = document.querySelector("video")
+  if (firstVideo) {
+    const videos = document.querySelectorAll("video")
+    firstVideo.addEventListener("loadeddata", () => {
+      videos.forEach((videoEl) => {
+        videoEl.classList.remove("hidden")
+        videoEl.classList.add("animate-fade")
+      })
+    })
+  }
+</script>
 
 <style>
   @font-face {
