@@ -6,7 +6,9 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<div class="relative h-[80vh] w-full max-w-[100vw] md:aspect-video md:h-full">
+<div
+  class="relative h-dvh w-full max-w-[100vw] md:aspect-video md:h-[80vh] xl:h-full"
+>
   <div
     class="absolute inset-0 h-full justify-center z-10 m-auto flex flex-col items-center w-full"
   >
