@@ -3,7 +3,17 @@ import SpainFlag from "@/components/flags/Spain.astro"
 import AndorraFlag from "@/components/flags/Andorra.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
 
-const { currentLocale = "es" } = Astro
+const { currentLocale = "es", url } = Astro
+const pathname = url.pathname
+
+let restUrl
+
+if (pathname.startsWith("/ca")) {
+  let nuevosSegmentos = pathname.split("/").slice(2);
+  restUrl = "/" + nuevosSegmentos.join("/").replace(/\/+$/, "")
+} else {
+  restUrl = pathname.replace(/\/+$/, "")
+}
 
 const LOCALES: Record<
   string,
@@ -11,13 +21,13 @@ const LOCALES: Record<
 > = {
   ca: {
     code: "ca",
-    href: "/ca",
+    href: `/ca${restUrl}`,
     name: "Català",
     flag: AndorraFlag,
   },
   es: {
     code: "es",
-    href: "/",
+    href: restUrl,
     name: "Español",
     flag: SpainFlag,
   },
