@@ -2,6 +2,8 @@
 import Logo from "./Logo.astro"
 import { getI18N } from "../i18n/"
 import Button from "./Button.astro"
+import MenuIcon from "@/components/icons/Menu.astro"
+import CloseIcon from "@/components/icons/Close.astro"
 import LanguageSelector from "./LanguageSelector.astro"
 import HeaderLink from "./HeaderLink.astro"
 
@@ -9,7 +11,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-2">
+<header id="header-nav" class="fixed top-0 z-50 w-full px-6 pt-4">
   <div class="mx-auto flex max-w-7xl items-center justify-between">
     <div class="flex flex-grow basis-0 z-50">
       <HeaderLink
@@ -27,7 +29,7 @@ const i18n = getI18N({ currentLocale })
 
     <!-- Menú de navegación para pantallas grandes -->
     <nav
-      class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-lg md:justify-center font-medium items-center"
+      class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-xl md:justify-center font-medium items-center"
     >
       <HeaderLink class="text__glowing" href="/vota">
         {i18n.HEADER_VOTE}
@@ -44,9 +46,12 @@ const i18n = getI18N({ currentLocale })
     <!-- Botón de menú para pantallas pequeñas -->
     <button
       id="menu-toggle"
-      class="flex flex-grow basis-0 justify-end text-2xl md:hidden z-50"
+      class="relative flex flex-grow basis-0 justify-end text-2xl md:hidden z-50"
     >
-      <span id="menu-icon">☰</span>
+      <span id="menu-icon">
+        <span class=""><MenuIcon /></span>
+        <span class="hidden"><CloseIcon /></span>
+      </span>
     </button>
 
     <div
@@ -66,6 +71,9 @@ const i18n = getI18N({ currentLocale })
     id="mobile-menu"
     class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
+    <HeaderLink class="text__glowing" href="/vota">
+      {i18n.HEADER_VOTE}
+    </HeaderLink>
     <HeaderLink class="my-4 text__glowing" href="/info">
       {i18n.HEADER_INFO}
     </HeaderLink>
@@ -96,7 +104,9 @@ const i18n = getI18N({ currentLocale })
     menuToggle.addEventListener("click", function () {
       mobileMenu.classList.toggle("translate-y-0")
       document.body.classList.toggle("overflow-hidden")
-      menuIcon.textContent = menuIcon.textContent === "☰" ? "✕" : "☰"
+      menuIcon
+        .querySelectorAll("span")
+        .forEach((el) => el.classList.toggle("hidden"))
     })
   })
 </script>
