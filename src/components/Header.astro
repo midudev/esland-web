@@ -3,6 +3,7 @@ import Logo from "./Logo.astro"
 import { getI18N } from "../i18n/"
 import Button from "./Button.astro"
 import LanguageSelector from "./LanguageSelector.astro"
+import HeaderLink from "./HeaderLink.astro"
 
 const { currentLocale } = Astro
 const currentLocalePage = currentLocale === "es" ? "" : "/ca";
@@ -12,21 +13,21 @@ const i18n = getI18N({ currentLocale })
 <header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-2">
   <div class="mx-auto flex max-w-7xl items-center justify-between">
     <div class="flex flex-grow basis-0 z-50">
-      <a href="/" class="group relative">
+      <HeaderLink href="/" class="group relative">
         <Logo
           class="h-auto w-10 blur-sm absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         />
         <Logo class="h-auto w-10" />
-      </a>
+      </HeaderLink>
     </div>
 
     <!-- Menú de navegación para pantallas grandes -->
     <nav
       class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-lg md:justify-center font-medium items-center"
     >
-      <a class="text__glowing" href={`${currentLocalePage}/vota`}>{i18n.HEADER_VOTE}</a>
-      <a class="text__glowing" href={`${currentLocalePage}/info`}>{i18n.HEADER_INFO}</a>
-      <a class="text__glowing" href={`${currentLocalePage}/archivo`}>{i18n.HEADER_ARCHIVE}</a>
+      <HeaderLink class="text__glowing" href="/vota">{i18n.HEADER_VOTE}</HeaderLink>
+      <HeaderLink class="text__glowing" href="/info">{i18n.HEADER_INFO}</HeaderLink>
+      <HeaderLink class="text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</HeaderLink>
       <LanguageSelector />
     </nav>
 
@@ -55,8 +56,9 @@ const i18n = getI18N({ currentLocale })
     id="mobile-menu"
     class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
-    <a class="my-4 text__glowing" href={`${currentLocalePage}/info`}>{i18n.HEADER_INFO}</a>
-    <a class="my-4 text__glowing" href={`${currentLocalePage}/archivo`}>{i18n.HEADER_ARCHIVE}</a>
+    <HeaderLink class="my-4 text__glowing" href="/info">{i18n.HEADER_INFO}</HeaderLink>
+    <HeaderLink class="my-4 text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</HeaderLink>
+
     <Button
       class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
       url="https://www.youtube.com/watch?v=O43x26hiolw"
