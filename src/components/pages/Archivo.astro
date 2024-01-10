@@ -20,19 +20,19 @@ const i18n = getI18N({ currentLocale })
     <h1
       class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
     >
-      Ediciones anteriores
+      {i18n.ARCHIVO.HERO_TITLE}
     </h1>
 
     <Button
-      class="animate-fade-up"
+      class="animate-fade-up uppercase"
       url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
     >
-      REVIVE LA ÚLTIMA GALA
+      {i18n.ARCHIVO.HERO_BUTTON}
     </Button>
   </HeroContainer>
   <main>
     <Galeria edicion="1" />
-    <Numeros />
+    <Numeros i18n={i18n} />
   </main>
   <Footer />
 </Layout>

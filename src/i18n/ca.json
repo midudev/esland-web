@@ -33,6 +33,14 @@
   "VIDEO_ALT": "Esland - Premis a la comunitat hispanoparlant de Streaming",
   "VIDEO_BUTTON": "Vota",
   "PREFOOTER_VIDEO_TITLE": "Guia de la 3a Edició dels premis ESLAND",
+  "ARCHIVO": {
+    "HERO_TITLE": "Edicions anteriores",
+    "HERO_BUTTON": "Reviu la darrera gala",
+    "COUNTER_TITLE": "Els ESLAND en xifres",
+    "COUNTER_VIEWS": "de visualitzacions",
+    "COUNTER_NEWS": "notícies en premsa",
+    "COUNTER_MEDIA": "en mitjans guanyats"
+  },
   "FOOTER": {
     "DISCLAIMER": "© ESLAND 2021 - 2024 Tots els drets reservats. - Aquesta no és la pàgina web oficial, desenvolupada per @midudev amb finalitats educatives",
     "LEGAL": {
