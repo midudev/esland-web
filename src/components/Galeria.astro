@@ -1,44 +1,65 @@
 ---
 import "photoswipe/style.css"
 import editionsInfo from "@/data/meta-gallery.json"
+import Button from "./Button.astro"
 
+const offset = 10
 const { edicion } = Astro.props
 const edictionIndex = Number(edicion) - 1
-const photos = editionsInfo[edictionIndex]
+const photos = editionsInfo[edictionIndex].slice(0, offset)
+
+const { i18n } = Astro.props
 ---
 
-<masonry-layout
-  gap="24"
-  maxcolwidth="500"
-  class="max-w-7xl lg:mx-auto mx-4 py-20"
-  id="gallery"
->
-  {
-    photos.map(({ height, width }, i) => (
-      <a
-        class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
-        href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
-        target="_blank"
-        data-cropped="true"
-        data-pswp-width={width}
-        data-pswp-height={height}
-      >
-        <img
-          class="rounded-xl object-cover w-full h-auto"
-          loading="lazy"
-          src={`/archivo-page/${edicion}/gallery/thumbnails/img-${i + 1}.webp`}
-          alt="Fotografía de los premios ESLAND"
-        />
-        <img
-          class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
-          loading="lazy"
-          src={`/archivo-page/${edicion}/gallery/thumbnails/img-${i + 1}.webp`}
-          alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
-        />
-      </a>
-    ))
-  }
-</masonry-layout>
+<section class="max-w-8xl mx-auto py-20 px-20">
+  <h2
+    class="mx-auto mb-8 text-center text-3xl lg:text-6xl font-semibold tracking-wide"
+  >
+    {i18n.INFO.GALLERY_TITLE}
+  </h2>
+  <p class="text-center text-2xl">{i18n.INFO.GALLERY_TEXT}</p>
+
+  <masonry-layout
+    gap="24"
+    maxcolwidth="600"
+    class="lg:mx-auto mx-4 py-20"
+    id="gallery"
+  >
+    {
+      photos.map(({ height, width }, i) => (
+        <a
+          class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
+          href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
+          target="_blank"
+          data-cropped="true"
+          data-pswp-width={width}
+          data-pswp-height={height}
+        >
+          <img
+            class="rounded-xl object-cover w-full h-auto"
+            loading="lazy"
+            src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+              i + 1
+            }.webp`}
+            alt="Fotografía de los premios ESLAND"
+          />
+          <img
+            class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
+            loading="lazy"
+            src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+              i + 1
+            }.webp`}
+            alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
+          />
+        </a>
+      ))
+    }
+  </masonry-layout>
+
+  <div class="text-center mx-auto">
+    <Button id="load-more" url="#">Descúbrelas todas</Button>
+  </div>
+</section>
 
 <script>
   import PhotoSwipeLightbox from "photoswipe/lightbox"
@@ -55,8 +76,57 @@ const photos = editionsInfo[edictionIndex]
   })
 </script>
 
+<script define:vars={{ edicion, offset }}>
+  document.addEventListener("astro:page-load", () => {
+    const $button = document.querySelector("#load-more")
+    // clone first element of gallery
+    const $first = document.querySelector("#gallery a:first-child")
+
+    $button?.addEventListener("click", async (e) => {
+      e.preventDefault()
+      const res = await fetch("/api/gallery.json?edition=1&offset=9")
+      const images = await res.json()
+
+      const html = images
+        .map((img, index) => {
+          const imgIndex = index + offset + 1
+          const $clone = $first?.cloneNode(true)
+
+          $clone.setAttribute("data-pswp-width", img.width)
+          $clone.setAttribute("data-pswp-height", img.height)
+          $clone.setAttribute(
+            "href",
+            `/archivo-page/${edicion}/gallery/img-${imgIndex}.webp`
+          )
+          $clone
+            .querySelector("img:first-child")
+            .setAttribute(
+              "src",
+              `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
+            )
+          $clone
+            .querySelector("img:last-child")
+            .setAttribute(
+              "src",
+              `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
+            )
+
+          return $clone?.outerHTML
+        })
+        .join("")
+
+      document.querySelector("#gallery")?.insertAdjacentHTML("beforeend", html)
+      document.querySelector("masonry-layout").scheduleLayout()
+    })
+  })
+</script>
+
 <style is:global>
   .pswp {
     --pswp-bg: #00012a;
+  }
+
+  #gallery a {
+    cursor: zoom-in;
   }
 </style>
