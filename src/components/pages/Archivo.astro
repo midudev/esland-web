@@ -8,12 +8,17 @@ import Numeros from "../Numeros.astro"
 import Galeria from "../Galeria.astro"
 
 const { currentLocale } = Astro
-// const i18n = getI18N({ currentLocale })
+const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title="Archivo" description="Archivo">
+<Layout
+  title={i18n.SEO.ARCHIVO_TITLE}
+  description={i18n.SEO.ARCHIVO_DESCRIPTION}
+>
   <HeroContainer img="/archivo-background.webp">
-    <h1 class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest">
+    <h1
+      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
+    >
       Ediciones anteriores
     </h1>
 

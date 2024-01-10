@@ -1,6 +1,12 @@
 {
   "SEO_TITLE": "Premios ESLAND 2024 - Celebrando lo mejor del streaming y los creadores de contenido",
   "SEO_DESCRIPTION": "Descubre a los mejores creadores de contenido de España, Latinoamérica y Andorra. ¡Vota por tus favoritos! Celebra la innovación y el talento de Twitch, YouTube y más",
+  "SEO": {
+    "ARCHIVO_TITLE": "Archivo de las ediciones anteriores de Premios Esland 2024",
+    "ARCHIVO_DESCRIPTION": "Repasa los mejores momentos de ediciones anteriores",
+    "INFO_TITLE": "Información sobre los Premios Esland 2024",
+    "INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios Esland 2024 y descarga el Kit de Prensa"
+  },
   "HEADER_VOTE": "VOTA",
   "HEADER_INFO": "INFO",
   "HEADER_ARCHIVE": "ARCHIVO",
