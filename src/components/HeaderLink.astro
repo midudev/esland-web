@@ -1,11 +1,17 @@
 ---
 interface Props {
+  checkActive?: boolean
   href: string
   class?: string
 }
 
 const { currentLocale = "es" } = Astro
-const { href, class: className, ...restOfProps } = Astro.props
+const {
+  href,
+  class: className,
+  checkActive = true,
+  ...restOfProps
+} = Astro.props
 
 const LOCALES: Record<string, { code: string; baseHref: string }> = {
   ca: {
@@ -22,7 +28,7 @@ const baseHref = LOCALES[currentLocale].baseHref
 
 const currentPath = Astro.url.pathname
 const destination = `${baseHref}${href}`
-const isActive = currentPath === destination
+const isActive = currentPath === destination && checkActive
 ---
 
 <a

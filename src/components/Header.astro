@@ -12,7 +12,12 @@ const i18n = getI18N({ currentLocale })
 <header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-2">
   <div class="mx-auto flex max-w-7xl items-center justify-between">
     <div class="flex flex-grow basis-0 z-50">
-      <HeaderLink href="/" class="group relative" aria-label={i18n.HEADER.LOGO}>
+      <HeaderLink
+        checkActive={false}
+        href="/"
+        class="group relative"
+        aria-label={i18n.HEADER.LOGO}
+      >
         <Logo
           class="h-auto w-10 blur-sm absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         />
