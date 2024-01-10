@@ -3,7 +3,7 @@ import SpainFlag from "@/components/flags/Spain.astro"
 import AndorraFlag from "@/components/flags/Andorra.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
 
-const { currentLocale = "es" } = Astro
+const { currentLocale = "es", url } = Astro
 
 const LOCALES: Record<
   string,
@@ -11,7 +11,7 @@ const LOCALES: Record<
 > = {
   ca: {
     code: "ca",
-    href: "/ca",
+    href: "/ca/",
     name: "Català",
     flag: AndorraFlag,
   },
@@ -26,7 +26,8 @@ const LOCALES: Record<
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
-)
+);
+const currentPath = url.pathname.replace(currentLocaleData.href, "");
 ---
 
 <div class="relative inline-block text-left">
@@ -52,7 +53,7 @@ const otherLocales = Object.values(LOCALES).filter(
           <li class="">
             <a
               class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={locale.href}
+              href={`${locale.href}${currentPath}`}
             >
               <locale.flag />
               {locale.name}
