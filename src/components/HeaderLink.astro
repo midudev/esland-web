@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { currentLocale = "es" } = Astro
+const { href, class: className } = Astro.props
+
+const LOCALES: Record<string, { code: string; baseHref: string }> = {
+  ca: {
+    code: "ca",
+    baseHref: "/ca",
+  },
+  es: {
+    code: "es",
+    baseHref: "",
+  },
+}
+
+const baseHref = LOCALES[currentLocale].baseHref
+---
+
+<a 
+  href={`${baseHref}${href}`}
+  class={className} 
+>
+  <slot />
+</a>
