@@ -19,8 +19,16 @@ const LOCALES: Record<string, { code: string; baseHref: string }> = {
 }
 
 const baseHref = LOCALES[currentLocale].baseHref
+
+const currentPath = Astro.url.pathname
+const destination = `${baseHref}${href}`
+const isActive = currentPath === destination
 ---
 
-<a href={`${baseHref}${href}`} class={className} {...restOfProps}>
+<a
+  href={destination}
+  class:list={[className, isActive && "border-b-2 border-white"]}
+  {...restOfProps}
+>
   <slot />
 </a>
