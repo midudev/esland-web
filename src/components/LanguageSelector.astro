@@ -10,8 +10,8 @@ const pathname = url.pathname
 let restUrl
 
 if (pathname.startsWith("/ca")) {
-  let nuevosSegmentos = pathname.split("/").slice(2);
-  restUrl = "/" + nuevosSegmentos.join("/").replace(/\/+$/, "")
+  const segments = pathname.split("/").slice(2)
+  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
 } else {
   restUrl = pathname.replace(/\/+$/, "")
 }
@@ -37,8 +37,8 @@ const LOCALES: Record<
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
-);
-const currentPath = url.pathname.replace(currentLocaleData.href, "");
+)
+const currentPath = url.pathname.replace(currentLocaleData.href, "")
 ---
 
 <div class="relative inline-block text-left">
@@ -48,7 +48,6 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "");
     <button
       type="button"
       class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-      id="menu-button"
       aria-expanded="true"
       aria-haspopup="true"
     >
