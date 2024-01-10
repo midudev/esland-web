@@ -1,6 +1,7 @@
 ---
 import { getI18N } from "@/i18n/"
 import Button from "./Button.astro"
+import Logo from "./Logo.astro"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -18,9 +19,12 @@ const i18n = getI18N({ currentLocale })
       <h1
         class="flex items-center gap-5 text-4xl md:text-6xl lg:gap-20 lg:text-8xl font-tomaso"
       >
-        <span>E</span><span>S</span><span>L</span><span
-          class="letter-logo"
-          aria-label="A"></span><span>N</span><span>D</span>
+        <span>E</span>
+        <span>S</span>
+        <span>L</span>
+        <Logo class="h-9 w-auto md:h-[3.75rem] lg:h-24 scale-150" aria-label="A" />
+        <span>N</span>
+        <span>D</span>
       </h1>
 
       <p
@@ -101,27 +105,5 @@ const i18n = getI18N({ currentLocale })
 
   .subtitle {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-
-  h1 .letter-logo {
-    background: url("/logo.svg") no-repeat;
-    width: 50px;
-    height: 46px;
-    background-position: center;
-    background-size: contain;
-    scale: 1.2;
-  }
-
-  @media (width >= 768px) {
-    h1 .letter-logo {
-      width: 100px;
-      height: 66px;
-    }
-  }
-
-  @media (width >= 992px) {
-    h1 .letter-logo {
-      height: 96px;
-    }
   }
 </style>
