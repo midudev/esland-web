@@ -6,7 +6,6 @@ import LanguageSelector from "./LanguageSelector.astro"
 import HeaderLink from "./HeaderLink.astro"
 
 const { currentLocale } = Astro
-const currentLocalePage = currentLocale === "es" ? "" : "/ca";
 const i18n = getI18N({ currentLocale })
 ---
 
@@ -25,9 +24,15 @@ const i18n = getI18N({ currentLocale })
     <nav
       class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-lg md:justify-center font-medium items-center"
     >
-      <HeaderLink class="text__glowing" href="/vota">{i18n.HEADER_VOTE}</HeaderLink>
-      <HeaderLink class="text__glowing" href="/info">{i18n.HEADER_INFO}</HeaderLink>
-      <HeaderLink class="text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</HeaderLink>
+      <HeaderLink class="text__glowing" href="/vota">
+        {i18n.HEADER_VOTE}
+      </HeaderLink>
+      <HeaderLink class="text__glowing" href="/info">
+        {i18n.HEADER_INFO}
+      </HeaderLink>
+      <HeaderLink class="text__glowing" href="/archivo">
+        {i18n.HEADER_ARCHIVE}
+      </HeaderLink>
       <LanguageSelector />
     </nav>
 
@@ -44,7 +49,7 @@ const i18n = getI18N({ currentLocale })
     >
       <Button
         class="md:text-sm lg:text-base md:py-2"
-        url="https://www.youtube.com/watch?v=O43x26hiolw"
+        url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
       >
         {i18n.HEADER_BUTTON}
       </Button>
@@ -56,12 +61,16 @@ const i18n = getI18N({ currentLocale })
     id="mobile-menu"
     class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
   >
-    <HeaderLink class="my-4 text__glowing" href="/info">{i18n.HEADER_INFO}</HeaderLink>
-    <HeaderLink class="my-4 text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</HeaderLink>
+    <HeaderLink class="my-4 text__glowing" href="/info">
+      {i18n.HEADER_INFO}
+    </HeaderLink>
+    <HeaderLink class="my-4 text__glowing" href="/archivo">
+      {i18n.HEADER_ARCHIVE}
+    </HeaderLink>
 
     <Button
-      class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
-      url="https://www.youtube.com/watch?v=O43x26hiolw"
+      class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base bg-black"
+      url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
     >
       {i18n.HEADER_BUTTON}
     </Button>
