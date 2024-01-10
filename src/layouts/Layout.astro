@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions"
 import Header from "@/components/Header.astro"
+import Footer from "@/components/Footer.astro"
 import "@fontsource-variable/onest"
 
 interface Props {
@@ -35,6 +36,7 @@ const { currentLocale } = Astro
   <body>
     <Header />
     <slot />
+    <Footer />
     <style is:global>
       :root {
         color-scheme: dark;
