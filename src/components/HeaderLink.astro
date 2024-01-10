@@ -1,11 +1,11 @@
 ---
 interface Props {
-  href: string;
-  class?: string;
+  href: string
+  class?: string
 }
 
 const { currentLocale = "es" } = Astro
-const { href, class: className } = Astro.props
+const { href, class: className, ...restOfProps } = Astro.props
 
 const LOCALES: Record<string, { code: string; baseHref: string }> = {
   ca: {
@@ -21,9 +21,6 @@ const LOCALES: Record<string, { code: string; baseHref: string }> = {
 const baseHref = LOCALES[currentLocale].baseHref
 ---
 
-<a 
-  href={`${baseHref}${href}`}
-  class={className} 
->
+<a href={`${baseHref}${href}`} class={className} {...restOfProps}>
   <slot />
 </a>

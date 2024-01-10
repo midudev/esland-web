@@ -7,6 +7,9 @@
     "INFO_TITLE": "Informació sobre els Premis Esland 2024",
     "INFO_DESCRIPTION": "Descobreix tot el que necessites saber sobre els Premis Esland 2024 i descarrega el Kit de Premsa"
   },
+  "HEADER": {
+    "LOGO": "Tornar a la pàgina d'inici dels Premis Esland"
+  },
   "HEADER_VOTE": "VOTA",
   "HEADER_INFO": "INFORMACIÓ",
   "HEADER_ARCHIVE": "ARXIU",
