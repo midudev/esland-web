@@ -5,19 +5,30 @@ import ChevronIcon from "@/components/icons/Chevron.astro"
 
 const { currentLocale = "es", url } = Astro
 
+const pathname = url.pathname
+
+let restUrl
+
+if (pathname.startsWith("/ca")) {
+  let nuevosSegmentos = pathname.split("/").slice(2);
+  restUrl = "/" + nuevosSegmentos.join("/").replace(/\/+$/, "")
+} else {
+  restUrl = pathname.replace(/\/+$/, "")
+}
+
 const LOCALES: Record<
   string,
   { code: string; name: string; href: string; flag: typeof SpainFlag }
 > = {
   ca: {
     code: "ca",
-    href: "/ca/",
+    href: `/ca${restUrl}`,
     name: "Català",
     flag: AndorraFlag,
   },
   es: {
     code: "es",
-    href: "/",
+    href: restUrl,
     name: "Español",
     flag: SpainFlag,
   },

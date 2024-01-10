@@ -6,6 +6,7 @@ import LanguageSelector from "./LanguageSelector.astro"
 import HeaderLink from "./HeaderLink.astro"
 
 const { currentLocale } = Astro
+const currentLocalePage = currentLocale === "es" ? "" : "/ca";
 const i18n = getI18N({ currentLocale })
 ---
 
@@ -57,6 +58,7 @@ const i18n = getI18N({ currentLocale })
   >
     <HeaderLink class="my-4 text__glowing" href="/info">{i18n.HEADER_INFO}</HeaderLink>
     <HeaderLink class="my-4 text__glowing" href="/archivo">{i18n.HEADER_ARCHIVE}</HeaderLink>
+
     <Button
       class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base"
       url="https://www.youtube.com/watch?v=O43x26hiolw"
