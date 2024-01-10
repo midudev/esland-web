@@ -83,13 +83,14 @@ const { i18n } = Astro.props
     const $first = document.querySelector("#gallery a:first-child")
 
     $button?.addEventListener("click", async (e) => {
+      $button.remove()
       e.preventDefault()
       const res = await fetch("/api/gallery.json?edition=1&offset=9")
       const images = await res.json()
 
       const html = images
         .map((img, index) => {
-          const imgIndex = index + offset + 1
+          const imgIndex = index + offset
           const $clone = $first?.cloneNode(true)
 
           $clone.setAttribute("data-pswp-width", img.width)
