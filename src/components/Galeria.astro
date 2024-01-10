@@ -98,6 +98,9 @@ const { i18n } = Astro.props
             "href",
             `/archivo-page/${edicion}/gallery/img-${imgIndex}.webp`
           )
+          $clone.classList.add("animate-fade-up")
+          $clone.classList.add("animate-delay-300")
+          $clone.classList.add("opacity-0")
           $clone
             .querySelector("img:first-child")
             .setAttribute(
