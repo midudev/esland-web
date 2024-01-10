@@ -6,35 +6,45 @@ import Footer from "../Footer.astro"
 ---
 
 <Layout title="Votar" description="Votar">
-  <h1>Las votaciones ya están aquí</h1>
+  <div class="bg-no-repeat bg-cover relative h-screen w-full max-w-[100vw]">
+    <img
+      class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
+      src="/vota-bkg.webp"
+      alt="ESLAND cover"
+    />
 
-  <p>
-    Ha llegado uno de los momentos más importantes del año, estás a punto de
-    votar en la 3ª Edición de los Premios ESLAND, pero antes de eso, y para que
-    tus votos se contabilicen de forma correcta, te dejamos algunos consejos:
-  </p>
+    <h1>Las votaciones<br />ya están aquí</h1>
 
-  <ul>
-    <li>Vota, por orden de preferencia, hasta 4 nominados por categoría.</li>
+    <p>
+      Ha llegado uno de los momentos más importantes del año, estás a punto de
+      votar en la 3ª Edición de los Premios ESLAND, pero antes de eso, y para
+      que tus votos se contabilicen de forma correcta, te dejamos algunos
+      consejos:
+    </p>
 
-    <li>No es obligatorio votar en cada categoría.</li>
+    <ul>
+      <li>Vota, por orden de preferencia, hasta 4 nominados por categoría.</li>
 
-    <li>No es obligatorio pero sí recomendable el uso del voto rankeado.</li>
+      <li>No es obligatorio votar en cada categoría.</li>
 
-    <li>
-      Una vez tengas clara tu elección, asegúrate de pulsar “enviar mis votos”.
-    </li>
+      <li>No es obligatorio pero sí recomendable el uso del voto rankeado.</li>
 
-    <li>Recuerda compartir tus votos en redes sociales.</li>
+      <li>
+        Una vez tengas clara tu elección, asegúrate de pulsar “enviar mis
+        votos”.
+      </li>
 
-    <li>Elige sabiamente y revisa tus votos, solo tienes una oportunidad.</li>
+      <li>Recuerda compartir tus votos en redes sociales.</li>
 
-    Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00 h
-    (hora española)
-  </ul>
+      <li>Elige sabiamente y revisa tus votos, solo tienes una oportunidad.</li>
+
+      Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00 h
+      (hora española)
+    </ul>
+  </div>
 </Layout>
 
-<main class="w-full max-w-[100vw] relative pt-48">
+<main class="w-full max-w-[100vw] relative pt-48 hidden">
   <VoteTitle>
     <span>Mejor</span>
     <span>Serie de</span>
@@ -106,4 +116,3 @@ import Footer from "../Footer.astro"
     <span>del Año</span>
   </VoteTitle>
 </main>
-<Footer />
