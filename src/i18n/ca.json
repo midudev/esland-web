@@ -13,7 +13,7 @@
   "HEADER_VOTE": "VOTA",
   "HEADER_INFO": "INFORMACIÓ",
   "HEADER_ARCHIVE": "ARXIU",
-  "HEADER_BUTTON": "CRITERIOS DE NOMINACIÓN",
+  "HEADER_BUTTON": "CRITERIS DE NOMINACIÓ",
   "HERO_SUBTITLE": "Premis a la comunitat hispanoparlant de Streaming",
   "INTRO_TITLE": "Benvinguts/des",
   "INTRO_TITLE_AFTER_BR": "als Premis ESLAND",
@@ -189,6 +189,8 @@
   },
   "INFO": {
     "TITLE_HERO_1": "Els premis",
-    "TITLE_HERO_2": "ESLAND"
+    "TITLE_HERO_2": "ESLAND",
+    "GALLERY_TITLE": "GALERÍA",
+    "GALLERY_TEXT": "Alguns dels millors moments de la gala que passaran a la història."
   }
 }
