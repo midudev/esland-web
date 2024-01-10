@@ -1,84 +1,109 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import VoteTitle from "../VoteTitle.astro";
-import HeroContainer from "../HeroContainer.astro";
-import Footer from "../Footer.astro";
+import Layout from "@/layouts/Layout.astro"
+import VoteTitle from "../VoteTitle.astro"
+import HeroContainer from "../HeroContainer.astro"
+import Footer from "../Footer.astro"
 ---
 
 <Layout title="Votar" description="Votar">
-  <h1>En construcción</h1>
+  <h1>Las votaciones ya están aquí</h1>
 
-  <main class="w-full max-w-[100vw] relative pt-48">
-    <VoteTitle>
-      <span>Mejor</span>
-      <span>Serie de</span>
-      <span>Contenido</span>
-    </VoteTitle>
+  <p>
+    Ha llegado uno de los momentos más importantes del año, estás a punto de
+    votar en la 3ª Edición de los Premios ESLAND, pero antes de eso, y para que
+    tus votos se contabilicen de forma correcta, te dejamos algunos consejos:
+  </p>
 
-    <VoteTitle>
-      <span>Streamer</span>
-      <span>Revelación</span>
-      <span>del Año</span>
-    </VoteTitle>
+  <ul>
+    <li>Vota, por orden de preferencia, hasta 4 nominados por categoría.</li>
 
-    <VoteTitle>
-      <span>Evento</span>
-      <span>Del Año</span>
-    </VoteTitle>
+    <li>No es obligatorio votar en cada categoría.</li>
 
-    <VoteTitle>
-      <span>Mejor</span>
-      <span>Miniserie de</span>
-      <span>Contenido</span>
-    </VoteTitle>
+    <li>No es obligatorio pero sí recomendable el uso del voto rankeado.</li>
 
-    <VoteTitle>
-      <span>Streamer</span>
-      <span>Promesa</span>
-      <span>del Año</span>
-    </VoteTitle>
+    <li>
+      Una vez tengas clara tu elección, asegúrate de pulsar “enviar mis votos”.
+    </li>
 
-    <VoteTitle>
-      <span>Roleplayer</span>
-      <span>del Año</span>
-    </VoteTitle>
+    <li>Recuerda compartir tus votos en redes sociales.</li>
 
-    <VoteTitle>
-      <span>Mejor</span>
-      <span>Cobertura</span>
-      <span>Informativa</span>
-    </VoteTitle>
+    <li>Elige sabiamente y revisa tus votos, solo tienes una oportunidad.</li>
 
-    <VoteTitle>
-      <span>Mejor</span>
-      <span>Variety</span>
-      <span>Streamer</span>
-    </VoteTitle>
-
-    <a
-      href="https://twitter.com/PremiosESLAND/status/1744081978951925926"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="font-tomaso block text-center text-white/80 text-xs uppercase mt-8 mb-4 tracking-wide hover:text-yellow-300 transition"
-      >Ver criterios utilizados para seleccionar a los 10 nominados para la
-      categoría STREAMER DEL AÑO.</a
-    >
-
-    <VoteTitle>
-      <span>Streamer</span>
-      <span>IRL</span>
-      <span>del Año</span>
-    </VoteTitle>
-
-    <VoteTitle>
-      <span>Enfado</span>
-      <span>del Año</span>
-    </VoteTitle>
-
-    <VoteTitle>
-      <span>Clip</span>
-      <span>del Año</span>
-    </VoteTitle>
-  </main>
-  <Footer />
+    Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00 h
+    (hora española)
+  </ul>
 </Layout>
+
+<main class="w-full max-w-[100vw] relative pt-48">
+  <VoteTitle>
+    <span>Mejor</span>
+    <span>Serie de</span>
+    <span>Contenido</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Streamer</span>
+    <span>Revelación</span>
+    <span>del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Evento</span>
+    <span>Del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Mejor</span>
+    <span>Miniserie de</span>
+    <span>Contenido</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Streamer</span>
+    <span>Promesa</span>
+    <span>del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Roleplayer</span>
+    <span>del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Mejor</span>
+    <span>Cobertura</span>
+    <span>Informativa</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Mejor</span>
+    <span>Variety</span>
+    <span>Streamer</span>
+  </VoteTitle>
+
+  <a
+    href="https://twitter.com/PremiosESLAND/status/1744081978951925926"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="font-tomaso block text-center text-white/80 text-xs uppercase mt-8 mb-4 tracking-wide hover:text-yellow-300 transition"
+    >Ver criterios utilizados para seleccionar a los 10 nominados para la
+    categoría STREAMER DEL AÑO.</a
+  >
+
+  <VoteTitle>
+    <span>Streamer</span>
+    <span>IRL</span>
+    <span>del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Enfado</span>
+    <span>del Año</span>
+  </VoteTitle>
+
+  <VoteTitle>
+    <span>Clip</span>
+    <span>del Año</span>
+  </VoteTitle>
+</main>
+<Footer />
