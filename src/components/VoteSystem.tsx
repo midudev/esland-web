@@ -1,3 +1,4 @@
+import type { FunctionComponent } from "preact"
 import { useEffect, useState } from "preact/hooks"
 
 interface PageInfo {
@@ -16,7 +17,7 @@ type Votes = Array<Array<number>>
 const MAX_CATEGORIES = 12
 const MAX_VOTES_PER_CATEGORY = 4
 
-export function VoteSystem ({ children }) {
+export const VoteSystem: FunctionComponent = ({ children }) => {
   const [pageInfo, setPageInfo] = useState<PageInfo>()
   const [category, setCategory] = useState(0)
   const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
@@ -113,7 +114,7 @@ export function VoteSystem ({ children }) {
         }
       </ul>
 
-      <footer class="flex justify-between px-4 items-center gap-x-20 rounded bg-black/50 backdrop-blur-xl mt-10 py-2">
+      <footer class="flex flex-col sm:flex-row justify-between px-4 items-center gap-x-20 rounded bg-black/50 backdrop-blur-xl mt-10 py-2">
         <div>
           {children}
         </div>
