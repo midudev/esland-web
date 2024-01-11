@@ -4,22 +4,9 @@ import palmares from "../../public/archivo-page/editions-info.json"
 // ! la variable edicion es recibida desde ArchivoPage
 const { edicion } = Astro.props
 let index = 3
-interface PalmaresProps {
-  categoria: string
-  ganador: string
-  foto1: string
-  foto2: string
-  comunidad1: number
-  comunidad2: number
-  streamers1: number
-  comunidad2: number
-  total1: number
-  streamers2: number
-  total2: number
-  finalista?: string
-}
 
-let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion)
+const { info } = palmares.find((palmar) => palmar.edition === edicion)!
+
 const {
   comunidad1,
   comunidad2,
@@ -31,7 +18,7 @@ const {
   streamers2,
   total1,
   total2,
-}: PalmaresProps = datosSeleccionados?.info[index]
+} = info[index]
 ---
 
 <section class="flex flex-col gap-4 pt-6 justify-center items-center">
