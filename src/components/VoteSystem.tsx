@@ -100,7 +100,7 @@ export function VoteSystem () {
                     )
                   }
 
-                  <img src={`/voting-assets/${imagen}`} alt={nombre} />
+                  <img class="group-hover:mix-blend-normal transition-all rounded mix-blend-luminosity w-full h-auto" src={`/voting-assets/${imagen}`} alt={nombre} />
                   <h2 class="font-semibold text-xs">{nombre}</h2>
                 </button>
               </li>
