@@ -1,37 +1,37 @@
 ---
-import StreamerCard from "../components/StreamerCard.astro";
-import palmares from "../../public/archivo-page/editions-info.json";
+import StreamerCard from "../components/StreamerCard.astro"
+import palmares from "../../public/archivo-page/editions-info.json"
 // ! la variable edicion es recibida desde ArchivoPage
-const { edicion } = Astro.props;
-let index = 3;
+const { edicion } = Astro.props
+let index = 3
 interface PalmaresProps {
-  categoria: string;
-  ganador: string;
-  foto1: string;
-  foto2: string;
-  comunidad1: number;
-  comundidad2: number;
-  streamers1: number;
-  comunidad2: number;
-  total1: number;
-  streamers2: number;
-  total2: number;
-  finalista?: string;
+  categoria: string
+  ganador: string
+  foto1: string
+  foto2: string
+  comunidad1: number
+  comundidad2: number
+  streamers1: number
+  comunidad2: number
+  total1: number
+  streamers2: number
+  total2: number
+  finalista?: string
 }
 
-let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion);
+let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion)
 const {
-  ganador,
+  comunidad1,
+  comunidad2,
   finalista,
   foto1,
   foto2,
-  comunidad1,
+  ganador,
   streamers1,
-  comunidad2,
-  total1,
   streamers2,
+  total1,
   total2,
-}: PalmaresProps = datosSeleccionados?.info[index];
+}: PalmaresProps = datosSeleccionados?.info[index]
 ---
 
 <section class="flex flex-col gap-4 pt-6 justify-center items-center">
@@ -42,11 +42,11 @@ const {
         palmares.map((item) => {
           if (item.edition === edicion) {
             return item.info.map((infoItem, i) => {
-              const { categoria, ganador } = infoItem;
+              const { categoria, ganador } = infoItem
               return (
                 <button class="button-palmar" type="button">
                   <div
-                    // id={`${i + 1}`}
+                    id={`${i + 1}`}
                     class={`alert flex justify-between rounded-sm ${
                       i % 2 === 0 ? "bg-blue-600" : "bg-blue-800"
                     } ${
@@ -59,8 +59,8 @@ const {
                     <strong>{ganador}</strong>
                   </div>
                 </button>
-              );
-            });
+              )
+            })
           }
         })
       }
@@ -97,7 +97,5 @@ const {
     </div>
   </div>
 
-  <script>
-
-  </script>
+  <script></script>
 </section>
