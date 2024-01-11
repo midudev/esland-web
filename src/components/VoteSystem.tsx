@@ -16,7 +16,7 @@ type Votes = Array<Array<number>>
 const MAX_CATEGORIES = 12
 const MAX_VOTES_PER_CATEGORY = 4
 
-export function VoteSystem ({ children }) {
+export function VoteSystem () {
   const [pageInfo, setPageInfo] = useState<PageInfo>()
   const [category, setCategory] = useState(0)
   const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
@@ -62,16 +62,12 @@ export function VoteSystem ({ children }) {
   const votesCategory = votes[category]
 
   return (
-    <>
+    <div class="mx-auto flex flex-col max-w-7xl pt-40">
       <CategoryTitle>
         {categoria}
       </CategoryTitle>
-      
-      <div class="font-semibold flex justify-center items-center gap-x-2 px-2 rounded py-3 -mt-24 mb-10 text-yellow-300 text-xl">
-          Votos realizados <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
-        </div>
 
-      <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-2 xl:px-0">
         {
           candidatos?.map((candidate, index) => {
             const voteIndex = votesCategory.indexOf(index)
@@ -82,7 +78,7 @@ export function VoteSystem ({ children }) {
               <li class={`relative rounded-lg`} >
                 {
                   enlace && (
-                    <a class="youtube-link text-xs peer:hover:opacity-0 w-6 h-6 flex justify-center items-center right-2 top-2 absolute transition bg-white hover:bg-black hover:text-white backdrop-blur-xl text-black z-10 rounded-full hover:scale-125" href={enlace} target='_blank' rel='noopener'>
+                    <a class="youtube-link text-xs peer:hover:opacity-0 transition w-6 h-6 flex justify-center items-center right-2 top-2 absolute bg-white hover:bg-sky-200 backdrop-blur-xl text-black z-10 rounded-full hover:scale-125" href={enlace} target='_blank' rel='noopener'>
                       <CameraIcon />
                     </a>
                   )
@@ -91,10 +87,10 @@ export function VoteSystem ({ children }) {
                 <button
                   class={`
                   shadow-sm shadow-black/20
-                  z-0 group relative
+                  z-0 group relative rounded-md
                   w-full flex flex-col gap-2 justify-center items-center
-                  transition-all p-1 rounded
-                  md:hover:scale-105
+                  transition-all p-1
+                  hover:scale-105
                   ${isVoted ? 'bg-yellow-500 text-white' : 'bg-[#1682c7] hover:bg-sky-400 text-white'}
                   `} onClick={() => handleVote({ category, candidate: index })}>
 
@@ -113,17 +109,17 @@ export function VoteSystem ({ children }) {
         }
       </ul>
 
-      <footer class="flex justify-between px-4 items-center gap-x-20 rounded bg-black/50 backdrop-blur-xl mt-10 py-2">
-        <div>
-          {children}
+      <footer class="flex justify-center items-center mt-4 gap-x-20">
+        <div class="flex justify-center items-center gap-x-4 bg-black/50 backdrop-blur-lg px-2 rounded py-3">
+          Votos realizados {votesCategory.length}/{MAX_VOTES_PER_CATEGORY}
         </div>
-        <div class="flex justify-center items-center gap-x-4 px-2 rounded py-2">
+        <div class="flex justify-center items-center gap-x-4 bg-black/50 backdrop-blur-lg px-2 rounded py-2">
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={() => handleNavigation(category - 1)}>
           <Arrow rotated />
         </button>
         
         <span class="text-lg font-semibold">
-          Categoría <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
+          Categoría <span class="text-2xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
       
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={() => handleNavigation(category + 1)}>
@@ -131,7 +127,7 @@ export function VoteSystem ({ children }) {
         </button>
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 
