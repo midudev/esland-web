@@ -33,7 +33,11 @@ const isActive = currentPath === destination && checkActive
 
 <a
   href={destination}
-  class:list={[className, isActive && "border-b-2 border-white"]}
+  class:list={[
+    className,
+    "border-b-2",
+    isActive ? "border-white" : "border-transparent",
+  ]}
   {...restOfProps}
 >
   <slot />
