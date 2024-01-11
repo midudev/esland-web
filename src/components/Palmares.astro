@@ -1,0 +1,103 @@
+---
+import StreamerCard from "../components/StreamerCard.astro";
+import palmares from "../../public/archivo-page/editions-info.json";
+// ! la variable edicion es recibida desde ArchivoPage
+const { edicion } = Astro.props;
+let index = 3;
+interface PalmaresProps {
+  categoria: string;
+  ganador: string;
+  foto1: string;
+  foto2: string;
+  comunidad1: number;
+  comundidad2: number;
+  streamers1: number;
+  comunidad2: number;
+  total1: number;
+  streamers2: number;
+  total2: number;
+  finalista?: string;
+}
+
+let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion);
+const {
+  ganador,
+  finalista,
+  foto1,
+  foto2,
+  comunidad1,
+  streamers1,
+  comunidad2,
+  total1,
+  streamers2,
+  total2,
+}: PalmaresProps = datosSeleccionados?.info[index];
+---
+
+<section class="flex flex-col gap-4 pt-6 justify-center items-center">
+  <h1 class="text-6xl uppercase font-tomaso">Palmarés</h1>
+  <div class="flex gap-44 h-fit justify-center items-center">
+    <div class="flex flex-col min-w-[500px] gap-1">
+      {
+        palmares.map((item) => {
+          if (item.edition === edicion) {
+            return item.info.map((infoItem, i) => {
+              const { categoria, ganador } = infoItem;
+              return (
+                <button class="button-palmar" type="button">
+                  <div
+                    // id={`${i + 1}`}
+                    class={`alert flex justify-between rounded-sm ${
+                      i % 2 === 0 ? "bg-blue-600" : "bg-blue-800"
+                    } ${
+                      index === i
+                        ? "bg-blue-950 border border-sky-800 border-spacing-6"
+                        : ""
+                    } text-center hover:bg-blue-950 px-4`}
+                  >
+                    <h1>{categoria}</h1>
+                    <strong>{ganador}</strong>
+                  </div>
+                </button>
+              );
+            });
+          }
+        })
+      }
+    </div>
+    <div class="flex gap-3 items-end">
+      {
+        ganador && (
+          <StreamerCard
+            position="º1"
+            edicion={edicion}
+            name={ganador}
+            comunidad={comunidad1}
+            streamers={streamers1}
+            foto={foto1}
+            total={total1}
+            background={"bg-finalista"}
+          />
+        )
+      }
+      {
+        finalista && (
+          <StreamerCard
+            position="º2"
+            edicion={edicion}
+            name={finalista}
+            comunidad={comunidad2}
+            streamers={streamers2}
+            foto={foto2}
+            total={total2}
+            background={"bg-semifinalista"}
+          />
+        )
+      }
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+</section>
