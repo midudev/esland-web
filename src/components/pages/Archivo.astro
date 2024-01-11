@@ -2,12 +2,12 @@
 import Layout from "@/layouts/Layout.astro"
 import HeroContainer from "@/components/HeroContainer.astro"
 import Button from "../Button.astro"
-
+import Palmares from "../Palmares.astro"
 import { getI18N } from "@/i18n"
 import Numeros from "../Numeros.astro"
 import Galeria from "../Galeria.astro"
 import Footer from "../Footer.astro"
-
+const edicion = "2"
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
@@ -34,5 +34,6 @@ const i18n = getI18N({ currentLocale })
   <main class="pb-24">
     <Galeria i18n={i18n} edicion="1" />
     <Numeros i18n={i18n} />
+    <Palmares edicion={edicion} /> 
   </main>
 </Layout>
