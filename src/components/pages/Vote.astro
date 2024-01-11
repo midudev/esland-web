@@ -6,8 +6,14 @@ import PodiumIcon from "@/components/icons/Podium.astro"
 import TapButtonIcon from "@/components/icons/TapButton.astro"
 import ShareIcon from "@/components/icons/Share.astro"
 import ThinkBrainIcon from "@/components/icons/ThinkBrain.astro"
+import { VoteSystem } from "@/components/VoteSystem.tsx"
 
 import Button from "@/components/Button.astro"
+import { getSession } from "auth-astro/server"
+
+const session = await getSession(Astro.request)
+
+const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---
 
 <Layout title="Votar" description="Votar">
@@ -16,86 +22,111 @@ import Button from "@/components/Button.astro"
   >
     <img
       class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
-      src="/vota-bkg.webp"
+      src={`/${bkg}`}
       alt="ESLAND cover"
     />
 
-    <div class="mx-auto flex flex-col max-w-7xl pt-40">
-      <h1
-        class="uppercase mb-10 text-left text-3xl lg:text-5xl font-bold tracking-wider leading-loose max-w-xl text-balance"
-      >
-        Las votaciones ya están aquí
-      </h1>
+    {
+      !session && (
+        <div class="mx-auto flex flex-col max-w-7xl pt-40">
+          <h1 class="uppercase mb-10 text-left text-3xl lg:text-5xl font-bold tracking-wider leading-loose max-w-xl text-balance">
+            Las votaciones ya están aquí
+          </h1>
 
-      <div class="mb-10">
-        <Button id="vote-button" url="#">¡Empezar con las votaciones!</Button>
-      </div>
-      <p class="max-w-3xl text-pretty text-2xl px-2 mb-10">
-        Ha llegado el momento más importante. <strong
-          >Votar en la 3ª Edición de los Premios ESLAND</strong
-        >. Para que tus votos se contabilicen de forma correcta, te dejamos
-        algunos consejos:
-      </p>
+          <div class="mb-10">
+            <Button id="vote-button" url="#">
+              ¡Empezar con las votaciones!
+            </Button>
+          </div>
+          <p class="max-w-3xl text-pretty text-2xl px-2 mb-10">
+            Ha llegado el momento más importante.{" "}
+            <strong>Votar en la 3ª Edición de los Premios ESLAND</strong>. Para
+            que tus votos se contabilicen de forma correcta, te dejamos algunos
+            consejos:
+          </p>
 
-      <ul class="flex flex-col gap-y-10 text-2xl pl-4 font-extralight">
-        <li class="flex gap-x-6 items-center">
-          <SortVoteIcon />
-          <span>
-            Vota, <strong>por orden de preferencia</strong>, hasta 4 nominados
-            por categoría.
-          </span>
-        </li>
+          <ul class="flex flex-col gap-y-10 text-2xl pl-4 font-extralight">
+            <li class="flex gap-x-6 items-center">
+              <SortVoteIcon />
+              <span>
+                Vota, <strong>por orden de preferencia</strong>, hasta 4
+                nominados por categoría.
+              </span>
+            </li>
 
-        <li class="flex gap-x-6 items-center">
-          <CheckPencilIcon />
-          <span
-            ><strong>No es obligatorio votar en cada categoría.</strong></span
-          >
-        </li>
+            <li class="flex gap-x-6 items-center">
+              <CheckPencilIcon />
+              <span>
+                <strong>No es obligatorio votar en cada categoría.</strong>
+              </span>
+            </li>
 
-        <li class="flex gap-x-6 items-center">
-          <PodiumIcon />
-          <span>
-            No es obligatorio pero sí recomendable el<strong>
-              uso del voto rankeado</strong
-            >.</span
-          >
-        </li>
+            <li class="flex gap-x-6 items-center">
+              <PodiumIcon />
+              <span>
+                No es obligatorio pero sí recomendable el
+                <strong>uso del voto rankeado</strong>.
+              </span>
+            </li>
 
-        <li class="flex gap-x-6 items-center">
-          <TapButtonIcon /><span>
-            Una vez tengas clara tu elección, <strong
-              >asegúrate de pulsar “enviar mis votos”.</strong
-            >
-          </span>
-        </li>
+            <li class="flex gap-x-6 items-center">
+              <>
+                <TapButtonIcon />
+                <span>
+                  Una vez tengas clara tu elección,{" "}
+                  <strong>asegúrate de pulsar “enviar mis votos”.</strong>
+                </span>
+              </>
+            </li>
 
-        <li class="flex gap-x-6 items-center">
-          <ShareIcon /><span>
-            <strong>Recuerda compartir tus votos</strong> en redes sociales.</span
-          >
-        </li>
+            <li class="flex gap-x-6 items-center">
+              <>
+                <ShareIcon />
+                <span>
+                  <strong>Recuerda compartir tus votos</strong> en redes
+                  sociales.
+                </span>
+              </>
+            </li>
 
-        <li class="flex gap-x-6 items-center">
-          <ThinkBrainIcon />
-          <span>
-            Elige sabiamente y <strong>revisa tus votos</strong>, solo tienes
-            una oportunidad.
-          </span>
-        </li>
-        <span class="opacity-85 text-base mt-4"
-          >Las votaciones estarán abiertas hasta el domingo 14 de enero a las
-          24:00h (hora española)</span
-        >
-      </ul>
-    </div>
-  </section>
-
-  <style>
-    p {
-      text-shadow:
-        0 0 5px rgba(0, 0, 0, 0.3),
-        0 0 10px rgba(0, 0, 0, 0.7);
+            <li class="flex gap-x-6 items-center">
+              <ThinkBrainIcon />
+              <span>
+                Elige sabiamente y <strong>revisa tus votos</strong>, solo
+                tienes una oportunidad.
+              </span>
+            </li>
+            <span class="opacity-85 text-base mt-4">
+              Las votaciones estarán abiertas hasta el domingo 14 de enero a las
+              24:00h (hora española)
+            </span>
+          </ul>
+        </div>
+      )
     }
-  </style>
+
+    {session && <VoteSystem client:load />}
+  </section>
 </Layout>
+
+<script>
+  const { signIn } = await import("auth-astro/client")
+  // pongo un $ delante para que se vea que es un elemento del DOM
+  // es una cosa que se hacía en el paso con jQuery y es una manía
+  // que se me ha quedado porque me gusta :)
+  const $button = document.querySelector("#vote-button")
+  $button?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signIn("twitch", {
+      callbackUrl: "http://localhost:4321/vota", // <--- ???
+    })
+  })
+</script>
+
+<style>
+  p {
+    text-shadow:
+      0 0 5px rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(0, 0, 0, 0.7);
+  }
+</style>
