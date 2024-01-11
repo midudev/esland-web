@@ -72,15 +72,17 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
           Votos realizados <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
         </div>
 
-      <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]">
         {
           candidatos?.map((candidate, index) => {
             const voteIndex = votesCategory.indexOf(index)
             const isVoted = voteIndex >= 0
             const { enlace, nombre, imagen } = candidate
             
+            const delay = `animation-delay: ${index * 100}ms`
+
             return (
-              <li class={`relative rounded-lg`} >
+              <li key={`${category}-${nombre}`} class={`relative rounded-lg animate-fade-up`} style={delay} >
                 {
                   enlace && (
                     <a class="youtube-link text-xs peer:hover:opacity-0 w-6 h-6 flex justify-center items-center right-2 top-2 absolute transition bg-white hover:bg-black hover:text-white backdrop-blur-xl text-black z-10 rounded-full hover:scale-125" href={enlace} target='_blank' rel='noopener'>
