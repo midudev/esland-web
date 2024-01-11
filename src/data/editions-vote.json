@@ -1,661 +1,656 @@
 [
   {
-    "edition": "3",
-    "info": [
+    "categoria": "CLIP DEL AÑO",
+    "candidatos": [
       {
-        "categoria": "CLIP DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "auronplay",
-            "imagen": "clip_auronplay.png",
-            "enlace": "https://youtu.be/PgElNgWZ8_A"
-          },
-          {
-            "nombre": "CrystalMolly",
-            "imagen": "clip_crystalmolly.png",
-            "enlace": "https://youtu.be/HCwkfjY4Yss"
-          },
-          {
-            "nombre": "Gemita",
-            "imagen": "clip_gemita.png",
-            "enlace": "https://youtu.be/Spx5iJhvx2s"
-          },
-          {
-            "nombre": "Guanyar",
-            "imagen": "clip_guanyar.png",
-            "enlace": "https://youtu.be/7CYxEp2zMvU"
-          },
-          {
-            "nombre": "IlloJuan y elBokeron",
-            "imagen": "clip_IlloJuan_elBokeron.png",
-            "enlace": "https://youtu.be/RTH6rQrMzU8"
-          },
-          {
-            "nombre": "Lacuevadepaink",
-            "imagen": "lacueva.png",
-            "enlace": "https://youtu.be/hwEb5Q2lS9g"
-          },
-          {
-            "nombre": "PipePunk",
-            "imagen": "clip_pipepunk.png",
-            "enlace": "https://youtu.be/7Lgbn_5FC0Q"
-          },
-          {
-            "nombre": "Repta Live",
-            "imagen": "clip_Reptalive.png",
-            "enlace": "https://youtu.be/ox1AA0Es1Rs"
-          },
-          {
-            "nombre": "Rubius",
-            "imagen": "clip_Rubius.png",
-            "enlace": "https://youtu.be/aQBVPdnOhwU"
-          },
-          {
-            "nombre": "xCry",
-            "imagen": "clip_xCry.png",
-            "enlace": "https://youtu.be/xH9rkX1nWHU"
-          }
-        ]
+        "nombre": "auronplay",
+        "imagen": "clip_auronplay.webp",
+        "enlace": "https://youtu.be/PgElNgWZ8_A"
       },
       {
-        "categoria": "ENFADO DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "agustin51",
-            "imagen": "enfado_agustin51.png",
-            "enlace": "https://youtu.be/ZPC2aqWprg0"
-          },
-          {
-            "nombre": "DjMaRiiO",
-            "imagen": "enfado_djmariio.png",
-            "enlace": "https://youtu.be/v3Qc76YRN8w"
-          },
-          {
-            "nombre": "elxokas",
-            "imagen": "enfado_xokas.png",
-            "enlace": "https://youtu.be/7CgC0rwUGq4"
-          },
-          {
-            "nombre": "Ibai y Messi",
-            "imagen": "enfado_ibaimessi.png",
-            "enlace": "https://youtu.be/4NF5GWq2l3U"
-          },
-          {
-            "nombre": "Nissaxter",
-            "imagen": "enfado_nissaxter.png",
-            "enlace": "https://youtu.be/gRZ3Yg7Kn9M"
-          },
-          {
-            "nombre": "PipePunk",
-            "imagen": "enfado_pipepunk.png",
-            "enlace": "https://youtu.be/wlv0yjukL0Y"
-          },
-          {
-            "nombre": "rickyedit",
-            "imagen": "enfado_rickyedit.png",
-            "enlace": "https://youtu.be/TktrcK_Qxyk"
-          },
-          {
-            "nombre": "rivers_gg",
-            "imagen": "enfado_riversgg.png",
-            "enlace": "https://youtu.be/8qB1rCDpbCI"
-          },
-          {
-            "nombre": "sezarbluelive",
-            "imagen": "enfado_sezarbluelive.png",
-            "enlace": "https://youtu.be/FQ56XmrtH2o"
-          },
-          {
-            "nombre": "WestCOL",
-            "imagen": "enfado_westcol.png",
-            "enlace": "https://youtu.be/pQmah35sQSg"
-          }
-        ]
+        "nombre": "CrystalMolly",
+        "imagen": "clip_crystalmolly.webp",
+        "enlace": "https://youtu.be/HCwkfjY4Yss"
       },
       {
-        "categoria": "STREAMER IRL DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "Alanalarana",
-            "imagen": "alanalarana.png",
-            "enlace": null
-          },
-          {
-            "nombre": "ArrozyDesgracias",
-            "imagen": "Arrozydesgracias.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Brunenger",
-            "imagen": "brunenger.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Grenheir",
-            "imagen": "Grenheir.png",
-            "enlace": null
-          },
-          {
-            "nombre": "JapanJordi",
-            "imagen": "Japanjordi.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Kidi",
-            "imagen": "kidi.png",
-            "enlace": null
-          },
-          {
-            "nombre": "llunaclark",
-            "imagen": "llunaclark.png",
-            "enlace": null
-          },
-          {
-            "nombre": "MarioTaxi",
-            "imagen": "mariotaxi.png",
-            "enlace": null
-          },
-          {
-            "nombre": "MarioTQ",
-            "imagen": "mariotq.png",
-            "enlace": null
-          },
-          {
-            "nombre": "viviendoenlacalle",
-            "imagen": "Viviendoenlacalle.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "Gemita",
+        "imagen": "clip_gemita.webp",
+        "enlace": "https://youtu.be/Spx5iJhvx2s"
       },
       {
-        "categoria": "MEJOR VARIETY STREAMER",
-        "candidatos": [
-          {
-            "nombre": "aldo_geo",
-            "imagen": "aldo_geo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "alexelcapo",
-            "imagen": "alexelcapo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Carola",
-            "imagen": "carola.png",
-            "enlace": null
-          },
-          {
-            "nombre": "elded",
-            "imagen": "elded.png",
-            "enlace": null
-          },
-          {
-            "nombre": "ElMariana",
-            "imagen": "elmariana.png",
-            "enlace": null
-          },
-          {
-            "nombre": "IlloJuan",
-            "imagen": "illojuan.png",
-            "enlace": null
-          },
-          {
-            "nombre": "knekro",
-            "imagen": "knekro.png",
-            "enlace": null
-          },
-          {
-            "nombre": "rivers_gg",
-            "imagen": "riversgg.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Roier",
-            "imagen": "roier.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Rubius",
-            "imagen": "rubius.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "Guanyar",
+        "imagen": "clip_guanyar.webp",
+        "enlace": "https://youtu.be/7CYxEp2zMvU"
       },
       {
-        "categoria": "MEJOR COBERTURA INFORMATIVA",
-        "candidatos": [
-          {
-            "nombre": "davooxeneize",
-            "imagen": "davooxeneize.png",
-            "enlace": null
-          },
-          {
-            "nombre": "el_yuste",
-            "imagen": "el_yuste.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Flavio Azzaro",
-            "imagen": "Flavioazzaro.png",
-            "enlace": null
-          },
-          {
-            "nombre": "gerardromero",
-            "imagen": "GerardRomero.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Julio Astillero",
-            "imagen": "julioastillero.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Kilometro Cero",
-            "imagen": "km0.png",
-            "enlace": null
-          },
-          {
-            "nombre": "La Secta Deportiva",
-            "imagen": "lasectadeportiva.png",
-            "enlace": null
-          },
-          {
-            "nombre": "LACOBRAAA",
-            "imagen": "lacobraaa.png",
-            "enlace": null
-          },
-          {
-            "nombre": "rubenmartinweb",
-            "imagen": "rubenmartinweb.png",
-            "enlace": null
-          },
-          {
-            "nombre": "ZonaFUT",
-            "imagen": "zonafut.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "IlloJuan y elBokeron",
+        "imagen": "clip_IlloJuan_elBokeron.webp",
+        "enlace": "https://youtu.be/RTH6rQrMzU8"
       },
       {
-        "categoria": "ROLEPLAYER DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "AgenteMaxo",
-            "imagen": "agentemaxo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "DessT3",
-            "imagen": "desst3.png",
-            "enlace": null
-          },
-          {
-            "nombre": "epidemic77",
-            "imagen": "epidemic77.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Eskimalito",
-            "imagen": "eskimalitto.png",
-            "enlace": null
-          },
-          {
-            "nombre": "FolagorLives",
-            "imagen": "folagorlives.png",
-            "enlace": null
-          },
-          {
-            "nombre": "kenaivsouza",
-            "imagen": "kenalvsouza.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Nexxuz",
-            "imagen": "nexxusz.png",
-            "enlace": null
-          },
-          {
-            "nombre": "RDjavi",
-            "imagen": "rdjavi.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Roier",
-            "imagen": "roier.png",
-            "enlace": null
-          },
-          {
-            "nombre": "TomateKing",
-            "imagen": "tomateking.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "Lacuevadepaink",
+        "imagen": "lacueva.webp",
+        "enlace": "https://youtu.be/hwEb5Q2lS9g"
       },
       {
-        "categoria": "STREAMER PROMESA",
-        "candidatos": [
-          {
-            "nombre": "angelogam3r",
-            "imagen": "angelogam3r.png",
-            "enlace": "https://www.twitch.tv/angelogam3r"
-          },
-          {
-            "nombre": "chaleselcrackk",
-            "imagen": "Chaleselcrack.png",
-            "enlace": "https://www.twitch.tv/chaleselcrackk"
-          },
-          {
-            "nombre": "futbolcontemo7",
-            "imagen": "furbolcontemo7.png",
-            "enlace": "https://www.twitch.tv/futbolcontemo7"
-          },
-          {
-            "nombre": "iaguirregabiria",
-            "imagen": "iaguirregabiria.png",
-            "enlace": "https://www.twitch.tv/iaguirregabiria"
-          },
-          {
-            "nombre": "KotaroHayama_",
-            "imagen": "kotarohayama_.png",
-            "enlace": "https://www.twitch.tv/kotarohayama_"
-          },
-          {
-            "nombre": "Mechaaax",
-            "imagen": "mechaaax.png",
-            "enlace": "https://www.twitch.tv/mechaaax"
-          },
-          {
-            "nombre": "paaulacg_",
-            "imagen": "paaulacg_.png",
-            "enlace": "https://www.twitch.tv/paaulacg_"
-          },
-          {
-            "nombre": "ReyDeLaCity",
-            "imagen": "reydelacity.png",
-            "enlace": "https://www.twitch.tv/reydelacity"
-          },
-          {
-            "nombre": "SoyBB7",
-            "imagen": "soybb7.png",
-            "enlace": "https://www.twitch.tv/soybb7"
-          },
-          {
-            "nombre": "soycande30",
-            "imagen": "soyCande30.png",
-            "enlace": "https://www.twitch.tv/soycande30"
-          }
-        ]
+        "nombre": "PipePunk",
+        "imagen": "clip_pipepunk.webp",
+        "enlace": "https://youtu.be/7Lgbn_5FC0Q"
       },
       {
-        "categoria": "MEJOR MINISERIE DE CONTENIDO",
-        "candidatos": [
-          {
-            "nombre": "7 Dias Para Palmarla",
-            "imagen": "7dias.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Backrooms",
-            "imagen": "Backrooms.png",
-            "enlace": null
-          },
-          {
-            "nombre": "BELLUM",
-            "imagen": "BELLUM.png",
-            "enlace": null
-          },
-          {
-            "nombre": "El Cielo",
-            "imagen": "El_cielo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "El Hoyo en Minecraft",
-            "imagen": "El_Hoyo_en_Minecraft.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Escondite en Francia",
-            "imagen": "Escondite_en_Francia.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Garry's Deluxe",
-            "imagen": "Garrys_Deluxe.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Hormigeo 2",
-            "imagen": "Hormigeo_2.png",
-            "enlace": null
-          },
-          {
-            "nombre": "PermadeaZ 2",
-            "imagen": "PermadeaZ_2.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Squid Craft Games 2",
-            "imagen": "Squid_Craft_Games 2.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "Repta Live",
+        "imagen": "clip_Reptalive.webp",
+        "enlace": "https://youtu.be/ox1AA0Es1Rs"
       },
       {
-        "categoria": "EVENTO DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "24 horas en el Obelisco",
-            "imagen": "24h_en_el_obelisco.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Coscu Army Awards 2023",
-            "imagen": "Coscu_Army_Awards.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Dogfight Wild Tournament",
-            "imagen": "Dogfight_wild_tournament.png",
-            "enlace": null
-          },
-          {
-            "nombre": "El ultimo en levantar las manos",
-            "imagen": "ULTIMO_EN_LEVANTAR_LAS_MANOS.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Final Four desde el Spotify Camp Nou",
-            "imagen": "Kings_League.png",
-            "enlace": null
-          },
-          {
-            "nombre": "King of the Ring",
-            "imagen": "King_of_the_Ring.png",
-            "enlace": null
-          },
-          {
-            "nombre": "La Velada del Año III",
-            "imagen": "Velada_III.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Parense de manos",
-            "imagen": "Parense_de_Manos.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Partidazo de Youtubers 4",
-            "imagen": "Partidazo_Youtubers4.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Stream Fighters 2",
-            "imagen": "Stream_Fighters_2.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "Rubius",
+        "imagen": "clip_Rubius.webp",
+        "enlace": "https://youtu.be/aQBVPdnOhwU"
       },
       {
-        "categoria": "STREAMER REVELACION",
-        "candidatos": [
-          {
-            "nombre": "adricontreras4",
-            "imagen": "adricontreras4.png",
-            "enlace": null
-          },
-          {
-            "nombre": "davooxeneize",
-            "imagen": "davooxeneize.png",
-            "enlace": null
-          },
-          {
-            "nombre": "nilojeda",
-            "imagen": "nilojeda.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Poloteli",
-            "imagen": "poloteli.png",
-            "enlace": null
-          },
-          {
-            "nombre": "RDjavi",
-            "imagen": "rdjavi.png",
-            "enlace": null
-          },
-          {
-            "nombre": "rene8808",
-            "imagen": "rene8808.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Roier",
-            "imagen": "roier.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Spursito",
-            "imagen": "spursito.png",
-            "enlace": null
-          },
-          {
-            "nombre": "WestCOL",
-            "imagen": "westcol.png",
-            "enlace": null
-          },
-          {
-            "nombre": "xCry",
-            "imagen": "xcry.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "xCry",
+        "imagen": "clip_xCry.webp",
+        "enlace": "https://youtu.be/xH9rkX1nWHU"
+      }
+    ]
+  },
+  {
+    "categoria": "ENFADO DEL AÑO",
+    "candidatos": [
+      {
+        "nombre": "agustin51",
+        "imagen": "enfado_agustin51.webp",
+        "enlace": "https://youtu.be/ZPC2aqWprg0"
       },
       {
-        "categoria": "MEJOR SERIE DE CONTENIDO",
-        "candidatos": [
-          {
-            "nombre": "DEDsafio ARK",
-            "imagen": "DEDsafio_ARK.png",
-            "enlace": null
-          },
-          {
-            "nombre": "El Dios de Todo",
-            "imagen": "El_Dios_de_Todo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Exodo",
-            "imagen": "Exodo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Experimento Hardcore",
-            "imagen": "Experimento_Hardcore.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Minecraft Extremo",
-            "imagen": "Minecraft_Extremo.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Mundial F1 Online 2",
-            "imagen": "Mundial_Fl_Online_2.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Pokemon Twitch Cup 3",
-            "imagen": "Pokemon_Twitch_Cup_3.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Proyecto176",
-            "imagen": "Proyecto176.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Reinos Enfrentados 3",
-            "imagen": "Reinos_Enfrentados_3.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Timeland",
-            "imagen": "timeland.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "DjMaRiiO",
+        "imagen": "enfado_djmariio.webp",
+        "enlace": "https://youtu.be/v3Qc76YRN8w"
       },
       {
-        "categoria": "STREAMER DEL AÑO",
-        "candidatos": [
-          {
-            "nombre": "DjMaRiiO",
-            "imagen": "djmariio.png",
-            "enlace": null
-          },
-          {
-            "nombre": "ElMariana",
-            "imagen": "elmariana.png",
-            "enlace": null
-          },
-          {
-            "nombre": "ElSpreen",
-            "imagen": "spreen.png",
-            "enlace": null
-          },
-          {
-            "nombre": "elxokas",
-            "imagen": "elxokas.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Ibai",
-            "imagen": "ibai.png",
-            "enlace": null
-          },
-          {
-            "nombre": "IlloJuan",
-            "imagen": "illojuan.png",
-            "enlace": null
-          },
-          {
-            "nombre": "rivers_gg",
-            "imagen": "riversgg.png",
-            "enlace": null
-          },
-          {
-            "nombre": "Rubius",
-            "imagen": "rubius.png",
-            "enlace": null
-          },
-          {
-            "nombre": "WestCOL",
-            "imagen": "westcol.png",
-            "enlace": null
-          }
-        ]
+        "nombre": "elxokas",
+        "imagen": "enfado_xokas.webp",
+        "enlace": "https://youtu.be/7CgC0rwUGq4"
+      },
+      {
+        "nombre": "Ibai y Messi",
+        "imagen": "enfado_ibaimessi.webp",
+        "enlace": "https://youtu.be/4NF5GWq2l3U"
+      },
+      {
+        "nombre": "Nissaxter",
+        "imagen": "enfado_nissaxter.webp",
+        "enlace": "https://youtu.be/gRZ3Yg7Kn9M"
+      },
+      {
+        "nombre": "PipePunk",
+        "imagen": "enfado_pipepunk.webp",
+        "enlace": "https://youtu.be/wlv0yjukL0Y"
+      },
+      {
+        "nombre": "rickyedit",
+        "imagen": "enfado_rickyedit.webp",
+        "enlace": "https://youtu.be/TktrcK_Qxyk"
+      },
+      {
+        "nombre": "rivers_gg",
+        "imagen": "enfado_riversgg.webp",
+        "enlace": "https://youtu.be/8qB1rCDpbCI"
+      },
+      {
+        "nombre": "sezarbluelive",
+        "imagen": "enfado_sezarbluelive.webp",
+        "enlace": "https://youtu.be/FQ56XmrtH2o"
+      },
+      {
+        "nombre": "WestCOL",
+        "imagen": "enfado_westcol.webp",
+        "enlace": "https://youtu.be/pQmah35sQSg"
+      }
+    ]
+  },
+  {
+    "categoria": "STREAMER IRL DEL AÑO",
+    "candidatos": [
+      {
+        "nombre": "Alanalarana",
+        "imagen": "alanalarana.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "ArrozyDesgracias",
+        "imagen": "Arrozydesgracias.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Brunenger",
+        "imagen": "brunenger.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Grenheir",
+        "imagen": "Grenheir.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "JapanJordi",
+        "imagen": "Japanjordi.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Kidi",
+        "imagen": "kidi.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "llunaclark",
+        "imagen": "llunaclark.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "MarioTaxi",
+        "imagen": "mariotaxi.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "MarioTQ",
+        "imagen": "mariotq.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "viviendoenlacalle",
+        "imagen": "Viviendoenlacalle.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "MEJOR VARIETY STREAMER",
+    "candidatos": [
+      {
+        "nombre": "aldo_geo",
+        "imagen": "aldo_geo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "alexelcapo",
+        "imagen": "alexelcapo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Carola",
+        "imagen": "carola.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "elded",
+        "imagen": "elded.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "ElMariana",
+        "imagen": "elmariana.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "IlloJuan",
+        "imagen": "illojuan.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "knekro",
+        "imagen": "knekro.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "rivers_gg",
+        "imagen": "riversgg.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Roier",
+        "imagen": "roier.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Rubius",
+        "imagen": "rubius.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "MEJOR COBERTURA INFORMATIVA",
+    "candidatos": [
+      {
+        "nombre": "davooxeneize",
+        "imagen": "davooxeneize.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "el_yuste",
+        "imagen": "el_yuste.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Flavio Azzaro",
+        "imagen": "Flavioazzaro.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "gerardromero",
+        "imagen": "GerardRomero.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Julio Astillero",
+        "imagen": "julioastillero.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Kilometro Cero",
+        "imagen": "km0.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "La Secta Deportiva",
+        "imagen": "lasectadeportiva.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "LACOBRAAA",
+        "imagen": "lacobraaa.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "rubenmartinweb",
+        "imagen": "rubenmartinweb.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "ZonaFUT",
+        "imagen": "zonafut.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "ROLEPLAYER DEL AÑO",
+    "candidatos": [
+      {
+        "nombre": "AgenteMaxo",
+        "imagen": "agentemaxo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "DessT3",
+        "imagen": "desst3.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "epidemic77",
+        "imagen": "epidemic77.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Eskimalito",
+        "imagen": "eskimalitto.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "FolagorLives",
+        "imagen": "folagorlives.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "kenaivsouza",
+        "imagen": "kenalvsouza.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Nexxuz",
+        "imagen": "nexxusz.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "RDjavi",
+        "imagen": "rdjavi.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Roier",
+        "imagen": "roier.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "TomateKing",
+        "imagen": "tomateking.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "STREAMER PROMESA",
+    "candidatos": [
+      {
+        "nombre": "angelogam3r",
+        "imagen": "angelogam3r.webp",
+        "enlace": "https://www.twitch.tv/angelogam3r"
+      },
+      {
+        "nombre": "chaleselcrackk",
+        "imagen": "Chaleselcrack.webp",
+        "enlace": "https://www.twitch.tv/chaleselcrackk"
+      },
+      {
+        "nombre": "futbolcontemo7",
+        "imagen": "furbolcontemo7.webp",
+        "enlace": "https://www.twitch.tv/futbolcontemo7"
+      },
+      {
+        "nombre": "iaguirregabiria",
+        "imagen": "iaguirregabiria.webp",
+        "enlace": "https://www.twitch.tv/iaguirregabiria"
+      },
+      {
+        "nombre": "KotaroHayama_",
+        "imagen": "kotarohayama_.webp",
+        "enlace": "https://www.twitch.tv/kotarohayama_"
+      },
+      {
+        "nombre": "Mechaaax",
+        "imagen": "mechaaax.webp",
+        "enlace": "https://www.twitch.tv/mechaaax"
+      },
+      {
+        "nombre": "paaulacg_",
+        "imagen": "paaulacg_.webp",
+        "enlace": "https://www.twitch.tv/paaulacg_"
+      },
+      {
+        "nombre": "ReyDeLaCity",
+        "imagen": "reydelacity.webp",
+        "enlace": "https://www.twitch.tv/reydelacity"
+      },
+      {
+        "nombre": "SoyBB7",
+        "imagen": "soybb7.webp",
+        "enlace": "https://www.twitch.tv/soybb7"
+      },
+      {
+        "nombre": "soycande30",
+        "imagen": "soyCande30.webp",
+        "enlace": "https://www.twitch.tv/soycande30"
+      }
+    ]
+  },
+  {
+    "categoria": "MEJOR MINISERIE DE CONTENIDO",
+    "candidatos": [
+      {
+        "nombre": "7 Dias Para Palmarla",
+        "imagen": "7dias.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Backrooms",
+        "imagen": "Backrooms.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "BELLUM",
+        "imagen": "BELLUM.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "El Cielo",
+        "imagen": "El_cielo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "El Hoyo en Minecraft",
+        "imagen": "El_Hoyo_en_Minecraft.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Escondite en Francia",
+        "imagen": "Escondite_en_Francia.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Garry's Deluxe",
+        "imagen": "Garrys_Deluxe.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Hormigeo 2",
+        "imagen": "Hormigeo_2.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "PermadeaZ 2",
+        "imagen": "PermadeaZ_2.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Squid Craft Games 2",
+        "imagen": "Squid_Craft_Games 2.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "EVENTO DEL AÑO",
+    "candidatos": [
+      {
+        "nombre": "24 horas en el Obelisco",
+        "imagen": "24h_en_el_obelisco.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Coscu Army Awards 2023",
+        "imagen": "Coscu_Army_Awards.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Dogfight Wild Tournament",
+        "imagen": "Dogfight_wild_tournament.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "El ultimo en levantar las manos",
+        "imagen": "ULTIMO_EN_LEVANTAR_LAS_MANOS.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Final Four desde el Spotify Camp Nou",
+        "imagen": "Kings_League.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "King of the Ring",
+        "imagen": "King_of_the_Ring.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "La Velada del Año III",
+        "imagen": "Velada_III.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Parense de manos",
+        "imagen": "Parense_de_Manos.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Partidazo de Youtubers 4",
+        "imagen": "Partidazo_Youtubers4.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Stream Fighters 2",
+        "imagen": "Stream_Fighters_2.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "STREAMER REVELACION",
+    "candidatos": [
+      {
+        "nombre": "adricontreras4",
+        "imagen": "adricontreras4.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "davooxeneize",
+        "imagen": "davooxeneize.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "nilojeda",
+        "imagen": "nilojeda.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Poloteli",
+        "imagen": "poloteli.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "RDjavi",
+        "imagen": "rdjavi.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "rene8808",
+        "imagen": "rene8808.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Roier",
+        "imagen": "roier.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Spursito",
+        "imagen": "spursito.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "WestCOL",
+        "imagen": "westcol.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "xCry",
+        "imagen": "xcry.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "MEJOR SERIE DE CONTENIDO",
+    "candidatos": [
+      {
+        "nombre": "DEDsafio ARK",
+        "imagen": "DEDsafio_ARK.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "El Dios de Todo",
+        "imagen": "El_Dios_de_Todo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Exodo",
+        "imagen": "Exodo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Experimento Hardcore",
+        "imagen": "Experimento_Hardcore.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Minecraft Extremo",
+        "imagen": "Minecraft_Extremo.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Mundial F1 Online 2",
+        "imagen": "Mundial_Fl_Online_2.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Pokemon Twitch Cup 3",
+        "imagen": "Pokemon_Twitch_Cup_3.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Proyecto176",
+        "imagen": "Proyecto176.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Reinos Enfrentados 3",
+        "imagen": "Reinos_Enfrentados_3.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Timeland",
+        "imagen": "timeland.webp",
+        "enlace": null
+      }
+    ]
+  },
+  {
+    "categoria": "STREAMER DEL AÑO",
+    "candidatos": [
+      {
+        "nombre": "DjMaRiiO",
+        "imagen": "djmariio.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "ElMariana",
+        "imagen": "elmariana.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "ElSpreen",
+        "imagen": "spreen.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "elxokas",
+        "imagen": "elxokas.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Ibai",
+        "imagen": "ibai.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "IlloJuan",
+        "imagen": "illojuan.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "rivers_gg",
+        "imagen": "riversgg.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "Rubius",
+        "imagen": "rubius.webp",
+        "enlace": null
+      },
+      {
+        "nombre": "WestCOL",
+        "imagen": "westcol.webp",
+        "enlace": null
       }
     ]
   }
