@@ -113,7 +113,7 @@ export function VoteSystem ({ children }) {
         }
       </ul>
 
-      <footer class="flex justify-center items-center gap-x-20 rounded bg-black/50 backdrop-blur-xl mt-10 py-2">
+      <footer class="flex justify-between px-4 items-center gap-x-20 rounded bg-black/50 backdrop-blur-xl mt-10 py-2">
         <div>
           {children}
         </div>
@@ -123,7 +123,7 @@ export function VoteSystem ({ children }) {
         </button>
         
         <span class="text-lg font-semibold">
-          Categoría <span class="text-2xl">{category + 1}/{MAX_CATEGORIES}</span>
+          Categoría <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
       
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={() => handleNavigation(category + 1)}>
