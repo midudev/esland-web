@@ -75,7 +75,7 @@ export function VoteSystem () {
             const { enlace, nombre, imagen } = candidate
             
             return (
-              <li class={`p-1 text-center`} >
+              <li class={`relative rounded-lg`} >
                 {
                   enlace && (
                     <a class="youtube-link text-xs peer:hover:opacity-0 transition w-6 h-6 flex justify-center items-center right-2 top-2 absolute bg-white hover:bg-sky-200 backdrop-blur-xl text-black z-10 rounded-full hover:scale-125" href={enlace} target='_blank' rel='noopener'>
@@ -101,7 +101,7 @@ export function VoteSystem () {
                   }
 
                   <img src={`/voting-assets/${imagen}`} alt={nombre} />
-                  <p>{nombre}</p>
+                  <h2 class="font-semibold text-xs">{nombre}</h2>
                 </button>
               </li>
             )
