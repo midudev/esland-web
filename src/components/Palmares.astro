@@ -10,16 +10,17 @@ interface PalmaresProps {
   foto1: string
   foto2: string
   comunidad1: number
-  comundidad2: number
-  streamers1: number
   comunidad2: number
+  streamers1: number
   total1: number
   streamers2: number
   total2: number
-  finalista?: string
+  finalista: string
 }
 
 let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion)
+const palmaresSelected: PalmaresProps = datosSeleccionados?.info[index] as
+PalmaresProps
 const {
   comunidad1,
   comunidad2,
@@ -31,7 +32,7 @@ const {
   streamers2,
   total1,
   total2,
-}: PalmaresProps = datosSeleccionados?.info[index]
+} = palmaresSelected
 ---
 
 <section class="flex flex-col gap-4 pt-6 justify-center items-center">
