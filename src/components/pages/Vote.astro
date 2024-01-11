@@ -8,6 +8,7 @@ import TapButtonIcon from "@/components/icons/TapButton.astro"
 import ShareIcon from "@/components/icons/Share.astro"
 import ThinkBrainIcon from "@/components/icons/ThinkBrain.astro"
 
+import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 
 const session = await getSession(Astro.request)
@@ -31,6 +32,9 @@ console.log(session)
         Las votaciones ya están aquí
       </h1>
 
+      <div class="mb-10">
+        <Button id="vote-button" url="#">¡Empezar con las votaciones!</Button>
+      </div>
       <p class="max-w-3xl text-pretty text-2xl px-2 mb-10">
         Ha llegado el momento más importante. <strong
           >Votar en la 3ª Edición de los Premios ESLAND</strong
@@ -84,7 +88,7 @@ console.log(session)
             una oportunidad.
           </span>
         </li>
-        <span class="opacity-85 text-base mt-10"
+        <span class="opacity-85 text-base mt-4"
           >Las votaciones estarán abiertas hasta el domingo 14 de enero a las
           24:00h (hora española)</span
         >
