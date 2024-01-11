@@ -12,6 +12,7 @@ import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 
 const session = await getSession(Astro.request)
+console.log(session)
 
 const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---
@@ -105,21 +106,49 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
       )
     }
 
-    {session && <VoteSystem client:load />}
+    {
+      session && (
+        <div class="mx-auto flex flex-col max-w-7xl pt-20 relative">
+          <VoteSystem client:load>
+            <div class="flex items-center gap-4">
+              <img
+                class="w-12 h-12 rounded-full"
+                src={session.user?.image}
+                alt=""
+              />
+              <div class="text-yellow-300">
+                <h4 class="font-bold text-xl">{session.user?.name}</h4>
+                <button
+                  id="logout-button"
+                  class="text-sm hover:border-white border-b font-light border-transparent text-white flex justify-center items-center gap-x-2"
+                >
+                  <span>Cerrar sesión</span>
+                </button>
+              </div>
+            </div>
+          </VoteSystem>
+        </div>
+      )
+    }
   </section>
 </Layout>
 
 <script>
-  const { signIn } = await import("auth-astro/client")
+  const { signIn, signOut } = await import("auth-astro/client")
   // pongo un $ delante para que se vea que es un elemento del DOM
   // es una cosa que se hacía en el paso con jQuery y es una manía
   // que se me ha quedado porque me gusta :)
-  const $button = document.querySelector("#vote-button")
-  $button?.addEventListener("click", async (event) => {
+  const $loginButton = document.querySelector("#vote-button")
+  const $logoutButton = document.querySelector("#logout-button")
+
+  $loginButton?.addEventListener("click", async (event) => {
     event.preventDefault()
-    await signIn("twitch", {
-      callbackUrl: "http://localhost:4321/vota", // <--- ???
-    })
+    await signIn("twitch")
+  })
+
+  $logoutButton?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signOut()
   })
 </script>
 
