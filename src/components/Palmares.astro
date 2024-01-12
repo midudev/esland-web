@@ -35,10 +35,12 @@ const {
   box-shadow: 0 0 10px 5px rgb(62, 159, 255);
   }
 </style>
-<section class="flex flex-col gap-4 pt-6 justify-center items-center mt-10 mb-20">
-  <h1 class="text-6xl uppercase font-tomaso mb-5">Palmarés</h1>
-  <div class="flex gap-44 h-fit justify-center items-center ">
-    <div class="flex flex-col min-w-[500px] gap-1 ml-5">
+
+<section class="max-w-6xl mx-auto flex flex-col gap-4 pt-6 justify-center items-center px-20">
+  <h2 class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso">Palmarés</h2>
+  <div class="flex flex-col lg:flex-row gap-10">
+    <div class="flex flex-col gap-1">
+
       {
         palmares.map((item) => {
           if (item.edition === edicion) {
