@@ -21,12 +21,15 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
   const [pageInfo, setPageInfo] = useState<PageInfo>()
   const [category, setCategory] = useState(0)
   const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
+  const [isChanging, setIsChanging] = useState(true);
 
   useEffect(() => {
     async function fetchCandidates () {
+      setIsChanging(true)
       const response = await fetch(`/api/candidates.json?category=${category}`)
       const data = await response.json()
       setPageInfo(data)
+      setTimeout(() => setIsChanging(false), 500)
     }
 
     fetchCandidates()
@@ -64,7 +67,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
 
   return (
     <>
-      <CategoryTitle>
+      <CategoryTitle isChanging={isChanging}>
         {categoria}
       </CategoryTitle>
       
@@ -142,24 +145,24 @@ const CameraIcon = () => (
   <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M17.3213 14.501c-.3204-.1755-.5195-.5117-.5195-.877v-3.2467c0-.3653.1991-.70155.5195-.87706l3.6075-1.9761c.6664-.36506 1.4804.11718 1.4804.87703v7.19893c0 .7598-.814 1.2421-1.4804.877l-3.6075-1.9761ZM8.43066 8.53223h4.12974v4.12967M5.91504 15.1943 12.438 8.67136"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M3.59082 19.499c-1.10457 0-2-.8954-2-2V6.50193c0-1.10457.89543-2 2-2H14.8013c1.1045 0 2 .89543 2 2V17.499c0 1.1046-.8955 2-2 2H3.59082Z"/></svg>
 )
 
-const CategoryTitle = ({ children }: { children?: string }) => {
+const CategoryTitle = ({ children, isChanging }: { children?: string, isChanging? : boolean }) => {
   return (
     <h1 class="relative [font-weight:100] m-auto mb-10 tracking-[1px] font-tomaso text-3xl max-w-xl text-center leading-snug flex justify-center items-center h-80 text-white">
 
-        <svg class="h-60 w-24 fill-current" viewBox="0 0 90.35 240.43">
+        <svg class={`h-60 w-24 fill-current ${isChanging ? ("translate-x-[8.5rem]") : ("translate-x-0")} transition duration-500`} viewBox="0 0 90.35 240.43">
           <path d="m142.7 234.66-52.79 7.45L142.7 39.4 52.35 279.83z" transform="translate(-52.35 -39.4)" />
         </svg>
 
         <div class="flex justify-center items-center flex-col gap-y-4 w-72 px-10">
-          <svg class="h-14 -translate-y-10 fill-current" viewBox="0 0 16.04 62.55">
+          <svg class={`absolute ${isChanging ? ("scale-[2] -translate-y-0") : ("scale-100 -translate-y-28")} h-14 fill-current transition duration-500`} viewBox="0 0 16.04 62.55">
             <path d="m300 38.16-8.02 46.7 8.02 15.85 8.02-15.85z" transform="translate(-291.98 -38.16)" />
           </svg>
-          <span>
+          <span class={`${isChanging ? ("invisible opacity-0") : ("visible opacity-100")} delay-75 transition duration-300`}>
             {children}
           </span>
         </div>
 
-        <svg class="h-60 w-24 fill-current" viewBox="0 0 90.35 240.43">
+        <svg class={`h-60 w-24 fill-current ${isChanging ? ("-translate-x-[8.5rem]") : ("translate-x-0")} transition duration-500`} viewBox="0 0 90.35 240.43">
           <path d="m457.3 234.66 52.79 7.45L457.3 39.4l90.35 240.43z" transform="translate(-457.3 -39.4)" />
         </svg>
       </h1>
