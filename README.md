@@ -146,6 +146,7 @@ Don't forget that add it to your `.env` file
 | ⚙️  | `dev` or `start` | Starts local dev server at `localhost:3000`.  |
 | ⚙️  | `build`          | Build your production site to `./dist/`.      |
 | ⚙️  | `preview`        | Preview your build locally, before deploying. |
+| ⚙️  | `lint`           | Format code linting and running prettier.     |
 
 ## 🔑 License
 
