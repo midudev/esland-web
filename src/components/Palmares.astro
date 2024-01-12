@@ -30,11 +30,17 @@ const {
   total2,
 } = datosSeleccionados?.info[index]
 ---
+<style>
+  .button-palmar:hover {
+  box-shadow: 0 0 10px 5px rgb(62, 159, 255);
+  }
+</style>
 
 <section class="max-w-6xl mx-auto flex flex-col gap-4 pt-6 justify-center items-center px-20">
   <h2 class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso">Palmarés</h2>
   <div class="flex flex-col lg:flex-row gap-10">
     <div class="flex flex-col gap-1">
+
       {
         palmares.map((item) => {
           if (item.edition === edicion) {
@@ -44,15 +50,15 @@ const {
                 <button class="button-palmar" type="button">
                   <div
                     id={`${i + 1}`}
-                    class={`alert flex justify-between rounded-sm ${
-                      i % 2 === 0 ? "bg-blue-600" : "bg-blue-800"
+                    class={`alert flex justify-between rounded-sm  ${
+                      i % 2 === 0 ? "bg-gradient-to-r from-blue-600 to-sky-400/45  " : "bg-gradient-to-r from-gray-700 to-blue-900"
                     } ${
                       index === i
-                        ? "bg-blue-950 border border-sky-800 border-spacing-6"
+                        ? "bg-blue-950 border border-sky-300 border-spacing-6"
                         : ""
-                    } text-center hover:bg-blue-950 px-4`}
+                    } text-center hover:bg-blue-900 px-4 mb-1`}
                   >
-                    <h1>{categoria}</h1>
+                    <h1 class="text-xl">{categoria}</h1>
                     <strong>{ganador}</strong>
                   </div>
                 </button>
@@ -62,7 +68,7 @@ const {
         })
       }
     </div>
-    <div class="flex gap-3 items-end">
+    <div class="flex gap-3 items-end mt-20 mr-5">
       {
         ganador && (
           <StreamerCard
