@@ -12,7 +12,6 @@ import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 
 const session = await getSession(Astro.request)
-console.log(session)
 
 const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---

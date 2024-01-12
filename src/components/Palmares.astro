@@ -1,7 +1,7 @@
 ---
 import StreamerCard from "../components/StreamerCard.astro"
 import palmares from "../../public/archivo-page/editions-info.json"
-// ! la variable edicion es recibida desde ArchivoPage
+
 interface Props {
   edicion: string
 }
@@ -9,9 +9,7 @@ interface Props {
 const { edicion } = Astro.props
 let index = 3
 
-let datosSeleccionados = palmares.find(
-  (palmar) => palmar.edition === edicion
-)
+let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion)
 
 if (!datosSeleccionados) {
   return
@@ -30,37 +28,37 @@ const {
   total2,
 } = datosSeleccionados?.info[index]
 ---
-<style>
-  .button-palmar:hover {
-  box-shadow: 0 0 10px 5px rgb(62, 159, 255);
-  }
-</style>
 
-<section class="max-w-6xl mx-auto flex flex-col gap-4 pt-6 justify-center items-center px-20">
-  <h2 class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso">Palmarés</h2>
+<section
+  class="max-w-6xl mx-auto flex flex-col gap-4 pt-20 justify-center items-center px-20"
+>
+  <h2
+    class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso"
+  >
+    Palmarés
+  </h2>
   <div class="flex flex-col lg:flex-row gap-10">
-    <div class="flex flex-col gap-1">
-
+    <div class="flex flex-col gap-2">
       {
         palmares.map((item) => {
           if (item.edition === edicion) {
             return item.info.map((infoItem, i) => {
               const { categoria, ganador } = infoItem
               return (
-                <button class="button-palmar" type="button">
-                  <div
-                    id={`${i + 1}`}
-                    class={`alert flex justify-between rounded-sm  ${
-                      i % 2 === 0 ? "bg-gradient-to-r from-blue-600 to-sky-400/45  " : "bg-gradient-to-r from-gray-700 to-blue-900"
-                    } ${
-                      index === i
-                        ? "bg-blue-950 border border-sky-300 border-spacing-6"
-                        : ""
-                    } text-center hover:bg-blue-900 px-4 mb-1`}
-                  >
-                    <h1 class="text-xl">{categoria}</h1>
-                    <strong>{ganador}</strong>
-                  </div>
+                <button
+                  id={`${i + 1}`}
+                  class={`flex justify-between items-center rounded-sm  ${
+                    i % 2 === 0
+                      ? "bg-gradient-to-r from-blue-600 to-sky-400/45  "
+                      : "bg-gradient-to-r from-gray-700 to-blue-900"
+                  } ${
+                    index === i
+                      ? "bg-blue-950 border border-sky-300 border-spacing-6"
+                      : ""
+                  } text-center hover:bg-blue-900 px-4 py-1`}
+                >
+                  <h1 class="text-sm text-left">{categoria}</h1>
+                  <strong class="text-xs text-right">{ganador}</strong>
                 </button>
               )
             })
@@ -68,11 +66,11 @@ const {
         })
       }
     </div>
-    <div class="flex gap-3 items-end mt-20 mr-5">
+    <div class="flex gap-3 items-end mr-5">
       {
         ganador && (
           <StreamerCard
-            position="º1"
+            position="1º"
             edicion={edicion}
             name={ganador}
             comunidad={comunidad1}
@@ -86,7 +84,7 @@ const {
       {
         finalista && (
           <StreamerCard
-            position="º2"
+            position="2º"
             edicion={edicion}
             name={finalista}
             comunidad={comunidad2}
@@ -99,6 +97,12 @@ const {
       }
     </div>
   </div>
-
-  <script></script>
 </section>
+
+<style>
+  button:hover {
+    box-shadow: 0 0 10px 5px rgb(62, 159, 255);
+  }
+</style>
+
+<script></script>
