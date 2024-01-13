@@ -1,7 +1,8 @@
 ---
-import Logo from "./Logo.astro"
+import Logo from "@/components/Logo.astro"
+import Link from "@/components/Link.astro"
+
 import { getI18N } from "@/i18n/index"
-import Link from "./Link.astro"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
