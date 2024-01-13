@@ -1,7 +1,8 @@
 ---
-import Logo from "./Logo.astro"
-import { getI18N } from "../i18n/"
-import Link from "./Link.astro"
+import Logo from "@/components/Logo.astro"
+import Link from "@/components/Link.astro"
+
+import { getI18N } from "@/i18n/index"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -72,14 +73,14 @@ const i18n = getI18N({ currentLocale })
           <ul class="flex flex-col gap-2 font-medium text-gray-400">
             <li>
               <a
-                href="https://flowbite.com/"
+                href="#"
                 class="hover:underline hover:text-primary duration-300"
                 >{i18n.FOOTER.LEGAL.NOTICE}</a
               >
             </li>
             <li>
               <a
-                href="https://tailwindcss.com/"
+                href="https://premiosesland.com/privacidad"
                 class="hover:underline hover:text-primary duration-300"
                 >{i18n.FOOTER.LEGAL.PRIVACY}</a
               >
@@ -126,11 +127,13 @@ const i18n = getI18N({ currentLocale })
           <h2 class="mb-0 text-sm font-semibold uppercase text-white">
             {i18n.FOOTER.PRODUCED_BY}
           </h2>
-          <a href="https://www.ubiq.ad/" target="_blank" rel="noreferrer">
-            <img
-              src="https://premiosesland.com/assets/UBIQ_LOGO.c719aeaa.svg"
-              alt="Logo Ubiq"
-            />
+          <a
+            class="hover:scale-110 transition block"
+            href="https://www.ubiq.ad/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img loading="lazy" src="/ubiq-logo.svg" alt="Logo Ubiq" />
           </a>
         </div>
       </div>

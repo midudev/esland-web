@@ -2,13 +2,15 @@
   "SEO_TITLE": "Premios ESLAND 2024 - Celebrando lo mejor del streaming y los creadores de contenido",
   "SEO_DESCRIPTION": "Descubre a los mejores creadores de contenido de España, Latinoamérica y Andorra. ¡Vota por tus favoritos! Celebra la innovación y el talento de Twitch, YouTube y más",
   "SEO": {
-    "ARCHIVO_TITLE": "Archivo de las ediciones anteriores de Premios Esland 2024",
+    "ARCHIVO_TITLE": "Archivo de las ediciones anteriores - Premios ESLAND 2024",
     "ARCHIVO_DESCRIPTION": "Repasa los mejores momentos de ediciones anteriores",
-    "INFO_TITLE": "Información sobre los Premios Esland 2024",
-    "INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios Esland 2024 y descarga el Kit de Prensa"
+    "INFO_TITLE": "Información - Premios ESLAND 2024",
+    "INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios ESLAND 2024 y descarga el Kit de Prensa",
+    "VOTE_TITLE": "Vota por tus creadores de contenido favoritos - Premios ESLAND 2024",
+    "VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra"
   },
   "HEADER": {
-    "LOGO": "Volver a la página de inicio de los Premios Esland"
+    "LOGO": "Volver a la página de inicio de los Premios ESLAND"
   },
   "HEADER_VOTE": "VOTA",
   "HEADER_INFO": "INFO",
@@ -30,7 +32,7 @@
   "BENTO_CONTENT_3": "Una gala de premios llena de <strong>contenido de primer nivel</strong> y <strong>muchas sorpresas</strong>, en la que descubrirán los ganadores de esta tercera edición de los Premios ESLAND.",
   "BENTO_TITLE_4": "Disfruta del Reddit de la comunidad",
   "BENTO_CONTENT_4": "Este año, el reddit no formará parte de las votaciones de los premios, pero sí que <strong>formará parte de la comunidad</strong>. El subreddit oficial de los Premios ESLAND está abierto para ti. Comparte tus clips, opiniones e <strong>interactúa con toda la comunidad</strong> del streaming hispanohablante.",
-  "VIDEO_ALT": "Esland - Premios a la comunidad hispanohablante de Streaming",
+  "VIDEO_ALT": "ESLAND - Premios a la comunidad hispanohablante de Streaming",
   "VIDEO_BUTTON": "Vota",
   "PREFOOTER_VIDEO_TITLE": "Guía de la 3ª Edición de los premios ESLAND",
   "ARCHIVO": {

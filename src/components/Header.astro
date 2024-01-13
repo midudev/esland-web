@@ -1,35 +1,34 @@
 ---
-import Logo from "./Logo.astro"
-import { getI18N } from "../i18n/"
-import Button from "./Button.astro"
+import Logo from "@/components/Logo.astro"
+import Button from "@/components/Button.astro"
+import LanguageSelector from "@/components/LanguageSelector.astro"
+import HeaderLink from "@/components/HeaderLink.astro"
+
 import MenuIcon from "@/components/icons/Menu.astro"
 import CloseIcon from "@/components/icons/Close.astro"
-import LanguageSelector from "./LanguageSelector.astro"
-import HeaderLink from "./HeaderLink.astro"
+
+import { getI18N } from "@/i18n/index"
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header id="header-nav" class="fixed top-0 z-50 w-full px-6 py-4">
-  <div class="mx-auto flex max-w-7xl items-center justify-between">
-    <div class="flex flex-grow basis-0 z-50">
-      <HeaderLink
-        checkActive={false}
-        href="/"
-        class="group relative"
-        aria-label={i18n.HEADER.LOGO}
-      >
-        <Logo
-          class="h-auto w-10 blur-sm absolute inset-0 m-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        />
-        <Logo class="h-auto w-10" />
-      </HeaderLink>
-    </div>
-
-    <!-- Menú de navegación para pantallas grandes -->
+<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+    <HeaderLink
+      checkActive={false}
+      href="/"
+      class="relative z-10"
+      aria-label={i18n.HEADER.LOGO}
+    >
+      <Logo
+        class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+      />
+      <Logo class="w-10" />
+    </HeaderLink>
     <nav
-      class="hidden md:flex flex-grow lg:basis-0 w-full gap-x-8 text-xl md:justify-center font-medium items-center"
+      id="header-menu"
+      class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
     >
       <HeaderLink class="text__glowing" href="/vota">
         {i18n.HEADER_VOTE}
@@ -41,72 +40,16 @@ const i18n = getI18N({ currentLocale })
         {i18n.HEADER_ARCHIVE}
       </HeaderLink>
       <LanguageSelector />
-    </nav>
-
-    <!-- Botón de menú para pantallas pequeñas -->
-    <button
-      id="menu-toggle"
-      class="relative flex flex-grow basis-0 justify-end text-2xl md:hidden z-50"
-    >
-      <span id="menu-icon">
-        <span class=""><MenuIcon /></span>
-        <span class="hidden"><CloseIcon /></span>
-      </span>
-    </button>
-
-    <div
-      class="hidden md:flex-grow md:basis-0 justify-end whitespace-nowrap md:flex md:text-base"
-    >
       <Button
-        class="md:text-sm lg:text-base md:py-2"
+        class="md:py-2 md:ml-auto md:text-base lg:text-base"
         url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
       >
         {i18n.HEADER_BUTTON}
       </Button>
-    </div>
+      <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+        <CloseIcon />
+      </a>
+    </nav>
+    <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
   </div>
-
-  <!-- Menú de navegación móvil para pantallas pequeñas -->
-  <nav
-    id="mobile-menu"
-    class="bg-[#151a36]/90 -translate-y-full transition-transform md:hidden w-full flex flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
-  >
-    <HeaderLink class="text__glowing" href="/vota">
-      {i18n.HEADER_VOTE}
-    </HeaderLink>
-    <HeaderLink class="my-4 text__glowing" href="/info">
-      {i18n.HEADER_INFO}
-    </HeaderLink>
-    <HeaderLink class="my-4 text__glowing" href="/archivo">
-      {i18n.HEADER_ARCHIVE}
-    </HeaderLink>
-
-    <Button
-      class="my-4 whitespace-nowrap text-center lg:hidden lg:text-base bg-black"
-      url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
-    >
-      {i18n.HEADER_BUTTON}
-    </Button>
-    <LanguageSelector />
-  </nav>
 </header>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const menuToggle = document.getElementById("menu-toggle")
-    const mobileMenu = document.getElementById("mobile-menu")
-    const menuIcon = document.getElementById("menu-icon")
-
-    if (!menuToggle || !mobileMenu || !menuIcon) {
-      return
-    }
-
-    menuToggle.addEventListener("click", function () {
-      mobileMenu.classList.toggle("translate-y-0")
-      document.body.classList.toggle("overflow-hidden")
-      menuIcon
-        .querySelectorAll("span")
-        .forEach((el) => el.classList.toggle("hidden"))
-    })
-  })
-</script>
