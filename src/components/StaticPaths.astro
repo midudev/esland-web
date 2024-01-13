@@ -7,7 +7,7 @@ export const pages = Object.fromEntries(
         "../components/cookies/Cookies.astro",
         "!../components/pages/App.astro" // evita error on build
       ])
-    ).map(async ([entry, callback]) => {
+    ).map(async ([entry, callback]: [string, Function]) => {
       const url = entry
         .replace("./pages/", "")
         .replace("./cookies/", "")
@@ -20,20 +20,6 @@ export const pages = Object.fromEntries(
     })
   )
 );
-/* Seria la opcion ideal pero el glob de astro no puede excluir
-export const pages = (await Astro.glob("../components/pages/*.astro")).reduce((acc: { [key: string]: any }, entry) => {
-  if (entry.url) {
-    let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
-    if (url !== 'app') {
-      if (url === 'vote') {
-        url = 'vota';
-      }
-      acc[url] = entry.default;
-    }
-  }
-  return acc;
-}, {});
-*/
 
 export const routes = Object.keys(pages).reduce((acc: { [key: string]: any }, page) => {
   acc.push({
