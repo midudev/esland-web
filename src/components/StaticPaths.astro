@@ -1,0 +1,43 @@
+---
+export const pages = Object.fromEntries(
+  await Promise.all(
+    Object.entries(
+      import.meta.glob([
+        "../components/pages/*.astro",
+        "!../components/pages/App.astro" // evita error on build
+      ])
+    ).map(async ([entry, callback]) => {
+      const url = entry
+        .replace("./pages/", "")
+        .replace('.astro', "")
+        .replace(".html", "")
+        .toLowerCase();
+
+      const component = (await callback()).default;
+      return [url === 'vote' ? 'vota' : url, component];
+    })
+  )
+);
+/* Seria la opcion ideal pero el glob de astro no puede excluir
+export const pages = (await Astro.glob("../components/pages/*.astro")).reduce((acc: { [key: string]: any }, entry) => {
+  if (entry.url) {
+    let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
+    if (url !== 'app') {
+      if (url === 'vote') {
+        url = 'vota';
+      }
+      acc[url] = entry.default;
+    }
+  }
+  return acc;
+}, {});
+*/
+
+export const routes = Object.keys(pages).reduce((acc: { [key: string]: any }, page) => {
+  acc.push({
+    params: { page },
+    props: { entryPoint: page },
+  });
+return acc;
+}, []);
+---
