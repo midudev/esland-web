@@ -1,11 +1,11 @@
 ---
-import Footer from "@/components/Footer.astro"
-import HeroContainer from "@/components/HeroContainer.astro"
 import Layout from "@/layouts/Layout.astro"
 
-import InfoKitPrensa from "../InfoKitPrensa.astro"
+import HeroContainer from "@/components/HeroContainer.astro"
+import InfoKitPrensa from "@/components/InfoKitPrensa.astro"
 
 import { getI18N } from "@/i18n"
+
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
@@ -75,11 +75,15 @@ const i18n = getI18N({ currentLocale })
 </Layout>
 
 <style>
-  #theater, #trophies-text h1, #trophies-text p {
+  #theater,
+  #trophies-text h1,
+  #trophies-text p {
     animation: cover-animation linear both;
     animation-timeline: view();
   }
-  #theater-text h1, #theater-text p, #trophies {
+  #theater-text h1,
+  #theater-text p,
+  #trophies {
     animation: entry-animation linear both;
     animation-timeline: view();
   }
@@ -101,7 +105,7 @@ const i18n = getI18N({ currentLocale })
   #trophies-text p {
     animation-range: entry 20% cover 30%;
   }
-   @keyframes entry-animation {
+  @keyframes entry-animation {
     0% {
       opacity: 0;
       translate: -100px 0;
