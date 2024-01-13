@@ -1,10 +1,7 @@
 ---
 import Logo from "@/components/Logo.astro"
 
-import { getI18N } from "@/i18n/index"
-
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { i18n } = Astro.locals;
 ---
 
 <section

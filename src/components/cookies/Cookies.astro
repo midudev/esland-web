@@ -1,17 +1,12 @@
 ---
-import { getI18N } from "@/i18n"
+import Layout from "@/layouts/Layout.astro";
+import CookieTypeDescriptionItem from "@/components/cookies/CookieTitleDescriptionItem.astro";
+import CookieDescriptionLinkItem from "@/components/cookies/CookieDescriptionLinkItem.astro";
+import CookieLink from "@/components/cookies/CookieLink.astro";
 
-import Layout from "@/layouts/Layout.astro"
-
-import CookieTypeDescriptionItem from "@/components/cookies/CookieTitleDescriptionItem.astro"
-import CookieDescriptionLinkItem from "@/components/cookies/CookieDescriptionLinkItem.astro"
-import CookieLink from "@/components/cookies/CookieLink.astro"
-
-const { currentLocale } = Astro
-
-const i18n = getI18N({ currentLocale })
+const { i18n } = Astro.locals;
 const H1_STYLES =
-  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
+  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase";
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
@@ -154,7 +149,22 @@ const H1_STYLES =
         <tbody>
           {
             i18n.COOKIES.SITE_COOKIES.ANALYTICS.map(
-              ({ NAME, EXPIRE, PROVIDER, OBJECTIVE, OBJECTIVE_URL }) => (
+              ({
+                NAME,
+                EXPIRE,
+                PROVIDER,
+                OBJECTIVE,
+                OBJECTIVE_URL,
+              }: {
+                NAME: string;
+                EXPIRE: string;
+                PROVIDER: {
+                  NAME: string;
+                  URL: string;
+                };
+                OBJECTIVE: string;
+                OBJECTIVE_URL: string;
+              }) => (
                 <tr class="odd:bg-[#007aff]">
                   <td class="px-6 py-3">{NAME}</td>
                   <td class="px-6 py-3">{EXPIRE}</td>
