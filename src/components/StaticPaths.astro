@@ -4,11 +4,13 @@ export const pages = Object.fromEntries(
     Object.entries(
       import.meta.glob([
         "../components/pages/*.astro",
+        "../components/cookies/Cookies.astro",
         "!../components/pages/App.astro" // evita error on build
       ])
     ).map(async ([entry, callback]) => {
       const url = entry
         .replace("./pages/", "")
+        .replace("./cookies/", "")
         .replace('.astro', "")
         .replace(".html", "")
         .toLowerCase();
