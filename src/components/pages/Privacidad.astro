@@ -1,0 +1,105 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { getI18N } from "@/i18n"
+
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+const HEADING_STYLES =
+  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
+const SECTION_STYLES = 
+  "max-w-5xl mx-auto my-10 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+---
+
+<Layout title={i18n.SEO.INFO_TITLE} description={i18n.SEO.INFO_DESCRIPTION}>
+  <main class="py-8">
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.POLICY.TITLE}</h2>
+      <p>{i18n.PRIVACY.POLICY.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.POLICY.DESCRIPTION_2}</p>
+      <p>{i18n.PRIVACY.POLICY.DESCRIPTION_3}</p>
+      <p>{i18n.PRIVACY.POLICY.DESCRIPTION_4}</p>
+      <p>{i18n.PRIVACY.POLICY.DESCRIPTION_5}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.RESPONSIBLE.TITLE}</h2>
+      <p>{i18n.PRIVACY.RESPONSIBLE.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.RESPONSIBLE.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.DEFINITIONS.TITLE}</h2>
+      <p>{i18n.PRIVACY.DEFINITIONS.DESCRIPTION}</p>
+      <ul>
+        <li><p>{i18n.PRIVACY.DEFINITIONS.ITEM_1}</p></li>
+        <li><p>{i18n.PRIVACY.DEFINITIONS.ITEM_2}</p></li>
+        <li><p>{i18n.PRIVACY.DEFINITIONS.ITEM_3}</p></li>
+        <li><p>{i18n.PRIVACY.DEFINITIONS.ITEM_4}</p></li>
+        <li><p>{i18n.PRIVACY.DEFINITIONS.ITEM_5}</p></li>
+      </ul>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.PURPOSE.TITLE}</h2>
+      <p>{i18n.PRIVACY.PURPOSE.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.PURPOSE.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.PERSONAL_DATA.TITLE}</h2>
+      <p>{i18n.PRIVACY.PERSONAL_DATA.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.PERSONAL_DATA.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.LEGITIMACY.TITLE}</h2>
+      <p>{i18n.PRIVACY.LEGITIMACY.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.LEGITIMACY.DESCRIPTION_2}</p>
+      <p>{i18n.PRIVACY.LEGITIMACY.DESCRIPTION_3}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.PRESERVATION.TITLE}</h2>
+      <p>{i18n.PRIVACY.PRESERVATION.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.PRESERVATION.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.COMMUNICATION.TITLE}</h2>
+      <p>{i18n.PRIVACY.COMMUNICATION.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.COMMUNICATION.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.USER_RIGHTS.TITLE}</h2>
+      <p>{i18n.PRIVACY.USER_RIGHTS.DESCRIPTION_1}</p>
+      <ul class="list-disc">
+        <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_1}</p></li>
+        <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_2}</p></li>
+        <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_3}</p></li>
+        <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_4}</p></li>
+        <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_5}</p></li>
+      </ul>
+      <p>{i18n.PRIVACY.USER_RIGHTS.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.THIRD_PARTY_DOMAIN_LINKS.TITLE}</h2>
+      <p>{i18n.PRIVACY.THIRD_PARTY_DOMAIN_LINKS.DESCRIPTION}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.SOCIALS.TITLE}</h2>
+      <p>{i18n.PRIVACY.SOCIALS.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.SOCIALS.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.COOKIES.TITLE}</h2>
+      <p>{i18n.PRIVACY.COOKIES.DESCRIPTION_1}</p>
+      <p>{i18n.PRIVACY.COOKIES.DESCRIPTION_2}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`></h2>
+      <p> </p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.INTERNATIONAL_TRANSFERS.TITLE}</h2>
+      <p>{i18n.PRIVACY.INTERNATIONAL_TRANSFERS.DESCRIPTION}</p>
+    </section>
+    <section class=`${SECTION_STYLES}`>
+      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.MODIFICATIONS.TITLE}</h2>
+      <p>{i18n.PRIVACY.MODIFICATIONS.DESCRIPTION}</p>
+      <p><em>{i18n.PRIVACY.MODIFICATIONS.LAST_UPDATE}</em></p>
+    </section>
+  </main>
+</Layout>
