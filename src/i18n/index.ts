@@ -1,5 +1,5 @@
-import catalan from './ca.json'
-import spanish from './es.json'
+import catalan from '@/i18n/ca.json'
+import spanish from '@/i18n/es.json'
 
 const LANGUAGES = {
   CATALAN: 'ca',
