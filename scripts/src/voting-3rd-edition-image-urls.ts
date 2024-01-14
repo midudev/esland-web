@@ -253,7 +253,7 @@ const ZM = "/assets/0101.e501d2e7.jpg"
   , SO = "/assets/1702.ec084d1a.jpg"
   , xO = "/assets/1703.f9990f8c.jpg"
   , EO = "/assets/1704.913f204a.jpg"
-  , CO = "/img/i-descargar.png";
+  // , CO = "/img/i-descargar.png";
 
 
 
