@@ -1,69 +1,20 @@
 import type { FunctionComponent } from "preact"
-import { useEffect, useState } from "preact/hooks"
-
-interface PageInfo {
-  categoria: string,
-  candidatos: Candidate[]
-}
-
-interface Candidate {
-  nombre: string,
-  imagen: string,
-  enlace?: string
-}
-
-type Votes = Array<Array<number>>
-
-const MAX_CATEGORIES = 12
-const MAX_VOTES_PER_CATEGORY = 4
+import { useVoteSystem } from "@/hooks/useVoteSystem"
 
 export const VoteSystem: FunctionComponent = ({ children }) => {
-  const [pageInfo, setPageInfo] = useState<PageInfo>()
-  const [category, setCategory] = useState(0)
-  const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
-  const [isChanging, setIsChanging] = useState(true);
-
-  useEffect(() => {
-    async function fetchCandidates () {
-      setIsChanging(true)
-      const response = await fetch(`/api/candidates.json?category=${category}`)
-      const data = await response.json()
-      setPageInfo(data)
-      setTimeout(() => setIsChanging(false), 500)
-    }
-
-    fetchCandidates()
-  }, [category])
-
-  const handleNavigation = (categoryIndex: number) => {
-    if (categoryIndex < 0) categoryIndex = MAX_CATEGORIES - 1
-    else if (categoryIndex > (MAX_CATEGORIES - 1)) categoryIndex = 0
-    setCategory(categoryIndex)
-  }
-
-  const handleVote = (
-    { category, candidate }:
-    { category: number, candidate: number }
-  ) => {
-    const votesCategory = votes[category]
-
-    // if it was already voted the item, remove it
-    if (votesCategory.includes(candidate)) {
-      const newVotes = votesCategory.filter((vote) => vote !== candidate)
-      setVotes(prevVotes => prevVotes.with(category, newVotes))
-      return
-    }
-
-    // check if the user has already voted for this category 4 times
-    if (votesCategory.length >= 4) return
-
-    // otherwise, add the vote
-    const newVotes = [...votesCategory, candidate]
-    setVotes(prevVotes => prevVotes.with(category, newVotes))
-  }
+  const { 
+    pageInfo, 
+    category, 
+    votesCategory, 
+    isChanging, 
+    MAX_CATEGORIES,
+    MAX_VOTES_PER_CATEGORY,
+    setNextCategory,
+    setPrevCategory,
+    setVotesCategory 
+  } = useVoteSystem()
 
   const { categoria = '', candidatos } = pageInfo ?? {}
-  const votesCategory = votes[category]
 
   return (
     <>
@@ -102,7 +53,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
                   transition-all p-1 rounded
                   md:hover:scale-105
                   ${isVoted ? 'bg-yellow-500 text-white' : 'bg-[#1682c7] hover:bg-sky-400 text-white'}
-                  `} onClick={() => handleVote({ category, candidate: index })}>
+                  `} onClick={() => setVotesCategory({ candidate: index })}>
 
                   {
                     voteIndex >= 0 && (
@@ -124,7 +75,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
           {children}
         </div>
         <div class="flex justify-center items-center gap-x-4 px-2 rounded py-2">
-        <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={() => handleNavigation(category - 1)}>
+        <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setPrevCategory}>
           <Arrow rotated />
         </button>
         
@@ -132,7 +83,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
           Categoría <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
       
-        <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={() => handleNavigation(category + 1)}>
+        <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setNextCategory}>
           <Arrow />
         </button>
         </div>
