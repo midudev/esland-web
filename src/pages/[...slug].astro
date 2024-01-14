@@ -1,0 +1,66 @@
+---
+import i18n from '../i18n';
+
+export const prefixDefaultLocale = i18n.routing.prefixDefaultLocale;
+export const defaultLocale = i18n.defaultLocale;
+export const locales = i18n.locales;
+
+interface Route {
+  params: { slug: string | undefined };
+}
+
+export const components = Object.fromEntries(
+  await Promise.all(
+    Object.entries(
+      import.meta.glob([
+        "../components/pages/*.astro",
+        "../components/cookies/Cookies.astro",
+      ])
+    ).map(async ([entry, callback]: [string, Function]) => {
+      let url: string = entry
+        .replace("components/", "")
+        .replace("pages/", "")
+        .replace("cookies/", "")
+        .replace("../", "")
+        .replace('.astro', "")
+        .replace(".html", "")
+        .toLowerCase();
+        const component = (await callback()).default;
+      return [url, component];
+    })
+  )
+);
+
+export const pages: Record<string, any> = {};
+
+export const routes = locales.reduce((acc: Route[], lang) => {
+  const isDefault = lang === defaultLocale;
+  for (const [path, component] of Object.entries(components)) {
+    let slug: string | undefined = path === 'vote' ? 'vota' : path;
+    if (slug === 'app' && isDefault && !prefixDefaultLocale) {
+      slug = undefined;
+    } else if (lang !== defaultLocale || prefixDefaultLocale) {
+      if (slug !== 'app') {
+        slug = `${lang}/${slug}`;
+      } else {
+        slug = lang;
+      }
+    }
+    acc.push({
+      params: { slug },
+    });
+    pages[slug === undefined ? 'app' : slug] = component;
+  }
+  return acc;
+}, []);
+
+export async function getStaticPaths() {
+  return routes;
+}
+
+export const prerender = true;
+
+const { slug } = Astro.params;
+const CustomPage = pages[slug === undefined ? 'app' : slug];
+---
+<CustomPage />
