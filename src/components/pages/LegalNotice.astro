@@ -1,31 +1,31 @@
 ---
-import Layout from '@/layouts/Layout.astro'
+import Layout from "@/layouts/Layout.astro"
 
-import { getI18N } from '@/i18n'
+import { getI18N } from "@/i18n"
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 
-import SubtitleItem from '@/components/legalNotice/SubtitleItem.astro'
-import DescriptionItem from '@/components/legalNotice/DescriptionItem.astro'
+import SubtitleItem from "@/components/legalNotice/SubtitleItem.astro"
+import DescriptionItem from "@/components/legalNotice/DescriptionItem.astro"
 
 const H1_STYLES =
-  'mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase'
+  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <link
-    rel='preload'
-    href='/fonts/jura.woff2'
-    as='font'
-    type='font/woff2'
+    rel="preload"
+    href="/fonts/jura.woff2"
+    as="font"
+    type="font/woff2"
     crossorigin
-    slot='preload'
+    slot="preload"
   />
   <main>
     <section
-      class='max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20'
+      class="max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
     >
-      <h1 class='uppercase'>
+      <h1 class={H1_STYLES}>
         {i18n.LEGAL_NOTICE.TITLE}
       </h1>
 
@@ -57,20 +57,15 @@ const H1_STYLES =
       />
 
       <!-- Terms of use -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.TERMS_OF_USE.TITLE}
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.TERMS_OF_USE.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_1}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.TERMS_OF_USE
-          .DESCRIPTION_1}
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_2}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.TERMS_OF_USE
-          .DESCRIPTION_2}
-      />
-      <DescriptionItem
-        description={i18n.LEGAL_NOTICE.TERMS_OF_USE
-          .DESCRIPTION_3}
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_3}
       />
 
       <!-- Use of website and resposibility -->
@@ -87,8 +82,7 @@ const H1_STYLES =
         subtitle={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.TITLE}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY
-          .DESCRIPTION_1}
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_1}
       />
 
       <!-- Intelectual and industrial property -->
@@ -117,69 +111,49 @@ const H1_STYLES =
       />
 
       <!-- Thrid party links -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.TITLE}
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.DESCRIPTION_1}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS
-          .DESCRIPTION_1}
-      />
-      <DescriptionItem
-        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS
-          .DESCRIPTION_2}
+        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.DESCRIPTION_2}
       />
 
       <!-- Social networks -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.TITLE}
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.DESCRIPTION_1}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS
-          .DESCRIPTION_1}
-      />
-      <DescriptionItem
-        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS
-          .DESCRIPTION_2}
+        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.DESCRIPTION_2}
       />
 
       <!-- Data protection -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.DATA_PROTECTION.TITLE}
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.DATA_PROTECTION.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_1}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.DATA_PROTECTION
-          .DESCRIPTION_1}
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_2}
       />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.DATA_PROTECTION
-          .DESCRIPTION_2}
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_3}
       />
-      <DescriptionItem
-        description={i18n.LEGAL_NOTICE.DATA_PROTECTION
-          .DESCRIPTION_3}
-      />
-
 
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.DATA_PROTECTION
-          .DESCRIPTION_4}
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_4}
       />
-
-
-
 
       <!-- Site update -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.SITE_UPDATE.TITLE}
-      />
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.SITE_UPDATE.TITLE} />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.SITE_UPDATE
-          .DESCRIPTION_1}
+        description={i18n.LEGAL_NOTICE.SITE_UPDATE.DESCRIPTION_1}
       />
 
       <!-- Web interoperability and funcionality -->
       <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.WEB_INTEROPERABILITY_AND_FUNCTIONALITY.TITLE}
+        subtitle={i18n.LEGAL_NOTICE.WEB_INTEROPERABILITY_AND_FUNCTIONALITY
+          .TITLE}
       />
       <DescriptionItem
         description={i18n.LEGAL_NOTICE.WEB_INTEROPERABILITY_AND_FUNCTIONALITY
@@ -187,18 +161,15 @@ const H1_STYLES =
       />
 
       <!-- Integrity -->
-      <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.INTEGRITY.TITLE}
-      />
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.INTEGRITY.TITLE} />
       <DescriptionItem
-        description={i18n.LEGAL_NOTICE.INTEGRITY
-          .DESCRIPTION_1}
+        description={i18n.LEGAL_NOTICE.INTEGRITY.DESCRIPTION_1}
       />
-
 
       <!-- Applicable legislation and jurisdiction -->
       <SubtitleItem
-        subtitle={i18n.LEGAL_NOTICE.APPLICABLE_LEGISLATION_AND_JURISDICTION.TITLE}
+        subtitle={i18n.LEGAL_NOTICE.APPLICABLE_LEGISLATION_AND_JURISDICTION
+          .TITLE}
       />
       <DescriptionItem
         description={i18n.LEGAL_NOTICE.APPLICABLE_LEGISLATION_AND_JURISDICTION
