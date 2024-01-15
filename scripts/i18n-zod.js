@@ -21,13 +21,6 @@ function loadYaml(filename) {
   }
 }
 
-function saveYaml(filename, data) {
-  if (!filename.endsWith('.yml')) {
-    filename += '.yml'
-  }
-  fs.writeFileSync(resolve(filename), YAML.dump(data, { noRefs: true }))
-}
-
 const { data } = loadYaml('../src/content/i18n/es')
 
 function createZodSchema(obj, indent = 2) {

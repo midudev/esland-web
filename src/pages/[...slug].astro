@@ -9,25 +9,13 @@ interface Route {
   params: { slug: string | undefined };
 }
 
-export const components = Object.fromEntries(
-  await Promise.all(
-    Object.entries(
-      import.meta.glob([
-        "../components/pages/*.astro",
-      ])
-    ).map(async ([entry, callback]: [string, Function]) => {
-      let url: string = entry
-        .replace("../components/", "")
-        .replace("pages/", "")
-        .replace("cookies/", "")
-        .replace('.astro', "")
-        .replace(".html", "")
-        .toLowerCase();
-        const component = (await callback()).default;
-      return [url, component];
-    })
-  )
-);
+export const components = (await Astro.glob("../components/pages/*.astro")).reduce((acc: { [key: string]: any }, entry) => {
+  if (entry.url) {
+    let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
+    acc[url] = entry.default;
+  }
+  return acc;
+}, {});
 
 export const pages: Record<string, any> = {};
 
