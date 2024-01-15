@@ -1,5 +1,5 @@
 ---
-import i18n from '../i18n';
+import i18n from '@/i18n';
 
 export const prefixDefaultLocale = i18n.routing.prefixDefaultLocale;
 export const defaultLocale = i18n.defaultLocale;
@@ -19,7 +19,7 @@ export const components = (await Astro.glob("../components/pages/*.astro")).redu
 
 export const pages: Record<string, any> = {};
 
-export const routes = locales.reduce((acc: Route[], lang) => {
+export const routes = locales.reduce((acc: Route[], lang: string) => {
   const needPrefix = lang !== defaultLocale || prefixDefaultLocale;
   for (const [path, component] of Object.entries(components)) {
     let slug: string | undefined = path
@@ -47,7 +47,7 @@ export async function getStaticPaths() {
 
 export const prerender = true;
 
-let { slug } = Astro.params;
+let { slug } : { slug: string | undefined} = Astro.params;
 
 if (prefixDefaultLocale && !slug) {
   return Astro.redirect(`/${defaultLocale}`);

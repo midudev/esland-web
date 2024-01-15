@@ -1,18 +1,16 @@
 ---
-import i18nConfig from "@/i18n"
+import { needPrefix } from "@/i18n"
 import { getPathByLocale } from "astro:i18n"
 import SpainFlag from "@/components/flags/Spain.astro"
 import AndorraFlag from "@/components/flags/Andorra.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
-import Link from "./Link.astro"
+import Link from "@/components/Link.astro"
 
 const { currentLocale = "es", url } = Astro
 
-const pathname = url.pathname
+const { pathname } = url
 
-const hasPrefix = i18nConfig.routing.prefixDefaultLocale || currentLocale !== i18nConfig.defaultLocale;
-
-const path = hasPrefix ? pathname.substring(getPathByLocale(currentLocale).length + 2) : pathname;
+const path = needPrefix(currentLocale) ? pathname.substring(getPathByLocale(currentLocale).length + 2) : pathname;
 
 const LOCALES: Record<
   string,

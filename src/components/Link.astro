@@ -9,8 +9,10 @@ interface Props {
 
 const { currentLocale = "es" } = Astro
 const { href, locale, class: className } = Astro.props
+const path = getRelativeLocaleUrl(locale || currentLocale, href)
+  .replace(/\/+$/, "");
 ---
 
-<a href={getRelativeLocaleUrl(locale || currentLocale, href)} class:list={[className]}>
+<a href={path} class:list={[className]}>
   <slot />
 </a>

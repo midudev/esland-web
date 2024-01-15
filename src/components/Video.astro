@@ -1,6 +1,9 @@
 ---
 import Button from "@/components/Button.astro"
 import Logo from "@/components/Logo.astro"
+import { getRelativeLocaleUrl } from "astro:i18n"
+
+const { currentLocale = "es" } = Astro;
 
 const { i18n } = Astro.locals;
 ---
@@ -37,7 +40,7 @@ const { i18n } = Astro.locals;
       <Button
         target="_self"
         class="text-blue-950 animate-fade-up bg-white"
-        url="/vota"
+        url={getRelativeLocaleUrl(currentLocale, "/vota")}
       >
         {i18n.VIDEO_BUTTON}
       </Button>
