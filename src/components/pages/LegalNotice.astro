@@ -1,0 +1,246 @@
+---
+import Layout from "@/layouts/Layout.astro"
+
+import { getI18N } from "@/i18n"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+import SubtitleItem from "@/components/legalNotice/SubtitleItem.astro"
+import DescriptionItem from "@/components/legalNotice/DescriptionItem.astro"
+
+const H1_STYLES =
+  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <link
+    rel="preload"
+    href="/fonts/jura.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+    slot="preload"
+  />
+  <main>
+    <section
+      class="max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+    >
+      <h1 class={H1_STYLES}>
+        {i18n.LEGAL_NOTICE.TITLE}
+      </h1>
+
+      <!-- Access and use -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.ACCESS_AND_USE.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.ACCESS_AND_USE.DESCRIPTION_1}
+      />
+
+      <!-- Ownership and contact data -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.OWNERSHIP_AND_CONTACT_DATA.TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.OWNERSHIP_AND_CONTACT_DATA.DESCRIPTION_1}
+      />
+
+      <!-- Purpose and content website -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.PURPOSE_AND_CONTENT_WEBSITE.TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.PURPOSE_AND_CONTENT_WEBSITE
+          .DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.PURPOSE_AND_CONTENT_WEBSITE
+          .DESCRIPTION_2}
+      />
+
+      <!-- Terms of use -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.TERMS_OF_USE.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.TERMS_OF_USE.DESCRIPTION_3}
+      />
+
+      <!-- Use of website and resposibility -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY.TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_3}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_4}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_5}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_6}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_7}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_8}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_9}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_10}
+      />
+
+      <!-- Disclaimer of liability -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_3}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_4}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_5}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_6}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_7}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_8}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_9}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_10}
+      />
+      <!-- Intelectual and industrial property -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY.TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY
+          .DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY
+          .DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY
+          .DESCRIPTION_3}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY
+          .DESCRIPTION_4}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY
+          .DESCRIPTION_5}
+      />
+
+      <!-- Thrid party links -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.THIRD_PARTY_LINKS.DESCRIPTION_2}
+      />
+
+      <!-- Social networks -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.SOCIAL_NETWORKS.DESCRIPTION_2}
+      />
+
+      <!-- Data protection -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.DATA_PROTECTION.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_1}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_3}
+      />
+
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DATA_PROTECTION.DESCRIPTION_4}
+      />
+
+      <!-- Site update -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.SITE_UPDATE.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.SITE_UPDATE.DESCRIPTION_1}
+      />
+
+      <!-- Web interoperability and funcionality -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.WEB_INTEROPERABILITY_AND_FUNCTIONALITY
+          .TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.WEB_INTEROPERABILITY_AND_FUNCTIONALITY
+          .DESCRIPTION_1}
+      />
+
+      <!-- Integrity -->
+      <SubtitleItem subtitle={i18n.LEGAL_NOTICE.INTEGRITY.TITLE} />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.INTEGRITY.DESCRIPTION_1}
+      />
+
+      <!-- Applicable legislation and jurisdiction -->
+      <SubtitleItem
+        subtitle={i18n.LEGAL_NOTICE.APPLICABLE_LEGISLATION_AND_JURISDICTION
+          .TITLE}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.APPLICABLE_LEGISLATION_AND_JURISDICTION
+          .DESCRIPTION_1}
+      />
+
+      <p>
+        <em>{i18n.LEGAL_NOTICE.MODIFICATIONS.LAST_UPDATE}</em>
+      </p>
+    </section>
+  </main>
+</Layout>
