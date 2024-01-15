@@ -14,7 +14,6 @@ export const components = Object.fromEntries(
     Object.entries(
       import.meta.glob([
         "../components/pages/*.astro",
-        "../components/cookies/Cookies.astro",
       ])
     ).map(async ([entry, callback]: [string, Function]) => {
       let url: string = entry
@@ -35,7 +34,7 @@ export const pages: Record<string, any> = {};
 export const routes = locales.reduce((acc: Route[], lang) => {
   const needPrefix = lang !== defaultLocale || prefixDefaultLocale;
   for (const [path, component] of Object.entries(components)) {
-    let slug: string | undefined = path === 'vote' ? 'vota' : path;
+    let slug: string | undefined = path
     if (slug === 'app') {
       slug = needPrefix ? lang : undefined;
     } else if (needPrefix) {

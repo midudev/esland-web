@@ -1,12 +1,9 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-
-import { getI18N } from "@/i18n"
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
-
 import SubtitleItem from "@/components/legalNotice/SubtitleItem.astro"
 import DescriptionItem from "@/components/legalNotice/DescriptionItem.astro"
+
+const { i18n } = Astro.locals;
 
 const H1_STYLES =
   "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"

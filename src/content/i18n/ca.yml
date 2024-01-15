@@ -279,8 +279,440 @@ COOKIES:
           conversió al lloc web de Google Ads llegiran aquesta galeta, llevat
           que la inhabiliteu
         OBJECTIVE_URL: https://support.google.com/google-ads/answer/7521212?hl=ca
+PRIVACY:
+  POLICY:
+    TITLE: Política de privacitat
+    DESCRIPTION_1: Ens complau que visiteu la web oficial de PREMIS ESLAND
+      www.premiosesland.com (d'ara endavant, Lloc Web) i agraïm el vostre
+      interès.
+    DESCRIPTION_2: UBIQ S.L.U (d'ara endavant, UBIQ) té el ferm compromís de complir
+      amb la legislació vigent en matèria de protecció de dades personals per
+      garantir la privadesa, el secret i la seguretat de les dades personals
+      dels Usuaris aplicant mesures tècniques i organitzatives apropiades a
+      aquest efecte.
+    DESCRIPTION_3: La present Política de Privadesa té per objecte informar els
+      Usuaris sobre el tractament que UBIQ fa de les dades personals que
+      l'Usuari faciliti en accedir, navegar i utilitzar els serveis que
+      s'ofereixen al Lloc Web, així com de les mesures de seguretat adoptades,
+      de l'exercici dels drets dels Usuaris i de la forma de contacte.
+    DESCRIPTION_4: Les dades personals només seran obtingudes per UBIQ per al seu
+      tractament, quan siguin adequades, pertinents i no excessives en relació
+      amb l'àmbit i les finalitats determinades, explícites i legítimes per a
+      les quals s'hagin obtingut.
+    DESCRIPTION_5: "A continuació, compliment amb la normativa vigent en matèria de
+      protecció de dades personals proporcionem als Usuaris la informació
+      següent:"
+  RESPONSIBLE:
+    TITLE: Responsable del tractament
+    DESCRIPTION_1: UBIQ S.L.U (d'ara endavant, UBIQ) societat andorrana amb NRT
+      L-718097-X, amb domicili social al carrer Josep Viladomat, 4, Ed Sogas,
+      1-1 AD700 Escaldes Engordany (Andorra), inscrita al Registre de Societats
+      del Govern d'Andorra amb núm. 23023, amb correu electrònic
+      [info@ubiq.ad………….], és la titular de la pàgina web www.premiosesland.com
+      (d'ara endavant, Lloc Web).
+    DESCRIPTION_2: "Els Usuaris poden contactar amb el Responsable del Tractament a
+      través de la següent adreça de correu electrònic: info@ubiq.ad"
+  DEFINITIONS:
+    TITLE: Definicions
+    DESCRIPTION: "A l'efecte de la present Política, els termes següents tindran el
+      significat que s'indica a continuació:"
+    ITEM_1: "“Dades Personals”: tota informació sobre una persona física
+      identificada o identificable. Es considera persona física identificable
+      tota persona la identitat de la qual es pugui determinar, directament o
+      indirectament, mitjançant un identificador."
+    ITEM_2: "“Responsable del Tractament”: Persona física o jurídica, autoritat
+      pública, servei o un altre organisme que, sol o juntament amb altres,
+      determini els fins i mitjans del tractament de dades."
+    ITEM_3: "“Encarregat del Tractament”: Persona física o jurídica, autoritat
+      pública, servei o un altre organisme que tracti dades personals per compte
+      del responsable del tractament."
+    ITEM_4: "“Interessat-Usuari”: Tota persona física identificada o identificable
+      les dades personals de la qual siguin objecte de tractament."
+    ITEM_5: "“Tractament de dades”: Qualsevol operació o conjunt d'operacions
+      realitzades sobre dades personals o conjunts de dades personals, ja sigui
+      per procediments automatitzats o no, com la recollida, registre,
+      organització, estructuració, conservació, adaptació o modificació ,
+      extracció, consulta, utilització, comunicació per transmissió, difusió o
+      qualsevol altra forma d'habilitació d'accés, confrontació o interconnexió,
+      limitació, supressió o destrucció."
+  PURPOSE:
+    TITLE: Finalitat del tractament
+    DESCRIPTION_1: Gestionar les sol·licituds d'informació rebudes a través de la
+      funció de “Contacte” de la Web. Gestionar les votacions dels PREMIS ESLAND
+      realitzades pels Usuaris del Lloc Web (identificació, validació i recompte
+      de vots). Fins estadístiques de participació i resultats de les votacions
+      als PREMIS ESLAND -per donar compliment a aquesta finalitat les dades
+      personals seran objecte d'un procés d'anonimització- Per poder participar
+      com a jurat als PREMIS ESLAND, els Usuaris hauran de prémer “Identifica't
+      i Vota” i seran redireccionats a la web de Twitch (www.twitch.tv) on
+      hauran de disposar d'un compte obert en aquesta plataforma de streaming
+      Quan l'Usuari des del seu compte premi “Autoritzar” estarà manifestant que
+      ha llegit i que accepta la Política de Privadesa de www.premiosesland.com
+      A continuació, l'Usuari podrà seleccionar les seves preferències de vot
+      entre les diferents categories definides per Streamers i continguts
+      seguint les indicacions del Lloc Web i una vegada seleccionats els seus
+      vots haurà de prémer “Enviar Els meus Vots” . Les votacions i la identitat
+      de l'Usuari es registraran a la base de dades de UBIQ. La identitat de
+      l'Usuari es registrarà mitjançant un codi hash -algorisme matemàtic-
+      (pseudonimitzat).
+    DESCRIPTION_2: Twitch Interactive, Inc. propietària de www.twitch.tv actua com a
+      proveïdor dels serveis de validació i verificació de la identitat dels
+      Usuaris que voten per evitar el frau en el procés de votació.
+  PERSONAL_DATA:
+    TITLE: Categoria de dades personals
+    DESCRIPTION_1: "La categoria de dades que tracta UBIQ al Lloc Web són:"
+    DESCRIPTION_2: "Correu electrònic en funció de Contacte. Dades identificatives:
+      Identificació de l'Usuari mitjançant un codi hash -algorisme matemàtic-.
+      UBIQ no accedeix a les dades del compte que els Usuaris tenen a
+      www.twitch.tv."
+  LEGITIMACY:
+    TITLE: Base de legitimació
+    DESCRIPTION_1: La base de legitimació per gestionar les comunicacions que es
+      rebin a través de la funció “Contacte” és l'interès legítim d'UBIQ.
+    DESCRIPTION_2: La base de legitimació del tractament de les dades personals dels
+      Usuaris que participen als PREMIS ESLAND és el consentiment exprés atorgat
+      en participar com a jurat i l'interès legítim d'UBIQ en la gestió dels
+      esdeveniments que organitzi i en la gestió dels PREMIS ESLAND.
+    DESCRIPTION_3: L'Usuari podrà revocar el consentiment en qualsevol moment. No
+      obstant, el tractament sobre les dades personals realitzat amb
+      anterioritat a la revocació del consentiment serà lícit.
+  PRESERVATION:
+    TITLE: Conservació de les dades
+    DESCRIPTION_1: Les dades es conservaran durant el termini estrictament necessari
+      per donar compliment a la finalitat per a la qual van ser recollides. No
+      obstant això, UBIQ podrà conservar les dades per a la posada a disposició
+      de les autoritats competents o per fer front a possibles reclamacions, en
+      aquest cas les dades es conservaran bloquejades fins a la finalització
+      dels terminis de prescripció, moment en què seran eliminats amb les
+      mesures de seguretat adequades.
+    DESCRIPTION_2: Finalitzat el termini de conservació, les dades personals podran
+      ser objecte d'un procés d'anonimització per a fins estadístiques dels
+      PREMIS ESLAND.
+  COMMUNICATION:
+    TITLE: Comunicació de dades
+    DESCRIPTION_1: UBIQ no cedirà a tercers les dades facilitades pels Usuaris del
+      Lloc Web, llevat de consentiment previ i exprés d'aquests o sigui
+      necessari per imperatiu legal (Administracions públiques, Forces i Cossos
+      de Seguretat de l'Estat, Ministeri Fiscal, Agència Espanyola de Protecció
+      de Dades, etc).
+    DESCRIPTION_2: UBIQ informa als Usuaris que les dades personals podran
+      comunicar-se a proveïdors d'UBIQ per poder atendre a la gestió dels PREMIS
+      ESLAND, cas en què aquells tindran la condició d'encarregats del
+      tractament seguint les instruccions d'UBIC sobre el tractament de dades
+      personals.
+  USER_RIGHTS:
+    TITLE: Drets dels usuaris
+    DESCRIPTION_1: "UBIQ informa als Usuaris que en referència al tractament de les
+      seves dades personals poden exercir els drets següents:"
+    ITEM_1: Dret a revocar el consentiment atorgat en qualsevol moment.
+    ITEM_2: Dret a obtenir informació sobre si UBIQ tracta dades personals de l'usuari.
+    ITEM_3: Dret d'accés, rectificació, portabilitat i supressió de les vostres
+      dades, ia la limitació o oposició al tractament.
+    ITEM_4: Dret a no ser objecte de decisions individuals automatitzades,
+      incloent-hi l'elaboració de perfils.
+    ITEM_5: Dret a presentar una reclamació davant de l'Agència Espanyola de
+      Protecció de Dades (www.aepd.es), quan l'Usuari consideri que UBIQ ha
+      vulnerat els drets en el tractament de dades personals.
+    DESCRIPTION_2: Els Usuaris podran exercir els seus drets en qualsevol moment i
+      de forma gratuïta adreçant-se per escrit a UBIQ S.L.U. per correu postal a
+      l'adreça de carrer Ganduxer, núm. 129, C.P 08022 Barcelona o bé mitjançant
+      correu electrònic a l'adreça [… …info@fan.content.com…….], en tots dos
+      casos caldrà acompanyar còpia del Document Nacional d'Identitat o document
+      equivalent que acrediti la seva identitat.
+  THIRD_PARTY_DOMAIN_LINKS:
+    TITLE: Enllaços de domini de tercers
+    DESCRIPTION: Per poder participar com a jurat els Usuaris seran redireccionats
+      al domini www.twitch.tv titularitat d'un tercer -Twitch Interactive, Inc-.
+      Aquest domini disposa de les seves pròpies Condicions d'Ús, Política de
+      Privadesa i Política de Cookies. Per això, recomanem als Usuaris que les
+      consultin abans de la seva utilització.
+  SOCIALS:
+    TITLE: Xarxes socials
+    DESCRIPTION_1: Aquest Lloc Web pot contenir enllaços que permeten accedir a
+      diferents xarxes socials pertanyents i gestionades per tercers (p.ex.
+      Facebook, Instagram, YouTube). Aquests enllaços al Lloc Web tenen per únic
+      objecte facilitar als Usuaris el accés a xarxes socials per a informals
+      sobre els esdeveniments organitzats per UBIQ.
+    DESCRIPTION_2: L'activació i ús d'aquestes aplicacions pot comportar la
+      identificació i autenticació de l'Usuari (login/contrasenya) a les
+      plataformes corresponents, completament externes al Lloc Web i fora del
+      control d'UBIQ. Aquestes xarxes socials i plataformes disposen de les
+      seves pròpies polítiques de privadesa i del tractament de les cookies. En
+      aquest sentit, tota informació i dades personals que l'usuari proporcioni
+      a aquestes plataformes serà sota la seva pròpia i exclusiva
+      responsabilitat.
+  COOKIES:
+    TITLE: Cookies
+    DESCRIPTION_1: Aquest Lloc Web no utilitza cookies per recollir informació dels
+      Usuaris, únicament s'utilitzen cookies pròpies, de sessió, amb finalitat
+      tècnica - aquelles que permeten a l'Usuari la navegació segura a través
+      del Lloc Web i la utilització de les diferents funcions i serveis que
+      s'ofereixen al Lloc Web. Per a una informació més detallada accediu a la
+      Política de Cookies.
+    DESCRIPTION_2: No obstant, aquest Lloc Web pot contenir enllaços a llocs web de
+      tercers amb polítiques de privadesa i de cookies alienes a UBIQ i que
+      l'Usuari podrà decidir si accepta o rebutja quan accedeixi a aquests llocs
+      web.
+  INTERNATIONAL_TRANSFERS:
+    TITLE: Transferències internacionals
+    DESCRIPTION: Les dades personals poden allotjar-se en servidors ubicats fora de
+      l'Espai Econòmic Europeu (Estats Units, Japó, Austràlia, Japó), en
+      participar als PREMIS ESLAND consent aquesta transferència de dades i se
+      li informa que en aquestes es garanteix la existència d'una Decisió
+      d'Adequació del Comitè Europeu de Protecció de Dades o bé l'adopció de
+      mesures de garantia complementàries per tal de garantir un nivell
+      d'adequació de protecció alineat amb el Reglament General de Protecció de
+      Dades de la Unió Europea.
+  MODIFICATIONS:
+    TITLE: Modificacions de la política de privadesa
+    DESCRIPTION: UBIQ es reserva el dret a modificar aquesta Política de privadesa
+      en funció d'exigències legislatives, reglamentàries o amb la finalitat
+      d'adaptar aquesta política a les instruccions dictades per l'Agència
+      Espanyola de Protecció de Dades i/o pel Comitè Europeu de Protecció de
+      Dades, per això s'aconsella als Usuaris que la visitin periòdicament. Quan
+      es produeixin canvis significatius en aquesta Política, aquests es
+      publicaran al Lloc Web.
+    LAST_UPDATE: "Data de la darrera actualització: 12 del 12 de 2023."
 INFO:
   TITLE_HERO_1: Els premis
   TITLE_HERO_2: ESLAND
   GALLERY_TITLE: GALERÍA
   GALLERY_TEXT: Alguns dels millors moments de la gala que passaran a la història.
+LEGAL_NOTICE:
+  TITLE: Aviso legal
+  ACCESS_AND_USE:
+    TITLE: Condiciones de acceso y uso
+    DESCRIPTION_1: El acceso, navegación y utilización del Sitio web
+      www.premiosesland.com implica la aceptación expresa y sin reservas de
+      todos los términos de las condiciones de uso incluidas en el presente
+      Aviso Legal. Su Cumplimiento es exigible respecto de cualquier persona que
+      acceda, navegue o utilice el Sitio web. Si el Usuario no está de acuerdo
+      con la totalidad o parte de las condiciones de uso en los términos
+      expuestos, deberá abstenerse de acceder, navegar o utilizar el Sitio Web.
+  OWNERSHIP_AND_CONTACT_DATA:
+    TITLE: Titularidad  y datos de contacto
+    DESCRIPTION_1: "UBIQ S.L.U (en adelante, UBIQ) sociedad andorrana con NRT
+      L-718097-X, con domicilio social en la calle Josep Viladomat, 4, Ed Sogas,
+      1-1 AD700 Escaldes Engordany (Andorra), inscrita en el Registro de
+      Sociedades del Gobierno de Andorra con nº 23023, con correo electrónico
+      [info@ubiq.ad………….], es la titular de la página Web www.premiosesland.com
+      (en adelante, Sitio Web). Los Usuarios del Sitio Web podrán contactar con
+      UBIQ mediante el envío de un correo electrónico a: info@ubiq.ad"
+  PURPOSE_AND_CONTENT_WEBSITE:
+    TITLE: Objeto y contenido del sitio web
+    DESCRIPTION_1: Este Sitio Web tiene por objeto informar a los Usuarios de los
+      eventos que organice UBIQ en relación con las actividades de Streamers y
+      ofrecer la posibilidad de participar en dichos eventos como jurado de los
+      Premios Esland y seleccionar y emitir su voto a favor de sus Streamers y
+      contenidos favoritos. El acceso a la información del Sitio Web no implica
+      ni constituye relación contractual alguna entre el Usuario y UBIQ.
+    DESCRIPTION_2: UBIQ emplea todos los esfuerzos para asegurar que toda la
+      información disponible en el Sitio Web sea completa y esté actualizada,
+      revisando periódicamente el contenido del Sitio Web. No obstante, el
+      Usuario reconoce y acepta que toda la información disponible en el Sitio
+      Web se ofrece únicamente a efectos meramente informativos y que UBIQ no
+      garantiza la precisión, idoneidad e integridad de la información contenida
+      en el Sitio Web. Es responsabilidad exclusiva del Usuario el uso que haga
+      de la información contenida en el Sitio Web.
+  TERMS_OF_USE:
+    TITLE: Condiciones de uso
+    DESCRIPTION_1: Estas condiciones generales de uso regulan el acceso y navegación
+      en el Sitio Web, cuyo acceso y uso tiene carácter libre y gratuito, no
+      siendo necesario el previo registro de los Usuarios. No obstante, en el
+      caso de que los Usuarios deseen participar de forma activa en los PREMIOS
+      ESLAND como jurado y así seleccionar y votar a sus Streamers y contenidos
+      favoritos, deberán disponer de una cuenta abierta en la plataforma de
+      streaming www.twitch.tv y en el proceso de votación se informará a los
+      Usuarios de los pasos a seguir para emitir sus votos en las diferentes
+      categorías designadas.
+    DESCRIPTION_2: El acceso, uso o navegación en el Sitio Web atribuye la condición
+      de Usuario e implica el conocimiento, la aceptación y el sometimiento a
+      las advertencias legales y a las condiciones de uso incluidas en el
+      presente Aviso Legal en la versión publicada en el momento en que el
+      Usuario accede al Sitio Web. El Usuario acepta que el uso del Sitio Web
+      tiene lugar bajo su única y exclusiva responsabilidad. Se recomienda al
+      Usuario leer el presente Aviso Legal en cada ocasión en que se acceda a la
+      Web.
+    DESCRIPTION_3: UBIQ se reserva, sin necesidad de previó aviso y en cualquier
+      momento, el derecho a interrumpir, suspender temporalmente, desactivar y/
+      cancelar el acceso al Sitio Web o a cualesquiera de los elementos que se
+      integran en el mismo.
+  USE_OF_WEBSITE_AND_RESPONSIBILITY:
+    TITLE: USO DEL SITIO WEB Y RESPONSABILIDAD
+    DESCRIPTION_1: El Usuario es responsable del uso que realice del Sitio Web y de
+      su contenido y lo hace bajo su propio riesgo. Al acceder acepta y se
+      compromete a utilizar el Sitio Web, sus contenidos y servicios de
+      conformidad con la Ley, el presente Aviso Legal, las buenas costumbres y
+      el orden público, y deberán responder frente a UBIQ o terceros por
+      cualquier daño que pueda producirse por el incumplimiento de estas
+      obligaciones.
+    DESCRIPTION_2: No destruir, alterar, inutilizar o dañar los datos o programas
+      informáticos o documentos electrónicos del Sitio Web.
+    DESCRIPTION_3: No obstaculizar el acceso de otros Usuarios al Sitio Web.
+    DESCRIPTION_4: No introducir virus o cualquier otro dispositivo que cause o
+      pueda causar una alteración en los sistemas de UBIQ.
+    DESCRIPTION_5: No copiar el Software.
+    DESCRIPTION_6: No distribuir, compartir, sublicenciar, prestar, arrendar o poner
+      la Web a disposición de terceros.
+    DESCRIPTION_7: No someter a ingeniería inversa, descompilar o desmontar el
+      Software del Sitio Web o tratar de obtener su código fuente.
+    DESCRIPTION_8: No almacenar, introducir o difundir en o desde el Sitio Web
+      información o material difamatorio, injurioso, obsceno, amenazador,
+      xenófogo o que incite a la violencia, discriminación por razón de raza,
+      sexo, ideología, religión, atente contra la moral, el orden público, los
+      derechos fundamentales, las libertades públicas, el honor, la intimidad o
+      la imagen de terceros, y en general que infrinja la normativa vigente.
+    DESCRIPTION_9: El Usuario es el único y exclusivo responsable del acceso al
+      Sitio Web y del uso que haga de la información y datos contenidos.
+    DESCRIPTION_10: UBIQ no responderá de ninguna consecuencia, daño o perjuicio
+      derivados del acceso o uso del Sitio Web y de su contenido por parte de
+      los Usuarios. UBIQ, como titular del Sitio Web, queda exonerado de
+      cualquier responsabilidad que pudiera derivarse de las acciones del
+      Usuario. De manera que el Usuario es el único responsable frente a
+      cualquier reclamación iniciada por terceras personas contra UBIQ por el
+      acceso o uso que el Usuario haga del Sitio Web.
+  DISCLAIMER_OF_LIABILITY:
+    TITLE: EXONERACIÓN DE RESPONSABILIDAD
+    DESCRIPTION_1: UBIQ realiza los máximos esfuerzos para que el uso del Sitio Web
+      se realice en las mejores condiciones y para facilitar una información
+      actualizada, no obstante, UBIQ no garantiza la inexistencia de errores u
+      omisiones en el contenido del Sitio Web, ni garantiza que el acceso al
+      Sitio Web sea ininterrumpido, estando facultado para suspender
+      temporalmente y sin previo aviso la accesibilidad al Sitio Web.
+    DESCRIPTION_2: ·Cualquier fallo o interrupción de la comunicación, la falta de
+      disponibilidad, actualidad, mantenimiento y efectivo funcionamiento del
+      Sitio Web y/o de sus servicios o contenidos.
+    DESCRIPTION_3: ·El incumplimiento de las expectativas de los Usuarios en
+      relación con el Sitio Web o en el servidor que lo suministra.
+    DESCRIPTION_4: ·La invulnerabilidad del Sitio Web y/o la invulnerabilidad de las
+      medidas de seguridad que se adopten en el mismo.
+    DESCRIPTION_5: ·Los contenidos, servicios, errores u omisiones que pudiera tener
+      el contenido del Sitio Web o de los links o enlaces que puedan estar
+      habilitados.
+    DESCRIPTION_6: ·La existencia de virus o programas lesivos en los contenidos que
+      puedan producir alteraciones en el sistema informático, en los documentos
+      electrónicos o en los ficheros almacenados de los Usuarios.
+    DESCRIPTION_7: ·Averías telefónicas o de redes motivadas por causas ajenas al
+      titular del Sitio Web.
+    DESCRIPTION_8: ·Retrasos o bloqueos en el funcionamiento operativo del sistema
+      causado por deficiencias o sobrecarga en las líneas telefónicas o en
+      Internet.
+    DESCRIPTION_9: ·Las intromisiones ilegítimas fuera de control del titular del
+      Sitio Web, como los accesos no autorizados, las copias, la alteración o la
+      supresión de información y datos realizados por terceros en el Sitio Web.
+    DESCRIPTION_10: UBIQ emplea todos los recursos técnicos necesarios para reducir
+      este tipo de riesgos. No obstante, se informa al Usuario que dichos
+      riesgos existen y que UBIQ no se responsabiliza de los daños que pudieran
+      ocasionar.
+  INTELLECTUAL_AND_INDUSTRIAL_PROPERTY:
+    TITLE: PROPIEDAD INTELECTUAL E INDUSTRIAL
+    DESCRIPTION_1: El contenido del Sitio Web se rige por las leyes españolas y está
+      protegido por la legislación nacional e internacional sobre Propiedad
+      Intelectual e Industrial.
+    DESCRIPTION_2: Los Derechos de Propiedad Intelectual e Industrial sobre toda la
+      información contenida en este Sitio Web, entre otros, marcas, nombres
+      comerciales, diseño gráfico, dibujos, logotipos, imágenes, índices,
+      textos, audios, vídeos, software, diseño y signos identificativos, así
+      como sus códigos fuente, estructura de navegación, bases de datos, y todos
+      los elementos en ellos contenidos, están protegidos por derechos de autor
+      y derechos de propiedad intelectual e industrial de UBIQ o de terceros.
+    DESCRIPTION_3: En ningún caso el acceso y uso al Sitio Web por parte de los
+      Usuarios, se podrá considerar como una concesión de licencia de uso o
+      derecho a ningún activo de UBIQ o de sus autores legítimos, por lo que no
+      implicará una cesión, ni transmisión, ni cualquier tipo de renuncia de
+      derechos de Propiedad Intelectual o Industrial.
+    DESCRIPTION_4: A menos que UBIQ o los terceros titulares de los derechos lo
+      autorice expresamente, queda prohibida toda reproducción, copia,
+      conversión, distribución, modificación, supresión o transformación,
+      publicación, comercialización, utilización de técnicas de ingeniería
+      inversa o cualquier otro medio para obtener el código fuente y cualquier
+      otra actividad que pueda realizarse con los datos y la información
+      contenida en el Sitio Web, así como con su diseño y la selección y modelo
+      de presentación. El Usuario emplea la información a la que pueda acceder
+      mediante el uso del Sitio Web, exclusivamente para fines personales y en
+      ningún caso para fines comerciales o empresariales.
+    DESCRIPTION_5: La utilización no autorizada de la información contenida en el
+      Sitio Web, su modificación o supresión de datos, así como la lesión de los
+      Derechos de Propiedad Intelectual o Industrial de UBIQ o de terceros, dará
+      lugar a las responsabilidades legalmente establecidas, reservándose UBIQ
+      la posibilidad de ejercer las acciones judiciales que procedan en derecho
+      contra los Usuarios que violen o infrinjan los derechos de propiedad
+      intelectual o industrial.
+  THIRD_PARTY_LINKS:
+    TITLE: ENLACES DE TERCEROS
+    DESCRIPTION_1: Este Sitio Web puede contener enlaces a otros Sitios Web
+      gestionados por terceros titulares de aquellos. Así, para poder participar
+      como jurado los Usuarios serán redireccionados al dominio www.twitch.tv
+      titularidad de un tercero -Twitch Interactive, Inc-. Dicho dominio dispone
+      de sus propias Condiciones de Uso, Política de Privacidad y Política de
+      Cookies. Por ello, recomendamos a los Usuarios su lectura previa al
+      registro y apertura de una cuenta en dicho dominio.
+    DESCRIPTION_2: UBIQ se reserva el derecho de retirar de modo unilateral y en
+      cualquier momento los enlaces que aparezcan en el presente Sitio Web.
+  SOCIAL_NETWORKS:
+    TITLE: REDES SOCIALES
+    DESCRIPTION_1: Este Sitio Web puede contener enlaces que permiten a los Usuarios
+      acceder a diferentes redes sociales pertenecientes y/o gestionadas por
+      terceros (p.ej, Facebook, Instagram, YouTube). Estos enlaces en el Sitio
+      Web tienen por único objeto facilitar a los Usuarios el acceso a redes
+      sociales para informales sobre eventos organizados por UBIQ.
+    DESCRIPTION_2: La activación y uso de estas aplicaciones puede conllevar la
+      identificación y autenticación del Usuario (login/contraseña) en las
+      plataformas correspondientes, completamente externas al Sitio Web y fuera
+      del control de UBIQ. Al acceder a dichas redes externas, el Usuario
+      ingresa en un entorno no controlado por UBIQ, de manera que ésta no
+      asumirá ninguna responsabilidad sobre la configuración de seguridad de
+      dichos entornos. Dichas redes sociales y plataformas disponen de sus
+      propias políticas de privacidad y del tratamiento de las cookies. En este
+      sentido, toda información y datos personales que el Usuario proporcione a
+      estas plataformas será bajo su propia y exclusiva responsabilidad.
+  DATA_PROTECTION:
+    TITLE: PROTECCIÓN DE DATOS PERSONALES
+    DESCRIPTION_1: UBIQ, como titular del Sitio Web, informa a los Usuarios que es
+      el responsable de los tratamientos que se realicen de los datos personales
+      solicitados y facilitados durante la utilización del Sitio Web.
+    DESCRIPTION_2: De conformidad con lo establecido en la legislación aplicable en
+      materia de protección de datos, UBIQ respeta la privacidad de los Usuarios
+      y el secreto y seguridad de los datos personales, adoptando para ello las
+      medidas técnicas y organizativas necesarias para evitar la pérdida, mal
+      uso, alteración, acceso no autorizado y robo de los datos personales
+      facilitados, habida cuenta el estado de la tecnología, la naturaleza de
+      los datos y los riesgos a los que están expuestos.
+    DESCRIPTION_3: Los datos personales de los Usuarios del Sitio Web, solo se
+      obtendrán para ser tratados cuando sean adecuados, pertinentes y no
+      excesivos en relación con el ámbito y las finalidades determinadas,
+      explícitas, consentidas y/o legítimas para las que se hayan recabado.
+      Cuando se recaben datos personales a través del Sitio Web, se informará
+      previamente al Usuario de forma clara e inequívoca.
+    DESCRIPTION_4: El Usuario deberá visitar la Política de Privacidad de UBIQ, en
+      este mismo Sitio Web, donde encontrará información detallada respecto la
+      protección de datos de carácter personal.
+  SITE_UPDATE:
+    TITLE: ACTUALIZACIÓN DEL SITIO WEB
+    DESCRIPTION_1: Para mejorar el servicio en beneficio de los Usuarios, UBIQ S.L.U
+      se reserva el derecho a actualizar, modificar o eliminar sin previo aviso,
+      la presentación y configuración del Sitio Web, los contenidos e
+      información contenidos en él, así como modificar las Condiciones de Uso
+      que entrarán en vigor desde el momento de su publicación en el Sitio Web
+      siendo aplicables desde esa fecha.
+  WEB_INTEROPERABILITY_AND_FUNCTIONALITY:
+    TITLE: INTEROPERATIVIDAD Y FUNCIONALIDAD DEL SITIO WEB
+    DESCRIPTION_1: El Sitio Web se ejecuta en las plataformas Safari, Firefox,
+      Internet Explorer y Chrome actualizadas en 2019. Está especialmente
+      optimizada para Chrome.
+  INTEGRITY:
+    TITLE: INTEGRIDAD
+    DESCRIPTION_1: Si alguna de las condiciones de uso del presente Aviso Legal
+      fuera anulado o se considerase no válida, el resto de condiciones no se
+      verán afectadas continuando con plena vigencia y validez.
+  APPLICABLE_LEGISLATION_AND_JURISDICTION:
+    TITLE: LEGISLACIÓN APLICABLE Y JURISDICCIÓN
+    DESCRIPTION_1: Toda cuestión o controversia que pudiera surgir en referencia a
+      la aplicación del presente Aviso Legal entre el Usuario y UBIQ se rige por
+      la normativa española vigente aplicable en la materia. Y siempre que la
+      normativa vigente al efecto prevea la posibilidad para las partes de
+      someterse a un fuero determinado, el Usuario renuncia de forma expresa al
+      fuero que pudiera corresponderle y se somete para la resolución de la
+      controversia a los Juzgados y Tribunales de Barcelona.
+  MODIFICATIONS:
+    LAST_UPDATE: "Fecha de la última actualización: 12 del 12 de 2023."
