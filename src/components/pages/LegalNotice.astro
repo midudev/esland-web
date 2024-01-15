@@ -1,29 +1,29 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from '@/layouts/Layout.astro'
 
-import { getI18N } from "@/i18n"
+import { getI18N } from '@/i18n'
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 
-import SubtitleItem from "@/components/legalNotice/SubtitleItem.astro"
-import DescriptionItem from "@/components/legalNotice/DescriptionItem.astro"
+import SubtitleItem from '@/components/legalNotice/SubtitleItem.astro'
+import DescriptionItem from '@/components/legalNotice/DescriptionItem.astro'
 
 const H1_STYLES =
-  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
+  'mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase'
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <link
-    rel="preload"
-    href="/fonts/jura.woff2"
-    as="font"
-    type="font/woff2"
+    rel='preload'
+    href='/fonts/jura.woff2'
+    as='font'
+    type='font/woff2'
     crossorigin
-    slot="preload"
+    slot='preload'
   />
   <main>
     <section
-      class="max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+      class='max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20'
     >
       <h1 class={H1_STYLES}>
         {i18n.LEGAL_NOTICE.TITLE}
@@ -76,6 +76,46 @@ const H1_STYLES =
         description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
           .DESCRIPTION_1}
       />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_3}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_4}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_5}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_6}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_7}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_8}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_9}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_10}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.USE_OF_WEBSITE_AND_RESPONSIBILITY
+          .DESCRIPTION_11}
+      />
 
       <!-- Disclaimer of liability -->
       <SubtitleItem
@@ -84,7 +124,33 @@ const H1_STYLES =
       <DescriptionItem
         description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_1}
       />
-
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_2}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_3}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_4}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_5}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_6}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_7}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_8}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_9}
+      />
+      <DescriptionItem
+        description={i18n.LEGAL_NOTICE.DISCLAIMER_OF_LIABILITY.DESCRIPTION_10}
+      />
       <!-- Intelectual and industrial property -->
       <SubtitleItem
         subtitle={i18n.LEGAL_NOTICE.INTELLECTUAL_AND_INDUSTRIAL_PROPERTY.TITLE}
@@ -176,7 +242,9 @@ const H1_STYLES =
           .DESCRIPTION_1}
       />
 
-      <p>Fecha de la última actualización: 12 del 12 de 2023.</p>
+      <p>
+        <em>{i18n.LEGAL_NOTICE.MODIFICATIONS.LAST_UPDATE}</em>
+      </p>
     </section>
   </main>
 </Layout>
