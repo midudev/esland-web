@@ -1,34 +1,30 @@
 ---
+import i18nConfig from "@/i18n"
+import { getPathByLocale } from "astro:i18n"
 import SpainFlag from "@/components/flags/Spain.astro"
 import AndorraFlag from "@/components/flags/Andorra.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
+import Link from "./Link.astro"
 
 const { currentLocale = "es", url } = Astro
 
 const pathname = url.pathname
 
-let restUrl
+const hasPrefix = i18nConfig.routing.prefixDefaultLocale || currentLocale !== i18nConfig.defaultLocale;
 
-if (pathname.startsWith("/ca")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
-} else {
-  restUrl = pathname.replace(/\/+$/, "")
-}
+const path = hasPrefix ? pathname.substring(getPathByLocale(currentLocale).length + 2) : pathname;
 
 const LOCALES: Record<
   string,
-  { code: string; name: string; href: string; flag: typeof SpainFlag }
+  { code: string; name: string; flag: typeof SpainFlag }
 > = {
   ca: {
     code: "ca",
-    href: `/ca${restUrl}`,
     name: "Català",
     flag: AndorraFlag,
   },
   es: {
     code: "es",
-    href: restUrl,
     name: "Español",
     flag: SpainFlag,
   },
@@ -38,7 +34,6 @@ const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
 )
-const currentPath = url.pathname.replace(currentLocaleData.href, "")
 ---
 
 <div class="relative inline-block text-left">
@@ -61,13 +56,14 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "")
       {
         otherLocales.map((locale) => (
           <li class="">
-            <a
+            <Link
               class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={`${locale.href}${currentPath}`}
+              href={path}
+              locale={locale.code}
             >
               <locale.flag />
               {locale.name}
-            </a>
+            </Link>
           </li>
         ))
       }

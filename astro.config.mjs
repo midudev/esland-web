@@ -9,6 +9,7 @@ import auth from "auth-astro";
 export default defineConfig({
   integrations: [tailwind(), preact(), auth()],
   i18n,
+  trailingSlash: "never",
   output: "server",
   adapter: vercel(),
 });

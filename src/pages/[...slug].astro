@@ -18,10 +18,9 @@ export const components = Object.fromEntries(
       ])
     ).map(async ([entry, callback]: [string, Function]) => {
       let url: string = entry
-        .replace("components/", "")
+        .replace("../components/", "")
         .replace("pages/", "")
         .replace("cookies/", "")
-        .replace("../", "")
         .replace('.astro', "")
         .replace(".html", "")
         .toLowerCase();
@@ -34,22 +33,23 @@ export const components = Object.fromEntries(
 export const pages: Record<string, any> = {};
 
 export const routes = locales.reduce((acc: Route[], lang) => {
-  const isDefault = lang === defaultLocale;
+  const needPrefix = lang !== defaultLocale || prefixDefaultLocale;
   for (const [path, component] of Object.entries(components)) {
     let slug: string | undefined = path === 'vote' ? 'vota' : path;
-    if (slug === 'app' && isDefault && !prefixDefaultLocale) {
-      slug = undefined;
-    } else if (lang !== defaultLocale || prefixDefaultLocale) {
-      if (slug !== 'app') {
-        slug = `${lang}/${slug}`;
-      } else {
-        slug = lang;
-      }
+    if (slug === 'app') {
+      slug = needPrefix ? lang : undefined;
+    } else if (needPrefix) {
+      slug = `${lang}/${slug}`
     }
     acc.push({
       params: { slug },
     });
     pages[slug === undefined ? 'app' : slug] = component;
+  }
+  if (needPrefix && lang === defaultLocale) {
+    acc.push({
+      params: { slug: undefined }
+    })
   }
   return acc;
 }, []);
@@ -60,7 +60,16 @@ export async function getStaticPaths() {
 
 export const prerender = true;
 
-const { slug } = Astro.params;
-const CustomPage = pages[slug === undefined ? 'app' : slug];
+let { slug } = Astro.params;
+
+if (prefixDefaultLocale && !slug) {
+  return Astro.redirect(`/${defaultLocale}`);
+}
+
+if (slug?.endsWith('/')) {
+  slug = slug.slice(0, -1);
+}
+
+const CustomPage = pages[!slug ? 'app' : slug];
 ---
 <CustomPage />

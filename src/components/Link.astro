@@ -3,13 +3,14 @@ import { getRelativeLocaleUrl } from "astro:i18n"
 
 interface Props {
   class?: string
-  href: string
+  href: string,
+  locale?: string
 }
 
 const { currentLocale = "es" } = Astro
-const { href, class: className } = Astro.props
+const { href, locale, class: className } = Astro.props
 ---
 
-<a href={getRelativeLocaleUrl(currentLocale, href)} class:list={[className]}>
+<a href={getRelativeLocaleUrl(locale || currentLocale, href)} class:list={[className]}>
   <slot />
 </a>

@@ -1,4 +1,7 @@
 ---
+import Link from './Link.astro'
+import { getRelativeLocaleUrl } from "astro:i18n"
+
 interface Props {
   checkActive?: boolean
   href: string
@@ -13,26 +16,13 @@ const {
   ...restOfProps
 } = Astro.props
 
-const LOCALES: Record<string, { code: string; baseHref: string }> = {
-  ca: {
-    code: "ca",
-    baseHref: "/ca",
-  },
-  es: {
-    code: "es",
-    baseHref: "",
-  },
-}
-
-const baseHref = LOCALES[currentLocale].baseHref
-
 const currentPath = Astro.url.pathname
-const destination = `${baseHref}${href}`
+const destination = getRelativeLocaleUrl(currentLocale, href);
 const isActive = currentPath === destination && checkActive
 ---
 
-<a
-  href={destination}
+<Link
+  href={href}
   class:list={[
     className,
     "border-b-2",
@@ -41,4 +31,4 @@ const isActive = currentPath === destination && checkActive
   {...restOfProps}
 >
   <slot />
-</a>
+</Link>
