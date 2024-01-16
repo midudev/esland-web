@@ -1,10 +1,9 @@
 ---
 import { needPrefix } from "@/i18n"
 import { getPathByLocale } from "astro:i18n"
-import SpainFlag from "@/components/flags/Spain.astro"
-import AndorraFlag from "@/components/flags/Andorra.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
 import Link from "@/components/Link.astro"
+import Svg from "@/components/Svg.astro"
 
 const { currentLocale = "es", url } = Astro
 
@@ -14,17 +13,15 @@ const path = needPrefix(currentLocale) ? pathname.substring(getPathByLocale(curr
 
 const LOCALES: Record<
   string,
-  { code: string; name: string; flag: typeof SpainFlag }
+  { code: string; name: string; }
 > = {
   ca: {
     code: "ca",
     name: "Català",
-    flag: AndorraFlag,
   },
   es: {
     code: "es",
     name: "Español",
-    flag: SpainFlag,
   },
 }
 
@@ -44,7 +41,7 @@ const otherLocales = Object.values(LOCALES).filter(
       aria-expanded="true"
       aria-haspopup="true"
     >
-      <currentLocaleData.flag />
+      <Svg src={`flags.${currentLocaleData.code}`} class="w-4 h-auto" />
       {currentLocaleData.name}
       <ChevronIcon />
     </button>
@@ -59,7 +56,7 @@ const otherLocales = Object.values(LOCALES).filter(
               href={path}
               locale={locale.code}
             >
-              <locale.flag />
+              <Svg src={`flags.${locale.code}`} class="w-4 h-auto" />
               {locale.name}
             </Link>
           </li>
