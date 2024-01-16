@@ -126,7 +126,7 @@ pnpm dev
 - [ ] Mejorar la precarga de las imágenes de las siguientes secciones en idle
 - [ ] Pestaña para cambiar entre ediciones en la página "Archivo"
 
-### Lo haremos en directo
+### 👀 Lo haremos en directo en Twitch
 
 - [ ] Base de datos para las votaciones
 - [ ] Backend para las votaciones
