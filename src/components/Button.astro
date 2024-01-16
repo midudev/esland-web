@@ -1,4 +1,6 @@
 ---
+import Link from '@/components/Link.astro'
+
 interface Props {
   id?: string
   class?: string
@@ -9,7 +11,7 @@ interface Props {
 const { url, target, class: className, ...rest } = Astro.props
 ---
 
-<a
+<Link
   href={url}
   target=`${target ?? '_blank'}`
   rel="noopener noreferrer"
@@ -30,7 +32,7 @@ const { url, target, class: className, ...rest } = Astro.props
   {...rest}
 >
   <slot />
-</a>
+</Link>
 
 <style>
   a {

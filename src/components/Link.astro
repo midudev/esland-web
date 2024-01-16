@@ -4,15 +4,21 @@ import { getRelativeLocaleUrl } from "astro:i18n"
 interface Props {
   class?: string
   href: string,
-  locale?: string
+  locale?: string,
+  id?:string,
+  target?: string
+  rel?:string
 }
 
 const { currentLocale = "es" } = Astro
-const { href, locale, class: className } = Astro.props
-const path = getRelativeLocaleUrl(locale || currentLocale, href)
-  .replace(/\/+$/, "");
+const { href, locale, class: className, ...rest } = Astro.props
+let path = href;
+if (!/^https?:\/\//.test(path) && path !== '#') {
+  path = getRelativeLocaleUrl(locale || currentLocale, path)
+  .replace(/\/+$/, "")
+}
 ---
 
-<a href={path} class:list={[className]}>
+<a href={path} class:list={[className]} {...rest}>
   <slot />
 </a>
