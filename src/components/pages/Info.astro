@@ -108,7 +108,7 @@ const i18n = getI18N({ currentLocale })
   @keyframes entry-animation {
     0% {
       opacity: 0;
-      translate: -100px 0;
+      translate: var(--entry-animation) 0;
     }
     100% {
       opacity: 1;
@@ -118,7 +118,7 @@ const i18n = getI18N({ currentLocale })
   @keyframes cover-animation {
     0% {
       opacity: 0;
-      translate: 100px 0;
+      translate: var(--cover-animation) 0;
     }
     100% {
       opacity: 1;
