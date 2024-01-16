@@ -5,6 +5,7 @@ interface Props {
   height?: number | string;
   class?: string;
   hidden?: boolean;
+  label?:string
 }
 
 declare global {
@@ -13,7 +14,7 @@ declare global {
 
 import path from "node:path";
 import fs from "node:fs/promises";
-const { src, class: className, hidden, ...attrs } = Astro.props;
+const { src, class: className, hidden, label, ...attrs } = Astro.props;
 let SVG = globalThis.__SVG__;
 if (!SVG) {
   SVG = await Astro.glob("/src/assets/images/*.svg");
@@ -38,7 +39,7 @@ if (!SVG) {
   globalThis.__SVG__ = SVG;
 }
 
-const inline = async (svg: string, className?: string, hidden?: boolean) => {
+const inline = async (svg: string, className?: string, hidden?: boolean, label?: string) => {
   let search: RegExpMatchArray | string | null = svg.match(/<svg([^>]+)/gi);
   if (search === null) {
     return svg;
@@ -66,6 +67,13 @@ const inline = async (svg: string, className?: string, hidden?: boolean) => {
       `aria-hidden="true"`
     )
   }
+  if (label) {
+    replace = replaceString(
+      replace,
+      new RegExp(`aria-label="([^"]+)"`, "g"),
+      `aria-label="${label}"`
+    )
+  }
   return svg.replace(search, replace);
 
   function replaceString(replace: string, regx: RegExp, value: string) {
@@ -78,7 +86,7 @@ const inline = async (svg: string, className?: string, hidden?: boolean) => {
     return replace
   }
 };
-const content = inline(SVG[src], className, hidden);
+const content = inline(SVG[src], className, hidden, label);
 ---
 
 <Fragment set:html={content} />

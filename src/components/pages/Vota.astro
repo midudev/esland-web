@@ -1,15 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import SortVoteIcon from "@/components/icons/SortVote.astro"
-import CheckPencilIcon from "@/components/icons/CheckPencil.astro"
-import PodiumIcon from "@/components/icons/Podium.astro"
-import TapButtonIcon from "@/components/icons/TapButton.astro"
-import ShareIcon from "@/components/icons/Share.astro"
-import ThinkBrainIcon from "@/components/icons/ThinkBrain.astro"
 import { VoteSystem } from "@/components/VoteSystem.tsx"
 
 import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
+import Svg from "@/components/Svg.astro"
 
 const session = await getSession(Astro.request)
 
@@ -47,7 +42,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 
           <ul class="flex flex-col gap-y-10 text-2xl pl-4 font-extralight">
             <li class="flex gap-x-6 items-center">
-              <SortVoteIcon />
+              <Svg src="sort.vote" />
               <span>
                 Vota, <strong>por orden de preferencia</strong>, hasta 4
                 nominados por categoría.
@@ -55,14 +50,14 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
             </li>
 
             <li class="flex gap-x-6 items-center">
-              <CheckPencilIcon />
+              <Svg src="check.pencil" />
               <span>
                 <strong>No es obligatorio votar en cada categoría.</strong>
               </span>
             </li>
 
             <li class="flex gap-x-6 items-center">
-              <PodiumIcon />
+              <Svg src="podium" />
               <span>
                 No es obligatorio pero sí recomendable el
                 <strong>uso del voto rankeado</strong>.
@@ -71,7 +66,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 
             <li class="flex gap-x-6 items-center">
               <>
-                <TapButtonIcon />
+                <Svg src="tap.button" />
                 <span>
                   Una vez tengas clara tu elección,{" "}
                   <strong>asegúrate de pulsar “enviar mis votos”.</strong>
@@ -81,7 +76,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 
             <li class="flex gap-x-6 items-center">
               <>
-                <ShareIcon />
+                <Svg src="share" />
                 <span>
                   <strong>Recuerda compartir tus votos</strong> en redes
                   sociales.
@@ -90,7 +85,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
             </li>
 
             <li class="flex gap-x-6 items-center">
-              <ThinkBrainIcon />
+              <Svg src="think.brain" />
               <span>
                 Elige sabiamente y <strong>revisa tus votos</strong>, solo
                 tienes una oportunidad.

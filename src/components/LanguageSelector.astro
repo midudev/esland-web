@@ -1,7 +1,6 @@
 ---
 import { needPrefix } from "@/i18n"
 import { getPathByLocale } from "astro:i18n"
-import ChevronIcon from "@/components/icons/Chevron.astro"
 import Link from "@/components/Link.astro"
 import Svg from "@/components/Svg.astro"
 
@@ -43,7 +42,7 @@ const otherLocales = Object.values(LOCALES).filter(
     >
       <Svg src={`flags.${currentLocaleData.code}`} class="w-4 h-auto" />
       {currentLocaleData.name}
-      <ChevronIcon />
+      <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
     </button>
     <ul
       class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
