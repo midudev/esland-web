@@ -13,7 +13,7 @@ interface Props {
 const { currentLocale = "es" } = Astro
 const { href, locale, class: className, ...rest } = Astro.props
 let path = href;
-if (!/^https?:\/\//.test(path) && path !== '#') {
+if (!/^https?:\/\//.test(path) && !path.startsWith('#')) {
   path = getRelativeLocaleUrl(locale || currentLocale, path)
   .replace(/\/+$/, "")
 }
