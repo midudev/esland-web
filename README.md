@@ -121,15 +121,12 @@ pnpm dev
 
 ## ✅ Por hacer...
 
-- [ ] Crear página de Aviso Legal
-- [ ] Crear página de Privacidad
 - [ ] Mejorar diseño de la página "Info"
-- [ ] Añadir secciones que faltan de la página "Info"
-- [ ] Mejorar el contador para tener efecto "ease"
+- [ ] Añadir funcionalidad de ganadores de pasadas ediciones
 - [ ] Mejorar la precarga de las imágenes de las siguientes secciones en idle
-
-### Lo haremos en directo
-
-- [ ] Sección de votaciones y base de datos
-- [ ] Añadir sección "Ganadores" en la página "Archivo"
 - [ ] Pestaña para cambiar entre ediciones en la página "Archivo"
+
+### Lo haremos en directo
+
+- [ ] Base de datos para las votaciones
+- [ ] Backend para las votaciones
