@@ -4,47 +4,54 @@ export const useProgressiveNumber = (
 	initialValue: number | (() => number),
 	duration = 1500,
 	decimals = 0,
-	delay = 50
+	delay = 5
 ): [number, (value: number | ((prevTarget: number) => number)) => void] => {
 	const [target, setTarget] = useState(initialValue)
 	const [current, setCurrent] = useState(initialValue)
-	const [step, setStep] = useState(0)
+	const [steps, setSteps] = useState(1)
+	const [currentStep, setCurrentStep] = useState(1);
 
+	const initial = typeof initialValue === 'function' ? initialValue() : initialValue;
+	
 	const setValue = useCallback(
 		(value: number | ((prevTarget: number) => number)) => {
-			setCurrent((prevCurrent) => {
-				const nextTarget = typeof value === 'function' ? value(target) : value
-				const diff = Math.abs(prevCurrent - nextTarget)
-				const steps = Math.max(duration / delay, 1)
-				const nextStep = diff / steps
+			const nextTarget = typeof value === 'function' ? value(target) : value
+			const steps = Math.max(Math.floor(duration / delay), 1)
 
-				setStep(nextStep)
-				setTarget(nextTarget)
-
-				return prevCurrent + (prevCurrent < nextTarget ? nextStep : -nextStep)
-			})
+			setSteps(steps)
+			setTarget(nextTarget)
+			setCurrentStep(1);
+			setCurrent(lerp(initial, nextTarget, easeOutCubic(1 / steps)))
 		},
 		[delay, duration, target]
 	)
 
 	useEffect(() => {
-		const interval = setInterval(
-			() =>
-				setCurrent((prevCurrent) => {
-					if (Math.abs(target - prevCurrent) < step) {
-						clearInterval(interval)
-						return target
-					}
-
-					return prevCurrent + (prevCurrent < target ? step : -step)
-				}),
+		const timeout = setTimeout(
+			() => {
+				const progress = currentStep / steps;
+				if (progress === 1) {
+					setCurrent(target);
+				} else {
+					setCurrent(lerp(initial, target, easeOutCubic(progress)))
+					setCurrentStep(currentStep + 1)
+				}
+			},
 			delay
 		)
 
-		return () => clearInterval(interval)
-	}, [delay, step, target])
+		return () => clearTimeout(timeout)
+	}, [delay, currentStep, target])
 
 	const value = Number(current.toFixed(decimals))
 
 	return [value, setValue]
+}
+
+const lerp = (a: number, b: number, alpha: number): number => {
+	return a + (alpha * (b - a))
+}
+
+const easeOutCubic = (value: number): number => {
+	return 1 - Math.pow(1 - value, 3)
 }
