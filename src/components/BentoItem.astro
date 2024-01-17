@@ -5,21 +5,19 @@ interface Props {
   subtitle?: string
 }
 
-const { title, subtitle } = Astro.props
+const { title, subtitle, class: className } = Astro.props
 ---
 
 <article
-  class={`
-  ${Astro.props.class}
-  col-span-5
-  relative rounded-xl
-  backdrop-blur-md
-  border border-black/10
-  shadow-inner shadow-white/10
-  overflow-hidden
-  group
-`}
->
+  class:list={[
+    className,
+    "col-span-5",
+    "relative rounded-xl",
+    "backdrop-blur-md",
+    "border border-black/10",
+    "shadow-inner shadow-white/10",
+    "overflow-hidden group",
+]}>
   <div
     class="absolute bottom-0 top-0 z-10 h-full w-full
     bg-gradient-to-b from-transparent from-40% via-[#151836]/50 to-[#151836]/80"

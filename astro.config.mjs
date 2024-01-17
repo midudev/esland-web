@@ -16,6 +16,9 @@ const config = {
   trailingSlash: "never",
   output: "server",
   adapter: vercel(),
+  build: {
+    assets: 'assets'
+  }
 };
 
 if (i18n.routing.prefixDefaultLocale) {
