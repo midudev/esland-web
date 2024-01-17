@@ -1,0 +1,39 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'img'> {
+  locale?: string
+}
+
+declare global {
+  var __IMAGES__: any;
+}
+
+import path from "node:path";
+const { src, ...attrs } = Astro.props;
+
+let IMAGES = globalThis.__IMAGES__ || {};
+if (!Object.hasOwn(IMAGES, src as string)) {
+  const isProd = import.meta.env.MODE === "production";
+  IMAGES = await Astro.glob("/src/assets/images/*.{png,jpg,webp}");
+  IMAGES = IMAGES.reduce((acc: Record<string, any>, img: { default: { src: string } }) => {
+    let src = img.default.src;
+    if (typeof src === "string") {
+      const parts = path.parse(src.replace("/@fs", ""));
+      let ext = parts.ext;
+      let name = parts.name;
+      if (!isProd) {
+        ext = ext.substring(0, ext.indexOf("?"));
+      } else {
+        name = name.substring(0, name.lastIndexOf('.')); // remove hash
+      }
+      acc[name + ext] = src;
+    }
+    return acc;
+  }, {});
+  globalThis.__IMAGES__ = IMAGES;
+}
+const img = IMAGES[src as string] || src;
+---
+
+<img src={img} {...attrs} />

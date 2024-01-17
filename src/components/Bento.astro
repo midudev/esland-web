@@ -1,5 +1,6 @@
 ---
 import BentoItem from "@/components/BentoItem.astro"
+import Img from "@/components/Img.astro"
 
 const { i18n } = Astro.locals;
 ---
@@ -12,15 +13,13 @@ const { i18n } = Astro.locals;
   `}
 >
   <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_1}>
-    <div
+    <Img
       slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
-        -z-10 h-full w-full bg-blue-950
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/mountain.webp"
-    >
-    </div>
-
+      class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-950 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      src="mountain.webp"
+      loading="lazy"
+      decoding="async"
+    />
     <p
       slot="content"
       class="max-w-xl text-base md:text-lg"
@@ -32,14 +31,13 @@ const { i18n } = Astro.locals;
     title={i18n.BENTO_TITLE_2}
     subtitle={i18n.BENTO_SUBTITLE_2}
   >
-    <div
+    <Img
       slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
-    -z-10 h-full w-full bg-blue-800
-    bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/pistas.webp"
-    >
-    </div>
+      class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-800 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      src="pistas.webp"
+      loading="lazy"
+      decoding="async"
+    />
     <p
       slot="content"
       class="max-w-xl text-base md:text-lg"
@@ -51,14 +49,13 @@ const { i18n } = Astro.locals;
     title={i18n.BENTO_TITLE_3}
     subtitle={i18n.BENTO_SUBTITLE_3}
   >
-    <div
+    <Img
       slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
-        -z-10 h-full w-full bg-blue-900
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/grefg.webp"
-    >
-    </div>
+      class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-900 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      src="grefg.webp"
+      loading="lazy"
+      decoding="async"
+    />
     <p
       slot="content"
       class="max-w-xl text-base md:text-lg"
@@ -66,14 +63,13 @@ const { i18n } = Astro.locals;
     />
   </BentoItem>
   <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_4}>
-    <div
+    <Img
       slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
-        -z-10 h-full w-full bg-blue-950
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/laptop.webp"
-    >
-    </div>
+      class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-blue-950 bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      src="laptop.webp"
+      loading="lazy"
+      decoding="async"
+    />
     <p
       slot="content"
       class="max-w-xl text-base md:text-lg"
@@ -81,38 +77,3 @@ const { i18n } = Astro.locals;
     />
   </BentoItem>
 </section>
-
-<script>
-  document.addEventListener("astro:page-load", () => {
-    const backgrounds = document.querySelectorAll(
-      ".background"
-    ) as NodeListOf<HTMLElement>
-
-    if (window.IntersectionObserver == null) {
-      backgrounds.forEach((bkg) => {
-        bkg.style.backgroundImage = "url('" + bkg.dataset.src + "')"
-      })
-      return
-    }
-
-    function handleIntersection(entries: IntersectionObserverEntry[]) {
-      entries.map((entry) => {
-        if (entry.isIntersecting) {
-          const target = entry.target as HTMLElement
-          const { style, dataset } = target
-          // Item has crossed our observation
-          // threshold - load src from data-src
-          style.backgroundImage = "url('" + dataset.src + "')"
-          // Job done for this item - no need to watch it!
-          observer.unobserve(entry.target)
-        }
-      })
-    }
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: "100px",
-    })
-
-    backgrounds.forEach((bkg) => observer.observe(bkg))
-  })
-</script>

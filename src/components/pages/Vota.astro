@@ -4,6 +4,7 @@ import { VoteSystem } from "@/components/VoteSystem.tsx"
 import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 import Svg from "@/components/Svg.astro"
+import Img from "@/components/Img.astro"
 
 const session = await getSession(Astro.request)
 
@@ -14,9 +15,9 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
   <section
     class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
   >
-    <img
+    <Img
       class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
-      src={`/${bkg}`}
+      src={bkg}
       alt="ESLAND cover"
     />
 

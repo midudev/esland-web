@@ -15,8 +15,8 @@ declare global {
 import path from "node:path";
 import fs from "node:fs/promises";
 const { src, class: className, hidden, label, height, width } = Astro.props;
-let SVG = globalThis.__SVG__;
-if (!SVG) {
+let SVG = globalThis.__SVG__ || {};
+if (!Object.hasOwn(SVG, src as string)) {
   SVG = await Astro.glob("/src/assets/images/*.svg");
   const isProd = import.meta.env.MODE === "production";
   SVG = await SVG.reduce(async (acc: Promise<Record<string, any>>, img: { default: { src: string } }) => {
@@ -74,6 +74,6 @@ const content = inline(SVG[src], {
   'aria-hidden': hidden,
   'aria-label': label
 });
----
 
+---
 <Fragment set:html={content} />
