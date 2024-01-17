@@ -135,7 +135,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 <script>
   const { signIn, signOut } = await import("auth-astro/client")
   // pongo un $ delante para que se vea que es un elemento del DOM
-  // es una cosa que se hacía en el paso con jQuery y es una manía
+  // es una cosa que se hacía en el pasado con jQuery y es una manía
   // que se me ha quedado porque me gusta :)
   const $loginButton = document.querySelector("#vote-button")
   const $logoutButton = document.querySelector("#logout-button")
