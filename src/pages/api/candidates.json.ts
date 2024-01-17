@@ -1,4 +1,4 @@
-import votesInfo from '@/data/editions-vote.json'
+import votesInfo from '@/content/editions/vote.json'
 import type { APIRoute } from 'astro'
 
 const DEFAULT_CATEGORY_PARAM = '1'

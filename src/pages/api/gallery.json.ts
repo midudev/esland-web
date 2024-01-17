@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-import galleryInfo from '@/data/meta-gallery.json'
+import galleryInfo from '@/content/meta/gallery.json'
 
 export const GET: APIRoute = ({ request }) => {
   const { url } = request
