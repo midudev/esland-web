@@ -5,17 +5,11 @@ interface Props {
   id?: string
   class?: string
   target?: string
-  url: string
+  url?: string
 }
 
 const { url, target, class: className, ...rest } = Astro.props
----
-
-<Link
-  href={url}
-  target=`${target ?? '_blank'}`
-  rel="noopener noreferrer"
-  class:list={[
+const classNames = [
     "w-fit",
     "lg:text-2xl",
     "font-medium",
@@ -28,20 +22,27 @@ const { url, target, class: className, ...rest } = Astro.props
     "rounded-full",
     "uppercase",
     className,
-  ]}
-  {...rest}
->
+];
+const props: Record<string, any> = Object.assign({}, rest);
+const Element = url ? Link : 'button';
+if (url) {
+  props.target = target ?? '_blank';
+  props.rel = 'noopener noreferrer'
+  props.href = url;
+}
+
+---
+<Element class:list={classNames} {...props}>
   <slot />
-</Link>
+</Element>
 
 <style>
-  a {
+  a, button {
     transition:
       text-shadow 0.5s ease-out,
       box-shadow 0.3s ease-out;
   }
-
-  a:hover {
+  a:hover, button:hover {
     box-shadow: 0 0 16px #fff8;
     text-shadow:
       0 0 10px rgba(255, 255, 255, 0.8),

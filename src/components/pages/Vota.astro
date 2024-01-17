@@ -1,7 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import { VoteSystem } from "@/components/VoteSystem.tsx"
-
 import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 import Svg from "@/components/Svg.astro"
@@ -29,7 +28,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
           </h1>
 
           <div class="mb-10">
-            <Button id="vote-button" url="#">
+            <Button id="vote-button">
               ¡Empezar con las votaciones!
             </Button>
           </div>

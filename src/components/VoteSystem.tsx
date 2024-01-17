@@ -2,16 +2,16 @@ import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 
 export const VoteSystem: FunctionComponent = ({ children }) => {
-  const { 
-    pageInfo, 
-    category, 
-    votesCategory, 
-    isChanging, 
+  const {
+    pageInfo,
+    category,
+    votesCategory,
+    isChanging,
     MAX_CATEGORIES,
     MAX_VOTES_PER_CATEGORY,
     setNextCategory,
     setPrevCategory,
-    setVotesCategory 
+    setVotesCategory
   } = useVoteSystem()
 
   const { categoria = '', candidatos } = pageInfo ?? {}
@@ -21,7 +21,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
       <CategoryTitle isChanging={isChanging}>
         {categoria}
       </CategoryTitle>
-      
+
       <div class="font-semibold flex justify-center items-center gap-x-2 px-2 rounded py-3 -mt-24 mb-10 text-yellow-300 text-xl">
           Votos realizados <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
         </div>
@@ -32,7 +32,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
             const voteIndex = votesCategory.indexOf(index)
             const isVoted = voteIndex >= 0
             const { enlace, nombre, imagen } = candidate
-            
+
             const delay = `animation-delay: ${index * 100}ms`
 
             return (
@@ -44,7 +44,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
                     </a>
                   )
                 }
-                
+
                 <button
                   class={`
                   shadow-sm shadow-black/20
@@ -78,11 +78,11 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setPrevCategory}>
           <Arrow rotated />
         </button>
-        
+
         <span class="text-lg font-semibold">
           Categoría <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
-      
+
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setNextCategory}>
           <Arrow />
         </button>

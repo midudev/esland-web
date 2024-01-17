@@ -7,7 +7,11 @@ import auth from "auth-astro";
 
 // https://astro.build/config
 const config = {
-  integrations: [tailwind(), preact(), auth()],
+  integrations: [
+    tailwind(),
+    preact(),
+    auth()
+  ],
   i18n,
   trailingSlash: "never",
   output: "server",
