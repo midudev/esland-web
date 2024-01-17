@@ -14,7 +14,7 @@ declare global {
 
 import path from "node:path";
 import fs from "node:fs/promises";
-const { src, class: className, hidden, label, ...attrs } = Astro.props;
+const { src, class: className, hidden, label, height, width } = Astro.props;
 let SVG = globalThis.__SVG__;
 if (!SVG) {
   SVG = await Astro.glob("/src/assets/images/*.svg");
@@ -39,7 +39,7 @@ if (!SVG) {
   globalThis.__SVG__ = SVG;
 }
 
-const inline = async (svg: string, className?: string, hidden?: boolean, label?: string) => {
+const inline = async (svg: string, attrs: Record<string, any>) => {
   let search: RegExpMatchArray | string | null = svg.match(/<svg([^>]+)/gi);
   if (search === null) {
     return svg;
@@ -47,32 +47,13 @@ const inline = async (svg: string, className?: string, hidden?: boolean, label?:
   search = search[0];
   let replace = search;
   for (const [key, value] of Object.entries(attrs)) {
-    replace = replaceString(
-      replace,
-      new RegExp(`${key}="(\\d+)"`, "g"),
-      `${key}="${value}"`
-    )
-  }
-  if (className) {
-    replace = replaceString(
-      replace,
-      new RegExp(`class="([^"]+)"`, "g"),
-      `class="${className}"`
-    )
-  }
-  if (hidden) {
-    replace = replaceString(
-      replace,
-      new RegExp(`aria-hidden="([^"]+)"`, "g"),
-      `aria-hidden="true"`
-    )
-  }
-  if (label) {
-    replace = replaceString(
-      replace,
-      new RegExp(`aria-label="([^"]+)"`, "g"),
-      `aria-label="${label}"`
-    )
+    if (value !== undefined) {
+      replace = replaceString(
+        replace,
+        new RegExp(`${key}="([^"]+)"`, "g"),
+        `${key}="${value}"`
+      )
+    }
   }
   return svg.replace(search, replace);
 
@@ -86,7 +67,13 @@ const inline = async (svg: string, className?: string, hidden?: boolean, label?:
     return replace
   }
 };
-const content = inline(SVG[src], className, hidden, label);
+const content = inline(SVG[src], {
+  height,
+  width,
+  class: className,
+  'aria-hidden': hidden,
+  'aria-label': label
+});
 ---
 
 <Fragment set:html={content} />
