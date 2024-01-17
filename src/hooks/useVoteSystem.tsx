@@ -19,7 +19,21 @@ const MAX_VOTES_PER_CATEGORY = 4
 export const useVoteSystem = ()=>{
     const [pageInfo, setPageInfo] = useState<PageInfo>()
     const [category, setCategory] = useState(0)
+    useEffect(() => {
+    let item = localStorage.getItem("votes");
+    let initialVotes;
+    if (item !== null) {
+      initialVotes = JSON.parse(item);
+    } else {
+      initialVotes = Array.from({ length: MAX_CATEGORIES }, () => []);
+    }
+    setVotes(initialVotes);
+  }, []);
     const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
+  useEffect(() => {
+    localStorage.setItem("votes", JSON.stringify(votes));
+  }, [votes]);
+
     const [isChanging, setIsChanging] = useState(false);
 
     useEffect(() => {
