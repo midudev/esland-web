@@ -1,6 +1,7 @@
 [
   {
     "edition": "1",
+    "maxPhotos": 74,
     "info": [
       {
         "categoria": "Streamer del año",
@@ -227,6 +228,7 @@
   },
   {
     "edition": "2",
+    "maxPhotos": 108,
     "info": [
       {
         "categoria": "Streamer del año",
