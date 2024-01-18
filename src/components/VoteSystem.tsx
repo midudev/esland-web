@@ -29,9 +29,10 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
       <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]">
         {
           candidatos?.map((candidate, index) => {
-            const voteIndex = votesCategory.indexOf(index)
+            const { enlace, nombre, imagen, id } = candidate
+
+            const voteIndex = votesCategory.indexOf(id)
             const isVoted = voteIndex >= 0
-            const { enlace, nombre, imagen } = candidate
             
             const delay = `animation-delay: ${index * 100}ms`
 
@@ -53,7 +54,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
                   transition-all p-1 rounded
                   md:hover:scale-105
                   ${isVoted ? 'bg-yellow-500 text-white' : 'bg-[#1682c7] hover:bg-sky-400 text-white'}
-                  `} onClick={() => setVotesCategory({ candidate: index })}>
+                  `} onClick={() => setVotesCategory({ candidate: id })}>
 
                   {
                     voteIndex >= 0 && (
