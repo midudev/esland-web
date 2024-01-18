@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "preact/hooks"
 import { type default as CandidatesType } from "@/data/editions-vote.json"
 import confetti from 'canvas-confetti'
-import type { Votes } from "@/hooks/useVoteSystem"
+import type { Votes } from "@/types/votes"
 
 const RESULT_STATUS = {
   ERROR: -1,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "preact/hooks"
 import candidates from '@/data/editions-vote.json'
+import type { Votes } from "@/types/votes"
 
 interface PageInfo {
   categoria: string,
@@ -12,8 +13,6 @@ interface Candidate {
   imagen: string,
   enlace?: string | null
 }
-
-export type Votes = Array<Array<string>>
 
 const MAX_CATEGORIES = 12
 const MAX_VOTES_PER_CATEGORY = 4
