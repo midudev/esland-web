@@ -1,8 +1,11 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
+import { VoteFinal } from "./VoteFinal"
 
 export const VoteSystem: FunctionComponent = ({ children }) => {
   const { 
+    candidates,
+    votes,
     pageInfo, 
     category, 
     votesCategory, 
@@ -11,10 +14,17 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
     MAX_VOTES_PER_CATEGORY,
     setNextCategory,
     setPrevCategory,
+    setCategory,
     setVotesCategory 
   } = useVoteSystem()
 
   const { categoria = '', candidatos } = pageInfo ?? {}
+
+  if (category === MAX_CATEGORIES) {
+    return (
+      <VoteFinal candidates={candidates} votes={votes} setCategory={setCategory}  />
+    )
+  }
 
   return (
     <>

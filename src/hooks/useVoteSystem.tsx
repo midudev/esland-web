@@ -96,6 +96,7 @@ export const useVoteSystem = ()=>{
       votesCategory: votes[category],
       setPrevCategory,
       setNextCategory,
+      setCategory,
       setVotesCategory,
       MAX_CATEGORIES,
       MAX_VOTES_PER_CATEGORY,
