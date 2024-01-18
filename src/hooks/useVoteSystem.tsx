@@ -52,7 +52,18 @@ export const useVoteSystem = ()=>{
     }
 
     const setNextCategory = () => {
-      setCategory(category + 1)
+      const nextCategory = category + 1
+
+      if (nextCategory === MAX_CATEGORIES) {
+        // check if we have all the votes (4 per category)
+        const missingVotes = votes.find((votesCategory) => votesCategory.length < MAX_VOTES_PER_CATEGORY)
+        if (missingVotes) {
+          alert('Debes votar 4 candidatos por categoría')
+          return
+        } 
+      }
+  
+      setCategory(nextCategory)
     }
 
     const setVotesCategory = (
