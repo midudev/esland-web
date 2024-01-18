@@ -1,16 +1,15 @@
 ---
 import type { HTMLAttributes } from 'astro/types'
+import { Image } from "astro:assets";
 
-interface Props extends HTMLAttributes<'img'> {
-  locale?: string
-}
+interface Props extends HTMLAttributes<'img'> {}
 
 declare global {
   var __IMAGES__: any;
 }
 
 import path from "node:path";
-const { src, ...attrs } = Astro.props;
+const { src, alt="", ...attrs } = Astro.props;
 
 let IMAGES = globalThis.__IMAGES__ || {};
 if (!Object.hasOwn(IMAGES, src as string)) {
@@ -27,13 +26,14 @@ if (!Object.hasOwn(IMAGES, src as string)) {
       } else {
         name = name.substring(0, name.lastIndexOf('.')); // remove hash
       }
-      acc[name + ext] = src;
+      acc[name + ext] = img.default;
     }
     return acc;
   }, {});
   globalThis.__IMAGES__ = IMAGES;
 }
+
 const img = IMAGES[src as string] || src;
 ---
 
-<img src={img} {...attrs} />
+<Image src={img} alt={alt} {...Object.assign(attrs)} />
