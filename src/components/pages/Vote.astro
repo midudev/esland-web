@@ -1,27 +1,28 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import SortVoteIcon from '@/components/icons/SortVote.astro';
-import CheckPencilIcon from '@/components/icons/CheckPencil.astro';
-import PodiumIcon from '@/components/icons/Podium.astro';
-import TapButtonIcon from '@/components/icons/TapButton.astro';
-import ShareIcon from '@/components/icons/Share.astro';
-import ThinkBrainIcon from '@/components/icons/ThinkBrain.astro';
-import { VoteSystem } from '@/components/VoteSystem.tsx';
-import { getI18N } from '@/i18n';
+import Layout from "@/layouts/Layout.astro"
+import SortVoteIcon from "@/components/icons/SortVote.astro"
+import CheckPencilIcon from "@/components/icons/CheckPencil.astro"
+import PodiumIcon from "@/components/icons/Podium.astro"
+import TapButtonIcon from "@/components/icons/TapButton.astro"
+import ShareIcon from "@/components/icons/Share.astro"
+import ThinkBrainIcon from "@/components/icons/ThinkBrain.astro"
+import { VoteSystem } from "@/components/VoteSystem.tsx"
+import { getI18N } from "@/i18n"
 
-import Button from '@/components/Button.astro';
-import { getSession } from 'auth-astro/server';
+import Button from "@/components/Button.astro"
+import { getSession } from "auth-astro/server"
 const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const i18n = getI18N({ currentLocale })
 
-const session = await getSession(Astro.request);
+const session = await getSession(Astro.request)
 
-const bkg = session ? 'vote-system-bkg.webp' : 'vota-bkg.webp';
+const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---
 
 <Layout title="Votar" description="Votar">
   <section
-    class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]">
+    class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
+  >
     <img
       class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
       src={`/${bkg}`}
@@ -101,7 +102,8 @@ const bkg = session ? 'vote-system-bkg.webp' : 'vota-bkg.webp';
                 <h4 class="font-bold text-xl">{session.user?.name}</h4>
                 <button
                   id="logout-button"
-                  class="text-sm hover:border-white border-b font-light border-transparent text-white flex justify-center items-center gap-x-2">
+                  class="text-sm hover:border-white border-b font-light border-transparent text-white flex justify-center items-center gap-x-2"
+                >
                   <span>{i18n.LOG_OUT}</span>
                 </button>
               </div>
@@ -114,22 +116,22 @@ const bkg = session ? 'vote-system-bkg.webp' : 'vota-bkg.webp';
 </Layout>
 
 <script>
-  const { signIn, signOut } = await import('auth-astro/client');
+  const { signIn, signOut } = await import("auth-astro/client")
   // pongo un $ delante para que se vea que es un elemento del DOM
   // es una cosa que se hacía en el pasado con jQuery y es una manía
   // que se me ha quedado porque me gusta :)
-  const $loginButton = document.querySelector('#vote-button');
-  const $logoutButton = document.querySelector('#logout-button');
+  const $loginButton = document.querySelector("#vote-button")
+  const $logoutButton = document.querySelector("#logout-button")
 
-  $loginButton?.addEventListener('click', async event => {
-    event.preventDefault();
-    await signIn('twitch');
-  });
+  $loginButton?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signIn("twitch")
+  })
 
-  $logoutButton?.addEventListener('click', async event => {
-    event.preventDefault();
-    await signOut();
-  });
+  $logoutButton?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signOut()
+  })
 </script>
 
 <style>

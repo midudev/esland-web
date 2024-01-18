@@ -1,9 +1,9 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
-import { getI18N } from '@/i18n';
+import { getI18N } from "@/i18n"
 
-export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ children, currentLocale = 'es' }) => {
+export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ children, currentLocale = "es" }) => {
   const i18n = getI18N({ currentLocale })
 
   const { 
