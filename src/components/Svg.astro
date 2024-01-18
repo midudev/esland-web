@@ -14,7 +14,6 @@ declare global {
 
 import path from "node:path";
 import fs from "node:fs/promises";
-import { optimize } from 'svgo';
 const { src, class: className, hidden, label, height, width } = Astro.props;
 let SVG = globalThis.__SVG__ || {};
 if (!Object.hasOwn(SVG, src as string)) {
@@ -35,8 +34,7 @@ if (!Object.hasOwn(SVG, src as string)) {
       }
       _acc[name] = await fs.readFile(src, "utf-8");
       if (isProd) {
-        const result = optimize(_acc[name]);
-        _acc[name] = result.data;
+        _acc[name] = _acc[name].replace(/\s+/g, ' ');
       }
     }
     return _acc;

@@ -40,7 +40,7 @@ const otherLocales = Object.values(LOCALES).filter(
       aria-expanded="true"
       aria-haspopup="true"
     >
-      <Svg src={`flags.${currentLocaleData.code}`} class="w-4 h-auto" />
+      <Svg src={`flag-${currentLocaleData.code}`} class="w-4 h-auto" />
       {currentLocaleData.name}
       <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
     </button>
@@ -55,7 +55,7 @@ const otherLocales = Object.values(LOCALES).filter(
               href={path}
               locale={locale.code}
             >
-              <Svg src={`flags.${locale.code}`} class="w-4 h-auto" />
+              <Svg src={`flag-${locale.code}`} class="w-4 h-auto" />
               {locale.name}
             </Link>
           </li>

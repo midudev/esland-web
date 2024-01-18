@@ -6,11 +6,11 @@ const { i18n } = Astro.locals;
 ---
 
 <section
-  class={`
-    w-full max-w-[1400px]
-    grid lg:grid-cols-10 auto-rows-[30rem] gap-4
-    mx-auto p-6 md:p-12 lg:p-20
-  `}
+  class:list={[
+    "w-full max-w-[1400px]",
+    "grid lg:grid-cols-10 auto-rows-[30rem] gap-4",
+    "mx-auto p-6 md:p-12 lg:p-20"
+  ]}
 >
   <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_1}>
     <Img
