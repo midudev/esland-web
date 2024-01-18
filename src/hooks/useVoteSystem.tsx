@@ -1,4 +1,5 @@
 import { useEffect, useState } from "preact/hooks"
+import candidates from '@/data/editions-vote.json'
 
 interface PageInfo {
   categoria: string,
@@ -9,10 +10,10 @@ interface Candidate {
   id: string,
   nombre: string,
   imagen: string,
-  enlace?: string
+  enlace?: string | null
 }
 
-type Votes = Array<Array<string>>
+export type Votes = Array<Array<string>>
 
 const MAX_CATEGORIES = 12
 const MAX_VOTES_PER_CATEGORY = 4
@@ -40,15 +41,9 @@ export const useVoteSystem = ()=>{
     const [isChanging, setIsChanging] = useState(false);
 
     useEffect(() => {
-      async function fetchCandidates () {
-          setIsChanging(true)
-          const response = await fetch(`/api/candidates.json?category=${category}`)
-          const data = await response.json()
-          setPageInfo(data)
-          setTimeout(() => setIsChanging(false), 500)
-      }
-  
-      fetchCandidates()
+      setIsChanging(true)
+      setPageInfo(candidates[category])
+      setTimeout(() => setIsChanging(false), 500)
     }, [category])
 
     const setPrevCategory = () => {
@@ -57,8 +52,7 @@ export const useVoteSystem = ()=>{
     }
 
     const setNextCategory = () => {
-      const nextCategory = category < (MAX_CATEGORIES - 1) ? category + 1 : 0
-      setCategory(nextCategory)
+      setCategory(category + 1)
     }
 
     const setVotesCategory = (
@@ -83,6 +77,7 @@ export const useVoteSystem = ()=>{
     }
 
     return {
+      candidates,
       category,
       pageInfo,
       votes,
