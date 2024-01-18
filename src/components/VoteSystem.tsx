@@ -1,8 +1,11 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
+import { getI18N } from '@/i18n';
 
-export const VoteSystem: FunctionComponent = ({ children }) => {
+export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ children, currentLocale = 'es' }) => {
+  const i18n = getI18N({ currentLocale })
+
   const { 
     candidates,
     votes,
@@ -33,7 +36,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
       </CategoryTitle>
       
       <div class="font-semibold flex justify-center items-center gap-x-2 px-2 rounded py-3 -mt-24 mb-10 text-yellow-300 text-xl">
-          Votos realizados <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
+        {i18n.VOTE.VOTES_CASTED} <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
         </div>
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]">
@@ -91,7 +94,7 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
         </button>
         
         <span class="text-lg font-semibold">
-          Categoría <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
+          {i18n.CATEGORY} <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
       
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setNextCategory}>

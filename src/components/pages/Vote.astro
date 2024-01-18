@@ -90,7 +90,7 @@ const bkg = session ? 'vote-system-bkg.webp' : 'vota-bkg.webp';
     {
       session && (
         <div class="mx-auto flex flex-col max-w-7xl pt-20 relative">
-          <VoteSystem client:load>
+          <VoteSystem client:load currentLocale={currentLocale}>
             <div class="flex items-center gap-4">
               <img
                 class="w-12 h-12 rounded-full"

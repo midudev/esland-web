@@ -53,8 +53,10 @@
     "ADVICE_4": "Quan tinguis clara la teva elecció, <strong>assegura't de clicar “enviar els meus vots”.</strong>",
     "ADVICE_5": "<strong>Recorda compartir els teus vots</strong> a les xarxes socials.",
     "ADVICE_6": "Tria sabiament i <strong>revisa els teus vots</strong>, només tens una oportunitat.",
-    "TIME_LIMIT": "Les votacions estaran obertes fins al diumenge 14 de gener a les 24:00h (hora espanyola)."
+    "TIME_LIMIT": "Les votacions estaran obertes fins al diumenge 14 de gener a les 24:00h (hora espanyola).",
+    "VOTES_CASTED": "Vots realitzats"
   },
+  "CATEGORY": "Categoria",
   "LOG_OUT": "Tancar sessió",
   "FOOTER": {
     "DISCLAIMER": "© ESLAND 2021 - 2024 Tots els drets reservats. - Aquesta no és la pàgina web oficial, desenvolupada per @midudev amb finalitats educatives",
