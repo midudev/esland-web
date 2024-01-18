@@ -22,7 +22,9 @@ export const VoteSystem: FunctionComponent = ({ children }) => {
 
   if (category === MAX_CATEGORIES) {
     return (
-      <VoteFinal candidates={candidates} votes={votes} setCategory={setCategory}  />
+      <VoteFinal candidates={candidates} votes={votes} setCategory={setCategory} categoryNames={
+        candidates.map(({ categoria }) => categoria)
+      } />
     )
   }
 
