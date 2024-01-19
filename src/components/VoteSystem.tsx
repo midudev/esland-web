@@ -1,11 +1,9 @@
+import { type CollectionEntry } from "astro:content";
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
-import { getI18N } from "@/i18n"
 
-export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ children, currentLocale = "es" }) => {
-  const i18n = getI18N({ currentLocale })
-
+export const VoteSystem: FunctionComponent<{ i18n: CollectionEntry<'i18n'> }> = ({ children, i18n }) => {
   const {
     candidates,
     votes,
@@ -17,6 +15,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
     MAX_VOTES_PER_CATEGORY,
     setNextCategory,
     setPrevCategory,
+    setCategory,
     setVotesCategory
   } = useVoteSystem()
 
@@ -47,7 +46,6 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
 
             const voteIndex = votesCategory.indexOf(id)
             const isVoted = voteIndex >= 0
-            const { enlace, nombre, imagen } = candidate
 
             const delay = `animation-delay: ${index * 100}ms`
 

@@ -1,4 +1,3 @@
-import { type Votes } from "@/types/votes";
 import { createClient } from "@libsql/client";
 
 const client = createClient({

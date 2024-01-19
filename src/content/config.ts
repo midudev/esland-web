@@ -47,6 +47,21 @@ const i18nCollection = defineCollection({
       COUNTER_NEWS: z.string(),
       COUNTER_MEDIA: z.string(),
     }),
+    VOTE: z.object({
+      TITLE: z.string(),
+      CALL_TO_VOTE: z.string(),
+      INTRO_CONTENT: z.string(),
+      ADVICE_1: z.string(),
+      ADVICE_2: z.string(),
+      ADVICE_3: z.string(),
+      ADVICE_4: z.string(),
+      ADVICE_5: z.string(),
+      ADVICE_6: z.string(),
+      TIME_LIMIT: z.string(),
+      VOTES_CASTED: z.string(),
+    }),
+    CATEGORY: z.string(),
+    LOG_OUT: z.string(),
     FOOTER: z.object({
       DISCLAIMER: z.string(),
       LEGAL: z.object({
@@ -350,3 +365,7 @@ const i18nCollection = defineCollection({
 export const collections = {
   i18n: i18nCollection,
 };
+
+export const schemas = {
+  votes: z.array(z.string().regex(/^\d\d?-\d\d?$/).array().length(4))
+}

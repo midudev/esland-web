@@ -1,7 +1,7 @@
 import { addUserVotes, cleanUserVotes } from "@/db/client";
 import { type APIRoute } from "astro";
 import { getSession } from "auth-astro/server";
-import { votesSchema } from '@/schemas/votes.ts';
+import { schemas } from '@/content/config';
 
 export const POST: APIRoute = async ({ request }) => {
   const session = await getSession(request)
@@ -19,7 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
   let votesToSave = []
   try {
     const { votes } = await request.json()
-    votesSchema.parse(votes)
+    schemas.votes.parse(votes)
     votesToSave = votes
   } catch (e) {
     return new Response('Bad Request', { status: 400 })
