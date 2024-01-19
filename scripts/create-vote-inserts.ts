@@ -9,7 +9,7 @@ if (editionsVotesFilePath === undefined) {
 const editionsVotesFile = Bun.file(editionsVotesFilePath)
 const votes: [{
   categoria: string,
-  candidatos: [{ nombre: string, imagen: string, enlace: string, id: string }],
+  candidatos: { nombre: string, imagen: string, enlace: string, id: string }[],
   id: string
 }] = JSON.parse(await editionsVotesFile.text())
 const inserts: string[] = []
