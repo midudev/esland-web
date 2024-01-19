@@ -63,6 +63,27 @@ ARCHIVO:
   COUNTER_VIEWS: de visualitzacions
   COUNTER_NEWS: notícies en premsa
   COUNTER_MEDIA: en mitjans guanyats
+VOTE:
+  TITLE: Les votacions ja estan aquí
+  CALL_TO_VOTE: Comença amb les votacions!
+  INTRO_CONTENT: "Ha arribat el moment més important. <strong>Votar a la 3ª Edició
+    dels Premis ESLAND</strong>. Perquè els teus vots es comptabilitzin de forma
+    correcta, et deixem alguns consells:"
+  ADVICE_1: Vota, <strong>per ordre de preferència</strong>, fins a 4 nominats per
+    categoria.
+  ADVICE_2: No és obligatori votar a cada categoria.
+  ADVICE_3: No és obligatori però sí recomanable l'<strong>ús del vot en
+    ranquing</strong>.
+  ADVICE_4: Quan tinguis clara la teva elecció, <strong>assegura't de clicar
+    “enviar els meus vots”.</strong>
+  ADVICE_5: <strong>Recorda compartir els teus vots</strong> a les xarxes socials.
+  ADVICE_6: Tria sabiament i <strong>revisa els teus vots</strong>, només tens una
+    oportunitat.
+  TIME_LIMIT: Les votacions estaran obertes fins al diumenge 14 de gener a les
+    24:00h (hora espanyola).
+  VOTES_CASTED: Vots realitzats
+CATEGORY: Categoria
+LOG_OUT: Tancar sessió
 FOOTER:
   DISCLAIMER: © ESLAND 2021 - 2024 Tots els drets reservats. - Aquesta no és la
     pàgina web oficial, desenvolupada per @midudev amb finalitats educatives
