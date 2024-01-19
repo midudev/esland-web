@@ -12,20 +12,20 @@ const { url, target, class: className, ...rest } = Astro.props
 <a
   href={url}
   target=`${target ?? '_blank'}`
-  rel="noopener noreferrer"
+  rel='noopener noreferrer'
   class:list={[
-    "w-fit",
-    "lg:text-2xl",
-    "font-medium",
-    "no-underline",
-    "px-5",
-    "py-3",
-    "border",
-    "border-solid",
-    "border-white",
-    "rounded-full",
-    "uppercase",
-    className,
+    'w-fit',
+    'lg:text-2xl',
+    'font-medium',
+    'no-underline',
+    'px-5',
+    'py-3',
+    'border',
+    'border-solid',
+    'border-white',
+    'rounded-full',
+    'uppercase',
+    className
   ]}
   {...rest}
 >

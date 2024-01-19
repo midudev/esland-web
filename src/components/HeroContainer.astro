@@ -6,20 +6,20 @@ interface Props {
 const { img } = Astro.props
 ---
 
-<div class="bg-no-repeat bg-cover relative h-[90vh] w-full max-w-[100vw]">
+<div class='relative h-[90vh] w-full max-w-[100vw] bg-cover bg-no-repeat'>
   <div
-    class="absolute inset-0 m-auto w-full h-full flex justify-center flex-col items-center"
+    class='absolute inset-0 m-auto flex h-full w-full flex-col items-center justify-center'
   >
     <slot />
   </div>
   <img
-    class="absolute cp-v h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
+    class='cp-v absolute -z-10 h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out'
     src={img}
-    alt="ESLAND cover"
+    alt='ESLAND cover'
   />
   <img
-    class="absolute animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out blur-3xl -z-40"
+    class='absolute -z-40 animate-fade object-cover object-center blur-3xl animate-duration-1000 animate-ease-in-out'
     src={img}
-    alt="ESLAND cover"
+    alt='ESLAND cover'
   />
 </div>

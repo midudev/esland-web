@@ -1,55 +1,55 @@
 ---
-import Logo from "@/components/Logo.astro"
-import Button from "@/components/Button.astro"
-import LanguageSelector from "@/components/LanguageSelector.astro"
-import HeaderLink from "@/components/HeaderLink.astro"
+import Logo from '@/components/Logo.astro'
+import Button from '@/components/Button.astro'
+import LanguageSelector from '@/components/LanguageSelector.astro'
+import HeaderLink from '@/components/HeaderLink.astro'
 
-import MenuIcon from "@/components/icons/Menu.astro"
-import CloseIcon from "@/components/icons/Close.astro"
+import MenuIcon from '@/components/icons/Menu.astro'
+import CloseIcon from '@/components/icons/Close.astro'
 
-import { getI18N } from "@/i18n/index"
+import { getI18N } from '@/i18n/index'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
-  <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+<header id='header-nav' class='fixed top-0 z-50 w-full px-6 py-4'>
+  <div class='mx-auto flex max-w-7xl items-center justify-between gap-16'>
     <HeaderLink
       checkActive={false}
-      href="/"
-      class="relative z-10"
+      href='/'
+      class='relative z-10'
       aria-label={i18n.HEADER.LOGO}
     >
       <Logo
-        class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+        class='absolute m-auto w-10 opacity-0 blur-sm transition-opacity duration-300 hover:opacity-100'
       />
-      <Logo class="w-10" />
+      <Logo class='w-10' />
     </HeaderLink>
     <nav
-      id="header-menu"
-      class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
+      id='header-menu'
+      class='fixed inset-0 flex h-dvh w-full -translate-y-full flex-col items-center justify-center gap-8 bg-[#151a36]/90 text-2xl transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:translate-y-[initial] md:flex-row md:bg-[initial] md:text-xl'
     >
-      <HeaderLink class="text__glowing" href="/vota">
+      <HeaderLink class='text__glowing' href='/vota'>
         {i18n.HEADER_VOTE}
       </HeaderLink>
-      <HeaderLink class="text__glowing" href="/info">
+      <HeaderLink class='text__glowing' href='/info'>
         {i18n.HEADER_INFO}
       </HeaderLink>
-      <HeaderLink class="text__glowing" href="/archivo">
+      <HeaderLink class='text__glowing' href='/archivo'>
         {i18n.HEADER_ARCHIVE}
       </HeaderLink>
       <LanguageSelector />
       <Button
-        class="md:py-2 md:ml-auto md:text-base lg:text-base"
-        url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+        class='md:ml-auto md:py-2 md:text-base lg:text-base'
+        url='https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view'
       >
         {i18n.HEADER_BUTTON}
       </Button>
-      <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+      <a href='#header-nav' class='absolute right-6 top-6 md:hidden'>
         <CloseIcon />
       </a>
     </nav>
-    <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+    <a href='#header-menu' class='md:hidden'><MenuIcon /></a>
   </div>
 </header>

@@ -1,6 +1,6 @@
 ---
-import StreamerCard from "@/components/StreamerCard.astro"
-import palmares from "@/data/editions-info.json"
+import StreamerCard from '@/components/StreamerCard.astro'
+import palmares from '@/data/editions-info.json'
 
 interface Props {
   edicion: string
@@ -25,20 +25,20 @@ const {
   streamers1,
   streamers2,
   total1,
-  total2,
+  total2
 } = datosSeleccionados?.info[index]
 ---
 
 <section
-  class="max-w-6xl mx-auto flex flex-col gap-4 pt-20 justify-center items-center px-20"
+  class='mx-auto flex max-w-6xl flex-col items-center justify-center gap-4 px-20 pt-20'
 >
   <h2
-    class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso"
+    class='mb-10 text-center font-tomaso text-4xl uppercase lg:mb-20 lg:text-6xl'
   >
     Palmarés
   </h2>
-  <div class="flex flex-col lg:flex-row gap-10">
-    <div class="flex flex-col gap-2">
+  <div class='flex flex-col gap-10 lg:flex-row'>
+    <div class='flex flex-col gap-2'>
       {
         palmares.map((item) => {
           if (item.edition === edicion) {
@@ -47,18 +47,18 @@ const {
               return (
                 <button
                   id={`${i + 1}`}
-                  class={`flex justify-between items-center rounded-sm  ${
+                  class={`flex items-center justify-between rounded-sm  ${
                     i % 2 === 0
-                      ? "bg-gradient-to-r from-blue-600 to-sky-400/45  "
-                      : "bg-gradient-to-r from-gray-700 to-blue-900"
+                      ? 'bg-gradient-to-r from-blue-600 to-sky-400/45  '
+                      : 'bg-gradient-to-r from-gray-700 to-blue-900'
                   } ${
                     index === i
-                      ? "bg-blue-950 border border-sky-300 border-spacing-6"
-                      : ""
-                  } text-center hover:bg-blue-900 px-4 py-1`}
+                      ? 'border-spacing-6 border border-sky-300 bg-blue-950'
+                      : ''
+                  } px-4 py-1 text-center hover:bg-blue-900`}
                 >
-                  <h1 class="text-sm text-left">{categoria}</h1>
-                  <strong class="text-xs text-right">{ganador}</strong>
+                  <h1 class='text-left text-sm'>{categoria}</h1>
+                  <strong class='text-right text-xs'>{ganador}</strong>
                 </button>
               )
             })
@@ -66,32 +66,32 @@ const {
         })
       }
     </div>
-    <div class="flex gap-3 items-end mr-5">
+    <div class='mr-5 flex items-end gap-3'>
       {
         ganador && (
           <StreamerCard
-            position="1º"
+            position='1º'
             edicion={edicion}
             name={ganador}
             comunidad={comunidad1}
             streamers={streamers1}
             foto={foto1}
             total={total1}
-            background={"bg-finalista"}
+            background={'bg-finalista'}
           />
         )
       }
       {
         finalista && (
           <StreamerCard
-            position="2º"
+            position='2º'
             edicion={edicion}
             name={finalista}
             comunidad={comunidad2}
             streamers={streamers2}
             foto={foto2}
             total={total2}
-            background={"bg-semifinalista"}
+            background={'bg-semifinalista'}
           />
         )
       }

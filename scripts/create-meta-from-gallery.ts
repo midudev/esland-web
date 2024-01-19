@@ -1,26 +1,17 @@
-import { Glob } from 'bun';
-import {imageMeta} from 'image-meta'
-import { join } from 'node:path';
+import { Glob } from 'bun'
+import { imageMeta } from 'image-meta'
+import { join } from 'node:path'
 
-const glob = new Glob(
-  'public/archivo-page/**/gallery/*.{webp}'
-);
+const glob = new Glob('public/archivo-page/**/gallery/*.{webp}')
 
 const metaEditions: [
-  { height: number, width: number }[],
-  { height: number, width: number }[],
-] = [
-  [],
-  [],
-]
+  { height: number; width: number }[],
+  { height: number; width: number }[]
+] = [[], []]
 
 for await (const file of glob.scan('.')) {
-
   const data = await Bun.file(file).arrayBuffer()
-  const {
-    height = 0,
-    width = 0
-  } = imageMeta(Buffer.from(data))
+  const { height = 0, width = 0 } = imageMeta(Buffer.from(data))
 
   const imageNumber = Number(file.match(/img-(\d+)/)?.[1] || '')
   const edition = Number(file.match(/\/(\d+)\//)?.[1] || '')

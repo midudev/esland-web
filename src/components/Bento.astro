@@ -1,6 +1,6 @@
 ---
-import BentoItem from "@/components/BentoItem.astro"
-import { getI18N } from "@/i18n/"
+import BentoItem from '@/components/BentoItem.astro'
+import { getI18N } from '@/i18n/'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -13,81 +13,81 @@ const i18n = getI18N({ currentLocale })
     mx-auto p-6 md:p-12 lg:p-20
   `}
 >
-  <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_1}>
+  <BentoItem class='col-span-10 lg:col-span-4' title={i18n.BENTO_TITLE_1}>
     <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      slot='image'
+      class='background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-950
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/mountain.webp"
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110'
+      data-src='/mountain.webp'
     >
     </div>
 
     <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
+      slot='content'
+      class='max-w-xl text-base md:text-lg'
       set:html={i18n.BENTO_CONTENT_1}
     />
   </BentoItem>
   <BentoItem
-    class="col-span-10 lg:col-span-6"
+    class='col-span-10 lg:col-span-6'
     title={i18n.BENTO_TITLE_2}
     subtitle={i18n.BENTO_SUBTITLE_2}
   >
     <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      slot='image'
+      class='background transition-scale absolute bottom-0 left-0 top-0
     -z-10 h-full w-full bg-blue-800
-    bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/pistas.webp"
+    bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110'
+      data-src='/pistas.webp'
     >
     </div>
     <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
+      slot='content'
+      class='max-w-xl text-base md:text-lg'
       set:html={i18n.BENTO_CONTENT_2}
     />
   </BentoItem>
   <BentoItem
-    class="col-span-10 lg:col-span-6"
+    class='col-span-10 lg:col-span-6'
     title={i18n.BENTO_TITLE_3}
     subtitle={i18n.BENTO_SUBTITLE_3}
   >
     <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      slot='image'
+      class='background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-900
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/grefg.webp"
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110'
+      data-src='/grefg.webp'
     >
     </div>
     <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
+      slot='content'
+      class='max-w-xl text-base md:text-lg'
       set:html={i18n.BENTO_CONTENT_3}
     />
   </BentoItem>
-  <BentoItem class="col-span-10 lg:col-span-4" title={i18n.BENTO_TITLE_4}>
+  <BentoItem class='col-span-10 lg:col-span-4' title={i18n.BENTO_TITLE_4}>
     <div
-      slot="image"
-      class="background transition-scale absolute bottom-0 left-0 top-0
+      slot='image'
+      class='background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-950
-        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      data-src="/laptop.webp"
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110'
+      data-src='/laptop.webp'
     >
     </div>
     <p
-      slot="content"
-      class="max-w-xl text-base md:text-lg"
+      slot='content'
+      class='max-w-xl text-base md:text-lg'
       set:html={i18n.BENTO_CONTENT_4}
     />
   </BentoItem>
 </section>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     const backgrounds = document.querySelectorAll(
-      ".background"
+      '.background'
     ) as NodeListOf<HTMLElement>
 
     if (window.IntersectionObserver == null) {
@@ -112,7 +112,7 @@ const i18n = getI18N({ currentLocale })
     }
 
     const observer = new IntersectionObserver(handleIntersection, {
-      rootMargin: "100px",
+      rootMargin: '100px'
     })
 
     backgrounds.forEach((bkg) => observer.observe(bkg))

@@ -7,7 +7,7 @@ const {
   streamers,
   total,
   position,
-  background,
+  background
 } = Astro.props
 ---
 
@@ -15,24 +15,24 @@ const {
   class={`max-w-full rounded-lg shadow ${background} border-[#0d507a] animate-fade-up`}
 >
   <p
-    class="mx-11 shadow-md absolute text-center rounded-b-lg rounded-t-sm bg-white -mt-[2px] text-black py-2 font-bold font-tomaso size-11"
+    class='absolute mx-11 -mt-[2px] size-11 rounded-b-lg rounded-t-sm bg-white py-2 text-center font-tomaso font-bold text-black shadow-md'
   >
     {position}
   </p>
   <img
-    class="rounded-t-lg object-cover"
+    class='rounded-t-lg object-cover'
     src={`/archivo-page/${edicion}/palmares/desktop/${foto}.webp`}
     alt={name}
     title={name}
   />
-  <div class="p-5">
+  <div class='p-5'>
     <p
-      class="mb-2 text-xl font-bold tracking-tight dark:text-white uppercase text-balance"
+      class='mb-2 text-balance text-xl font-bold uppercase tracking-tight dark:text-white'
     >
       {name}
     </p>
     <p
-      class="mt-5 flex flex-col mb-3 font-normal text-gray-700 dark:text-gray-400 uppercase"
+      class='mb-3 mt-5 flex flex-col font-normal uppercase text-gray-700 dark:text-gray-400'
     >
       <strong>Comunidad: {comunidad}</strong>
       <strong>Streamers: {streamers}</strong>

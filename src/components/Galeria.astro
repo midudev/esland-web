@@ -1,7 +1,7 @@
 ---
-import "photoswipe/style.css"
-import editionsInfo from "@/data/meta-gallery.json"
-import Button from "@/components/Button.astro"
+import 'photoswipe/style.css'
+import editionsInfo from '@/data/meta-gallery.json'
+import Button from '@/components/Button.astro'
 
 const offset = 10
 const { edicion } = Astro.props
@@ -11,65 +11,65 @@ const photos = editionsInfo[edictionIndex].slice(0, offset)
 const { i18n } = Astro.props
 ---
 
-<section class="max-w-8xl mx-auto py-20 px-20">
+<section class='max-w-8xl mx-auto px-20 py-20'>
   <h2
-    class="mx-auto mb-8 text-center text-3xl lg:text-6xl font-semibold tracking-wide"
+    class='mx-auto mb-8 text-center text-3xl font-semibold tracking-wide lg:text-6xl'
   >
     {i18n.INFO.GALLERY_TITLE}
   </h2>
-  <p class="text-center text-2xl">{i18n.INFO.GALLERY_TEXT}</p>
+  <p class='text-center text-2xl'>{i18n.INFO.GALLERY_TEXT}</p>
 
   <masonry-layout
-    gap="24"
-    maxcolwidth="600"
-    class="lg:mx-auto mx-4 py-20"
-    id="gallery"
+    gap='24'
+    maxcolwidth='600'
+    class='mx-4 py-20 lg:mx-auto'
+    id='gallery'
   >
     {
       photos.map(({ height, width }, i) => (
         <a
-          class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
+          class='group relative rounded-xl transition-all hover:scale-105 hover:contrast-[110%]'
           href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
-          target="_blank"
-          data-cropped="true"
+          target='_blank'
+          data-cropped='true'
           data-pswp-width={width}
           data-pswp-height={height}
         >
           <img
-            class="rounded-xl object-cover w-full h-auto"
-            loading="lazy"
+            class='h-auto w-full rounded-xl object-cover'
+            loading='lazy'
             src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
               i + 1
             }.webp`}
-            alt="Fotografía de los premios ESLAND"
+            alt='Fotografía de los premios ESLAND'
           />
           <img
-            class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
-            loading="lazy"
+            class='absolute inset-0 -z-10 object-cover opacity-0 blur-md contrast-150 transition group-hover:opacity-100'
+            loading='lazy'
             src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
               i + 1
             }.webp`}
-            alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
+            alt='Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND'
           />
         </a>
       ))
     }
   </masonry-layout>
 
-  <div class="text-center mx-auto">
-    <Button id="load-more" url="#">Descúbrelas todas</Button>
+  <div class='mx-auto text-center'>
+    <Button id='load-more' url='#'>Descúbrelas todas</Button>
   </div>
 </section>
 
 <script>
-  import PhotoSwipeLightbox from "photoswipe/lightbox"
-  import "@appnest/masonry-layout"
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+  import '@appnest/masonry-layout'
 
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     const lightbox = new PhotoSwipeLightbox({
-      gallery: "#gallery",
-      children: "a",
-      pswpModule: () => import("photoswipe"),
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('photoswipe')
     })
 
     lightbox.init()
@@ -77,15 +77,15 @@ const { i18n } = Astro.props
 </script>
 
 <script define:vars={{ edicion, offset }}>
-  document.addEventListener("astro:page-load", () => {
-    const $button = document.querySelector("#load-more")
+  document.addEventListener('astro:page-load', () => {
+    const $button = document.querySelector('#load-more')
     // clone first element of gallery
-    const $first = document.querySelector("#gallery a:first-child")
+    const $first = document.querySelector('#gallery a:first-child')
 
-    $button?.addEventListener("click", async (e) => {
+    $button?.addEventListener('click', async (e) => {
       $button.remove()
       e.preventDefault()
-      const res = await fetch("/api/gallery.json?edition=1&offset=9")
+      const res = await fetch('/api/gallery.json?edition=1&offset=9')
       const images = await res.json()
 
       const html = images
@@ -93,34 +93,34 @@ const { i18n } = Astro.props
           const imgIndex = index + offset
           const $clone = $first?.cloneNode(true)
 
-          $clone.setAttribute("data-pswp-width", img.width)
-          $clone.setAttribute("data-pswp-height", img.height)
+          $clone.setAttribute('data-pswp-width', img.width)
+          $clone.setAttribute('data-pswp-height', img.height)
           $clone.setAttribute(
-            "href",
+            'href',
             `/archivo-page/${edicion}/gallery/img-${imgIndex}.webp`
           )
-          $clone.classList.add("animate-fade-up")
-          $clone.classList.add("animate-delay-300")
-          $clone.classList.add("opacity-0")
+          $clone.classList.add('animate-fade-up')
+          $clone.classList.add('animate-delay-300')
+          $clone.classList.add('opacity-0')
           $clone
-            .querySelector("img:first-child")
+            .querySelector('img:first-child')
             .setAttribute(
-              "src",
+              'src',
               `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
             )
           $clone
-            .querySelector("img:last-child")
+            .querySelector('img:last-child')
             .setAttribute(
-              "src",
+              'src',
               `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
             )
 
           return $clone?.outerHTML
         })
-        .join("")
+        .join('')
 
-      document.querySelector("#gallery")?.insertAdjacentHTML("beforeend", html)
-      document.querySelector("masonry-layout").scheduleLayout()
+      document.querySelector('#gallery')?.insertAdjacentHTML('beforeend', html)
+      document.querySelector('masonry-layout').scheduleLayout()
     })
   })
 </script>
@@ -141,7 +141,7 @@ const { i18n } = Astro.props
     0% {
       opacity: 0;
       translate: 0 50px;
-      scale: .7;
+      scale: 0.7;
     }
     100% {
       opacity: 1;
@@ -149,5 +149,4 @@ const { i18n } = Astro.props
       scale: 1;
     }
   }
-
 </style>

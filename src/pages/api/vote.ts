@@ -1,7 +1,7 @@
-import { addUserVotes, cleanUserVotes } from "@/db/client";
-import { type APIRoute } from "astro";
-import { getSession } from "auth-astro/server";
-import { votesSchema } from '@/schemas/votes.ts';
+import { addUserVotes, cleanUserVotes } from '@/db/client'
+import { type APIRoute } from 'astro'
+import { getSession } from 'auth-astro/server'
+import { votesSchema } from '@/schemas/votes.ts'
 
 export const POST: APIRoute = async ({ request }) => {
   const session = await getSession(request)
@@ -33,5 +33,5 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response('Internal Server Error', { status: 500 })
   }
 
-  return new Response("ok", { status: 200 })
+  return new Response('ok', { status: 200 })
 }

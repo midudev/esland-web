@@ -1,17 +1,17 @@
 ---
-import Layout from "@/layouts/Layout.astro"
-import { getI18N } from "@/i18n"
+import Layout from '@/layouts/Layout.astro'
+import { getI18N } from '@/i18n'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 const HEADING_STYLES =
-  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
-const SECTION_STYLES = 
-  "max-w-5xl mx-auto my-10 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+  'mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase'
+const SECTION_STYLES =
+  'max-w-5xl mx-auto my-10 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20'
 ---
 
 <Layout title={i18n.SEO.INFO_TITLE} description={i18n.SEO.INFO_DESCRIPTION}>
-  <main class="py-8">
+  <main class='py-8'>
     <section class=`${SECTION_STYLES}`>
       <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.POLICY.TITLE}</h2>
       <p>{i18n.PRIVACY.POLICY.DESCRIPTION_1}</p>
@@ -65,7 +65,7 @@ const SECTION_STYLES =
     <section class=`${SECTION_STYLES}`>
       <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.USER_RIGHTS.TITLE}</h2>
       <p>{i18n.PRIVACY.USER_RIGHTS.DESCRIPTION_1}</p>
-      <ul class="list-disc">
+      <ul class='list-disc'>
         <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_1}</p></li>
         <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_2}</p></li>
         <li><p>{i18n.PRIVACY.USER_RIGHTS.ITEM_3}</p></li>
@@ -75,7 +75,9 @@ const SECTION_STYLES =
       <p>{i18n.PRIVACY.USER_RIGHTS.DESCRIPTION_2}</p>
     </section>
     <section class=`${SECTION_STYLES}`>
-      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.THIRD_PARTY_DOMAIN_LINKS.TITLE}</h2>
+      <h2 class=`${HEADING_STYLES}`>
+        {i18n.PRIVACY.THIRD_PARTY_DOMAIN_LINKS.TITLE}
+      </h2>
       <p>{i18n.PRIVACY.THIRD_PARTY_DOMAIN_LINKS.DESCRIPTION}</p>
     </section>
     <section class=`${SECTION_STYLES}`>
@@ -90,10 +92,12 @@ const SECTION_STYLES =
     </section>
     <section class=`${SECTION_STYLES}`>
       <h2 class=`${HEADING_STYLES}`></h2>
-      <p> </p>
+      <p></p>
     </section>
     <section class=`${SECTION_STYLES}`>
-      <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.INTERNATIONAL_TRANSFERS.TITLE}</h2>
+      <h2 class=`${HEADING_STYLES}`>
+        {i18n.PRIVACY.INTERNATIONAL_TRANSFERS.TITLE}
+      </h2>
       <p>{i18n.PRIVACY.INTERNATIONAL_TRANSFERS.DESCRIPTION}</p>
     </section>
     <section class=`${SECTION_STYLES}`>

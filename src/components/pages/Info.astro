@@ -1,44 +1,44 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from '@/layouts/Layout.astro'
 
-import HeroContainer from "@/components/HeroContainer.astro"
-import InfoKitPrensa from "@/components/InfoKitPrensa.astro"
+import HeroContainer from '@/components/HeroContainer.astro'
+import InfoKitPrensa from '@/components/InfoKitPrensa.astro'
 
-import { getI18N } from "@/i18n"
+import { getI18N } from '@/i18n'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
 <Layout title={i18n.SEO.INFO_TITLE} description={i18n.SEO.INFO_DESCRIPTION}>
-  <HeroContainer img="/info-background.webp">
+  <HeroContainer img='/info-background.webp'>
     <h1
-      class="lg:text-6xl text-5xl text-center uppercase font-tomaso tracking tracking-widest"
+      class='tracking text-center font-tomaso text-5xl uppercase tracking-widest lg:text-6xl'
     >
       {i18n.INFO_TITLE}
     </h1>
   </HeroContainer>
-  <main class="pb-24">
+  <main class='pb-24'>
     <section
-      class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+      class='mx-auto my-24 flex w-full max-w-[1400px] flex-col items-center justify-between gap-10 text-pretty p-6 px-6 text-left text-xl sm:px-20 md:flex-row md:p-8'
     >
-      <div id="theater-text" class="md:w-1/2 space-y-4">
+      <div id='theater-text' class='space-y-4 md:w-1/2'>
         <h1
-          class="mx-auto mb-10 text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide"
+          class='mx-auto mb-10 text-balance text-left text-3xl font-semibold tracking-wide lg:text-5xl'
         >
           {i18n.INFO_TITLE_1}
         </h1>
         <p>{i18n.INFO_CONTENT_1_1}</p>
         <p>{i18n.INFO_CONTENT_1_2}</p>
       </div>
-      <div id="theater" class="mt-6 md:mt-0 md:w-1/2">
+      <div id='theater' class='mt-6 md:mt-0 md:w-1/2'>
         <img
-          class="object-cover w-full h-full rounded-md"
+          class='h-full w-full rounded-md object-cover'
           height={500}
-          src="/theater.webp"
+          src='/theater.webp'
           style={{
-            aspectRatio: "812/556",
-            objectFit: "cover",
+            aspectRatio: '812/556',
+            objectFit: 'cover'
           }}
           width={500}
         />
@@ -46,23 +46,23 @@ const i18n = getI18N({ currentLocale })
     </section>
 
     <section
-      class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"
+      class='mx-auto my-24 flex w-full max-w-[1400px] flex-col items-center justify-between gap-10 text-pretty p-6 px-6 text-left text-xl sm:px-20 md:flex-row md:p-8'
     >
-      <div id="trophies" class="mt-6 md:mt-0 md:w-1/2">
+      <div id='trophies' class='mt-6 md:mt-0 md:w-1/2'>
         <img
-          class="object-cover w-full h-full rounded-md"
+          class='h-full w-full rounded-md object-cover'
           height={556}
-          src="/trophies.webp"
+          src='/trophies.webp'
           style={{
-            aspectRatio: "812/556",
-            objectFit: "cover",
+            aspectRatio: '812/556',
+            objectFit: 'cover'
           }}
           width={812}
         />
       </div>
-      <div id="trophies-text" class="md:w-1/2 space-y-4">
+      <div id='trophies-text' class='space-y-4 md:w-1/2'>
         <h1
-          class="mx-auto mb-10 text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide"
+          class='mx-auto mb-10 text-balance text-left text-3xl font-semibold tracking-wide lg:text-5xl'
         >
           {i18n.INFO_TITLE_2}
         </h1>
