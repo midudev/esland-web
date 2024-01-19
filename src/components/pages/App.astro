@@ -1,10 +1,10 @@
 ---
-import Layout from "@/layouts/Layout.astro"
-import Video from "@/components/Video.astro"
-import Intro from "@/components/Intro.astro"
-import Bento from "@/components/Bento.astro"
-import PreFooter from "@/components/PreFooter.astro"
-import { getI18N } from "@/i18n"
+import Layout from '@/layouts/Layout.astro'
+import Video from '@/components/Video.astro'
+import Intro from '@/components/Intro.astro'
+import Bento from '@/components/Bento.astro'
+import PreFooter from '@/components/PreFooter.astro'
+import { getI18N } from '@/i18n'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -12,12 +12,12 @@ const i18n = getI18N({ currentLocale })
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <link
-    rel="preload"
-    href="/fonts/jura.woff2"
-    as="font"
-    type="font/woff2"
+    rel='preload'
+    href='/fonts/jura.woff2'
+    as='font'
+    type='font/woff2'
     crossorigin
-    slot="preload"
+    slot='preload'
   />
 
   <Video />

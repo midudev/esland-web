@@ -2,24 +2,24 @@
 const { link, title, image, download } = Astro.props
 ---
 
-<article class="flex flex-col justify-center items-center">
-  <h3 class="text-2xl mb-2">{title}</h3>
+<article class='flex flex-col items-center justify-center'>
+  <h3 class='mb-2 text-2xl'>{title}</h3>
   <a
-    class="relative group flex flex-col gap-y-4 text-center justify-center items-center mt-2 uppercase m-auto transition-all text__glowing"
+    class='text__glowing group relative m-auto mt-2 flex flex-col items-center justify-center gap-y-4 text-center uppercase transition-all'
     href={link}
   >
     <img
       src={image}
-      class="aspect-video rounded-lg w-full h-auto transition group-hover:scale-105"
-      loading="lazy"
+      class='aspect-video h-auto w-full rounded-lg transition group-hover:scale-105'
+      loading='lazy'
     />
     <img
       src={image}
-      class="absolute inset-0 opacity-0 brightness-200 blur-xl group-hover:opacity-40 scale-125 aspect-video rounded w-full h-auto -z-10 transition"
-      loading="lazy"
+      class='absolute inset-0 -z-10 aspect-video h-auto w-full scale-125 rounded opacity-0 blur-xl brightness-200 transition group-hover:opacity-40'
+      loading='lazy'
     />
     <span
-      class="border-white inline-flex w-fit border-2 border-solid rounded-full py-2 px-12"
+      class='inline-flex w-fit rounded-full border-2 border-solid border-white px-12 py-2'
       >{download}</span
     >
   </a>

@@ -1,15 +1,15 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from '@/layouts/Layout.astro'
 
-import HeroContainer from "@/components/HeroContainer.astro"
-import Button from "@/components/Button.astro"
-import Palmares from "@/components/Palmares.astro"
-import Numeros from "@/components/Numeros.astro"
-import Galeria from "@/components/Galeria.astro"
+import HeroContainer from '@/components/HeroContainer.astro'
+import Button from '@/components/Button.astro'
+import Palmares from '@/components/Palmares.astro'
+import Numeros from '@/components/Numeros.astro'
+import Galeria from '@/components/Galeria.astro'
 
-import { getI18N } from "@/i18n"
+import { getI18N } from '@/i18n'
 
-const edicion = "2"
+const edicion = '2'
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
@@ -18,24 +18,24 @@ const i18n = getI18N({ currentLocale })
   title={i18n.SEO.ARCHIVO_TITLE}
   description={i18n.SEO.ARCHIVO_DESCRIPTION}
 >
-  <HeroContainer img="/archivo-background.webp">
+  <HeroContainer img='/archivo-background.webp'>
     <h1
-      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
+      class='mb-20 text-center font-tomaso text-4xl uppercase tracking-widest lg:text-6xl'
     >
       {i18n.ARCHIVO.HERO_TITLE}
     </h1>
 
     <Button
-      class="animate-fade-up uppercase"
-      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
+      class='animate-fade-up uppercase'
+      url='https://www.youtube.com/watch?v=1YmpPrqKP-g'
     >
       {i18n.ARCHIVO.HERO_BUTTON}
     </Button>
   </HeroContainer>
 
-  <main class="pb-24">
+  <main class='pb-24'>
     <Palmares edicion={edicion} />
-    <Galeria i18n={i18n} edicion="1" />
+    <Galeria i18n={i18n} edicion='1' />
     <Numeros i18n={i18n} />
   </main>
 </Layout>

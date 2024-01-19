@@ -1,23 +1,23 @@
 ---
-import { getI18N } from "@/i18n"
+import { getI18N } from '@/i18n'
 
-import Layout from "@/layouts/Layout.astro"
+import Layout from '@/layouts/Layout.astro'
 
-import CookieTypeDescriptionItem from "@/components/cookies/CookieTitleDescriptionItem.astro"
-import CookieDescriptionLinkItem from "@/components/cookies/CookieDescriptionLinkItem.astro"
-import CookieLink from "@/components/cookies/CookieLink.astro"
+import CookieTypeDescriptionItem from '@/components/cookies/CookieTitleDescriptionItem.astro'
+import CookieDescriptionLinkItem from '@/components/cookies/CookieDescriptionLinkItem.astro'
+import CookieLink from '@/components/cookies/CookieLink.astro'
 
 const { currentLocale } = Astro
 
 const i18n = getI18N({ currentLocale })
 const H1_STYLES =
-  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase"
+  'mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase'
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <main>
     <section
-      class="max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+      class='mx-auto my-24 max-w-5xl text-pretty px-6 text-left text-lg leading-relaxed sm:px-20'
     >
       <h1 class={H1_STYLES}>
         {i18n.COOKIES.POLICIES.TITLE}
@@ -139,15 +139,15 @@ const H1_STYLES =
       <h1 class={H1_STYLES}>
         {i18n.COOKIES.SITE_COOKIES.TITLE}
       </h1>
-      <table class="w-fulltext-left rtl:text-right">
-        <thead class="uppercase">
+      <table class='w-fulltext-left rtl:text-right'>
+        <thead class='uppercase'>
           <tr>
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_NAME}</th>
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_CADUCITY}</th
+            <th class='px-6 py-3'>{i18n.COOKIES.SITE_COOKIES.THEAD_NAME}</th>
+            <th class='px-6 py-3'>{i18n.COOKIES.SITE_COOKIES.THEAD_CADUCITY}</th
             >
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_PROVIDER}</th
+            <th class='px-6 py-3'>{i18n.COOKIES.SITE_COOKIES.THEAD_PROVIDER}</th
             >
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_FINALITY}</th
+            <th class='px-6 py-3'>{i18n.COOKIES.SITE_COOKIES.THEAD_FINALITY}</th
             >
           </tr>
         </thead>
@@ -155,19 +155,19 @@ const H1_STYLES =
           {
             i18n.COOKIES.SITE_COOKIES.ANALYTICS.map(
               ({ NAME, EXPIRE, PROVIDER, OBJECTIVE, OBJECTIVE_URL }) => (
-                <tr class="odd:bg-[#007aff]">
-                  <td class="px-6 py-3">{NAME}</td>
-                  <td class="px-6 py-3">{EXPIRE}</td>
-                  <td class="px-6 py-3">
+                <tr class='odd:bg-[#007aff]'>
+                  <td class='px-6 py-3'>{NAME}</td>
+                  <td class='px-6 py-3'>{EXPIRE}</td>
+                  <td class='px-6 py-3'>
                     <CookieLink url={PROVIDER.URL} text={PROVIDER.NAME} />
                   </td>
-                  <td class="px-6 py-3">
+                  <td class='px-6 py-3'>
                     <p>
                       {OBJECTIVE}
                       {OBJECTIVE_URL.length && (
                         <CookieLink
                           url={OBJECTIVE_URL}
-                          text="Más información"
+                          text='Más información'
                         />
                       )}
                     </p>

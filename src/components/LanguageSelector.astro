@@ -1,19 +1,19 @@
 ---
-import SpainFlag from "@/components/flags/Spain.astro"
-import AndorraFlag from "@/components/flags/Andorra.astro"
-import ChevronIcon from "@/components/icons/Chevron.astro"
+import SpainFlag from '@/components/flags/Spain.astro'
+import AndorraFlag from '@/components/flags/Andorra.astro'
+import ChevronIcon from '@/components/icons/Chevron.astro'
 
-const { currentLocale = "es", url } = Astro
+const { currentLocale = 'es', url } = Astro
 
 const pathname = url.pathname
 
 let restUrl
 
-if (pathname.startsWith("/ca")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
+if (pathname.startsWith('/ca')) {
+  const segments = pathname.split('/').slice(2)
+  restUrl = '/' + segments.join('/').replace(/\/+$/, '')
 } else {
-  restUrl = pathname.replace(/\/+$/, "")
+  restUrl = pathname.replace(/\/+$/, '')
 }
 
 const LOCALES: Record<
@@ -21,48 +21,48 @@ const LOCALES: Record<
   { code: string; name: string; href: string; flag: typeof SpainFlag }
 > = {
   ca: {
-    code: "ca",
+    code: 'ca',
     href: `/ca${restUrl}`,
-    name: "Català",
-    flag: AndorraFlag,
+    name: 'Català',
+    flag: AndorraFlag
   },
   es: {
-    code: "es",
+    code: 'es',
     href: restUrl,
-    name: "Español",
-    flag: SpainFlag,
-  },
+    name: 'Español',
+    flag: SpainFlag
+  }
 }
 
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
 )
-const currentPath = url.pathname.replace(currentLocaleData.href, "")
+const currentPath = url.pathname.replace(currentLocaleData.href, '')
 ---
 
-<div class="relative inline-block text-left">
+<div class='relative inline-block text-left'>
   <div
-    class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
+    class='group rounded-md bg-black/30 text-xs font-semibold text-white transition-all hover:bg-black/70'
   >
     <button
-      type="button"
-      class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-      aria-expanded="true"
-      aria-haspopup="true"
+      type='button'
+      class='inline-flex w-full items-center justify-start gap-x-2 px-3 py-2'
+      aria-expanded='true'
+      aria-haspopup='true'
     >
       <currentLocaleData.flag />
       {currentLocaleData.name}
       <ChevronIcon />
     </button>
     <ul
-      class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+      class='absolute hidden w-full pt-0.5 group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200'
     >
       {
         otherLocales.map((locale) => (
-          <li class="">
+          <li class=''>
             <a
-              class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+              class='whitespace-no-wrap inline-flex w-full items-center justify-start gap-x-2 rounded-md bg-black/30 px-3 py-2 hover:bg-black/70'
               href={`${locale.href}${currentPath}`}
             >
               <locale.flag />
