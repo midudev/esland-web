@@ -1,64 +1,68 @@
 ---
-import BentoItem from "@/components/BentoItem.astro"
-import Img from "@/components/Img.astro"
+import BentoItem from "@/components/BentoItem.astro";
+import Img from "@/components/Img.astro";
 
 const { i18n } = Astro.locals;
 
 const bentos = [
   {
-    cols:  "lg:col-span-4",
+    cols: "lg:col-span-4",
     bg: "bg-blue-950",
     title: i18n.BENTO_TITLE_1,
     subtitle: undefined,
     img: "mountain.png",
-    content: i18n.BENTO_CONTENT_1
+    content: i18n.BENTO_CONTENT_1,
   },
   {
-    cols:  "lg:col-span-6",
+    cols: "lg:col-span-6",
     bg: "bg-blue-800",
     title: i18n.BENTO_TITLE_2,
     subtitle: i18n.BENTO_SUBTITLE_2,
     img: "pistas.png",
-    content: i18n.BENTO_CONTENT_2
+    content: i18n.BENTO_CONTENT_2,
   },
   {
-    cols:  "lg:col-span-6",
+    cols: "lg:col-span-6",
     bg: "bg-blue-900",
     title: i18n.BENTO_TITLE_3,
     subtitle: i18n.BENTO_SUBTITLE_3,
     img: "grefg.png",
-    content: i18n.BENTO_CONTENT_3
+    content: i18n.BENTO_CONTENT_3,
   },
   {
-    cols:  "lg:col-span-4",
+    cols: "lg:col-span-4",
     bg: "bg-blue-950",
     title: i18n.BENTO_TITLE_4,
     subtitle: undefined,
     img: "laptop.png",
-    content: i18n.BENTO_CONTENT_4
-  }
-]
+    content: i18n.BENTO_CONTENT_4,
+  },
+];
 ---
 
 <section
   class:list={[
     "w-full max-w-[1400px]",
     "grid lg:grid-cols-10 auto-rows-[30rem] gap-4",
-    "mx-auto p-6 md:p-12 lg:p-20"
+    "mx-auto p-6 md:p-12 lg:p-20",
   ]}
 >
-    {bentos.map(( { title, subtitle, img, cols, bg, content }) =><BentoItem cols={cols} title={title} subtitle={subtitle} bg={bg}>
-      <Img
-        slot="image"
-        class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat opacity-90 duration-1000 ease-in-out group-hover:scale-110 mix-blend-luminosity"
-        src={img}
-        loading="lazy"
-        decoding="async"
-      />
-      <p
-        slot="content"
-        class="max-w-xl text-base md:text-lg"
-        set:html={content}
-      />
-    </BentoItem>)}
+  {
+    bentos.map(({ title, subtitle, img, cols, bg, content }) => (
+      <BentoItem cols={cols} title={title} subtitle={subtitle} bg={bg}>
+        <Img
+          slot="image"
+          class="background transition-scale absolute bottom-0 left-0 top-0 -z-10 h-full w-full bg-cover bg-center bg-no-repeat opacity-90 duration-1000 ease-in-out group-hover:scale-110 mix-blend-luminosity"
+          src={img}
+          loading="lazy"
+          decoding="async"
+        />
+        <p
+          slot="content"
+          class="max-w-xl text-base md:text-lg"
+          set:html={content}
+        />
+      </BentoItem>
+    ))
+  }
 </section>
