@@ -107,6 +107,38 @@ pnpm dev
   <img src="https://contrib.rocks/image?repo=midudev/esland-web" />
 </a>
 
+## 🔑 Get your Twicth client ID and secret
+
+Before being able to initialize the application, you will need to obtain your ***client ID*** and ***client secret*** from Twitch.
+
+First, you must to go to [dev.twitch.tv](https://dev.twitch.tv)
+
+Once you're there, you should to click on the button that says **'your console'** in the upper right corner.
+
+![home page of dev.twitch.tv](resourses/consola.png)
+
+When you're in the console page. You create a new app in the **'apps'** section and press the button that say's 'regist your app'
+
+![create your twitch app](resourses/crear-aplicacion.png)
+
+Then you'll need to regist your app. Fill the fields as teh follow example and click the **'create'** button.
+
+![fill the fields](resourses/campos.png)
+
+After that, the page will redirect you to the admin panel. Look for the application you just created and click on the **'manage'** button.
+
+![control panel](resourses/panel_de_admin.png)
+
+You'll go to the same page where you were when you registered your app. Scroll down, and you'll find your ***client ID*** as shown below:
+
+![get the id](resourses/cliente_id.png)
+
+Finally, you'll need your ***client secret***. Below the place where you obtained your ***client ID***, you'll find the **'new secret'** button; click on it to get your secret.
+
+![get the secret](resourses/secreto.png)
+
+Don't forget that add it to your `.env` file
+
 ## 🧞 Commands
 
 |     | Command          | Action                                        |
