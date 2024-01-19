@@ -11,6 +11,7 @@
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
     "script:create-thumbs": "bun ./scripts/create-thumbnails-gallery.ts",
     "script:create-meta": "bun ./scripts/create-meta-from-gallery.ts",
+    "script:create-vote-inserts": "bun ./scripts/create-vote-inserts.ts",
     "webp": "bun ./scripts/convert-all.ts",
     "dl": "bun ./scripts/download-all-images.ts",
     "dl:voting": "bun ./scripts/dl-voting.ts"
