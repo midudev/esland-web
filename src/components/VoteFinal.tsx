@@ -11,8 +11,8 @@ const RESULT_STATUS = {
 }
 
 export const VoteFinal = (
-  { candidates, votes, setCategory }:
-  { candidates: typeof CandidatesType, votes: Votes, setCategory: Function }
+  { candidates, votes, setCategory, categoryNames }:
+  { candidates: typeof CandidatesType, votes: Votes, setCategory: Function, categoryNames: string[] }
 ) => {
   const [result, setResult] = useState(RESULT_STATUS.IDLE)
 
@@ -91,7 +91,7 @@ export const VoteFinal = (
             {
               votes.map((categoryVotes, index) => {
                 return (
-                  <button class="bg-[#1682c7] hover:scale-105 hover:bg-[#54beff]" onClick={() => setCategory(index)}>
+                  <button class="bg-[#1682c7] hover:scale-105 hover:bg-[#54beff] flex flex-col justify-between items-center" onClick={() => setCategory(index)}>
                     <ul class="grid grid-cols-2">
                       {
                         categoryVotes.map((candidate) => {
@@ -107,7 +107,9 @@ export const VoteFinal = (
                         })
                       }
                     </ul>
-                    <h2 class="text-lg font-semibold text-center">Categoria {index + 1}</h2>
+                    <h2 class="text-lg font-semibold text-center my-auto text-balance">
+                      {categoryNames[index]}
+                    </h2>
                   </button>
                 )
               }
