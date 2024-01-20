@@ -72,18 +72,20 @@ const i18n = getI18N({ currentLocale })
           </h2>
           <ul class="flex flex-col gap-2 font-medium text-gray-400">
             <li>
-              <a
+              <Link
                 href="/aviso-legal"
                 class="hover:underline hover:text-primary duration-300"
-                >{i18n.FOOTER.LEGAL.NOTICE}</a
-              >
+                >
+                {i18n.FOOTER.LEGAL.NOTICE}
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/privacidad"
                 class="hover:underline hover:text-primary duration-300"
-                >{i18n.FOOTER.LEGAL.PRIVACY}</a
-              >
+                >
+                {i18n.FOOTER.LEGAL.PRIVACY}
+              </Link>
             </li>
             <li>
               <Link
@@ -101,25 +103,28 @@ const i18n = getI18N({ currentLocale })
           </h2>
           <ul class="flex flex-col gap-2 font-medium text-gray-400">
             <li>
-              <a
+              <Link
                 href="/"
                 class="hover:underline hover:text-primary duration-300"
-                >{i18n.FOOTER.WEB_MAP.HOME}</a
-              >
+                >
+                {i18n.FOOTER.WEB_MAP.HOME}
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/info"
                 class="hover:underline hover:text-primary duration-300"
-                >{i18n.FOOTER.WEB_MAP.INFO}</a
-              >
+                >
+                {i18n.FOOTER.WEB_MAP.INFO}
+            </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/archivo"
                 class="hover:underline hover:text-primary duration-300"
-                >{i18n.FOOTER.WEB_MAP.ARCHIVE}</a
-              >
+                >
+                {i18n.FOOTER.WEB_MAP.ARCHIVE}
+              </Link>
             </li>
           </ul>
         </div>
