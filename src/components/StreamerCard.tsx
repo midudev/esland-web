@@ -1,17 +1,18 @@
----
-const {
-  name,
-  foto,
-  edicion,
-  comunidad,
-  streamers,
-  total,
-  position,
-  background,
-} = Astro.props
----
 
-<div
+interface Props {
+  name: string
+  foto: string
+  edicion: string
+  comunidad: number
+  streamers: number
+  total: number
+  position: string
+  background: string
+}
+
+export default function StreamerCard({name, foto, edicion, comunidad, streamers, total, position, background}: Props) {
+  return (
+    <div
   class={`max-w-full rounded-lg shadow ${background} border-[#0d507a] animate-fade-up`}
 >
   <p
@@ -40,3 +41,5 @@ const {
     </p>
   </div>
 </div>
+  )
+}

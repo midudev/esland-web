@@ -1,5 +1,5 @@
 import { useProgressiveNumber } from '@/hooks/useProgressiveNumber'
-import { useEffect } from 'preact/hooks'
+import { useEffect} from 'preact/hooks'
 
 export const CountUp = (
   { initial, final, decimals, duration }:
@@ -9,7 +9,7 @@ export const CountUp = (
 
   useEffect(() => {
     setCount(final)
-  }, [])
+  }, [final])
 
   return <span>{count}</span>
 }
