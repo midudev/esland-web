@@ -1,6 +1,12 @@
 [
   {
     "edition": "1",
+    "name": "Primera edición",
+    "metrics":{
+      "news": 227,
+      "media": 3.2,
+      "views": 69.9
+    },
     "info": [
       {
         "categoria": "Streamer del año",
@@ -227,6 +233,12 @@
   },
   {
     "edition": "2",
+    "name": "Segunda edición",
+    "metrics":{
+      "news": 616,
+      "media": 6.6,
+      "views": 730
+    },
     "info": [
       {
         "categoria": "Streamer del año",
