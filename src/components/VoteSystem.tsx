@@ -1,9 +1,8 @@
-import { type CollectionEntry } from "astro:content";
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
 
-export const VoteSystem: FunctionComponent<{ i18n: CollectionEntry<'i18n'> }> = ({ children, i18n }) => {
+export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n }) => {
   const {
     candidates,
     votes,
@@ -31,6 +30,7 @@ export const VoteSystem: FunctionComponent<{ i18n: CollectionEntry<'i18n'> }> = 
 
   return (
     <>
+      {i18n.SEO_TITLE}
       <CategoryTitle isChanging={isChanging}>
         {categoria}
       </CategoryTitle>

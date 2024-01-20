@@ -984,7 +984,7 @@ packages:
     resolution: {integrity: sha512-zqr+aHFXwpmI9Wyl3vjlRdYW8G7mHSKrSL8Qn6p50M0aBeOfgHCP2dCn/eS9RR4b4vcayASnJmPvkzaKKE3tXg==}
     dependencies:
       '@libsql/hrana-client': 0.5.5
-      js-base64: 3.7.5
+      js-base64: 3.7.6
       libsql: 0.2.0-pre.7
     transitivePeerDependencies:
       - bufferutil
@@ -1013,7 +1013,7 @@ packages:
     dependencies:
       '@libsql/isomorphic-fetch': 0.1.10
       '@libsql/isomorphic-ws': 0.1.5
-      js-base64: 3.7.5
+      js-base64: 3.7.6
       node-fetch: 3.3.2
     transitivePeerDependencies:
       - bufferutil
@@ -1927,7 +1927,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001579
-      electron-to-chromium: 1.4.639
+      electron-to-chromium: 1.4.640
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
     dev: false
@@ -2332,8 +2332,8 @@ packages:
   /eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  /electron-to-chromium@1.4.639:
-    resolution: {integrity: sha512-CkKf3ZUVZchr+zDpAlNLEEy2NJJ9T64ULWaDgy3THXXlPVPkLu3VOs9Bac44nebVtdwl2geSj6AxTtGDOxoXhg==}
+  /electron-to-chromium@1.4.640:
+    resolution: {integrity: sha512-z/6oZ/Muqk4BaE7P69bXhUhpJbUM9ZJeka43ZwxsDshKtePns4mhBlh8bU5+yrnOnz3fhG82XLzGUXazOmsWnA==}
     dev: false
 
   /emmet@2.4.6:
@@ -2971,8 +2971,8 @@ packages:
     resolution: {integrity: sha512-oW3PCnvyrcm1HMvGTzqjxxfnEs9EoFOFWi2HsEGhlFVOXxTE3K9GKWVMFoFw06yPUqwpvEWic1BmtUZBI/tIjw==}
     dev: false
 
-  /js-base64@3.7.5:
-    resolution: {integrity: sha512-3MEt5DTINKqfScXKfJFrRbxkrnk2AxPWGBL/ycjz4dK8iqiSJ06UxD8jh8xuh6p10TX4t2+7FsBYVxxQbMg+qA==}
+  /js-base64@3.7.6:
+    resolution: {integrity: sha512-NPrWuHFxFUknr1KqJRDgUQPexQF0uIJWjeT+2KjEePhitQxQEx5EJBG1lVn5/hc8aLycTpXrDOgPQ6Zq+EDiTA==}
     dev: false
 
   /js-tokens@4.0.0:

@@ -1,9 +1,11 @@
 import { addUserVotes, cleanUserVotes } from "@/db/client";
+import { votesSchema } from '@/db/schemas';
 import { type APIRoute } from "astro";
 import { getSession } from "auth-astro/server";
-import { schemas } from '@/content/config';
+
 
 export const POST: APIRoute = async ({ request }) => {
+
   const session = await getSession(request)
 
   if (!session) {
@@ -19,7 +21,7 @@ export const POST: APIRoute = async ({ request }) => {
   let votesToSave = []
   try {
     const { votes } = await request.json()
-    schemas.votes.parse(votes)
+    votesSchema.parse(votes)
     votesToSave = votes
   } catch (e) {
     return new Response('Bad Request', { status: 400 })
@@ -33,5 +35,5 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response('Internal Server Error', { status: 500 })
   }
 
-  return new Response("ok", { status: 200 })
+  return new Response("ok", { status: 201 })
 }
