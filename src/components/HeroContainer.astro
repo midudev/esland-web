@@ -2,7 +2,7 @@
 interface Props {
   img: string
 }
-
+import Img from "@/components/Img.astro"
 const { img } = Astro.props
 ---
 
@@ -12,12 +12,14 @@ const { img } = Astro.props
   >
     <slot />
   </div>
-  <img
+  <Img
     class="absolute cp-v h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
     src={img}
     alt="ESLAND cover"
+    loading="eager"
+    fetchpriority="high"
   />
-  <img
+  <Img
     class="absolute animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out blur-3xl -z-40"
     src={img}
     alt="ESLAND cover"

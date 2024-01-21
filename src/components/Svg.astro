@@ -1,0 +1,82 @@
+---
+interface Props {
+  src: string;
+  width?: number | string;
+  height?: number | string;
+  class?: string;
+  hidden?: boolean;
+  label?:string
+}
+
+declare global {
+  var __SVG__: any;
+}
+
+import path from "node:path";
+import fs from "node:fs/promises";
+const { src, class: className, hidden, label, height, width } = Astro.props;
+let SVG = globalThis.__SVG__ || {};
+if (!Object.hasOwn(SVG, src as string)) {
+  SVG = await Astro.glob("/src/assets/images/*.svg");
+  const isProd = import.meta.env.MODE === "production";
+  SVG = await SVG.reduce(async (acc: Promise<Record<string, any>>, img: { default: { src: string } }) => {
+    let src = img.default.src;
+    const _acc = await acc;
+    if (typeof src === "string") {
+      src = src.replace("/@fs", "");
+      const parts = path.parse(src);
+      let name = parts.name;
+      if (isProd) {
+        src = `./dist${src}`;
+        name = name.substring(0, name.lastIndexOf("."));
+      } else {
+        src = src.substring(0, src.indexOf(".svg?")) + ".svg";
+      }
+      _acc[name] = await fs.readFile(src, "utf-8");
+      if (isProd) {
+        _acc[name] = _acc[name].replace(/\s+/g, ' ');
+      }
+    }
+    return _acc;
+  }, Promise.resolve({}));
+  globalThis.__SVG__ = SVG;
+}
+
+const inline = async (svg: string, attrs: Record<string, any>) => {
+  let search: RegExpMatchArray | string | null = svg.match(/<svg([^>]+)/gi);
+  if (search === null) {
+    return svg;
+  }
+  search = search[0];
+  let replace = search;
+  for (const [key, value] of Object.entries(attrs)) {
+    if (value !== undefined) {
+      replace = replaceString(
+        replace,
+        new RegExp(`${key}="([^"]+)"`, "g"),
+        `${key}="${value}"`
+      )
+    }
+  }
+  return svg.replace(search, replace);
+
+  function replaceString(replace: string, regx: RegExp, value: string) {
+    const res = replace.replace(regx, value);
+    if (res !== replace) {
+      replace = res;
+    } else {
+      replace += ` ${value}`;
+    }
+    return replace
+  }
+};
+const content = inline(SVG[src], {
+  height,
+  width,
+  class: className,
+  'aria-hidden': hidden,
+  'aria-label': label
+});
+
+---
+<Fragment set:html={content} />

@@ -1,15 +1,21 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n"
 
-interface Props {
-  class?: string
-  href: string
+import type { HTMLAttributes } from 'astro/types'
+
+interface Props extends HTMLAttributes<'a'> {
+  locale?: string
 }
 
 const { currentLocale = "es" } = Astro
-const { href, class: className } = Astro.props
+const { href, locale, class: className, ...rest } = Astro.props
+let path = href as string;
+if (!/^https?:\/\//.test(path) && !path.startsWith('#')) {
+  path = getRelativeLocaleUrl(locale || currentLocale, path)
+  .replace(/\/+$/, "")
+}
 ---
 
-<a href={getRelativeLocaleUrl(currentLocale, href)} class:list={[className]}>
+<a href={path} class:list={[className]} {...rest}>
   <slot />
 </a>

@@ -28,5 +28,5 @@ for await (const file of glob.scan('.')) {
   metaEditions[edition - 1][imageNumber - 1] = { height, width }
 }
 
-const outputPath = join(process.cwd(), 'src/data/meta-gallery.json')
+const outputPath = join(process.cwd(), 'src/content/meta/gallery.json')
 await Bun.write(outputPath, JSON.stringify(metaEditions))

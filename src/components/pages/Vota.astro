@@ -1,0 +1,148 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import { VoteSystem } from "@/components/VoteSystem.tsx"
+import { getRelativeLocaleUrl } from "astro:i18n"
+import Button from "@/components/Button.astro"
+import { getSession } from "auth-astro/server"
+import Svg from "@/components/Svg.astro"
+import Img from "@/components/Img.astro"
+
+const { i18n } = Astro.locals;
+const { currentLocale = "es" } = Astro;
+
+const session = await getSession(Astro.request)
+
+const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
+---
+
+<Layout title={i18n.SEO.VOTE_TITLE} description={i18n.SEO.VOTE_DESCRIPTION}>
+  <section
+    class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
+  >
+    <Img
+      class="absolute h-full w-full animate-fade object-cover object-center animate-duration-1000 animate-ease-in-out -z-10"
+      src={bkg}
+      alt="ESLAND cover"
+    />
+
+    {
+      !session && (
+        <div class="mx-auto flex flex-col max-w-7xl px-6 pt-40">
+          <h1 class="uppercase mb-10 text-left text-3xl lg:text-5xl font-bold tracking-wider leading-loose max-w-xl text-balance">
+            {i18n.VOTE.TITLE}
+          </h1>
+
+          <div class="mb-10">
+            <Button id="vote-button" data-return-url={getRelativeLocaleUrl(currentLocale, "vota")}>
+              {i18n.VOTE.CALL_TO_VOTE}
+            </Button>
+          </div>
+          <p
+            set:html={i18n.VOTE.INTRO_CONTENT}
+            class="max-w-3xl text-pretty text-2xl px-2 mb-10"
+          />
+
+          <ul class="flex flex-col gap-y-10 text-2xl pl-4 font-extralight">
+            <li class="flex gap-x-6 items-center">
+              <Svg src="sort.vote" />
+              <span set:html={i18n.VOTE.ADVICE_1} />
+            </li>
+
+            <li class="flex gap-x-6 items-center">
+              <Svg src="check.pencil" />
+              <span set:html={i18n.VOTE.ADVICE_2} />
+            </li>
+
+            <li class="flex gap-x-6 items-center">
+              <Svg src="podium" />
+              <span set:html={i18n.VOTE.ADVICE_3} />
+            </li>
+
+            <li class="flex gap-x-6 items-center">
+              <>
+              <Svg src="tap.button" />
+                <span set:html={i18n.VOTE.ADVICE_4} />
+              </>
+            </li>
+
+            <li class="flex gap-x-6 items-center">
+              <>
+              <Svg src="share" />
+                <span set:html={i18n.VOTE.ADVICE_5} />
+              </>
+            </li>
+
+            <li class="flex gap-x-6 items-center">
+              <Svg src="think.brain" />
+              <span set:html={i18n.VOTE.ADVICE_6} />
+            </li>
+            <span class="opacity-85 text-base mt-4">
+              {i18n.VOTE.TIME_LIMIT}
+            </span>
+          </ul>
+        </div>
+      )
+    }
+
+    {
+      session && (
+        <div class="mx-auto flex flex-col max-w-7xl pt-20 relative">
+          <VoteSystem client:load i18n={i18n}>
+            <div class="flex items-center gap-4">
+              <img
+                class="w-12 h-12 rounded-full"
+                src={session.user?.image}
+                alt=""
+              />
+              <div class="text-yellow-300">
+                <h4 class="font-bold text-xl">{session.user?.name}</h4>
+                <button
+                  id="logout-button"
+                  class="text-sm hover:border-white border-b font-light border-transparent text-white flex justify-center items-center gap-x-2"
+                >
+                  {i18n.LOG_OUT}
+                </button>
+              </div>
+            </div>
+          </VoteSystem>
+        </div>
+      )
+    }
+  </section>
+</Layout>
+
+<script>
+	import { signIn, signOut } from "auth-astro/client"
+	// @ts-ignore
+	window.signIn = signIn
+  // @ts-ignore
+  window.signOut = signOut
+</script>
+
+<script client:load>
+  // pongo un $ delante para que se vea que es un elemento del DOM
+  // es una cosa que se hacía en el pasado con jQuery y es una manía
+  // que se me ha quedado porque me gusta :)
+  const $loginButton = document.querySelector("#vote-button")
+  const $logoutButton = document.querySelector("#logout-button")
+
+  $loginButton?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signIn("twitch", {
+      callbackUrl: $loginButton?.dataset?.returnUrl
+    }, { callbackUrl: $loginButton?.dataset?.returnUrl })
+  })
+
+  $logoutButton?.addEventListener("click", async (event) => {
+    event.preventDefault()
+    await signOut()
+  })
+</script>
+
+<style>
+  p {
+    text-shadow:
+      0 0 5px rgba(0, 0, 0, 0.3),
+      0 0 10px rgba(0, 0, 0, 0.7);
+  }
+</style>

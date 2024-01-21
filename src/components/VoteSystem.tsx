@@ -1,24 +1,21 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
-import { getI18N } from "@/i18n"
 
-export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ children, currentLocale = "es" }) => {
-  const i18n = getI18N({ currentLocale })
-
-  const { 
+export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n }) => {
+  const {
     candidates,
     votes,
-    pageInfo, 
-    category, 
-    votesCategory, 
-    isChanging, 
+    pageInfo,
+    category,
+    votesCategory,
+    isChanging,
     MAX_CATEGORIES,
     MAX_VOTES_PER_CATEGORY,
     setNextCategory,
     setPrevCategory,
     setCategory,
-    setVotesCategory 
+    setVotesCategory
   } = useVoteSystem()
 
   const { categoria = '', candidatos } = pageInfo ?? {}
@@ -33,10 +30,11 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
 
   return (
     <>
+      {i18n.SEO_TITLE}
       <CategoryTitle isChanging={isChanging}>
         {categoria}
       </CategoryTitle>
-      
+
       <div class="font-semibold flex justify-center items-center gap-x-2 px-2 rounded py-3 -mt-24 mb-10 text-yellow-300 text-xl">
         {i18n.VOTE.VOTES_CASTED} <span class="text-3xl">{votesCategory.length}/{MAX_VOTES_PER_CATEGORY}</span>
         </div>
@@ -48,7 +46,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
 
             const voteIndex = votesCategory.indexOf(id)
             const isVoted = voteIndex >= 0
-            
+
             const delay = `animation-delay: ${index * 100}ms`
 
             return (
@@ -60,7 +58,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
                     </a>
                   )
                 }
-                
+
                 <button
                   class={`
                   shadow-sm shadow-black/20
@@ -94,11 +92,11 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setPrevCategory}>
           <Arrow rotated />
         </button>
-        
+
         <span class="text-lg font-semibold">
           {i18n.CATEGORY} <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
         </span>
-      
+
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setNextCategory}>
           <Arrow />
         </button>

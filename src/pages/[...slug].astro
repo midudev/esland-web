@@ -1,0 +1,62 @@
+---
+import i18n from '@/i18n';
+
+export const prefixDefaultLocale = i18n.routing.prefixDefaultLocale;
+export const defaultLocale = i18n.defaultLocale;
+export const locales = i18n.locales;
+
+interface Route {
+  params: { slug: string | undefined };
+}
+
+export const components = (await Astro.glob("../components/pages/*.astro")).reduce((acc: { [key: string]: any }, entry) => {
+  if (entry.url) {
+    let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
+    acc[url] = entry.default;
+  }
+  return acc;
+}, {});
+
+export const pages: Record<string, any> = {};
+
+export const routes = locales.reduce((acc: Route[], lang: string) => {
+  const needPrefix = lang !== defaultLocale || prefixDefaultLocale;
+  for (const [path, component] of Object.entries(components)) {
+    let slug: string | undefined = path
+    if (slug === 'app') {
+      slug = needPrefix ? lang : undefined;
+    } else if (needPrefix) {
+      slug = `${lang}/${slug}`
+    }
+    acc.push({
+      params: { slug },
+    });
+    pages[slug === undefined ? 'app' : slug] = component;
+  }
+  if (needPrefix && lang === defaultLocale) {
+    acc.push({
+      params: { slug: undefined }
+    })
+  }
+  return acc;
+}, []);
+
+export async function getStaticPaths() {
+  return routes;
+}
+
+export const prerender = true;
+
+let { slug } : { slug: string | undefined} = Astro.params;
+
+if (prefixDefaultLocale && !slug) {
+  return Astro.redirect(`/${defaultLocale}`);
+}
+
+if (slug?.endsWith('/')) {
+  slug = slug.slice(0, -1);
+}
+
+const CustomPage = pages[!slug ? 'app' : slug];
+---
+<CustomPage />

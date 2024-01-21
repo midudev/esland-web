@@ -1,16 +1,10 @@
 ---
-import Logo from "@/components/Logo.astro"
 import Button from "@/components/Button.astro"
 import LanguageSelector from "@/components/LanguageSelector.astro"
 import HeaderLink from "@/components/HeaderLink.astro"
+import Svg from "@/components/Svg.astro"
 
-import MenuIcon from "@/components/icons/Menu.astro"
-import CloseIcon from "@/components/icons/Close.astro"
-
-import { getI18N } from "@/i18n/index"
-
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { i18n } = Astro.locals;
 ---
 
 <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
@@ -21,10 +15,11 @@ const i18n = getI18N({ currentLocale })
       class="relative z-10"
       aria-label={i18n.HEADER.LOGO}
     >
-      <Logo
+      <Svg
+        src="logo"
         class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
       />
-      <Logo class="w-10" />
+      <Svg src="logo" class="w-10" />
     </HeaderLink>
     <nav
       id="header-menu"
@@ -47,9 +42,9 @@ const i18n = getI18N({ currentLocale })
         {i18n.HEADER_BUTTON}
       </Button>
       <a href="#header-nav" class="md:hidden absolute top-6 right-6">
-        <CloseIcon />
+        <Svg src="close" />
       </a>
     </nav>
-    <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+    <a href="#header-menu" class="md:hidden"><Svg src="menu" /></a>
   </div>
 </header>

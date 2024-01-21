@@ -1,6 +1,6 @@
 ---
 import "photoswipe/style.css"
-import editionsInfo from "@/data/meta-gallery.json"
+import editionsInfo from "@/content/meta/gallery.json"
 import Button from "@/components/Button.astro"
 
 const offset = 10
@@ -57,7 +57,7 @@ const { i18n } = Astro.props
   </masonry-layout>
 
   <div class="text-center mx-auto">
-    <Button id="load-more" url="#">Descúbrelas todas</Button>
+    <Button id="load-more">Descúbrelas todas</Button>
   </div>
 </section>
 

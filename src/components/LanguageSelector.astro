@@ -1,36 +1,26 @@
 ---
-import SpainFlag from "@/components/flags/Spain.astro"
-import AndorraFlag from "@/components/flags/Andorra.astro"
-import ChevronIcon from "@/components/icons/Chevron.astro"
+import { needPrefix } from "@/i18n"
+import { getPathByLocale } from "astro:i18n"
+import Link from "@/components/Link.astro"
+import Svg from "@/components/Svg.astro"
 
 const { currentLocale = "es", url } = Astro
 
-const pathname = url.pathname
+const { pathname } = url
 
-let restUrl
-
-if (pathname.startsWith("/ca")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
-} else {
-  restUrl = pathname.replace(/\/+$/, "")
-}
+const path = needPrefix(currentLocale) ? pathname.substring(getPathByLocale(currentLocale).length + 2) : pathname;
 
 const LOCALES: Record<
   string,
-  { code: string; name: string; href: string; flag: typeof SpainFlag }
+  { code: string; name: string; }
 > = {
   ca: {
     code: "ca",
-    href: `/ca${restUrl}`,
     name: "Català",
-    flag: AndorraFlag,
   },
   es: {
     code: "es",
-    href: restUrl,
     name: "Español",
-    flag: SpainFlag,
   },
 }
 
@@ -38,7 +28,6 @@ const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(
   (locale) => locale.code !== currentLocale
 )
-const currentPath = url.pathname.replace(currentLocaleData.href, "")
 ---
 
 <div class="relative inline-block text-left">
@@ -51,9 +40,9 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "")
       aria-expanded="true"
       aria-haspopup="true"
     >
-      <currentLocaleData.flag />
+      <Svg src={`flag-${currentLocaleData.code}`} class="w-4 h-auto" />
       {currentLocaleData.name}
-      <ChevronIcon />
+      <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
     </button>
     <ul
       class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
@@ -61,13 +50,14 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "")
       {
         otherLocales.map((locale) => (
           <li class="">
-            <a
+            <Link
               class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={`${locale.href}${currentPath}`}
+              href={path}
+              locale={locale.code}
             >
-              <locale.flag />
+              <Svg src={`flag-${locale.code}`} class="w-4 h-auto" />
               {locale.name}
-            </a>
+            </Link>
           </li>
         ))
       }

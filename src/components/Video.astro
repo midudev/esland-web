@@ -1,10 +1,8 @@
 ---
-import { getI18N } from "@/i18n/"
 import Button from "@/components/Button.astro"
-import Logo from "@/components/Logo.astro"
+import Svg from "@/components/Svg.astro";
 
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { i18n } = Astro.locals;
 ---
 
 <div
@@ -22,9 +20,10 @@ const i18n = getI18N({ currentLocale })
         <span>E</span>
         <span>S</span>
         <span>L</span>
-        <Logo
+        <Svg
+          src="logo"
           class="h-9 w-auto md:h-[3.75rem] lg:h-24 scale-150"
-          aria-label="A"
+          label="A"
         />
         <span>N</span>
         <span>D</span>

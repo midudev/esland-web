@@ -1,0 +1,196 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import CookieTypeDescriptionItem from "@/components/cookies/CookieTitleDescriptionItem.astro";
+import CookieDescriptionLinkItem from "@/components/cookies/CookieDescriptionLinkItem.astro";
+import CookieLink from "@/components/cookies/CookieLink.astro";
+
+const { i18n } = Astro.locals;
+const H1_STYLES =
+  "mx-auto mt-16 mb-4 text-wrap text-4xl font-semibold tracking-wide uppercase";
+---
+
+<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+  <main>
+    <section
+      class="max-w-5xl mx-auto my-24 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
+    >
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.POLICIES.TITLE}
+      </h1>
+      <p>
+        {i18n.COOKIES.POLICIES.DESCRIPTION_1}
+      </p>
+      <p>
+        {i18n.COOKIES.POLICIES.DESCRIPTION_2}
+      </p>
+      <p>
+        {i18n.COOKIES.POLICIES.DESCRIPTION_3}
+      </p>
+      <p>
+        {i18n.COOKIES.POLICIES.DESCRIPTION_4}
+      </p>
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.WHAT_IS.TITLE}
+      </h1>
+      <p>
+        {i18n.COOKIES.WHAT_IS.DESCRIPTION_1}
+      </p>
+      <p>
+        {i18n.COOKIES.WHAT_IS.DESCRIPTION_2}
+      </p>
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.TYPES.TITLE}
+      </h1>
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_1_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_1}
+      />
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_2_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_2}
+      />
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_3_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_3}
+      />
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_4_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_4}
+      />
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_5_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_5}
+      />
+      <CookieTypeDescriptionItem
+        title={i18n.COOKIES.TYPES.DESCRIPTION_6_TITLE}
+        description={i18n.COOKIES.TYPES.DESCRIPTION_6}
+      />
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.BLOCK.TITLE}
+      </h1>
+      <p>
+        {i18n.COOKIES.BLOCK.DESCRIPTION_1}
+      </p>
+      <p>
+        {i18n.COOKIES.BLOCK.DESCRIPTION_2}
+      </p>
+      <p>
+        {i18n.COOKIES.BLOCK.DESCRIPTION_3}
+      </p>
+      <p>
+        {i18n.COOKIES.BLOCK.DESCRIPTION_4}
+      </p>
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_5}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_5_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_6}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_6_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_7}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_7_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_8}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_8_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_9}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_9_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.BLOCK.DESCRIPTION_10}
+        url={i18n.COOKIES.BLOCK.DESCRIPTION_10_URL}
+      />
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.MORE_INFO.TITLE}
+      </h1>
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.MORE_INFO.DESCRIPTION_1}
+        url={i18n.COOKIES.MORE_INFO.DESCRIPTION_1_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.MORE_INFO.DESCRIPTION_2}
+        url={i18n.COOKIES.MORE_INFO.DESCRIPTION_2_URL}
+      />
+      <CookieDescriptionLinkItem
+        description={i18n.COOKIES.MORE_INFO.DESCRIPTION_3}
+        url={i18n.COOKIES.MORE_INFO.DESCRIPTION_3_URL}
+      />
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.THIRD_PARTY.TITLE}
+      </h1>
+      <p>
+        {i18n.COOKIES.THIRD_PARTY.DESCRIPTION}
+      </p>
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.UPDATES.TITLE}
+      </h1>
+      <p>
+        {i18n.COOKIES.UPDATES.DESCRIPTION}
+      </p>
+      <h1 class={H1_STYLES}>
+        {i18n.COOKIES.SITE_COOKIES.TITLE}
+      </h1>
+      <table class="w-fulltext-left rtl:text-right">
+        <thead class="uppercase">
+          <tr>
+            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_NAME}</th>
+            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_CADUCITY}</th
+            >
+            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_PROVIDER}</th
+            >
+            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_FINALITY}</th
+            >
+          </tr>
+        </thead>
+        <tbody>
+          {
+            i18n.COOKIES.SITE_COOKIES.ANALYTICS.map(
+              ({
+                NAME,
+                EXPIRE,
+                PROVIDER,
+                OBJECTIVE,
+                OBJECTIVE_URL,
+              }: {
+                NAME: string;
+                EXPIRE: string;
+                PROVIDER: {
+                  NAME: string;
+                  URL: string;
+                };
+                OBJECTIVE: string;
+                OBJECTIVE_URL: string;
+              }) => (
+                <tr class="odd:bg-[#007aff]">
+                  <td class="px-6 py-3">{NAME}</td>
+                  <td class="px-6 py-3">{EXPIRE}</td>
+                  <td class="px-6 py-3">
+                    <CookieLink url={PROVIDER.URL} text={PROVIDER.NAME} />
+                  </td>
+                  <td class="px-6 py-3">
+                    <p>
+                      {OBJECTIVE}
+                      {OBJECTIVE_URL.length && (
+                        <CookieLink
+                          url={OBJECTIVE_URL}
+                          text="Más información"
+                        />
+                      )}
+                    </p>
+                  </td>
+                </tr>
+              )
+            )
+          }
+        </tbody>
+      </table>
+      <p>
+        {i18n.COOKIES.UPDATES.DATE}
+      </p>
+    </section>
+  </main>
+</Layout>

@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "preact/hooks"
-import { type default as CandidatesType } from "@/data/editions-vote.json"
+import { type default as CandidatesType } from "@/content/editions/vote.json"
 import confetti from 'canvas-confetti'
-import type { Votes } from "@/types/votes"
 
 const RESULT_STATUS = {
   ERROR: -1,
@@ -24,12 +23,12 @@ export const VoteFinal = (
   const selectedCandidates = useMemo(() => {
     const result: Record<string, typeof CandidatesType[0]['candidatos'][0]> = {}
     if (votes.length === 0) return
-  
+
     votes.flat(2).forEach(voteId => {
       const [categoryId] = voteId.split('-')
       const categoryInfo = candidates.find((category) => category.id === categoryId)
       const candidateInfo = categoryInfo?.candidatos?.find(candidate => candidate.id === voteId)
-  
+
       if (candidateInfo?.id != null) {
         result[voteId] = candidateInfo
       }
@@ -37,7 +36,7 @@ export const VoteFinal = (
 
     return result
   }, [votes])
-  
+
   const handleSubmit = async () => {
     setResult(RESULT_STATUS.LOADING)
 
@@ -87,7 +86,7 @@ export const VoteFinal = (
               Tus votos finales
             </h1>
           <div class={`${isLoading ? 'opacity-50' : ''} transition grid grid-cols-6 gap-2`}>
-            
+
             {
               votes.map((categoryVotes, index) => {
                 return (
@@ -98,7 +97,7 @@ export const VoteFinal = (
                           const info = selectedCandidates?.[candidate]
                           const image = info?.imagen ?? ''
                           const name = info?.nombre ?? ''
-                          
+
                           return (
                             <li>
                               <img class="aspect-video w-full" src={`/voting-assets/${image}`} alt={name} />
@@ -116,7 +115,7 @@ export const VoteFinal = (
             )
           }
           </div>
-  
+
           <div class="flex justify-center items-center w-full py-10 mb-24 flex-col gap-y-4">
             <button class={`${result === RESULT_STATUS.LOADING ? 'disabled opacity-90' : ''} lg:text-2xl font-medium no-underline px-5 py-3 rounded-full uppercase text-blue-950 animate-fade-up bg-white hover:scale-125 hover:bg-yellow-300 hover:border-yellow-400 transition`} onClick={handleSubmit}>
               {
@@ -141,7 +140,7 @@ export const VoteFinal = (
         )
       }
 
-      
+
     </section>
   )
 }

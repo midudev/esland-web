@@ -1,12 +1,11 @@
 import { useEffect, useState } from "preact/hooks"
-import candidates from '@/data/editions-vote.json'
-import type { Votes } from "@/types/votes"
+import candidates from '@/content/editions/vote.json'
 
 interface PageInfo {
   categoria: string,
   candidatos: Candidate[]
 }
-  
+
 interface Candidate {
   id: string,
   nombre: string,
@@ -21,7 +20,7 @@ export const useVoteSystem = ()=>{
     const [pageInfo, setPageInfo] = useState<PageInfo>()
     const [category, setCategory] = useState(0)
     const [votes, setVotes] = useState<Votes>(Array.from({ length: MAX_CATEGORIES }, () => []))
-  
+
     useEffect(() => {
       let item = localStorage.getItem("votes");
       let initialVotes;
@@ -46,7 +45,7 @@ export const useVoteSystem = ()=>{
     }, [category])
 
     const setPrevCategory = () => {
-      const prevCategory = category > 0 ? (category - 1) : (MAX_CATEGORIES - 1) 
+      const prevCategory = category > 0 ? (category - 1) : (MAX_CATEGORIES - 1)
       setCategory(prevCategory)
     }
 
@@ -59,9 +58,9 @@ export const useVoteSystem = ()=>{
         if (missingVotes) {
           alert('Debes votar 4 candidatos por categoría')
           return
-        } 
+        }
       }
-  
+
       setCategory(nextCategory)
     }
 
@@ -70,17 +69,17 @@ export const useVoteSystem = ()=>{
       {  candidate: string }
     ) => {
       const votesCategory = votes[category]
-  
+
       // if it was already voted the item, remove it
       if (votesCategory.includes(candidate)) {
         const newVotes = votesCategory.filter((vote) => vote !== candidate)
         setVotes(prevVotes => prevVotes.with(category, newVotes))
         return
       }
-  
+
       // check if the user has already voted for this category 4 times
       if (votesCategory.length >= 4) return
-  
+
       // otherwise, add the vote
       const newVotes = [...votesCategory, candidate]
       setVotes(prevVotes => prevVotes.with(category, newVotes))
