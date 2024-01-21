@@ -139,45 +139,47 @@ const H1_STYLES =
       <h1 class={H1_STYLES}>
         {i18n.COOKIES.SITE_COOKIES.TITLE}
       </h1>
-      <table class="w-fulltext-left rtl:text-right">
-        <thead class="uppercase">
-          <tr>
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_NAME}</th>
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_CADUCITY}</th
-            >
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_PROVIDER}</th
-            >
-            <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_FINALITY}</th
-            >
-          </tr>
-        </thead>
-        <tbody>
-          {
-            i18n.COOKIES.SITE_COOKIES.ANALYTICS.map(
-              ({ NAME, EXPIRE, PROVIDER, OBJECTIVE, OBJECTIVE_URL }) => (
-                <tr class="odd:bg-[#007aff]">
-                  <td class="px-6 py-3">{NAME}</td>
-                  <td class="px-6 py-3">{EXPIRE}</td>
-                  <td class="px-6 py-3">
-                    <CookieLink url={PROVIDER.URL} text={PROVIDER.NAME} />
-                  </td>
-                  <td class="px-6 py-3">
-                    <p>
-                      {OBJECTIVE}
-                      {OBJECTIVE_URL.length && (
-                        <CookieLink
-                          url={OBJECTIVE_URL}
-                          text="Más información"
-                        />
-                      )}
-                    </p>
-                  </td>
-                </tr>
+      <div class="overflow-x-auto">
+        <table class="w-fulltext-left rtl:text-right">
+          <thead class="uppercase">
+            <tr>
+              <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_NAME}</th>
+              <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_CADUCITY}</th
+              >
+              <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_PROVIDER}</th
+              >
+              <th class="px-6 py-3">{i18n.COOKIES.SITE_COOKIES.THEAD_FINALITY}</th
+              >
+            </tr>
+          </thead>
+          <tbody>
+            {
+              i18n.COOKIES.SITE_COOKIES.ANALYTICS.map(
+                ({ NAME, EXPIRE, PROVIDER, OBJECTIVE, OBJECTIVE_URL }) => (
+                  <tr class="odd:bg-[#007aff]">
+                    <td class="px-6 py-3">{NAME}</td>
+                    <td class="px-6 py-3">{EXPIRE}</td>
+                    <td class="px-6 py-3">
+                      <CookieLink url={PROVIDER.URL} text={PROVIDER.NAME} />
+                    </td>
+                    <td class="px-6 py-3">
+                      <p>
+                        {OBJECTIVE}
+                        {OBJECTIVE_URL.length && (
+                          <CookieLink
+                            url={OBJECTIVE_URL}
+                            text="Más información"
+                          />
+                        )}
+                      </p>
+                    </td>
+                  </tr>
+                )
               )
-            )
-          }
-        </tbody>
-      </table>
+            }
+          </tbody>
+        </table>
+      </div>
       <p>
         {i18n.COOKIES.UPDATES.DATE}
       </p>
