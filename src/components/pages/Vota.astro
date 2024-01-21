@@ -1,20 +1,21 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import { VoteSystem } from "@/components/VoteSystem.tsx"
-
+import { getRelativeLocaleUrl } from "astro:i18n"
 import Button from "@/components/Button.astro"
 import { getSession } from "auth-astro/server"
 import Svg from "@/components/Svg.astro"
 import Img from "@/components/Img.astro"
 
 const { i18n } = Astro.locals;
+const { currentLocale = "es" } = Astro;
 
 const session = await getSession(Astro.request)
 
 const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---
 
-<Layout title="Votar" description="Votar">
+<Layout title={i18n.SEO.VOTE_TITLE} description={i18n.SEO.VOTE_DESCRIPTION}>
   <section
     class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
   >
@@ -32,7 +33,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
           </h1>
 
           <div class="mb-10">
-            <Button id="vote-button">
+            <Button id="vote-button" data-return-url={getRelativeLocaleUrl(currentLocale, "vota")}>
               {i18n.VOTE.CALL_TO_VOTE}
             </Button>
           </div>
@@ -99,7 +100,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
                   id="logout-button"
                   class="text-sm hover:border-white border-b font-light border-transparent text-white flex justify-center items-center gap-x-2"
                 >
-                  <span>{i18n.LOG_OUT}</span>
+                  {i18n.LOG_OUT}
                 </button>
               </div>
             </div>
@@ -111,7 +112,14 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 </Layout>
 
 <script>
-  const { signIn, signOut } = await import("auth-astro/client")
+	import { signIn, signOut } from "auth-astro/client"
+	// @ts-ignore
+	window.signIn = signIn
+  // @ts-ignore
+  window.signOut = signOut
+</script>
+
+<script client:load>
   // pongo un $ delante para que se vea que es un elemento del DOM
   // es una cosa que se hacía en el pasado con jQuery y es una manía
   // que se me ha quedado porque me gusta :)
@@ -120,7 +128,9 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 
   $loginButton?.addEventListener("click", async (event) => {
     event.preventDefault()
-    await signIn("twitch")
+    await signIn("twitch", {
+      callbackUrl: $loginButton?.dataset?.returnUrl
+    }, { callbackUrl: $loginButton?.dataset?.returnUrl })
   })
 
   $logoutButton?.addEventListener("click", async (event) => {
