@@ -31,6 +31,7 @@
     "cookie": "0.6.0",
     "image-meta": "0.2.0",
     "minimasonry": "1.3.2",
+    "next-auth": "^4.24.5",
     "photoswipe": "5.4.3",
     "preact": "10.19.3",
     "tailwindcss": "3.4.1",

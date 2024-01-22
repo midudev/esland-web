@@ -35,7 +35,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
           <div class="mb-10">
             <Button
               id="vote-button"
-              data-return-url={getRelativeLocaleUrl(currentLocale, "vota")}
+              data-callback-url={getRelativeLocaleUrl(currentLocale, 'vota')}
             >
               {i18n.VOTE.CALL_TO_VOTE}
             </Button>
@@ -113,95 +113,9 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
     }
   </section>
 </Layout>
-
 <script>
-  import { signOut } from "auth-astro/client";
-  // @ts-ignore
-  window.signIn = async (providerId, options, authorizationParams) => {
-    const { callbackUrl = window.location.href, redirect = true, currentLocale = "es" } =
-      options ?? {};
-    const { prefix = "/api/auth", ...opts } = options ?? {};
-
-    // TODO: Support custom providers
-    const isCredentials = providerId === "credentials";
-    const isEmail = providerId === "email";
-    const isSupportingReturn = isCredentials || isEmail;
-
-    // TODO: Handle custom base path
-    const signInUrl = `${prefix}/${
-      isCredentials ? "callback" : "signin"
-    }/${providerId}`;
-
-    const _signInUrl = `${signInUrl}?${new URLSearchParams(
-      authorizationParams
-    )}`;
-
-    // TODO: Handle custom base path
-    const csrfTokenResponse = await fetch(`${prefix}/csrf`);
-    const { csrfToken } = await csrfTokenResponse.json();
-
-    const res = await fetch(_signInUrl, {
-      method: "post",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "X-Auth-Return-Redirect": "1",
-      },
-      body: new URLSearchParams({
-        ...opts,
-        csrfToken,
-        callbackUrl,
-      }),
-    });
-
-    const data = await res.clone().json();
-    const url = new URL(data.url);
-    // Si anexto el callbackUrl a la url de retorno como parametro
-    if (url.searchParams.has("redirect_uri")) {
-      const redirectUri =  url.searchParams.get("redirect_uri");
-      const rUri = new URL(redirectUri as string);
-      if (!rUri.searchParams.has("callbackUrl")) {
-        rUri.searchParams.set("callbackUrl", callbackUrl);
-        url.searchParams.set("redirect_uri", rUri.href);
-      }
-    }
-    const error = url.searchParams.get("error");
-    if (redirect || !isSupportingReturn || !error) {
-      // TODO: Do not redirect for Credentials and Email providers by default in next major
-      window.location.href = url.href ?? callbackUrl;
-      // If url contains a hash, the browser does not reload the page. We reload manually
-      if (url.href.includes("#")) window.location.reload();
-      return;
-    }
-
-    return res;
-  };
-  // @ts-ignore
-  window.signOut = signOut;
-</script>
-
-<script client:load>
-  // TODO Apesar del warning no se por que astro no esta generando el Aisland para el componente es por eso que me toco colocar client:load
-  // pongo un $ delante para que se vea que es un elemento del DOM
-  // es una cosa que se hacía en el pasado con jQuery y es una manía
-  // que se me ha quedado porque me gusta :)
-  const $loginButton = document.querySelector("#vote-button");
-  const $logoutButton = document.querySelector("#logout-button");
-
-  $loginButton?.addEventListener("click", async (event) => {
-    const callbackUrl = $loginButton?.dataset?.returnUrl;
-    event.preventDefault();
-    await signIn(
-      "twitch",
-      {
-        callbackUrl,
-      }
-    );
-  });
-
-  $logoutButton?.addEventListener("click", async (event) => {
-    event.preventDefault();
-    await signOut();
-  });
+  import { auth } from "@/components/Auth";
+  auth("vote-button", "logout-button")
 </script>
 
 <style>
