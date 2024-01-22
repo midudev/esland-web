@@ -86,7 +86,7 @@ export const VoteFinal = (
           <h1 class="pt-24 pb-10 mx-auto text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide">
               Tus votos finales
             </h1>
-          <div class={`${isLoading ? 'opacity-50' : ''} transition grid grid-cols-6 gap-2`}>
+          <div class={`${isLoading ? 'opacity-50' : ''} transition grid grid-cols-2 md:grid-cols-6 gap-2 p-4`}>
             
             {
               votes.map((categoryVotes, index) => {
