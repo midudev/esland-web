@@ -1,6 +1,7 @@
 ---
 import SpainFlag from "@/components/flags/Spain.astro"
 import AndorraFlag from "@/components/flags/Andorra.astro"
+import UnitedStatesFlag from "@/components/flags/UnitedStates.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
 
 const { currentLocale = "es", url } = Astro
@@ -9,7 +10,7 @@ const pathname = url.pathname
 
 let restUrl
 
-if (pathname.startsWith("/ca")) {
+if (pathname.startsWith("/ca") || pathname.startsWith("/en")) {
   const segments = pathname.split("/").slice(2)
   restUrl = "/" + segments.join("/").replace(/\/+$/, "")
 } else {
@@ -25,6 +26,12 @@ const LOCALES: Record<
     href: `/ca${restUrl}`,
     name: "Català",
     flag: AndorraFlag,
+  },
+  en: {
+    code: "en",
+    href: `/en${restUrl}`,
+    name: "English",
+    flag: UnitedStatesFlag,
   },
   es: {
     code: "es",

@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [tailwind(), preact(), auth()],
   i18n: {
     defaultLocale: 'es',
-    locales: ['es', 'ca'],
+    locales: ['es', 'en', 'ca'],
     routing: {
       prefixDefaultLocale: false
     }
