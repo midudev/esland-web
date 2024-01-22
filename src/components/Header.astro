@@ -1,6 +1,6 @@
 ---
 import Logo from "@/components/Logo.astro"
-import Button from "@/components/Button.astro"
+import Button from "@/components/Button.tsx"
 import LanguageSelector from "@/components/LanguageSelector.astro"
 import HeaderLink from "@/components/HeaderLink.astro"
 
@@ -41,7 +41,7 @@ const i18n = getI18N({ currentLocale })
       </HeaderLink>
       <LanguageSelector />
       <Button
-        class="md:py-2 md:ml-auto md:text-base lg:text-base"
+        className="md:py-2 md:ml-auto md:text-base lg:text-base"
         url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
       >
         {i18n.HEADER_BUTTON}

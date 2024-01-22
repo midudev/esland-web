@@ -1,6 +1,6 @@
 ---
 import { getI18N } from "@/i18n/"
-import Button from "@/components/Button.astro"
+import Button from "@/components/Button.tsx"
 import Logo from "@/components/Logo.astro"
 
 const { currentLocale } = Astro
@@ -38,7 +38,7 @@ const i18n = getI18N({ currentLocale })
 
       <Button
         target="_self"
-        class="text-blue-950 animate-fade-up bg-white"
+        className="text-blue-950 animate-fade-up bg-white"
         url="/vota"
       >
         {i18n.VIDEO_BUTTON}
