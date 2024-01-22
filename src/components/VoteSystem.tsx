@@ -7,26 +7,26 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
   const i18n = getI18N({ currentLocale })
 
   const { 
-    candidates,
+    candidatesByCategory,
     votes,
     pageInfo, 
-    category, 
+    categoryCode, 
     votesCategory, 
     isChanging, 
     MAX_CATEGORIES,
     MAX_VOTES_PER_CATEGORY,
     setNextCategory,
     setPrevCategory,
-    setCategory,
+    setCategoryCode,
     setVotesCategory 
   } = useVoteSystem()
 
-  const { categoria = '', candidatos } = pageInfo ?? {}
+  const { categoryName = '', candidates } = pageInfo ?? {}
 
-  if (category === MAX_CATEGORIES) {
+  if (categoryCode === MAX_CATEGORIES) {
     return (
-      <VoteFinal candidates={candidates} votes={votes} setCategory={setCategory} categoryNames={
-        candidates.map(({ categoria }) => categoria)
+      <VoteFinal candidates={candidatesByCategory} votes={votes} setCategory={setCategoryCode} categoryNames={
+        candidatesByCategory.map(({ categoryName }) => categoryName)
       } />
     )
   }
@@ -34,7 +34,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
   return (
     <>
       <CategoryTitle isChanging={isChanging}>
-        {categoria}
+        {categoryName}
       </CategoryTitle>
       
       <div class="font-semibold flex justify-center items-center gap-x-2 px-2 rounded py-3 -mt-24 mb-10 text-yellow-300 text-xl">
@@ -43,8 +43,8 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
 
       <ul class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]">
         {
-          candidatos?.map((candidate, index) => {
-            const { enlace, nombre, imagen, id } = candidate
+          candidates?.map((candidate, index) => {
+            const { link, name, image, id } = candidate
 
             const voteIndex = votesCategory.indexOf(id)
             const isVoted = voteIndex >= 0
@@ -52,9 +52,9 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
             const delay = `animation-delay: ${index * 100}ms`
 
             return (
-              <li key={`${category}-${nombre}`} class={`relative rounded-lg animate-fade-up`} style={delay} >
+              <li key={`${categoryCode}-${name}`} class={`relative rounded-lg animate-fade-up`} style={delay} >
                 {
-                  enlace && (
+                  link && (
                     <a class="youtube-link text-xs peer:hover:opacity-0 w-6 h-6 flex justify-center items-center right-2 top-2 absolute transition bg-white hover:bg-black hover:text-white backdrop-blur-xl text-black z-10 rounded-full hover:scale-125" href={enlace} target='_blank' rel='noopener'>
                       <CameraIcon />
                     </a>
@@ -77,8 +77,8 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
                     )
                   }
 
-                  <img class="group-hover:mix-blend-normal transition-all rounded mix-blend-luminosity w-full h-auto" src={`/voting-assets/${imagen}`} alt={nombre} />
-                  <h2 class="font-semibold text-xs">{nombre}</h2>
+                  <img class="group-hover:mix-blend-normal transition-all rounded mix-blend-luminosity w-full h-auto" src={`/voting-assets/${image}`} alt={name} />
+                  <h2 class="font-semibold text-xs">{name}</h2>
                 </button>
               </li>
             )
@@ -96,7 +96,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({ chil
         </button>
         
         <span class="text-lg font-semibold">
-          {i18n.CATEGORY} <span class="text-3xl">{category + 1}/{MAX_CATEGORIES}</span>
+          {i18n.CATEGORY} <span class="text-3xl">{categoryCode + 1}/{MAX_CATEGORIES}</span>
         </span>
       
         <button class="rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition" onClick={setNextCategory}>

@@ -22,13 +22,13 @@ export const VoteFinal = (
   }, [])
 
   const selectedCandidates = useMemo(() => {
-    const result: Record<string, typeof CandidatesType[0]['candidatos'][0]> = {}
+    const result: Record<string, typeof CandidatesType[0]['candidates'][0]> = {}
     if (votes.length === 0) return
   
     votes.flat(2).forEach(voteId => {
       const [categoryId] = voteId.split('-')
       const categoryInfo = candidates.find((category) => category.id === categoryId)
-      const candidateInfo = categoryInfo?.candidatos?.find(candidate => candidate.id === voteId)
+      const candidateInfo = categoryInfo?.candidates?.find(candidate => candidate.id === voteId)
   
       if (candidateInfo?.id != null) {
         result[voteId] = candidateInfo
@@ -96,8 +96,8 @@ export const VoteFinal = (
                       {
                         categoryVotes.map((candidate) => {
                           const info = selectedCandidates?.[candidate]
-                          const image = info?.imagen ?? ''
-                          const name = info?.nombre ?? ''
+                          const image = info?.image ?? ''
+                          const name = info?.name ?? ''
                           
                           return (
                             <li>
