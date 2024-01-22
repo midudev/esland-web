@@ -5,7 +5,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<section class="flex flex-col items-center justify-center p-4">
+<section class="flex flex-col items-center justify-center p-4 overflow-hidden">
   <h2 class="text-6xl font-bold mb-14 mt-4">{i18n.MEDIA_KIT_TITLE}</h2>
   <div class="flex flex-col gap-16 lg:flex-row lg:gap-8">
     <InfoKitPrensaItem
