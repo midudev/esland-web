@@ -1,6 +1,5 @@
 ---
-import { needPrefix } from "@/i18n"
-import { getPathByLocale } from "astro:i18n"
+import { geRealPath, LOCALES } from "@/i18n"
 import Link from "@/components/Link.astro"
 import Svg from "@/components/Svg.astro"
 
@@ -8,25 +7,7 @@ const { currentLocale = "es", url } = Astro
 
 const { pathname } = url
 
-const path = needPrefix(currentLocale) ? pathname.substring(getPathByLocale(currentLocale).length + 2) : pathname;
-
-const LOCALES: Record<
-  string,
-  { code: string; name: string; }
-> = {
-  ca: {
-    code: "ca",
-    name: "Català",
-  },
-  en: {
-    code: "en",
-    name: "English",
-  },
-  es: {
-    code: "es",
-    name: "Español",
-  },
-}
+const path = geRealPath(currentLocale, pathname);
 
 const currentLocaleData = LOCALES[currentLocale]
 const otherLocales = Object.values(LOCALES).filter(

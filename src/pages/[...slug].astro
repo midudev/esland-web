@@ -1,6 +1,5 @@
 ---
-import i18n from '@/i18n';
-
+import i18n, { getRelativeLocaleUrl } from '@/i18n';
 export const prefixDefaultLocale = i18n.routing.prefixDefaultLocale;
 export const defaultLocale = i18n.defaultLocale;
 export const locales = i18n.locales;
@@ -26,7 +25,7 @@ export const routes = locales.reduce((acc: Route[], lang: string) => {
     if (slug === 'app') {
       slug = needPrefix ? lang : undefined;
     } else if (needPrefix) {
-      slug = `${lang}/${slug}`
+      slug = getRelativeLocaleUrl(lang, slug).substring(1)
     }
     acc.push({
       params: { slug },

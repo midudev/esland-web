@@ -1,6 +1,6 @@
 ---
 import Button from "@/components/Button.astro"
-import LanguageSelector from "@/components/LanguageSelector.astro"
+// import LanguageSelector from "@/components/LanguageSelector.astro"
 import HeaderLink from "@/components/HeaderLink.astro"
 import Svg from "@/components/Svg.astro"
 
@@ -34,7 +34,9 @@ const { i18n } = Astro.locals;
       <HeaderLink class="text__glowing" href="/archivo">
         {i18n.HEADER_ARCHIVE}
       </HeaderLink>
+      <!--
       <LanguageSelector />
+       -->
       <Button
         class="md:py-2 md:ml-auto md:text-base lg:text-base"
         url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"

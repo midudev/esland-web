@@ -1,5 +1,5 @@
 import { addUserVotes, cleanUserVotes } from "@/db/client";
-import { votesSchema } from '@/db/schemas';
+import votesSchema from "@/schemas/votes";
 import { type APIRoute } from "astro";
 import { getSession } from "auth-astro/server";
 
