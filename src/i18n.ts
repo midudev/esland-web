@@ -1,6 +1,6 @@
 const config = {
   defaultLocale: "es",
-  locales: ["es", "ca"],
+  locales: ["es", "en", "ca"],
   routing: {
     prefixDefaultLocale: true,
   },

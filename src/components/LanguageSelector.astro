@@ -18,6 +18,10 @@ const LOCALES: Record<
     code: "ca",
     name: "Català",
   },
+  en: {
+    code: "en",
+    name: "English",
+  },
   es: {
     code: "es",
     name: "Español",
@@ -49,7 +53,7 @@ const otherLocales = Object.values(LOCALES).filter(
     >
       {
         otherLocales.map((locale) => (
-          <li class="">
+          <li class="py-0.5">
             <Link
               class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
               href={path}
