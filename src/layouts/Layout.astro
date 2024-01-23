@@ -3,6 +3,7 @@ import { ViewTransitions } from "astro:transitions"
 import Header from "@/components/Header.astro"
 import Footer from "@/components/Footer.astro"
 import "@fontsource-variable/onest"
+import { getLangFromUrl } from "@/i18n/utils"
 
 interface Props {
   description: string
@@ -10,11 +11,11 @@ interface Props {
 }
 
 const { description, title } = Astro.props
-const { currentLocale } = Astro
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang={currentLocale}>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />

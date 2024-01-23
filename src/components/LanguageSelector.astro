@@ -1,51 +1,16 @@
 ---
-import SpainFlag from "@/components/flags/Spain.astro"
-import AndorraFlag from "@/components/flags/Andorra.astro"
-import UnitedStatesFlag from "@/components/flags/UnitedStates.astro"
 import ChevronIcon from "@/components/icons/Chevron.astro"
+import { LANGUAGES } from '../i18n/ui';
+import { getRouteFromUrl, useTranslatedPath, getLangFromUrl } from '../i18n/utils';
 
-const { currentLocale = "es", url } = Astro
+const route = getRouteFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
-const pathname = url.pathname
-
-let restUrl
-
-if (pathname.startsWith("/ca") || pathname.startsWith("/en")) {
-  const segments = pathname.split("/").slice(2)
-  restUrl = "/" + segments.join("/").replace(/\/+$/, "")
-} else {
-  restUrl = pathname.replace(/\/+$/, "")
-}
-
-const LOCALES: Record<
-  string,
-  { code: string; name: string; href: string; flag: typeof SpainFlag }
-> = {
-  ca: {
-    code: "ca",
-    href: `/ca${restUrl}`,
-    name: "Català",
-    flag: AndorraFlag,
-  },
-  en: {
-    code: "en",
-    href: `/en${restUrl}`,
-    name: "English",
-    flag: UnitedStatesFlag,
-  },
-  es: {
-    code: "es",
-    href: restUrl,
-    name: "Español",
-    flag: SpainFlag,
-  },
-}
-
-const currentLocaleData = LOCALES[currentLocale]
-const otherLocales = Object.values(LOCALES).filter(
-  (locale) => locale.code !== currentLocale
+const currentLocaleData = LANGUAGES[lang]
+const otherLocales = Object.values(LANGUAGES).filter(
+  (locale) => locale.code !== lang
 )
-const currentPath = url.pathname.replace(currentLocaleData.href, "")
 ---
 
 <div class="relative inline-block text-left">
@@ -67,10 +32,11 @@ const currentPath = url.pathname.replace(currentLocaleData.href, "")
     >
       {
         otherLocales.map((locale) => (
-          <li class="">
+
+          <li class="py-[2px]">
             <a
               class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              href={`${locale.href}${currentPath}`}
+              href={translatePath(`/${route ? route : ''}`, locale.code)}
             >
               <locale.flag />
               {locale.name}

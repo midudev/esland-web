@@ -1,389 +1,387 @@
 {
-  "SEO_TITLE": "Premis ESLAND 2024 - Celebrant el millor del streaming i els creadors de contingut",
-  "SEO_DESCRIPTION": "Descobreix els millors creadors de contingut d'Espanya, Llatinoamèrica i Andorra. Vota pels teus favorits! Celebra la innovació i el talent de Twitch, YouTube i més",
-  "SEO": {
-    "ARCHIVO_TITLE": "Arxiu de les edicions anteriors - Premis ESLAND 2024",
-    "ARCHIVO_DESCRIPTION": "Repassa els millors moments d'edicions anteriors",
-    "INFO_TITLE": "Informació - Premis ESLAND 2024",
-    "INFO_DESCRIPTION": "Descobreix tot el que necessites saber sobre els Premis ESLAND 2024 i descarrega el Kit de Premsa",
-    "VOTE_TILTE": "Vota pels teus creadors de contingut favorits - Premis ESLAND 2024",
-    "VOTE_DESCRIPTION": "Vota pels teus creadors de contingut favorits d'Espanya, Llatinoamèrica i Andorra"
-  },
-  "HEADER": {
-    "LOGO": "Tornar a la pàgina d'inici dels Premis ESLAND"
-  },
-  "HEADER_VOTE": "VOTA",
-  "HEADER_INFO": "INFORMACIÓ",
-  "HEADER_ARCHIVE": "ARXIU",
-  "HEADER_BUTTON": "CRITERIS DE NOMINACIÓ",
-  "HERO_SUBTITLE": "Premis a la comunitat hispanoparlant de Streaming",
-  "INTRO_TITLE": "Benvinguts/des",
-  "INTRO_TITLE_AFTER_BR": "als Premis ESLAND",
-  "INTRO_DESCRIPTION_1": "El cinema té els Oscars, la música té els Grammy i <strong>el streaming té els ESLAND</strong>. Els premis que celebren la creativitat i el talent dels millors creadors de contingut de <strong>la comunitat hispanoparlant</strong>",
-  "INTRO_DESCRIPTION_2": "Espanya, Llatinoamèrica i Andorra unides per creadors, creadores i les seves comunitats, per recordar i reviure <strong>alguns dels millors moments de l'any.</strong>",
-  "INTRO_DESCRIPTION_3": "Després de dues gal·les celebrades, una al Palau de la Música Catalana de Barcelona, i una al Auditorio Nacional de la Ciudad de México, només queda esperar a <strong>la tercera edició a Andorra.</strong>",
-  "BENTO_TITLE_1": "ANDORRA: EL CÈNIT DELS PREMIS ESLAND",
-  "BENTO_CONTENT_1": "Una nova edició <strong>plena de novetats</strong> i contingut, que començarà diverses setmanes abans de la desitjada gala. <strong>Directes especials, col·laboracions, concerts i molt més</strong> en el que serà una autèntica festa dedicada a la creació de contingut.",
-  "BENTO_TITLE_2": "LA CATIFA BLANCA",
-  "BENTO_SUBTITLE_2": "16 de febrer de 2024",
-  "BENTO_CONTENT_2": "Enguany, el moment de la catifa blava serà substituït i millorat, gràcies als increïbles paisatges andorrans, per una <strong>catifa blanca en plena neu</strong>, situada a les <strong>pistes d'esquí d'Andorra</strong>.",
-  "BENTO_TITLE_3": "LA GALA",
-  "BENTO_SUBTITLE_3": "17 de febrer de 2024",
-  "BENTO_CONTENT_3": "Una gala de premis plena de <strong> contingut de primer nivell</strong> i <strong>moltes sorpreses</strong>, on es descobriran els guanyadors d'aquesta tercera edició dels Premis ESLAND.",
-  "BENTO_TITLE_4": "GAUDEIX DEL REDDIT DE LA COMUNITAT",
-  "BENTO_CONTENT_4": "Enguany, el reddit no formarà part de les votacions dels premis, però sí que <strong>formarà part de la comunitat</strong>. El subreddit oficial dels Premis ESLAND està obert per a tu. Comparteix els teus clips, opinions i <strong>interactua amb tota la comunitat</strong> del streaming en espanyol.",
-  "VIDEO_ALT": "ESLAND - Premis a la comunitat hispanoparlant de Streaming",
-  "VIDEO_BUTTON": "Vota",
-  "PREFOOTER_VIDEO_TITLE": "Guia de la 3a Edició dels premis ESLAND",
-  "ARCHIVO": {
-    "HERO_TITLE": "Edicions anteriores",
-    "HERO_BUTTON": "Reviu la darrera gala",
-    "COUNTER_TITLE": "Els ESLAND en xifres",
-    "COUNTER_VIEWS": "de visualitzacions",
-    "COUNTER_NEWS": "notícies en premsa",
-    "COUNTER_MEDIA": "en mitjans guanyats"
-  },
-  "VOTE": {
-    "TITLE": "Les votacions ja estan aquí",
-    "CALL_TO_VOTE": "Comença amb les votacions!",
-    "INTRO_CONTENT": "Ha arribat el moment més important. <strong>Votar a la 3ª Edició dels Premis ESLAND</strong>. Perquè els teus vots es comptabilitzin de forma correcta, et deixem alguns consells:",
-    "ADVICE_1": "Vota, <strong>per ordre de preferència</strong>, fins a 4 nominats per categoria.",
-    "ADVICE_2": "No és obligatori votar a cada categoria.",
-    "ADVICE_3": "No és obligatori però sí recomanable l'<strong>ús del vot en ranquing</strong>.",
-    "ADVICE_4": "Quan tinguis clara la teva elecció, <strong>assegura't de clicar “enviar els meus vots”.</strong>",
-    "ADVICE_5": "<strong>Recorda compartir els teus vots</strong> a les xarxes socials.",
-    "ADVICE_6": "Tria sabiament i <strong>revisa els teus vots</strong>, només tens una oportunitat.",
-    "TIME_LIMIT": "Les votacions estaran obertes fins al diumenge 14 de gener a les 24:00h (hora espanyola).",
-    "VOTES_CASTED": "Vots realitzats"
-  },
-  "CATEGORY": "Categoria",
-  "LOG_OUT": "Tancar sessió",
-  "FOOTER": {
-    "DISCLAIMER": "© ESLAND 2021 - 2024 Tots els drets reservats. - Aquesta no és la pàgina web oficial, desenvolupada per @midudev amb finalitats educatives",
-    "LEGAL": {
-      "TITLE": "Legal",
-      "NOTICE": "Avís Legal",
-      "PRIVACY": "Privadesa",
-      "COOKIES": "Galetes",
-      "PRIVACY_POLICY": "Política de Privadesa",
-      "TOS": "Termes i Condicions"
-    },
-    "WEB_MAP": {
-      "TITLE": "Mapa del Lloc Web",
-      "HOME": "Inici",
-      "INFO": "Informació",
-      "ARCHIVE": "Arxiu"
-    },
-    "PRODUCED_BY": "Produït per"
-  },
-  "INFO_TITLE": "Els premis ESLAND",
-  "INFO_TITLE_1": "Un reconoixement únic per a creadors, creadores i comunitats",
-  "INFO_CONTENT_1_1": "Un reconeixement únic per a creadors, creadores i comunitats que busquen el seu lloc al món de l'entreteniment en directe.",
-  "INFO_CONTENT_1_2": "ESLAND és l'acrònim d'ESPANYA, LLATINOAMÈRICA I ANDORRA, tres localitzacions geogràfiques que comparteixen l'idioma que les uneix més enllà de qualsevol frontera, física o virtual.",
-  "INFO_TITLE_2": "EL PREMI A LA CREACIÓ",
-  "INFO_CONTENT_2_1": "El trofeu que es lliura als guanyadors i guanyadores a la cerimònia és <strong>una representació de la lletra “A” dividida en tres fragments</strong> i acoblades a tall d'artilugi futurista sobre el qual es construeix la narrativa de l'esdeveniment.",
-  "INFO_CONTENT_2_2": "Un artefacte d'origen desconegut que dota de <strong>ferramentes i habilitats per a la creació.</strong> Una metàfora sobre l'emancipació del talent gràcies a la tecnologia i la irrupció dels creadors de contingut al món de l'entreteniment.",
-  "MEDIA_KIT_TITLE": "KIT DE PREMSA",
-  "MEDIA_KIT_SUBTITLE_1": "LOGOTIP I TROFEU",
-  "MEDIA_KIT_SUBTITLE_2": "FONS DE PANTALLA",
-  "MEDIA_KIT_SUBTITLE_3": "NOTA DE PREMSA",
-  "DOWNLOAD_BUTTON": "DESCARREGAR",
-  "COOKIES": {
-    "POLICIES": {
-      "TITLE": "Política de Galetes",
-      "DESCRIPTION_1": "Aquesta Política de cookies és part integrant de l'Avís Legal i la Política de Privadesa de www.premiosesland.com (d'ara endavant, Lloc Web), titularitat d'UBIQ S.L.U (d'ara endavant, UBIQ) amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany, i responsable de les Cookies i del tractament de dades personals obtingudes a través de cookies pròpies i de tercers que es fan servir en aquest Lloc Web.",
-      "DESCRIPTION_2": "Aquest Lloc Web utilitza galetes de tercers en concret galetes analítiques de Google Analytics per analitzar l'activitat que realitzen els usuaris quan visiten la web amb finalitats estadístiques.",
-      "DESCRIPTION_3": "Pots acceptar totes les cookies, rebutjar-les o configurar les teves preferències al panell de configuració de cookies. En qualsevol moment podràs revocar el consentiment o modificar les teves preferències de configuració de cookies accedint novament al panell de configuració. Així mateix, pots evitar la descàrrega de cookies o eliminar les instal·lades a través de la configuració del teu navegador, evitant que les cookies s'emmagatzemin al dispositiu. És molt important que llegeixis aquesta política de cookies.",
-      "DESCRIPTION_4": "T'informem de la possibilitat que el rebuig i la desactivació de les cookies pot afectar o dificultar la navegació o la prestació dels serveis oferts en aquest Lloc Web."
-    },
-    "WHAT_IS": {
-      "TITLE": "Què són les galetes?",
-      "DESCRIPTION_1": "Les cookies són identificadors alfanumèrics que contenen informació que s'instal·la al dispositiu de l'Usuari i es descarreguen al navegador Web de l'Usuari quan aquest visita i accedeix a una pàgina web. La seva finalitat principal és identificar i reconèixer de manera unívoca el dispositiu de l'Usuari cada cop que accedeix al Lloc Web, a més de millorar la qualitat i oferir un millor ús del Lloc Web.",
-      "DESCRIPTION_2": "Es tracta de petits fitxers de text que queden emmagatzemats al disc dur de l'ordinador i que serveixen per identificar l'Usuari quan es connecta novament al lloc web. El seu objectiu és registrar la visita de l'Usuari i guardar certa informació. ús és comú i freqüent a la web ja que permet a les pàgines funcionar de manera més eficient i aconseguir una major personalització i anàlisi sobre el comportament de l'Usuari."
-    },
-    "TYPES": {
-      "TITLE": "Quins tipus de galetes existeixen?",
-      "DESCRIPTION_1_TITLE": "1.- Segons l'entitat que les gestioni:",
-      "DESCRIPTION_1": "Les cookies pròpies són aquelles que s'instal·len al terminal de l'Usuari des del domini gestionat pel responsable de la Web i les cookies de tercers són aquelles que s'instal·len al terminal de l'Usuari des d'un domini gestionat per tercers que tracten les dades obtingudes a través de les cookies.",
-      "DESCRIPTION_2_TITLE": "2.- Segons el termini de temps que romanguin actives:",
-      "DESCRIPTION_2": "Les galetes de sessió són aquelles que romanen activades i recapten dades mentre l'usuari accedeix a una web i desapareixen en acabar la sessió, i les galetes permanents són aquelles que segueixen actives i de les quals es recull informació durant un període de temps definit pel responsable de la galeta o fins a la desactivació o eliminació per part de l'Usuari.",
-      "DESCRIPTION_3_TITLE": "3.- Cookies tècniques:",
-      "DESCRIPTION_3": "Són aquelles que permeten a l'Usuari navegar a través d'una pàgina web i utilitzar les diferents opcions o serveis que s'ofereixen, com ara controlar el trànsit i la comunicació de dades, identificar la sessió, accedir a parts d'accés restringit, realitzar una sol·licitud d'inscripció, utilitzar elements de seguretat durant la navegació, etc. En ser necessàries per al funcionament del web, aquestes cookies estaran activades i no es podran rebutjar.",
-      "DESCRIPTION_4_TITLE": "4.- Cookies de rendiment o operatives:",
-      "DESCRIPTION_4": "Aquest tipus de Cookie recorda les vostres preferències en la navegació per la Web per la qual cosa no heu de tornar a configurar el servei cada vegada que visiteu la Web. A tall d'exemple, en aquesta tipologia s'inclouen: Configuració de volum de reproductors de vídeo o so. Les velocitats de transmissió de vídeo que siguin compatibles amb el vostre navegador. Aquestes cookies poden desactivar-se per l'Usuari, si bé això pot afectar el bon funcionament dels serveis del Web.",
-      "DESCRIPTION_5_TITLE": "5.- Cookies analítiques o de mesura:",
-      "DESCRIPTION_5": "Són aquelles que permeten fer un seguiment i anàlisi del comportament dels Usuaris de la Web amb la finalitat d'obtenir dades estadístiques i millorar el funcionament de la Web. Cada vegada que un Usuari visita una Web, una eina d'un proveïdor extern genera una galeta analítica a l'ordinador de l'Usuari.",
-      "DESCRIPTION_6_TITLE": "6.- Cookies de publicitat:",
-      "DESCRIPTION_6": "Aquest tipus de galetes permeten obtenir informació sobre la durada o freqüència de visualització de posicions publicitàries, la interacció amb aquestes, o els patrons de navegació i/o comportaments de l'Usuari ja que ajuden a conformar un perfil d'interès publicitari . D'aquesta manera, permeten oferir publicitat afí als interessos de l'Usuari."
-    },
-    "BLOCK": {
-      "TITLE": "REBUIXAR, CONFIGURAR, DESHABILITAR O BLOQUEJAR LES COOKIES:",
-      "DESCRIPTION_1": "Bé al banner o al panell de configuració de cookies -sempre actiu i accessible- l'Usuari té la possibilitat d'acceptar o rebutjar les cookies, així com configurar les seves preferències d'aquelles cookies el tractament de les quals requereixi del consentiment de l'Usuari .",
-      "DESCRIPTION_2": "L'Usuari podrà revocar el consentiment inicialment atorgat o modificar-ne les preferències, en qualsevol moment accedint al panell de configuració.",
-      "DESCRIPTION_3": "Així mateix, l'Usuari pot bloquejar i eliminar les cookies instal·lades al vostre equip mitjançant la configuració de les opcions del vostre navegador.",
-      "DESCRIPTION_4": "Es poden configurar els diferents navegadors per avisar l'Usuari de la recepció de cookies i, si es vol, impedir la seva instal·lació a l'equip. Així mateix, l'Usuari pot revisar al vostre navegador quines cookies té instal·lades i quin és el termini de caducitat de les mateixes, podent eliminar-les. Podeu trobar informació sobre com fer-ho, en relació amb els navegadors més comuns, en els enllaços que es relacionen a continuació:",
-      "DESCRIPTION_5": "Chrome:",
-      "DESCRIPTION_5_URL": "https://support.google.com/chrome/answer/95647?hl=ca",
-      "DESCRIPTION_6": "Per a més informació sobre l'administració de les galetes a Internet Explorer:",
-      "DESCRIPTION_6_URL": "http://windows.microsoft.com/es-es/windows-vista/cookies-frequently-asked-questions",
-      "DESCRIPTION_7": "Per a més informació sobre l'administració de les galetes a Mozilla Firefox:",
-      "DESCRIPTION_7_URL": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias",
-      "DESCRIPTION_8": "Per a més informació sobre l'administració de les galetes a Safari:",
-      "DESCRIPTION_8_URL": "http://www.apple.com/es/privacy/use-of-cookies",
-      "DESCRIPTION_9": "Per a més informació sobre l'administració de les galetes a Opera:",
-      "DESCRIPTION_9_URL": "http://help.opera.com/Windows/11.50/ca-ES/cookies.html",
-      "DESCRIPTION_10": "Si voleu deixar de ser seguit per Google Analytics visiteu:",
-      "DESCRIPTION_10_URL": "http://tools.google.com/dlpage/gaoptout",
-      "DESCRIPTION_11": "Chrome:"
-    },
-    "MORE_INFO": {
-      "TITLE": "Per saber més sobre les galetes",
-      "DESCRIPTION_1": "Podeu obtenir més informació sobre la publicitat en línia basada en el comportament i la privadesa en línia al següent enllaç:",
-      "DESCRIPTION_1_URL": "http://www.youronlinechoices.com/ca",
-      "DESCRIPTION_2": "Protecció de dades de Google Analytics",
-      "DESCRIPTION_2_URL": "http://www.google.com/analytics/learn/privacy.html",
-      "DESCRIPTION_3": "Com utilitza Google Analytics les galetes:",
-      "DESCRIPTION_3_URL": "https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=ca#analyticsjs"
-    },
-    "THIRD_PARTY": {
-      "TITLE": "Tercers i Transferències Internacionals",
-      "DESCRIPTION": "Pot obtenir informació sobre el tractament realitzat per tercers i possibles transferències de dades a altres països que realitzin aquests tercers identificats en aquesta política, als enllaços que es faciliten en aquesta política de cookies. Els diferents mecanismes de regularització de les transferències internacionals, en cas que n'hi hagi, seran informats pels esmentats tercers."
-    },
-    "UPDATES": {
-      "TITLE": "Actualitzacions i canvis a la política de cookies",
-      "DESCRIPTION": "FAN CONTENT poden modificar aquesta Política de Cookies en funció d'exigències legislatives, reglamentàries, o amb la finalitat d'adaptar aquesta política a les instruccions dictades per l'Agència Espanyola de Protecció de Dades i pel Comitè Europeu de Protecció de Dades , per això s'aconsella als Usuaris que la visitin periòdicament.",
-      "DATE": "Data de la darrera actualització: 12 del 12 de 2023."
-    },
-    "SITE_COOKIES": {
-      "TITLE": "Quines cookies utilitza aquest Lloc WEB?",
-      "THEAD_NAME": "Nom",
-      "THEAD_CADUCITY": "Caducitat",
-      "THEAD_PROVIDER": "Proveïdor",
-      "THEAD_FINALITY": "Finalitat",
-      "ANALYTICS": [
-        {
-          "NAME": "_ga",
-          "EXPIRE": "2 anys",
-          "PROVIDER": {
-            "NAME": "Google",
-            "URL": "https://google.com/"
-          },
-          "OBJECTIVE": "S'utilitza per distingir els usuaris.",
-          "OBJECTIVE_URL": ""
-        },
-        {
-          "NAME": "_gid",
-          "EXPIRE": "24 hores",
-          "PROVIDER": {
-            "NAME": "Google",
-            "URL": "https://google.com/"
-          },
-          "OBJECTIVE": "S'utilitza per distingir els usuaris.",
-          "OBJECTIVE_URL": ""
-        },
-        {
-          "NAME": "_ga_J8PJQBXG7J",
-          "EXPIRE": "2 anys",
-          "PROVIDER": {
-            "NAME": "Google",
-            "URL": "https://google.com/"
-          },
-          "OBJECTIVE": "S'utilitza per mantenir l'estat de la sessió.",
-          "OBJECTIVE_URL": ""
-        },
-        {
-          "NAME": "_gac_gb_J8PJQBXG7J",
-          "EXPIRE": "90 dies",
-          "PROVIDER": {
-            "NAME": "Google",
-            "URL": "https://google.com/"
-          },
-          "OBJECTIVE": "Inclou informació relacionada amb la campanya. Si heu vinculat els vostres comptes de Google Analytics i Google Ads, les etiquetes de conversió al lloc web de Google Ads llegiran aquesta galeta, llevat que la inhabiliteu",
-          "OBJECTIVE_URL": "https://support.google.com/google-ads/answer/7521212?hl=ca"
-        }
-      ]
-    }
-  },
-  "PRIVACY": {
-    "POLICY": {
-      "TITLE": "Política de privacitat",
-      "DESCRIPTION_1": "Ens complau que visiteu la web oficial de PREMIS ESLAND www.premiosesland.com (d'ara endavant, Lloc Web) i agraïm el vostre interès.",
-      "DESCRIPTION_2": "UBIQ S.L.U (d'ara endavant, UBIQ) té el ferm compromís de complir amb la legislació vigent en matèria de protecció de dades personals per garantir la privadesa, el secret i la seguretat de les dades personals dels Usuaris aplicant mesures tècniques i organitzatives apropiades a aquest efecte.",
-      "DESCRIPTION_3": "La present Política de Privadesa té per objecte informar els Usuaris sobre el tractament que UBIQ fa de les dades personals que l'Usuari faciliti en accedir, navegar i utilitzar els serveis que s'ofereixen al Lloc Web, així com de les mesures de seguretat adoptades, de l'exercici dels drets dels Usuaris i de la forma de contacte.",
-      "DESCRIPTION_4": "Les dades personals només seran obtingudes per UBIQ per al seu tractament, quan siguin adequades, pertinents i no excessives en relació amb l'àmbit i les finalitats determinades, explícites i legítimes per a les quals s'hagin obtingut.",
-      "DESCRIPTION_5": "A continuació, compliment amb la normativa vigent en matèria de protecció de dades personals proporcionem als Usuaris la informació següent:"
-    },
-    "RESPONSIBLE": {
-      "TITLE": "Responsable del tractament",
-      "DESCRIPTION_1": "UBIQ S.L.U (d'ara endavant, UBIQ) societat andorrana amb NRT L-718097-X, amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita al Registre de Societats del Govern d'Andorra amb núm. 23023, amb correu electrònic [info@ubiq.ad………….], és la titular de la pàgina web www.premiosesland.com (d'ara endavant, Lloc Web).",
-      "DESCRIPTION_2": "Els Usuaris poden contactar amb el Responsable del Tractament a través de la següent adreça de correu electrònic: info@ubiq.ad"
-    },
-    "DEFINITIONS": {
-      "TITLE": "Definicions",
-      "DESCRIPTION": "A l'efecte de la present Política, els termes següents tindran el significat que s'indica a continuació:",
-      "ITEM_1": "“Dades Personals”: tota informació sobre una persona física identificada o identificable. Es considera persona física identificable tota persona la identitat de la qual es pugui determinar, directament o indirectament, mitjançant un identificador.",
-      "ITEM_2": "“Responsable del Tractament”: Persona física o jurídica, autoritat pública, servei o un altre organisme que, sol o juntament amb altres, determini els fins i mitjans del tractament de dades.",
-      "ITEM_3": "“Encarregat del Tractament”: Persona física o jurídica, autoritat pública, servei o un altre organisme que tracti dades personals per compte del responsable del tractament.",
-      "ITEM_4": "“Interessat-Usuari”: Tota persona física identificada o identificable les dades personals de la qual siguin objecte de tractament.",
-      "ITEM_5": "“Tractament de dades”: Qualsevol operació o conjunt d'operacions realitzades sobre dades personals o conjunts de dades personals, ja sigui per procediments automatitzats o no, com la recollida, registre, organització, estructuració, conservació, adaptació o modificació , extracció, consulta, utilització, comunicació per transmissió, difusió o qualsevol altra forma d'habilitació d'accés, confrontació o interconnexió, limitació, supressió o destrucció."
-    },
-    "PURPOSE": {
-      "TITLE": "Finalitat del tractament",
-      "DESCRIPTION_1": "Gestionar les sol·licituds d'informació rebudes a través de la funció de “Contacte” de la Web. Gestionar les votacions dels PREMIS ESLAND realitzades pels Usuaris del Lloc Web (identificació, validació i recompte de vots). Fins estadístiques de participació i resultats de les votacions als PREMIS ESLAND -per donar compliment a aquesta finalitat les dades personals seran objecte d'un procés d'anonimització- Per poder participar com a jurat als PREMIS ESLAND, els Usuaris hauran de prémer “Identifica't i Vota” i seran redireccionats a la web de Twitch (www.twitch.tv) on hauran de disposar d'un compte obert en aquesta plataforma de streaming Quan l'Usuari des del seu compte premi “Autoritzar” estarà manifestant que ha llegit i que accepta la Política de Privadesa de www.premiosesland.com A continuació, l'Usuari podrà seleccionar les seves preferències de vot entre les diferents categories definides per Streamers i continguts seguint les indicacions del Lloc Web i una vegada seleccionats els seus vots haurà de prémer “Enviar Els meus Vots” . Les votacions i la identitat de l'Usuari es registraran a la base de dades de UBIQ. La identitat de l'Usuari es registrarà mitjançant un codi hash -algorisme matemàtic- (pseudonimitzat).",
-      "DESCRIPTION_2": "Twitch Interactive, Inc. propietària de www.twitch.tv actua com a proveïdor dels serveis de validació i verificació de la identitat dels Usuaris que voten per evitar el frau en el procés de votació."
-    },
-    "PERSONAL_DATA": {
-      "TITLE": "Categoria de dades personals",
-      "DESCRIPTION_1": "La categoria de dades que tracta UBIQ al Lloc Web són:",
-      "DESCRIPTION_2": "Correu electrònic en funció de Contacte. Dades identificatives: Identificació de l'Usuari mitjançant un codi hash -algorisme matemàtic-. UBIQ no accedeix a les dades del compte que els Usuaris tenen a www.twitch.tv."
-    },
-    "LEGITIMACY": {
-      "TITLE": "Base de legitimació",
-      "DESCRIPTION_1": "La base de legitimació per gestionar les comunicacions que es rebin a través de la funció “Contacte” és l'interès legítim d'UBIQ.",
-      "DESCRIPTION_2": "La base de legitimació del tractament de les dades personals dels Usuaris que participen als PREMIS ESLAND és el consentiment exprés atorgat en participar com a jurat i l'interès legítim d'UBIQ en la gestió dels esdeveniments que organitzi i en la gestió dels PREMIS ESLAND.",
-      "DESCRIPTION_3": "L'Usuari podrà revocar el consentiment en qualsevol moment. No obstant, el tractament sobre les dades personals realitzat amb anterioritat a la revocació del consentiment serà lícit."
-    },
-    "PRESERVATION": {
-      "TITLE": "Conservació de les dades",
-      "DESCRIPTION_1": "Les dades es conservaran durant el termini estrictament necessari per donar compliment a la finalitat per a la qual van ser recollides. No obstant això, UBIQ podrà conservar les dades per a la posada a disposició de les autoritats competents o per fer front a possibles reclamacions, en aquest cas les dades es conservaran bloquejades fins a la finalització dels terminis de prescripció, moment en què seran eliminats amb les mesures de seguretat adequades.",
-      "DESCRIPTION_2": "Finalitzat el termini de conservació, les dades personals podran ser objecte d'un procés d'anonimització per a fins estadístiques dels PREMIS ESLAND."
-    },
-    "COMMUNICATION": {
-      "TITLE": "Comunicació de dades",
-      "DESCRIPTION_1": "UBIQ no cedirà a tercers les dades facilitades pels Usuaris del Lloc Web, llevat de consentiment previ i exprés d'aquests o sigui necessari per imperatiu legal (Administracions públiques, Forces i Cossos de Seguretat de l'Estat, Ministeri Fiscal, Agència Espanyola de Protecció de Dades, etc).",
-      "DESCRIPTION_2": "UBIQ informa als Usuaris que les dades personals podran comunicar-se a proveïdors d'UBIQ per poder atendre a la gestió dels PREMIS ESLAND, cas en què aquells tindran la condició d'encarregats del tractament seguint les instruccions d'UBIC sobre el tractament de dades personals."
-    },
-    "USER_RIGHTS": {
-      "TITLE": "Drets dels usuaris",
-      "DESCRIPTION_1": "UBIQ informa als Usuaris que en referència al tractament de les seves dades personals poden exercir els drets següents:",
-      "ITEM_1": "Dret a revocar el consentiment atorgat en qualsevol moment.",
-      "ITEM_2": "Dret a obtenir informació sobre si UBIQ tracta dades personals de l'usuari.",
-      "ITEM_3": "Dret d'accés, rectificació, portabilitat i supressió de les vostres dades, ia la limitació o oposició al tractament.",
-      "ITEM_4": "Dret a no ser objecte de decisions individuals automatitzades, incloent-hi l'elaboració de perfils.",
-      "ITEM_5": "Dret a presentar una reclamació davant de l'Agència Espanyola de Protecció de Dades (www.aepd.es), quan l'Usuari consideri que UBIQ ha vulnerat els drets en el tractament de dades personals.",
-      "DESCRIPTION_2": "Els Usuaris podran exercir els seus drets en qualsevol moment i de forma gratuïta adreçant-se per escrit a UBIQ S.L.U. per correu postal a l'adreça de carrer Ganduxer, núm. 129, C.P 08022 Barcelona o bé mitjançant correu electrònic a l'adreça [… …info@fan.content.com…….], en tots dos casos caldrà acompanyar còpia del Document Nacional d'Identitat o document equivalent que acrediti la seva identitat."
-    },
-    "THIRD_PARTY_DOMAIN_LINKS": {
-      "TITLE": "Enllaços de domini de tercers",
-      "DESCRIPTION": "Per poder participar com a jurat els Usuaris seran redireccionats al domini www.twitch.tv titularitat d'un tercer -Twitch Interactive, Inc-. Aquest domini disposa de les seves pròpies Condicions d'Ús, Política de Privadesa i Política de Cookies. Per això, recomanem als Usuaris que les consultin abans de la seva utilització."
-    },
-    "SOCIALS": {
-      "TITLE": "Xarxes socials",
-      "DESCRIPTION_1": "Aquest Lloc Web pot contenir enllaços que permeten accedir a diferents xarxes socials pertanyents i gestionades per tercers (p.ex. Facebook, Instagram, YouTube). Aquests enllaços al Lloc Web tenen per únic objecte facilitar als Usuaris el accés a xarxes socials per a informals sobre els esdeveniments organitzats per UBIQ.",
-      "DESCRIPTION_2": "L'activació i ús d'aquestes aplicacions pot comportar la identificació i autenticació de l'Usuari (login/contrasenya) a les plataformes corresponents, completament externes al Lloc Web i fora del control d'UBIQ. Aquestes xarxes socials i plataformes disposen de les seves pròpies polítiques de privadesa i del tractament de les cookies. En aquest sentit, tota informació i dades personals que l'usuari proporcioni a aquestes plataformes serà sota la seva pròpia i exclusiva responsabilitat."
-    },
-    "COOKIES": {
-      "TITLE": "Cookies",
-      "DESCRIPTION_1": "Aquest Lloc Web no utilitza cookies per recollir informació dels Usuaris, únicament s'utilitzen cookies pròpies, de sessió, amb finalitat tècnica - aquelles que permeten a l'Usuari la navegació segura a través del Lloc Web i la utilització de les diferents funcions i serveis que s'ofereixen al Lloc Web. Per a una informació més detallada accediu a la Política de Cookies.",
-      "DESCRIPTION_2": "No obstant, aquest Lloc Web pot contenir enllaços a llocs web de tercers amb polítiques de privadesa i de cookies alienes a UBIQ i que l'Usuari podrà decidir si accepta o rebutja quan accedeixi a aquests llocs web."
-    },
-    "INTERNATIONAL_TRANSFERS": {
-      "TITLE": "Transferències internacionals",
-      "DESCRIPTION": "Les dades personals poden allotjar-se en servidors ubicats fora de l'Espai Econòmic Europeu (Estats Units, Japó, Austràlia, Japó), en participar als PREMIS ESLAND consent aquesta transferència de dades i se li informa que en aquestes es garanteix la existència d'una Decisió d'Adequació del Comitè Europeu de Protecció de Dades o bé l'adopció de mesures de garantia complementàries per tal de garantir un nivell d'adequació de protecció alineat amb el Reglament General de Protecció de Dades de la Unió Europea."
-    },
-    "MODIFICATIONS": {
-      "TITLE": "Modificacions de la política de privadesa",
-      "DESCRIPTION": "UBIQ es reserva el dret a modificar aquesta Política de privadesa en funció d'exigències legislatives, reglamentàries o amb la finalitat d'adaptar aquesta política a les instruccions dictades per l'Agència Espanyola de Protecció de Dades i/o pel Comitè Europeu de Protecció de Dades, per això s'aconsella als Usuaris que la visitin periòdicament. Quan es produeixin canvis significatius en aquesta Política, aquests es publicaran al Lloc Web.",
-      "LAST_UPDATE": "Data de la darrera actualització: 12 del 12 de 2023."
-    }
-  },
-  "INFO": {
-    "TITLE_HERO_1": "Els premis",
-    "TITLE_HERO_2": "ESLAND",
-    "GALLERY_TITLE": "GALERÍA",
-    "GALLERY_TEXT": "Alguns dels millors moments de la gala que passaran a la història."
-  },
-  "LEGAL_NOTICE": {
-    "TITLE": "Avís legal",
-    "ACCESS_AND_USE": {
-      "TITLE": "Condicions d'accés i ús",
-      "DESCRIPTION_1": "L'accés, la navegació i la utilització del Lloc web www.premiosesland.com implica l'acceptació expressa i sense reserves de tots els termes de les condicions d'ús incloses en aquest Avís Legal. El seu Compliment és exigible respecte de qualsevol persona que accedeixi, navegui o utilitzi el Lloc web. Si l'Usuari no està d'acord amb la totalitat o part de les condicions d'ús en els termes exposats, us heu d'abstenir d'accedir, navegar o utilitzar el Lloc Web."
-    },
-    "OWNERSHIP_AND_CONTACT_DATA": {
-      "TITLE": "Titularitat i dades de contacte",
-      "DESCRIPTION_1": "UBIQ S.L.U (d'ara endavant, UBIQ) societat andorrana amb NRT L-718097-X, amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita al Registre de Societats del Govern d'Andorra amb núm. 23023, amb correu electrònic [info@ubiq.ad………….], és la titular de la pàgina web www.premiosesland.com (d'ara endavant, Lloc Web). Els Usuaris del Lloc Web podran contactar amb UBIQ mitjançant l´enviament d´un correu electrònic a: info@ubiq.ad"
-    },
-    "PURPOSE_AND_CONTENT_WEBSITE": {
-      "TITLE": "Objecte i contingut del lloc web",
-      "DESCRIPTION_1": "Aquest Lloc Web té per objecte informar els Usuaris dels esdeveniments que organitzi UBIQ en relació amb les activitats de Streamers i oferir la possibilitat de participar en aquests esdeveniments com a jurat dels Premis Esland i seleccionar i emetre el seu vot a favor dels seus Streamers i continguts preferits. L'accés a la informació del Lloc Web no implica ni constitueix cap relació contractual entre l'Usuari i UBIQ.",
-      "DESCRIPTION_2": "UBIQ empra tots els esforços per assegurar que tota la informació disponible al Lloc Web sigui completa i estigui actualitzada, revisant periòdicament el contingut del Lloc Web. Això no obstant, l'Usuari reconeix i accepta que tota la informació disponible al Lloc Web s'ofereix únicament a efectes merament informatius i que UBIQ no garanteix la precisió, idoneïtat i integritat de la informació continguda al Lloc Web. És responsabilitat exclusiva de l'Usuari l'ús que faci de la informació continguda al Lloc Web."
-    },
-    "TERMS_OF_USE": {
-      "TITLE": "Condicions d'ús",
-      "DESCRIPTION_1": "Aquestes condicions generals d'ús regulen l'accés i la navegació al Lloc Web, l'accés i l'ús del qual té caràcter lliure i gratuït, i no és necessari el registre previ dels Usuaris. No obstant això, en el cas que els Usuaris vulguin participar de forma activa als PREMIS ESLAND com a jurat i així seleccionar i votar els seus Streamers i continguts favorits, hauran de disposar d'un compte obert a la plataforma de streaming www.twitch.tv i en el procés de votació s'informarà els usuaris dels passos a seguir per emetre els seus vots a les diferents categories designades.",
-      "DESCRIPTION_2": "L'accés, ús o navegació al Lloc Web atribueix la condició d'Usuari i implica el coneixement, l'acceptació i el sotmetiment a les advertències legals ia les condicions d'ús incloses en aquest Avís Legal a la versió publicada en el moment en què el Usuari accedeix al Lloc Web. L'Usuari accepta que l'ús del Lloc Web té lloc sota la seva única i exclusiva responsabilitat. Es recomana a l'Usuari llegir aquest Avís Legal cada vegada que s'accedeixi a la Web.",
-      "DESCRIPTION_3": "UBIQ es reserva, sense necessitat de previ avís i en qualsevol moment, el dret a interrompre, suspendre temporalment, desactivar i/a cancel·lar l'accés al Lloc Web oa qualsevol dels elements que s'hi integren."
-    },
-    "USE_OF_WEBSITE_AND_RESPONSIBILITY": {
-      "TITLE": "ÚS DEL LLOC WEB I RESPONSABILITAT",
-      "DESCRIPTION_1": "L'Usuari és responsable de l'ús que realitzi del Lloc Web i del contingut i ho fa sota el seu propi risc. En accedir-hi accepta i es compromet a utilitzar el Lloc Web, els seus continguts i serveis de conformitat amb la Llei, aquest Avís Legal, els bons costums i l'ordre públic, i hauran de respondre davant UBIQ o tercers per qualsevol dany que pugui produir-se per incompliment daquestes obligacions.",
-      "DESCRIPTION_2": "No destruir, alterar, inutilitzar o fer malbé les dades o programes informàtics o documents electrònics del Lloc Web.",
-      "DESCRIPTION_3": "No obstaculitzar l'accés d'altres usuaris al lloc web.",
-      "DESCRIPTION_4": "No introduir virus o qualsevol altre dispositiu que causi o pugui causar una alteració als sistemes de UBIQ.",
-      "DESCRIPTION_5": "No copiar el software.",
-      "DESCRIPTION_6": "No distribuir, compartir, subllicenciar, prestar, arrendar o posar el web a disposició de tercers.",
-      "DESCRIPTION_7": "No sotmetre a enginyeria inversa, descompilar o desmuntar el Programari del Lloc Web o intentar obtenir el codi font.",
-      "DESCRIPTION_8": "No emmagatzemar, introduir o difondre en o des del Lloc Web informació o material difamatori, injuriós, obscè, amenaçador, xenòfog o que inciti a la violència, discriminació per raó de raça, sexe, ideologia, religió, atempte contra la moral, l'ordre públic, els drets fonamentals, les llibertats públiques, l'honor, la intimitat o la imatge de tercers, i en general que infringeixi la normativa vigent.",
-      "DESCRIPTION_9": "L'Usuari és l'únic i exclusiu responsable de l'accés al Lloc Web i de l'ús que faci de la informació i les dades contingudes.",
-      "DESCRIPTION_10": "UBIQ no respondrà de cap conseqüència, dany o perjudici derivats de l'accés o ús del Lloc Web i del contingut per part dels Usuaris. UBIQ, com a titular del Lloc Web, queda exonerat de qualsevol responsabilitat que es pugui derivar de les accions de l'Usuari. De manera que l'Usuari és l'únic responsable davant de qualsevol reclamació iniciada per terceres persones contra UBIQ per l'accés o ús que l'Usuari faci del Lloc Web."
-    },
-    "DISCLAIMER_OF_LIABILITY": {
-      "TITLE": "EXEMCIÓ DE RESPONSABILITAT",
-      "DESCRIPTION_1": "UBIQ realitza els màxims esforços perquè l'ús del Lloc Web es faci en les millors condicions i per facilitar una informació actualitzada, no obstant això, UBIQ no garanteix l'absència d'errors o omissions en el contingut del Lloc Web, ni garanteix que l'accés al Lloc Web sigui ininterromput, estant facultat per suspendre temporalment i sense previ avís l'accessibilitat al Lloc Web.",
-      "DESCRIPTION_2": "·Qualsevol fallada o interrupció de la comunicació, la manca de disponibilitat, actualitat, manteniment i efectiu funcionament del Lloc Web i/o dels seus serveis o continguts.",
-      "DESCRIPTION_3": "·L'incompliment de les expectatives dels Usuaris en relació amb el Lloc Web o en el servidor que el subministra.",
-      "DESCRIPTION_4": "·La invulnerabilitat del Lloc Web i/o la invulnerabilitat de les mesures de seguretat que s'adoptin en el mateix.",
-      "DESCRIPTION_5": "·Els continguts, serveis, errors o omissions que pogués tenir el contingut del Lloc Web o dels enllaços que puguin estar habilitats.",
-      "DESCRIPTION_6": "·L'existència de virus o programes lesius en els continguts que puguin produir alteracions en el sistema informàtic, en els documents electrònics o en els fitxers emmagatzemats dels Usuaris.",
-      "DESCRIPTION_7": "·Avaries telefòniques o de xarxes motivades per causes alienes al titular del Lloc Web.",
-      "DESCRIPTION_8": "·Retards o bloquejos en el funcionament operatiu del sistema causat per deficiències o sobrecàrrega a les línies telefòniques o a Internet.",
-      "DESCRIPTION_9": "·Les intromissions il·legítimes fora de control del titular del Lloc Web, com els accessos no autoritzats, les còpies, l'alteració o la supressió d'informació i dades realitzades per tercers en el Lloc Web.",
-      "DESCRIPTION_10": "UBIQ empra tots els recursos tècnics necessaris per reduir aquest tipus de riscos. No obstant això, s'informa a l'Usuari que aquests riscos existeixen i que UBIQ no es responsabilitza dels danys que poguessin ocasionar."
-    },
-    "INTELLECTUAL_AND_INDUSTRIAL_PROPERTY": {
-      "TITLE": "PROPIETAT INTEL·LECTUAL I INDUSTRIAL",
-      "DESCRIPTION_1": "El contingut del Lloc Web es regeix per les lleis espanyoles i està protegit per la legislació nacional i internacional sobre Propietat Intel·lectual i Industrial.",
-      "DESCRIPTION_2": "Els Drets de Propietat Intel·lectual i Industrial sobre tota la informació continguda en aquest Lloc Web, entre d'altres, marques, noms comercials, disseny gràfic, dibuixos, logotips, imatges, índexs, textos, àudios, vídeos, programari, disseny i signes identificatius, així com els seus codis font, estructura de navegació, bases de dades, i tots els elements en ells continguts, estan protegits per drets d'autor i drets de propietat intel·lectual i industrial d'UBIQ o de tercers.",
-      "DESCRIPTION_3": "En cap cas l'accés i ús al Lloc Web per part dels Usuaris, es podrà considerar com una concessió de llicència d'ús o dret a cap actiu d'UBIQ o dels seus autors legítims, pel que no implicarà una cessió, ni transmissió, ni cap tipus de renúncia de drets de Propietat Intel·lectual o Industrial.",
-      "DESCRIPTION_4": "A menys que UBIQ o els tercers titulars dels drets ho autoritzin expressament, queda prohibida tota reproducció, còpia, conversió, distribució, modificació, supressió o transformació, publicació, comercialització, utilització de tècniques d'enginyeria inversa o qualsevol altre mitjà per obtenir el codi font i qualsevol altra activitat que es pugui realitzar amb les dades i la informació continguda en el Lloc Web, així com amb el seu disseny i la selecció i model de presentació. L'Usuari utilitza la informació a la qual pugui accedir mitjançant l'ús del Lloc Web, exclusivament per a fins personals i en cap cas per a fins comercials o empresarials.",
-      "DESCRIPTION_5": "La utilització no autoritzada de la informació continguda en el Lloc Web, la seva modificació o supressió de dades, així com la lesió dels Drets de Propietat Intel·lectual o Industrial d'UBIQ o de tercers, donarà lloc a les responsabilitats legalment establertes, reservant-se UBIQ la possibilitat d'exercir les accions judicials que procedeixin en dret contra els Usuaris que violin o infringeixin els drets de propietat intel·lectual o industrial."
-    },
-    "THIRD_PARTY_LINKS": {
-      "TITLE": "ENLLAÇOS DE TERCERS",
-      "DESCRIPTION_1": "Aquest Lloc Web pot contenir enllaços a altres Llocs Web gestionats per tercers titulars daquells. Així, per poder participar com a jurat els Usuaris seran redireccionats al domini www.twitch.tv titularitat d'un tercer -Twitch Interactive, Inc-. Aquest domini disposa de les vostres pròpies Condicions d'Ús, Política de Privadesa i Política de Cookies. Per això, recomanem als Usuaris la lectura prèvia al registre i obertura d'un compte en aquest domini.",
-      "DESCRIPTION_2": "UBIQ es reserva el dret de retirar de manera unilateral i en qualsevol moment els enllaços que apareguin al present Lloc Web."
-    },
-    "SOCIAL_NETWORKS": {
-      "TITLE": "REDES SOCIALES",
-      "DESCRIPTION_1": "Este Sitio Web puede contener enlaces que permiten a los Usuarios acceder a diferentes redes sociales pertenecientes y/o gestionadas por terceros (p.ej, Facebook, Instagram, YouTube). Estos enlaces en el Sitio Web tienen por único objeto facilitar a los Usuarios el acceso a redes sociales para informales sobre eventos organizados por UBIQ.",
-      "DESCRIPTION_2": "La activación y uso de estas aplicaciones puede conllevar la identificación y autenticación del Usuario (login/contraseña) en las plataformas correspondientes, completamente externas al Sitio Web y fuera del control de UBIQ. Al acceder a dichas redes externas, el Usuario ingresa en un entorno no controlado por UBIQ, de manera que ésta no asumirá ninguna responsabilidad sobre la configuración de seguridad de dichos entornos. Dichas redes sociales y plataformas disponen de sus propias políticas de privacidad y del tratamiento de las cookies. En este sentido, toda información y datos personales que el Usuario proporcione a estas plataformas será bajo su propia y exclusiva responsabilidad."
-    },
-    "DATA_PROTECTION": {
-      "TITLE": "PROTECCIÓN DE DATOS PERSONALES",
-      "DESCRIPTION_1": "UBIQ, como titular del Sitio Web, informa a los Usuarios que es el responsable de los tratamientos que se realicen de los datos personales solicitados y facilitados durante la utilización del Sitio Web.",
-      "DESCRIPTION_2": "De conformidad con lo establecido en la legislación aplicable en materia de protección de datos, UBIQ respeta la privacidad de los Usuarios y el secreto y seguridad de los datos personales, adoptando para ello las medidas técnicas y organizativas necesarias para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados, habida cuenta el estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.",
-      "DESCRIPTION_3": "Los datos personales de los Usuarios del Sitio Web, solo se obtendrán para ser tratados cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y las finalidades determinadas, explícitas, consentidas y/o legítimas para las que se hayan recabado. Cuando se recaben datos personales a través del Sitio Web, se informará previamente al Usuario de forma clara e inequívoca.",
-      "DESCRIPTION_4": "El Usuario deberá visitar la Política de Privacidad de UBIQ, en este mismo Sitio Web, donde encontrará información detallada respecto la protección de datos de carácter personal."
-    },
-    "SITE_UPDATE": {
-      "TITLE": "ACTUALIZACIÓN DEL SITIO WEB",
-      "DESCRIPTION_1": "Para mejorar el servicio en beneficio de los Usuarios, UBIQ S.L.U se reserva el derecho a actualizar, modificar o eliminar sin previo aviso, la presentación y configuración del Sitio Web, los contenidos e información contenidos en él, así como modificar las Condiciones de Uso que entrarán en vigor desde el momento de su publicación en el Sitio Web siendo aplicables desde esa fecha."
-    },
-    "WEB_INTEROPERABILITY_AND_FUNCTIONALITY": {
-      "TITLE": "INTEROPERATIVIDAD Y FUNCIONALIDAD DEL SITIO WEB",
-      "DESCRIPTION_1": "El Sitio Web se ejecuta en las plataformas Safari, Firefox, Internet Explorer y Chrome actualizadas en 2019. Está especialmente optimizada para Chrome."
-    },
-    "INTEGRITY": {
-      "TITLE": "INTEGRIDAD",
-      "DESCRIPTION_1": "Si alguna de las condiciones de uso del presente Aviso Legal fuera anulado o se considerase no válida, el resto de condiciones no se verán afectadas continuando con plena vigencia y validez."
-    },
-    "APPLICABLE_LEGISLATION_AND_JURISDICTION": {
-      "TITLE": "LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
-      "DESCRIPTION_1": "Toda cuestión o controversia que pudiera surgir en referencia a la aplicación del presente Aviso Legal entre el Usuario y UBIQ se rige por la normativa española vigente aplicable en la materia. Y siempre que la normativa vigente al efecto prevea la posibilidad para las partes de someterse a un fuero determinado, el Usuario renuncia de forma expresa al fuero que pudiera corresponderle y se somete para la resolución de la controversia a los Juzgados y Tribunales de Barcelona."
-    },
-    "MODIFICATIONS": {
-        "LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
-    }
-
-  }
+	"SEO_TITLE": "Premis ESLAND 2024 - Celebrant el millor del streaming i els creadors de contingut",
+	"SEO_DESCRIPTION": "Descobreix els millors creadors de contingut d'Espanya, Llatinoamèrica i Andorra. Vota pels teus favorits! Celebra la innovació i el talent de Twitch, YouTube i més",
+	"SEO": {
+		"ARCHIVO_TITLE": "Arxiu de les edicions anteriors - Premis ESLAND 2024",
+		"ARCHIVO_DESCRIPTION": "Repassa els millors moments d'edicions anteriors",
+		"INFO_TITLE": "Informació - Premis ESLAND 2024",
+		"INFO_DESCRIPTION": "Descobreix tot el que necessites saber sobre els Premis ESLAND 2024 i descarrega el Kit de Premsa",
+		"VOTE_TILTE": "Vota pels teus creadors de contingut favorits - Premis ESLAND 2024",
+		"VOTE_DESCRIPTION": "Vota pels teus creadors de contingut favorits d'Espanya, Llatinoamèrica i Andorra"
+	},
+	"HEADER": {
+		"LOGO": "Tornar a la pàgina d'inici dels Premis ESLAND"
+	},
+	"HEADER_VOTE": "VOTA",
+	"HEADER_INFO": "INFORMACIÓ",
+	"HEADER_ARCHIVE": "ARXIU",
+	"HEADER_BUTTON": "CRITERIS DE NOMINACIÓ",
+	"HERO_SUBTITLE": "Premis a la comunitat hispanoparlant de Streaming",
+	"INTRO_TITLE": "Benvinguts/des",
+	"INTRO_TITLE_AFTER_BR": "als Premis ESLAND",
+	"INTRO_DESCRIPTION_1": "El cinema té els Oscars, la música té els Grammy i <strong>el streaming té els ESLAND</strong>. Els premis que celebren la creativitat i el talent dels millors creadors de contingut de <strong>la comunitat hispanoparlant</strong>",
+	"INTRO_DESCRIPTION_2": "Espanya, Llatinoamèrica i Andorra unides per creadors, creadores i les seves comunitats, per recordar i reviure <strong>alguns dels millors moments de l'any.</strong>",
+	"INTRO_DESCRIPTION_3": "Després de dues gal·les celebrades, una al Palau de la Música Catalana de Barcelona, i una al Auditorio Nacional de la Ciudad de México, només queda esperar a <strong>la tercera edició a Andorra.</strong>",
+	"BENTO_TITLE_1": "ANDORRA: EL CÈNIT DELS PREMIS ESLAND",
+	"BENTO_CONTENT_1": "Una nova edició <strong>plena de novetats</strong> i contingut, que començarà diverses setmanes abans de la desitjada gala. <strong>Directes especials, col·laboracions, concerts i molt més</strong> en el que serà una autèntica festa dedicada a la creació de contingut.",
+	"BENTO_TITLE_2": "LA CATIFA BLANCA",
+	"BENTO_SUBTITLE_2": "16 de febrer de 2024",
+	"BENTO_CONTENT_2": "Enguany, el moment de la catifa blava serà substituït i millorat, gràcies als increïbles paisatges andorrans, per una <strong>catifa blanca en plena neu</strong>, situada a les <strong>pistes d'esquí d'Andorra</strong>.",
+	"BENTO_TITLE_3": "LA GALA",
+	"BENTO_SUBTITLE_3": "17 de febrer de 2024",
+	"BENTO_CONTENT_3": "Una gala de premis plena de <strong> contingut de primer nivell</strong> i <strong>moltes sorpreses</strong>, on es descobriran els guanyadors d'aquesta tercera edició dels Premis ESLAND.",
+	"BENTO_TITLE_4": "GAUDEIX DEL REDDIT DE LA COMUNITAT",
+	"BENTO_CONTENT_4": "Enguany, el reddit no formarà part de les votacions dels premis, però sí que <strong>formarà part de la comunitat</strong>. El subreddit oficial dels Premis ESLAND està obert per a tu. Comparteix els teus clips, opinions i <strong>interactua amb tota la comunitat</strong> del streaming en espanyol.",
+	"VIDEO_ALT": "ESLAND - Premis a la comunitat hispanoparlant de Streaming",
+	"VIDEO_BUTTON": "Vota",
+	"PREFOOTER_VIDEO_TITLE": "Guia de la 3a Edició dels premis ESLAND",
+	"ARCHIVO": {
+		"HERO_TITLE": "Edicions anteriores",
+		"HERO_BUTTON": "Reviu la darrera gala",
+		"COUNTER_TITLE": "Els ESLAND en xifres",
+		"COUNTER_VIEWS": "de visualitzacions",
+		"COUNTER_NEWS": "notícies en premsa",
+		"COUNTER_MEDIA": "en mitjans guanyats"
+	},
+	"VOTE": {
+		"TITLE": "Les votacions ja estan aquí",
+		"CALL_TO_VOTE": "Comença amb les votacions!",
+		"INTRO_CONTENT": "Ha arribat el moment més important. <strong>Votar a la 3ª Edició dels Premis ESLAND</strong>. Perquè els teus vots es comptabilitzin de forma correcta, et deixem alguns consells:",
+		"ADVICE_1": "Vota, <strong>per ordre de preferència</strong>, fins a 4 nominats per categoria.",
+		"ADVICE_2": "No és obligatori votar a cada categoria.",
+		"ADVICE_3": "No és obligatori però sí recomanable l'<strong>ús del vot en ranquing</strong>.",
+		"ADVICE_4": "Quan tinguis clara la teva elecció, <strong>assegura't de clicar “enviar els meus vots”.</strong>",
+		"ADVICE_5": "<strong>Recorda compartir els teus vots</strong> a les xarxes socials.",
+		"ADVICE_6": "Tria sabiament i <strong>revisa els teus vots</strong>, només tens una oportunitat.",
+		"TIME_LIMIT": "Les votacions estaran obertes fins al diumenge 14 de gener a les 24:00h (hora espanyola).",
+		"VOTES_CASTED": "Vots realitzats"
+	},
+	"CATEGORY": "Categoria",
+	"LOG_OUT": "Tancar sessió",
+	"FOOTER": {
+		"DISCLAIMER": "© ESLAND 2021 - 2024 Tots els drets reservats. - Aquesta no és la pàgina web oficial, desenvolupada per @midudev amb finalitats educatives",
+		"LEGAL": {
+			"TITLE": "Legal",
+			"NOTICE": "Avís Legal",
+			"PRIVACY": "Privadesa",
+			"COOKIES": "Galetes",
+			"PRIVACY_POLICY": "Política de Privadesa",
+			"TOS": "Termes i Condicions"
+		},
+		"WEB_MAP": {
+			"TITLE": "Mapa del Lloc Web",
+			"HOME": "Inici",
+			"INFO": "Informació",
+			"ARCHIVE": "Arxiu"
+		},
+		"PRODUCED_BY": "Produït per"
+	},
+	"INFO_TITLE": "Els premis ESLAND",
+	"INFO_TITLE_1": "Un reconoixement únic per a creadors, creadores i comunitats",
+	"INFO_CONTENT_1_1": "Un reconeixement únic per a creadors, creadores i comunitats que busquen el seu lloc al món de l'entreteniment en directe.",
+	"INFO_CONTENT_1_2": "ESLAND és l'acrònim d'ESPANYA, LLATINOAMÈRICA I ANDORRA, tres localitzacions geogràfiques que comparteixen l'idioma que les uneix més enllà de qualsevol frontera, física o virtual.",
+	"INFO_TITLE_2": "EL PREMI A LA CREACIÓ",
+	"INFO_CONTENT_2_1": "El trofeu que es lliura als guanyadors i guanyadores a la cerimònia és <strong>una representació de la lletra “A” dividida en tres fragments</strong> i acoblades a tall d'artilugi futurista sobre el qual es construeix la narrativa de l'esdeveniment.",
+	"INFO_CONTENT_2_2": "Un artefacte d'origen desconegut que dota de <strong>ferramentes i habilitats per a la creació.</strong> Una metàfora sobre l'emancipació del talent gràcies a la tecnologia i la irrupció dels creadors de contingut al món de l'entreteniment.",
+	"MEDIA_KIT_TITLE": "KIT DE PREMSA",
+	"MEDIA_KIT_SUBTITLE_1": "LOGOTIP I TROFEU",
+	"MEDIA_KIT_SUBTITLE_2": "FONS DE PANTALLA",
+	"MEDIA_KIT_SUBTITLE_3": "NOTA DE PREMSA",
+	"DOWNLOAD_BUTTON": "DESCARREGAR",
+	"COOKIES": {
+		"POLICIES": {
+			"TITLE": "Política de Galetes",
+			"DESCRIPTION_1": "Aquesta Política de cookies és part integrant de l'Avís Legal i la Política de Privadesa de www.premiosesland.com (d'ara endavant, Lloc Web), titularitat d'UBIQ S.L.U (d'ara endavant, UBIQ) amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany, i responsable de les Cookies i del tractament de dades personals obtingudes a través de cookies pròpies i de tercers que es fan servir en aquest Lloc Web.",
+			"DESCRIPTION_2": "Aquest Lloc Web utilitza galetes de tercers en concret galetes analítiques de Google Analytics per analitzar l'activitat que realitzen els usuaris quan visiten la web amb finalitats estadístiques.",
+			"DESCRIPTION_3": "Pots acceptar totes les cookies, rebutjar-les o configurar les teves preferències al panell de configuració de cookies. En qualsevol moment podràs revocar el consentiment o modificar les teves preferències de configuració de cookies accedint novament al panell de configuració. Així mateix, pots evitar la descàrrega de cookies o eliminar les instal·lades a través de la configuració del teu navegador, evitant que les cookies s'emmagatzemin al dispositiu. És molt important que llegeixis aquesta política de cookies.",
+			"DESCRIPTION_4": "T'informem de la possibilitat que el rebuig i la desactivació de les cookies pot afectar o dificultar la navegació o la prestació dels serveis oferts en aquest Lloc Web."
+		},
+		"WHAT_IS": {
+			"TITLE": "Què són les galetes?",
+			"DESCRIPTION_1": "Les cookies són identificadors alfanumèrics que contenen informació que s'instal·la al dispositiu de l'Usuari i es descarreguen al navegador Web de l'Usuari quan aquest visita i accedeix a una pàgina web. La seva finalitat principal és identificar i reconèixer de manera unívoca el dispositiu de l'Usuari cada cop que accedeix al Lloc Web, a més de millorar la qualitat i oferir un millor ús del Lloc Web.",
+			"DESCRIPTION_2": "Es tracta de petits fitxers de text que queden emmagatzemats al disc dur de l'ordinador i que serveixen per identificar l'Usuari quan es connecta novament al lloc web. El seu objectiu és registrar la visita de l'Usuari i guardar certa informació. ús és comú i freqüent a la web ja que permet a les pàgines funcionar de manera més eficient i aconseguir una major personalització i anàlisi sobre el comportament de l'Usuari."
+		},
+		"TYPES": {
+			"TITLE": "Quins tipus de galetes existeixen?",
+			"DESCRIPTION_1_TITLE": "1.- Segons l'entitat que les gestioni:",
+			"DESCRIPTION_1": "Les cookies pròpies són aquelles que s'instal·len al terminal de l'Usuari des del domini gestionat pel responsable de la Web i les cookies de tercers són aquelles que s'instal·len al terminal de l'Usuari des d'un domini gestionat per tercers que tracten les dades obtingudes a través de les cookies.",
+			"DESCRIPTION_2_TITLE": "2.- Segons el termini de temps que romanguin actives:",
+			"DESCRIPTION_2": "Les galetes de sessió són aquelles que romanen activades i recapten dades mentre l'usuari accedeix a una web i desapareixen en acabar la sessió, i les galetes permanents són aquelles que segueixen actives i de les quals es recull informació durant un període de temps definit pel responsable de la galeta o fins a la desactivació o eliminació per part de l'Usuari.",
+			"DESCRIPTION_3_TITLE": "3.- Cookies tècniques:",
+			"DESCRIPTION_3": "Són aquelles que permeten a l'Usuari navegar a través d'una pàgina web i utilitzar les diferents opcions o serveis que s'ofereixen, com ara controlar el trànsit i la comunicació de dades, identificar la sessió, accedir a parts d'accés restringit, realitzar una sol·licitud d'inscripció, utilitzar elements de seguretat durant la navegació, etc. En ser necessàries per al funcionament del web, aquestes cookies estaran activades i no es podran rebutjar.",
+			"DESCRIPTION_4_TITLE": "4.- Cookies de rendiment o operatives:",
+			"DESCRIPTION_4": "Aquest tipus de Cookie recorda les vostres preferències en la navegació per la Web per la qual cosa no heu de tornar a configurar el servei cada vegada que visiteu la Web. A tall d'exemple, en aquesta tipologia s'inclouen: Configuració de volum de reproductors de vídeo o so. Les velocitats de transmissió de vídeo que siguin compatibles amb el vostre navegador. Aquestes cookies poden desactivar-se per l'Usuari, si bé això pot afectar el bon funcionament dels serveis del Web.",
+			"DESCRIPTION_5_TITLE": "5.- Cookies analítiques o de mesura:",
+			"DESCRIPTION_5": "Són aquelles que permeten fer un seguiment i anàlisi del comportament dels Usuaris de la Web amb la finalitat d'obtenir dades estadístiques i millorar el funcionament de la Web. Cada vegada que un Usuari visita una Web, una eina d'un proveïdor extern genera una galeta analítica a l'ordinador de l'Usuari.",
+			"DESCRIPTION_6_TITLE": "6.- Cookies de publicitat:",
+			"DESCRIPTION_6": "Aquest tipus de galetes permeten obtenir informació sobre la durada o freqüència de visualització de posicions publicitàries, la interacció amb aquestes, o els patrons de navegació i/o comportaments de l'Usuari ja que ajuden a conformar un perfil d'interès publicitari . D'aquesta manera, permeten oferir publicitat afí als interessos de l'Usuari."
+		},
+		"BLOCK": {
+			"TITLE": "REBUIXAR, CONFIGURAR, DESHABILITAR O BLOQUEJAR LES COOKIES:",
+			"DESCRIPTION_1": "Bé al banner o al panell de configuració de cookies -sempre actiu i accessible- l'Usuari té la possibilitat d'acceptar o rebutjar les cookies, així com configurar les seves preferències d'aquelles cookies el tractament de les quals requereixi del consentiment de l'Usuari .",
+			"DESCRIPTION_2": "L'Usuari podrà revocar el consentiment inicialment atorgat o modificar-ne les preferències, en qualsevol moment accedint al panell de configuració.",
+			"DESCRIPTION_3": "Així mateix, l'Usuari pot bloquejar i eliminar les cookies instal·lades al vostre equip mitjançant la configuració de les opcions del vostre navegador.",
+			"DESCRIPTION_4": "Es poden configurar els diferents navegadors per avisar l'Usuari de la recepció de cookies i, si es vol, impedir la seva instal·lació a l'equip. Així mateix, l'Usuari pot revisar al vostre navegador quines cookies té instal·lades i quin és el termini de caducitat de les mateixes, podent eliminar-les. Podeu trobar informació sobre com fer-ho, en relació amb els navegadors més comuns, en els enllaços que es relacionen a continuació:",
+			"DESCRIPTION_5": "Chrome:",
+			"DESCRIPTION_5_URL": "https://support.google.com/chrome/answer/95647?hl=ca",
+			"DESCRIPTION_6": "Per a més informació sobre l'administració de les galetes a Internet Explorer:",
+			"DESCRIPTION_6_URL": "http://windows.microsoft.com/es-es/windows-vista/cookies-frequently-asked-questions",
+			"DESCRIPTION_7": "Per a més informació sobre l'administració de les galetes a Mozilla Firefox:",
+			"DESCRIPTION_7_URL": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias",
+			"DESCRIPTION_8": "Per a més informació sobre l'administració de les galetes a Safari:",
+			"DESCRIPTION_8_URL": "http://www.apple.com/es/privacy/use-of-cookies",
+			"DESCRIPTION_9": "Per a més informació sobre l'administració de les galetes a Opera:",
+			"DESCRIPTION_9_URL": "http://help.opera.com/Windows/11.50/ca-ES/cookies.html",
+			"DESCRIPTION_10": "Si voleu deixar de ser seguit per Google Analytics visiteu:",
+			"DESCRIPTION_10_URL": "http://tools.google.com/dlpage/gaoptout",
+			"DESCRIPTION_11": "Chrome:"
+		},
+		"MORE_INFO": {
+			"TITLE": "Per saber més sobre les galetes",
+			"DESCRIPTION_1": "Podeu obtenir més informació sobre la publicitat en línia basada en el comportament i la privadesa en línia al següent enllaç:",
+			"DESCRIPTION_1_URL": "http://www.youronlinechoices.com/ca",
+			"DESCRIPTION_2": "Protecció de dades de Google Analytics",
+			"DESCRIPTION_2_URL": "http://www.google.com/analytics/learn/privacy.html",
+			"DESCRIPTION_3": "Com utilitza Google Analytics les galetes:",
+			"DESCRIPTION_3_URL": "https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=ca#analyticsjs"
+		},
+		"THIRD_PARTY": {
+			"TITLE": "Tercers i Transferències Internacionals",
+			"DESCRIPTION": "Pot obtenir informació sobre el tractament realitzat per tercers i possibles transferències de dades a altres països que realitzin aquests tercers identificats en aquesta política, als enllaços que es faciliten en aquesta política de cookies. Els diferents mecanismes de regularització de les transferències internacionals, en cas que n'hi hagi, seran informats pels esmentats tercers."
+		},
+		"UPDATES": {
+			"TITLE": "Actualitzacions i canvis a la política de cookies",
+			"DESCRIPTION": "FAN CONTENT poden modificar aquesta Política de Cookies en funció d'exigències legislatives, reglamentàries, o amb la finalitat d'adaptar aquesta política a les instruccions dictades per l'Agència Espanyola de Protecció de Dades i pel Comitè Europeu de Protecció de Dades , per això s'aconsella als Usuaris que la visitin periòdicament.",
+			"DATE": "Data de la darrera actualització: 12 del 12 de 2023."
+		},
+		"SITE_COOKIES": {
+			"TITLE": "Quines cookies utilitza aquest Lloc WEB?",
+			"THEAD_NAME": "Nom",
+			"THEAD_CADUCITY": "Caducitat",
+			"THEAD_PROVIDER": "Proveïdor",
+			"THEAD_FINALITY": "Finalitat",
+			"ANALYTICS": [
+				{
+					"NAME": "_ga",
+					"EXPIRE": "2 anys",
+					"PROVIDER": {
+						"NAME": "Google",
+						"URL": "https://google.com/"
+					},
+					"OBJECTIVE": "S'utilitza per distingir els usuaris.",
+					"OBJECTIVE_URL": ""
+				},
+				{
+					"NAME": "_gid",
+					"EXPIRE": "24 hores",
+					"PROVIDER": {
+						"NAME": "Google",
+						"URL": "https://google.com/"
+					},
+					"OBJECTIVE": "S'utilitza per distingir els usuaris.",
+					"OBJECTIVE_URL": ""
+				},
+				{
+					"NAME": "_ga_J8PJQBXG7J",
+					"EXPIRE": "2 anys",
+					"PROVIDER": {
+						"NAME": "Google",
+						"URL": "https://google.com/"
+					},
+					"OBJECTIVE": "S'utilitza per mantenir l'estat de la sessió.",
+					"OBJECTIVE_URL": ""
+				},
+				{
+					"NAME": "_gac_gb_J8PJQBXG7J",
+					"EXPIRE": "90 dies",
+					"PROVIDER": {
+						"NAME": "Google",
+						"URL": "https://google.com/"
+					},
+					"OBJECTIVE": "Inclou informació relacionada amb la campanya. Si heu vinculat els vostres comptes de Google Analytics i Google Ads, les etiquetes de conversió al lloc web de Google Ads llegiran aquesta galeta, llevat que la inhabiliteu",
+					"OBJECTIVE_URL": "https://support.google.com/google-ads/answer/7521212?hl=ca"
+				}
+			]
+		}
+	},
+	"PRIVACY": {
+		"POLICY": {
+			"TITLE": "Política de privacitat",
+			"DESCRIPTION_1": "Ens complau que visiteu la web oficial de PREMIS ESLAND www.premiosesland.com (d'ara endavant, Lloc Web) i agraïm el vostre interès.",
+			"DESCRIPTION_2": "UBIQ S.L.U (d'ara endavant, UBIQ) té el ferm compromís de complir amb la legislació vigent en matèria de protecció de dades personals per garantir la privadesa, el secret i la seguretat de les dades personals dels Usuaris aplicant mesures tècniques i organitzatives apropiades a aquest efecte.",
+			"DESCRIPTION_3": "La present Política de Privadesa té per objecte informar els Usuaris sobre el tractament que UBIQ fa de les dades personals que l'Usuari faciliti en accedir, navegar i utilitzar els serveis que s'ofereixen al Lloc Web, així com de les mesures de seguretat adoptades, de l'exercici dels drets dels Usuaris i de la forma de contacte.",
+			"DESCRIPTION_4": "Les dades personals només seran obtingudes per UBIQ per al seu tractament, quan siguin adequades, pertinents i no excessives en relació amb l'àmbit i les finalitats determinades, explícites i legítimes per a les quals s'hagin obtingut.",
+			"DESCRIPTION_5": "A continuació, compliment amb la normativa vigent en matèria de protecció de dades personals proporcionem als Usuaris la informació següent:"
+		},
+		"RESPONSIBLE": {
+			"TITLE": "Responsable del tractament",
+			"DESCRIPTION_1": "UBIQ S.L.U (d'ara endavant, UBIQ) societat andorrana amb NRT L-718097-X, amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita al Registre de Societats del Govern d'Andorra amb núm. 23023, amb correu electrònic [info@ubiq.ad………….], és la titular de la pàgina web www.premiosesland.com (d'ara endavant, Lloc Web).",
+			"DESCRIPTION_2": "Els Usuaris poden contactar amb el Responsable del Tractament a través de la següent adreça de correu electrònic: info@ubiq.ad"
+		},
+		"DEFINITIONS": {
+			"TITLE": "Definicions",
+			"DESCRIPTION": "A l'efecte de la present Política, els termes següents tindran el significat que s'indica a continuació:",
+			"ITEM_1": "“Dades Personals”: tota informació sobre una persona física identificada o identificable. Es considera persona física identificable tota persona la identitat de la qual es pugui determinar, directament o indirectament, mitjançant un identificador.",
+			"ITEM_2": "“Responsable del Tractament”: Persona física o jurídica, autoritat pública, servei o un altre organisme que, sol o juntament amb altres, determini els fins i mitjans del tractament de dades.",
+			"ITEM_3": "“Encarregat del Tractament”: Persona física o jurídica, autoritat pública, servei o un altre organisme que tracti dades personals per compte del responsable del tractament.",
+			"ITEM_4": "“Interessat-Usuari”: Tota persona física identificada o identificable les dades personals de la qual siguin objecte de tractament.",
+			"ITEM_5": "“Tractament de dades”: Qualsevol operació o conjunt d'operacions realitzades sobre dades personals o conjunts de dades personals, ja sigui per procediments automatitzats o no, com la recollida, registre, organització, estructuració, conservació, adaptació o modificació , extracció, consulta, utilització, comunicació per transmissió, difusió o qualsevol altra forma d'habilitació d'accés, confrontació o interconnexió, limitació, supressió o destrucció."
+		},
+		"PURPOSE": {
+			"TITLE": "Finalitat del tractament",
+			"DESCRIPTION_1": "Gestionar les sol·licituds d'informació rebudes a través de la funció de “Contacte” de la Web. Gestionar les votacions dels PREMIS ESLAND realitzades pels Usuaris del Lloc Web (identificació, validació i recompte de vots). Fins estadístiques de participació i resultats de les votacions als PREMIS ESLAND -per donar compliment a aquesta finalitat les dades personals seran objecte d'un procés d'anonimització- Per poder participar com a jurat als PREMIS ESLAND, els Usuaris hauran de prémer “Identifica't i Vota” i seran redireccionats a la web de Twitch (www.twitch.tv) on hauran de disposar d'un compte obert en aquesta plataforma de streaming Quan l'Usuari des del seu compte premi “Autoritzar” estarà manifestant que ha llegit i que accepta la Política de Privadesa de www.premiosesland.com A continuació, l'Usuari podrà seleccionar les seves preferències de vot entre les diferents categories definides per Streamers i continguts seguint les indicacions del Lloc Web i una vegada seleccionats els seus vots haurà de prémer “Enviar Els meus Vots” . Les votacions i la identitat de l'Usuari es registraran a la base de dades de UBIQ. La identitat de l'Usuari es registrarà mitjançant un codi hash -algorisme matemàtic- (pseudonimitzat).",
+			"DESCRIPTION_2": "Twitch Interactive, Inc. propietària de www.twitch.tv actua com a proveïdor dels serveis de validació i verificació de la identitat dels Usuaris que voten per evitar el frau en el procés de votació."
+		},
+		"PERSONAL_DATA": {
+			"TITLE": "Categoria de dades personals",
+			"DESCRIPTION_1": "La categoria de dades que tracta UBIQ al Lloc Web són:",
+			"DESCRIPTION_2": "Correu electrònic en funció de Contacte. Dades identificatives: Identificació de l'Usuari mitjançant un codi hash -algorisme matemàtic-. UBIQ no accedeix a les dades del compte que els Usuaris tenen a www.twitch.tv."
+		},
+		"LEGITIMACY": {
+			"TITLE": "Base de legitimació",
+			"DESCRIPTION_1": "La base de legitimació per gestionar les comunicacions que es rebin a través de la funció “Contacte” és l'interès legítim d'UBIQ.",
+			"DESCRIPTION_2": "La base de legitimació del tractament de les dades personals dels Usuaris que participen als PREMIS ESLAND és el consentiment exprés atorgat en participar com a jurat i l'interès legítim d'UBIQ en la gestió dels esdeveniments que organitzi i en la gestió dels PREMIS ESLAND.",
+			"DESCRIPTION_3": "L'Usuari podrà revocar el consentiment en qualsevol moment. No obstant, el tractament sobre les dades personals realitzat amb anterioritat a la revocació del consentiment serà lícit."
+		},
+		"PRESERVATION": {
+			"TITLE": "Conservació de les dades",
+			"DESCRIPTION_1": "Les dades es conservaran durant el termini estrictament necessari per donar compliment a la finalitat per a la qual van ser recollides. No obstant això, UBIQ podrà conservar les dades per a la posada a disposició de les autoritats competents o per fer front a possibles reclamacions, en aquest cas les dades es conservaran bloquejades fins a la finalització dels terminis de prescripció, moment en què seran eliminats amb les mesures de seguretat adequades.",
+			"DESCRIPTION_2": "Finalitzat el termini de conservació, les dades personals podran ser objecte d'un procés d'anonimització per a fins estadístiques dels PREMIS ESLAND."
+		},
+		"COMMUNICATION": {
+			"TITLE": "Comunicació de dades",
+			"DESCRIPTION_1": "UBIQ no cedirà a tercers les dades facilitades pels Usuaris del Lloc Web, llevat de consentiment previ i exprés d'aquests o sigui necessari per imperatiu legal (Administracions públiques, Forces i Cossos de Seguretat de l'Estat, Ministeri Fiscal, Agència Espanyola de Protecció de Dades, etc).",
+			"DESCRIPTION_2": "UBIQ informa als Usuaris que les dades personals podran comunicar-se a proveïdors d'UBIQ per poder atendre a la gestió dels PREMIS ESLAND, cas en què aquells tindran la condició d'encarregats del tractament seguint les instruccions d'UBIC sobre el tractament de dades personals."
+		},
+		"USER_RIGHTS": {
+			"TITLE": "Drets dels usuaris",
+			"DESCRIPTION_1": "UBIQ informa als Usuaris que en referència al tractament de les seves dades personals poden exercir els drets següents:",
+			"ITEM_1": "Dret a revocar el consentiment atorgat en qualsevol moment.",
+			"ITEM_2": "Dret a obtenir informació sobre si UBIQ tracta dades personals de l'usuari.",
+			"ITEM_3": "Dret d'accés, rectificació, portabilitat i supressió de les vostres dades, ia la limitació o oposició al tractament.",
+			"ITEM_4": "Dret a no ser objecte de decisions individuals automatitzades, incloent-hi l'elaboració de perfils.",
+			"ITEM_5": "Dret a presentar una reclamació davant de l'Agència Espanyola de Protecció de Dades (www.aepd.es), quan l'Usuari consideri que UBIQ ha vulnerat els drets en el tractament de dades personals.",
+			"DESCRIPTION_2": "Els Usuaris podran exercir els seus drets en qualsevol moment i de forma gratuïta adreçant-se per escrit a UBIQ S.L.U. per correu postal a l'adreça de carrer Ganduxer, núm. 129, C.P 08022 Barcelona o bé mitjançant correu electrònic a l'adreça [… …info@fan.content.com…….], en tots dos casos caldrà acompanyar còpia del Document Nacional d'Identitat o document equivalent que acrediti la seva identitat."
+		},
+		"THIRD_PARTY_DOMAIN_LINKS": {
+			"TITLE": "Enllaços de domini de tercers",
+			"DESCRIPTION": "Per poder participar com a jurat els Usuaris seran redireccionats al domini www.twitch.tv titularitat d'un tercer -Twitch Interactive, Inc-. Aquest domini disposa de les seves pròpies Condicions d'Ús, Política de Privadesa i Política de Cookies. Per això, recomanem als Usuaris que les consultin abans de la seva utilització."
+		},
+		"SOCIALS": {
+			"TITLE": "Xarxes socials",
+			"DESCRIPTION_1": "Aquest Lloc Web pot contenir enllaços que permeten accedir a diferents xarxes socials pertanyents i gestionades per tercers (p.ex. Facebook, Instagram, YouTube). Aquests enllaços al Lloc Web tenen per únic objecte facilitar als Usuaris el accés a xarxes socials per a informals sobre els esdeveniments organitzats per UBIQ.",
+			"DESCRIPTION_2": "L'activació i ús d'aquestes aplicacions pot comportar la identificació i autenticació de l'Usuari (login/contrasenya) a les plataformes corresponents, completament externes al Lloc Web i fora del control d'UBIQ. Aquestes xarxes socials i plataformes disposen de les seves pròpies polítiques de privadesa i del tractament de les cookies. En aquest sentit, tota informació i dades personals que l'usuari proporcioni a aquestes plataformes serà sota la seva pròpia i exclusiva responsabilitat."
+		},
+		"COOKIES": {
+			"TITLE": "Cookies",
+			"DESCRIPTION_1": "Aquest Lloc Web no utilitza cookies per recollir informació dels Usuaris, únicament s'utilitzen cookies pròpies, de sessió, amb finalitat tècnica - aquelles que permeten a l'Usuari la navegació segura a través del Lloc Web i la utilització de les diferents funcions i serveis que s'ofereixen al Lloc Web. Per a una informació més detallada accediu a la Política de Cookies.",
+			"DESCRIPTION_2": "No obstant, aquest Lloc Web pot contenir enllaços a llocs web de tercers amb polítiques de privadesa i de cookies alienes a UBIQ i que l'Usuari podrà decidir si accepta o rebutja quan accedeixi a aquests llocs web."
+		},
+		"INTERNATIONAL_TRANSFERS": {
+			"TITLE": "Transferències internacionals",
+			"DESCRIPTION": "Les dades personals poden allotjar-se en servidors ubicats fora de l'Espai Econòmic Europeu (Estats Units, Japó, Austràlia, Japó), en participar als PREMIS ESLAND consent aquesta transferència de dades i se li informa que en aquestes es garanteix la existència d'una Decisió d'Adequació del Comitè Europeu de Protecció de Dades o bé l'adopció de mesures de garantia complementàries per tal de garantir un nivell d'adequació de protecció alineat amb el Reglament General de Protecció de Dades de la Unió Europea."
+		},
+		"MODIFICATIONS": {
+			"TITLE": "Modificacions de la política de privadesa",
+			"DESCRIPTION": "UBIQ es reserva el dret a modificar aquesta Política de privadesa en funció d'exigències legislatives, reglamentàries o amb la finalitat d'adaptar aquesta política a les instruccions dictades per l'Agència Espanyola de Protecció de Dades i/o pel Comitè Europeu de Protecció de Dades, per això s'aconsella als Usuaris que la visitin periòdicament. Quan es produeixin canvis significatius en aquesta Política, aquests es publicaran al Lloc Web.",
+			"LAST_UPDATE": "Data de la darrera actualització: 12 del 12 de 2023."
+		}
+	},
+	"GALLERY": {
+		"TITLE": "GALERIA",
+		"TEXT": "Alguns dels millors moments de la gala que passaran a la història.",
+		"LOAD_MORE": "Descobreix-les totes"
+	},
+	"LEGAL_NOTICE": {
+		"TITLE": "Avís legal",
+		"ACCESS_AND_USE": {
+			"TITLE": "Condicions d'accés i ús",
+			"DESCRIPTION_1": "L'accés, la navegació i la utilització del Lloc web www.premiosesland.com implica l'acceptació expressa i sense reserves de tots els termes de les condicions d'ús incloses en aquest Avís Legal. El seu Compliment és exigible respecte de qualsevol persona que accedeixi, navegui o utilitzi el Lloc web. Si l'Usuari no està d'acord amb la totalitat o part de les condicions d'ús en els termes exposats, us heu d'abstenir d'accedir, navegar o utilitzar el Lloc Web."
+		},
+		"OWNERSHIP_AND_CONTACT_DATA": {
+			"TITLE": "Titularitat i dades de contacte",
+			"DESCRIPTION_1": "UBIQ S.L.U (d'ara endavant, UBIQ) societat andorrana amb NRT L-718097-X, amb domicili social al carrer Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita al Registre de Societats del Govern d'Andorra amb núm. 23023, amb correu electrònic [info@ubiq.ad………….], és la titular de la pàgina web www.premiosesland.com (d'ara endavant, Lloc Web). Els Usuaris del Lloc Web podran contactar amb UBIQ mitjançant l´enviament d´un correu electrònic a: info@ubiq.ad"
+		},
+		"PURPOSE_AND_CONTENT_WEBSITE": {
+			"TITLE": "Objecte i contingut del lloc web",
+			"DESCRIPTION_1": "Aquest Lloc Web té per objecte informar els Usuaris dels esdeveniments que organitzi UBIQ en relació amb les activitats de Streamers i oferir la possibilitat de participar en aquests esdeveniments com a jurat dels Premis Esland i seleccionar i emetre el seu vot a favor dels seus Streamers i continguts preferits. L'accés a la informació del Lloc Web no implica ni constitueix cap relació contractual entre l'Usuari i UBIQ.",
+			"DESCRIPTION_2": "UBIQ empra tots els esforços per assegurar que tota la informació disponible al Lloc Web sigui completa i estigui actualitzada, revisant periòdicament el contingut del Lloc Web. Això no obstant, l'Usuari reconeix i accepta que tota la informació disponible al Lloc Web s'ofereix únicament a efectes merament informatius i que UBIQ no garanteix la precisió, idoneïtat i integritat de la informació continguda al Lloc Web. És responsabilitat exclusiva de l'Usuari l'ús que faci de la informació continguda al Lloc Web."
+		},
+		"TERMS_OF_USE": {
+			"TITLE": "Condicions d'ús",
+			"DESCRIPTION_1": "Aquestes condicions generals d'ús regulen l'accés i la navegació al Lloc Web, l'accés i l'ús del qual té caràcter lliure i gratuït, i no és necessari el registre previ dels Usuaris. No obstant això, en el cas que els Usuaris vulguin participar de forma activa als PREMIS ESLAND com a jurat i així seleccionar i votar els seus Streamers i continguts favorits, hauran de disposar d'un compte obert a la plataforma de streaming www.twitch.tv i en el procés de votació s'informarà els usuaris dels passos a seguir per emetre els seus vots a les diferents categories designades.",
+			"DESCRIPTION_2": "L'accés, ús o navegació al Lloc Web atribueix la condició d'Usuari i implica el coneixement, l'acceptació i el sotmetiment a les advertències legals ia les condicions d'ús incloses en aquest Avís Legal a la versió publicada en el moment en què el Usuari accedeix al Lloc Web. L'Usuari accepta que l'ús del Lloc Web té lloc sota la seva única i exclusiva responsabilitat. Es recomana a l'Usuari llegir aquest Avís Legal cada vegada que s'accedeixi a la Web.",
+			"DESCRIPTION_3": "UBIQ es reserva, sense necessitat de previ avís i en qualsevol moment, el dret a interrompre, suspendre temporalment, desactivar i/a cancel·lar l'accés al Lloc Web oa qualsevol dels elements que s'hi integren."
+		},
+		"USE_OF_WEBSITE_AND_RESPONSIBILITY": {
+			"TITLE": "ÚS DEL LLOC WEB I RESPONSABILITAT",
+			"DESCRIPTION_1": "L'Usuari és responsable de l'ús que realitzi del Lloc Web i del contingut i ho fa sota el seu propi risc. En accedir-hi accepta i es compromet a utilitzar el Lloc Web, els seus continguts i serveis de conformitat amb la Llei, aquest Avís Legal, els bons costums i l'ordre públic, i hauran de respondre davant UBIQ o tercers per qualsevol dany que pugui produir-se per incompliment daquestes obligacions.",
+			"DESCRIPTION_2": "No destruir, alterar, inutilitzar o fer malbé les dades o programes informàtics o documents electrònics del Lloc Web.",
+			"DESCRIPTION_3": "No obstaculitzar l'accés d'altres usuaris al lloc web.",
+			"DESCRIPTION_4": "No introduir virus o qualsevol altre dispositiu que causi o pugui causar una alteració als sistemes de UBIQ.",
+			"DESCRIPTION_5": "No copiar el software.",
+			"DESCRIPTION_6": "No distribuir, compartir, subllicenciar, prestar, arrendar o posar el web a disposició de tercers.",
+			"DESCRIPTION_7": "No sotmetre a enginyeria inversa, descompilar o desmuntar el Programari del Lloc Web o intentar obtenir el codi font.",
+			"DESCRIPTION_8": "No emmagatzemar, introduir o difondre en o des del Lloc Web informació o material difamatori, injuriós, obscè, amenaçador, xenòfog o que inciti a la violència, discriminació per raó de raça, sexe, ideologia, religió, atempte contra la moral, l'ordre públic, els drets fonamentals, les llibertats públiques, l'honor, la intimitat o la imatge de tercers, i en general que infringeixi la normativa vigent.",
+			"DESCRIPTION_9": "L'Usuari és l'únic i exclusiu responsable de l'accés al Lloc Web i de l'ús que faci de la informació i les dades contingudes.",
+			"DESCRIPTION_10": "UBIQ no respondrà de cap conseqüència, dany o perjudici derivats de l'accés o ús del Lloc Web i del contingut per part dels Usuaris. UBIQ, com a titular del Lloc Web, queda exonerat de qualsevol responsabilitat que es pugui derivar de les accions de l'Usuari. De manera que l'Usuari és l'únic responsable davant de qualsevol reclamació iniciada per terceres persones contra UBIQ per l'accés o ús que l'Usuari faci del Lloc Web."
+		},
+		"DISCLAIMER_OF_LIABILITY": {
+			"TITLE": "EXEMCIÓ DE RESPONSABILITAT",
+			"DESCRIPTION_1": "UBIQ realitza els màxims esforços perquè l'ús del Lloc Web es faci en les millors condicions i per facilitar una informació actualitzada, no obstant això, UBIQ no garanteix l'absència d'errors o omissions en el contingut del Lloc Web, ni garanteix que l'accés al Lloc Web sigui ininterromput, estant facultat per suspendre temporalment i sense previ avís l'accessibilitat al Lloc Web.",
+			"DESCRIPTION_2": "·Qualsevol fallada o interrupció de la comunicació, la manca de disponibilitat, actualitat, manteniment i efectiu funcionament del Lloc Web i/o dels seus serveis o continguts.",
+			"DESCRIPTION_3": "·L'incompliment de les expectatives dels Usuaris en relació amb el Lloc Web o en el servidor que el subministra.",
+			"DESCRIPTION_4": "·La invulnerabilitat del Lloc Web i/o la invulnerabilitat de les mesures de seguretat que s'adoptin en el mateix.",
+			"DESCRIPTION_5": "·Els continguts, serveis, errors o omissions que pogués tenir el contingut del Lloc Web o dels enllaços que puguin estar habilitats.",
+			"DESCRIPTION_6": "·L'existència de virus o programes lesius en els continguts que puguin produir alteracions en el sistema informàtic, en els documents electrònics o en els fitxers emmagatzemats dels Usuaris.",
+			"DESCRIPTION_7": "·Avaries telefòniques o de xarxes motivades per causes alienes al titular del Lloc Web.",
+			"DESCRIPTION_8": "·Retards o bloquejos en el funcionament operatiu del sistema causat per deficiències o sobrecàrrega a les línies telefòniques o a Internet.",
+			"DESCRIPTION_9": "·Les intromissions il·legítimes fora de control del titular del Lloc Web, com els accessos no autoritzats, les còpies, l'alteració o la supressió d'informació i dades realitzades per tercers en el Lloc Web.",
+			"DESCRIPTION_10": "UBIQ empra tots els recursos tècnics necessaris per reduir aquest tipus de riscos. No obstant això, s'informa a l'Usuari que aquests riscos existeixen i que UBIQ no es responsabilitza dels danys que poguessin ocasionar."
+		},
+		"INTELLECTUAL_AND_INDUSTRIAL_PROPERTY": {
+			"TITLE": "PROPIETAT INTEL·LECTUAL I INDUSTRIAL",
+			"DESCRIPTION_1": "El contingut del Lloc Web es regeix per les lleis espanyoles i està protegit per la legislació nacional i internacional sobre Propietat Intel·lectual i Industrial.",
+			"DESCRIPTION_2": "Els Drets de Propietat Intel·lectual i Industrial sobre tota la informació continguda en aquest Lloc Web, entre d'altres, marques, noms comercials, disseny gràfic, dibuixos, logotips, imatges, índexs, textos, àudios, vídeos, programari, disseny i signes identificatius, així com els seus codis font, estructura de navegació, bases de dades, i tots els elements en ells continguts, estan protegits per drets d'autor i drets de propietat intel·lectual i industrial d'UBIQ o de tercers.",
+			"DESCRIPTION_3": "En cap cas l'accés i ús al Lloc Web per part dels Usuaris, es podrà considerar com una concessió de llicència d'ús o dret a cap actiu d'UBIQ o dels seus autors legítims, pel que no implicarà una cessió, ni transmissió, ni cap tipus de renúncia de drets de Propietat Intel·lectual o Industrial.",
+			"DESCRIPTION_4": "A menys que UBIQ o els tercers titulars dels drets ho autoritzin expressament, queda prohibida tota reproducció, còpia, conversió, distribució, modificació, supressió o transformació, publicació, comercialització, utilització de tècniques d'enginyeria inversa o qualsevol altre mitjà per obtenir el codi font i qualsevol altra activitat que es pugui realitzar amb les dades i la informació continguda en el Lloc Web, així com amb el seu disseny i la selecció i model de presentació. L'Usuari utilitza la informació a la qual pugui accedir mitjançant l'ús del Lloc Web, exclusivament per a fins personals i en cap cas per a fins comercials o empresarials.",
+			"DESCRIPTION_5": "La utilització no autoritzada de la informació continguda en el Lloc Web, la seva modificació o supressió de dades, així com la lesió dels Drets de Propietat Intel·lectual o Industrial d'UBIQ o de tercers, donarà lloc a les responsabilitats legalment establertes, reservant-se UBIQ la possibilitat d'exercir les accions judicials que procedeixin en dret contra els Usuaris que violin o infringeixin els drets de propietat intel·lectual o industrial."
+		},
+		"THIRD_PARTY_LINKS": {
+			"TITLE": "ENLLAÇOS DE TERCERS",
+			"DESCRIPTION_1": "Aquest Lloc Web pot contenir enllaços a altres Llocs Web gestionats per tercers titulars daquells. Així, per poder participar com a jurat els Usuaris seran redireccionats al domini www.twitch.tv titularitat d'un tercer -Twitch Interactive, Inc-. Aquest domini disposa de les vostres pròpies Condicions d'Ús, Política de Privadesa i Política de Cookies. Per això, recomanem als Usuaris la lectura prèvia al registre i obertura d'un compte en aquest domini.",
+			"DESCRIPTION_2": "UBIQ es reserva el dret de retirar de manera unilateral i en qualsevol moment els enllaços que apareguin al present Lloc Web."
+		},
+		"SOCIAL_NETWORKS": {
+			"TITLE": "REDES SOCIALES",
+			"DESCRIPTION_1": "Este Sitio Web puede contener enlaces que permiten a los Usuarios acceder a diferentes redes sociales pertenecientes y/o gestionadas por terceros (p.ej, Facebook, Instagram, YouTube). Estos enlaces en el Sitio Web tienen por único objeto facilitar a los Usuarios el acceso a redes sociales para informales sobre eventos organizados por UBIQ.",
+			"DESCRIPTION_2": "La activación y uso de estas aplicaciones puede conllevar la identificación y autenticación del Usuario (login/contraseña) en las plataformas correspondientes, completamente externas al Sitio Web y fuera del control de UBIQ. Al acceder a dichas redes externas, el Usuario ingresa en un entorno no controlado por UBIQ, de manera que ésta no asumirá ninguna responsabilidad sobre la configuración de seguridad de dichos entornos. Dichas redes sociales y plataformas disponen de sus propias políticas de privacidad y del tratamiento de las cookies. En este sentido, toda información y datos personales que el Usuario proporcione a estas plataformas será bajo su propia y exclusiva responsabilidad."
+		},
+		"DATA_PROTECTION": {
+			"TITLE": "PROTECCIÓN DE DATOS PERSONALES",
+			"DESCRIPTION_1": "UBIQ, como titular del Sitio Web, informa a los Usuarios que es el responsable de los tratamientos que se realicen de los datos personales solicitados y facilitados durante la utilización del Sitio Web.",
+			"DESCRIPTION_2": "De conformidad con lo establecido en la legislación aplicable en materia de protección de datos, UBIQ respeta la privacidad de los Usuarios y el secreto y seguridad de los datos personales, adoptando para ello las medidas técnicas y organizativas necesarias para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados, habida cuenta el estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.",
+			"DESCRIPTION_3": "Los datos personales de los Usuarios del Sitio Web, solo se obtendrán para ser tratados cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y las finalidades determinadas, explícitas, consentidas y/o legítimas para las que se hayan recabado. Cuando se recaben datos personales a través del Sitio Web, se informará previamente al Usuario de forma clara e inequívoca.",
+			"DESCRIPTION_4": "El Usuario deberá visitar la Política de Privacidad de UBIQ, en este mismo Sitio Web, donde encontrará información detallada respecto la protección de datos de carácter personal."
+		},
+		"SITE_UPDATE": {
+			"TITLE": "ACTUALIZACIÓN DEL SITIO WEB",
+			"DESCRIPTION_1": "Para mejorar el servicio en beneficio de los Usuarios, UBIQ S.L.U se reserva el derecho a actualizar, modificar o eliminar sin previo aviso, la presentación y configuración del Sitio Web, los contenidos e información contenidos en él, así como modificar las Condiciones de Uso que entrarán en vigor desde el momento de su publicación en el Sitio Web siendo aplicables desde esa fecha."
+		},
+		"WEB_INTEROPERABILITY_AND_FUNCTIONALITY": {
+			"TITLE": "INTEROPERATIVIDAD Y FUNCIONALIDAD DEL SITIO WEB",
+			"DESCRIPTION_1": "El Sitio Web se ejecuta en las plataformas Safari, Firefox, Internet Explorer y Chrome actualizadas en 2019. Está especialmente optimizada para Chrome."
+		},
+		"INTEGRITY": {
+			"TITLE": "INTEGRIDAD",
+			"DESCRIPTION_1": "Si alguna de las condiciones de uso del presente Aviso Legal fuera anulado o se considerase no válida, el resto de condiciones no se verán afectadas continuando con plena vigencia y validez."
+		},
+		"APPLICABLE_LEGISLATION_AND_JURISDICTION": {
+			"TITLE": "LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+			"DESCRIPTION_1": "Toda cuestión o controversia que pudiera surgir en referencia a la aplicación del presente Aviso Legal entre el Usuario y UBIQ se rige por la normativa española vigente aplicable en la materia. Y siempre que la normativa vigente al efecto prevea la posibilidad para las partes de someterse a un fuero determinado, el Usuario renuncia de forma expresa al fuero que pudiera corresponderle y se somete para la resolución de la controversia a los Juzgados y Tribunales de Barcelona."
+		},
+		"MODIFICATIONS": {
+			"LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
+		}
+	}
 }
