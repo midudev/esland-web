@@ -7,7 +7,9 @@
 		"INFO_TITLE": "Information - ESLAND Awards 2024",
 		"INFO_DESCRIPTION": "Learn everything you need to know about the ESLAND Awards 2024 and download the Press Kit.",
 		"VOTE_TITLE": "Vote for Your Favorite Content Creators - ESLAND Awards 2024",
-		"VOTE_DESCRIPTION": "Support your favorite content creators from Spain, Latin America, and Andorra by voting for them."
+		"VOTE_DESCRIPTION": "Support your favorite content creators from Spain, Latin America, and Andorra by voting for them.",
+		"ERROR_404_TITLE": "404 Page not found - ESLAND Awards 2024",
+		"ERROR_404_DESCRIPTION": "Page not found (Error 404). Check the URL or explore our sections. Need help? Contact us."
 	},
 	"HEADER": {
 		"LOGO": "Return to the ESLAND Awards Homepage"
@@ -365,5 +367,9 @@
 		"MODIFICATIONS": {
 			"LAST_UPDATE": "Date of last update: 12 del 12 de 2023."
 		}
+	},
+	"ERROR_404": {
+		"TITLE": "Page not found",
+		"BACK_HOMEPAGE_BTN": "Back to homepage"
 	}
 }
