@@ -20,15 +20,17 @@ const i18n = getI18N({ currentLocale })
                     <h1 class="text-4xl font-bold text-white text-center pr-2 mt-2">
                         404
                     </h1>
-                    <p class="text-white text-[10px] md:text-xs text-center uppercase mt-4 ">
+                    <p class="text-white text-[10px] md:text-xs text-center uppercase mt-2 ">
                         <!-- En espera a traducir en caso de aceptar la PR de los path/routing traducidos, que también toqué los json -->
                         PÁGINA NO ENCONTRADA
                     </p>
                 </div>
-                <p>Volver a la 
-                    <a href="/" class="hover:text-cyan-100 text__glowing text-sm border-b pb-1 hover:border-b-cyan-100">
-                        página de inicio</a> 
-                </p>
+                <a href="/" class="hover:text-cyan-100 text__glowing text-sm">
+                    <span
+                        class="border-white inline-flex brightness-200 text-sm w-fit border-2 border-solid rounded-full py-2 px-12"
+                        > Volver a la página de inicio
+                    </span>
+                </a> 
             </div>
         </section>
     </HeroContainer>
