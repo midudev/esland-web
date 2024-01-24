@@ -1,0 +1,47 @@
+---
+import Error404Layout from "@/layouts/Error404Layout.astro";
+import LogoTitle from "@/components/LogoTitle.astro";
+import { getI18N } from "@/i18n"
+import styles from "@/components/styles/Button.module.css"
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale })
+
+---
+<!-- En espera a traducir en caso de aceptar la PR de los path/routing traducidos, que también toqué los json -->
+<Error404Layout title="404 - Página no encontrada - Esland" description="Error 404">
+        <section
+        class="flex relative pb-24 min-h-screen"
+        >
+            <div class="mx-auto flex flex-col pt-20 relative justify-center items-center">
+                <LogoTitle class="w-[70%]" />
+                <div class="absolute">
+                    <h1 class="text-4xl font-bold text-white text-center pr-2 mt-1">
+                        404
+                    </h1>
+                    <p class="text-white text-[10px] md:text-xs text-center uppercase mt-2 ">
+                        <!-- En espera a traducir en caso de aceptar la PR de los path/routing traducidos, que también toqué los json -->
+                        PÁGINA NO ENCONTRADA
+                    </p>
+                </div>
+                <a href="/" class={`
+                  hover:text-cyan-100
+                    text__glowing
+                    text-sm 
+                    ${styles.button} 
+                    w-fit
+                    font-medium
+                    no-underline
+                    px-5
+                    py-3
+                    border
+                    border-solid
+                    border-white
+                    rounded-full
+                    uppercase`}>
+                     Volver a la página de inicio
+                </a> 
+            </div>
+        </section>
+    </HeroContainer>
+</Error404Layout>
