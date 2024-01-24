@@ -1,13 +1,15 @@
-import type { FunctionComponent } from 'preact';
 import { useVoteSystem } from '@/hooks/useVoteSystem';
-import { VoteFinal } from './VoteFinal';
 import { getI18N } from '@/i18n';
+import type { FunctionComponent } from 'preact';
+import { useEffect, useRef } from 'preact/hooks';
+import { VoteFinal } from './VoteFinal';
 
 export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 	children,
 	currentLocale = 'es',
 }) => {
 	const i18n = getI18N({ currentLocale });
+	const containerRef = useRef<HTMLUListElement>(null);
 
 	const {
 		candidatesByCategory,
@@ -25,6 +27,32 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 	} = useVoteSystem();
 
 	const { categoryName = '', candidates } = pageInfo ?? {};
+
+	useEffect(() => {
+		window.addEventListener('resize', removeMinHeigh);
+
+		return () => {
+			window.removeEventListener('resize', removeMinHeigh);
+		};
+	}, []);
+
+	const removeMinHeigh = () => {
+		if(containerRef.current) containerRef.current.style.minHeight = '';
+	}
+
+	const addMinheight = () => {
+		if(containerRef.current) containerRef.current.style.minHeight = `${containerRef.current.offsetHeight}px`;
+	}
+
+	const nextCategoryHandler = () => {
+		addMinheight();
+		setNextCategory();
+	}
+
+	const previousCategoryHandler = () => {
+		addMinheight();
+		setPrevCategory();
+	}
 
 	if (categoryCode === MAX_CATEGORIES) {
 		return (
@@ -52,7 +80,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 				</span>
 			</div>
 
-			<ul class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]'>
+			<ul ref={containerRef} class='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-2 px-8 lg:px-24 xl:px-0 min-h-[343px]'>
 				{candidates?.map((candidate, index) => {
 					const { link, name, image, id } = candidate;
 
@@ -118,7 +146,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 				<div class='flex justify-center items-center gap-x-4 px-2 rounded py-2'>
 					<button
 						class='rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition'
-						onClick={setPrevCategory}
+						onClick={previousCategoryHandler}
 					>
 						<Arrow rotated />
 					</button>
@@ -132,7 +160,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 
 					<button
 						class='rounded border border-white hover:border-transparent hover:bg-white hover:text-sky-800 p-2 transition'
-						onClick={setNextCategory}
+						onClick={nextCategoryHandler}
 					>
 						<Arrow />
 					</button>
