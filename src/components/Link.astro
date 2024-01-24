@@ -1,5 +1,5 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n"
+import { getRelativeLocaleUrl } from "@/i18n/config" // falla si no esta dentro del i18n folder
 
 import type { HTMLAttributes } from 'astro/types'
 
@@ -12,7 +12,6 @@ const { href, locale, class: className, ...rest } = Astro.props
 let path = href as string;
 if (!/^https?:\/\//.test(path) && !path.startsWith('#')) {
   path = getRelativeLocaleUrl(locale || currentLocale, path)
-  .replace(/\/+$/, "")
 }
 ---
 

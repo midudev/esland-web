@@ -1,16 +1,22 @@
 ---
-import { ViewTransitions } from "astro:transitions"
-import Header from "@/components/Header.astro"
-import Footer from "@/components/Footer.astro"
-import "@fontsource-variable/onest"
+import "@fontsource-variable/onest";
+import { ViewTransitions } from "astro:transitions";
+import { getRelativeLocaleUrl, getComponentPath, split } from "@/i18n/config";
+import Button from "@/components/Button.astro";
+import Link from "@/components/Link.astro";
+import Svg from "@/components/Svg.astro";
 
 interface Props {
-  description: string
-  title: string
+  description: string;
+  title: string;
 }
 
-const { description, title } = Astro.props
-const { currentLocale } = Astro
+const { description, title } = Astro.props;
+const { currentLocale = "es" } = Astro;
+const { pathname } = Astro.url;
+const { i18n } = Astro.locals;
+const page = getComponentPath(currentLocale, pathname);
+const [currentLocaleData, otherLocales] = split(currentLocale);
 ---
 
 <!doctype html>
@@ -34,9 +40,208 @@ const { currentLocale } = Astro
   </head>
 
   <body>
-    <Header />
+    <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+        <!-- LOGO -->
+
+        <Link
+          href="/"
+          class="relative z-10 border-b-2 border-transparent"
+          aria-label={i18n.HEADER.LOGO}
+        >
+          <Svg
+            src="logo"
+            class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+          />
+          <Svg src="logo" class="w-10" />
+        </Link>
+
+        <!-- NAVIGATION -->
+
+        <nav
+          id="header-menu"
+          class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
+        >
+          {
+            Object.entries({
+              vota: i18n.HEADER_VOTE,
+              info: i18n.HEADER_INFO,
+              archivo: i18n.HEADER_ARCHIVE,
+            }).map(([slug, text]) => (
+              <Link
+                href={slug}
+                class:list={[
+                  "text__glowing",
+                  "border-b-2",
+                  getRelativeLocaleUrl(currentLocale, slug) === pathname
+                    ? "border-white"
+                    : "border-transparent",
+                ]}
+              >
+                {text}
+              </Link>
+            ))
+          }
+
+          <!-- LANGUAGE SELECTOR -->
+
+          <div class="relative inline-block text-left">
+            <div
+              class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
+            >
+              <button
+                type="button"
+                class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+                aria-expanded="true"
+                aria-haspopup="true"
+              >
+                <Svg src={`flag-${currentLocale}`} class="w-4 h-auto" />
+                {currentLocaleData.name}
+                <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
+              </button>
+              <ul
+                class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+              >
+                {
+                  Object.entries(otherLocales).map(([code, locale]) => (
+                    <li class="py-0.5">
+                      <Link
+                        class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+                        href={page}
+                        locale={code}
+                      >
+                        <Svg src={`flag-${code}`} class="w-4 h-auto" />
+                        {locale.name}
+                      </Link>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+
+          <Button
+            class="md:py-2 md:ml-auto md:text-base lg:text-base"
+            url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+          >
+            {i18n.HEADER_BUTTON}
+          </Button>
+
+          <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+            <Svg src="close" />
+          </a>
+        </nav>
+
+        <a href="#header-menu" class="md:hidden"><Svg src="menu" /></a>
+      </div>
+    </header>
+
     <slot />
-    <Footer />
+
+    <footer class="bg-black/40">
+      <div class="mx-auto w-full max-w-screen-xl p-4 px-6 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 flex flex-col md:mb-0">
+            <a
+              href="https://premiosesland.com/"
+              class="-mt-14 flex items-center justify-center"
+            >
+              <Svg src="logo" class="h-auto w-24" />
+            </a>
+            <div class="mt-6 flex justify-center gap-x-4">
+              <a href="#" class="text-white hover:text-primary duration-300">
+                <Svg src="twitter" class="size-6" hidden />
+                <span class="sr-only">Twitter</span>
+              </a>
+              <a href="#" class="text-white hover:text-primary duration-300">
+                <Svg src="instagram" class="size-6" width="256" height="256" />
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a href="#" class="text-white hover:text-primary duration-300">
+                <Svg src="reddit" class="size-6" width="24" height="24" />
+                <span class="sr-only">Reddit</span>
+              </a>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+                {i18n.FOOTER.LEGAL.TITLE}
+              </h2>
+              <ul class="flex flex-col gap-2 font-medium text-gray-400">
+                {
+                  Object.entries({
+                    "aviso-legal": i18n.FOOTER.LEGAL.NOTICE,
+                    privacidad: i18n.FOOTER.LEGAL.PRIVACY,
+                    cookies: i18n.FOOTER.LEGAL.COOKIES,
+                  }).map(([slug, text]) => (
+                    <li>
+                      <Link
+                        href={slug}
+                        class="hover:underline hover:text-primary duration-300"
+                      >
+                        {text}
+                      </Link>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+                {i18n.FOOTER.WEB_MAP.TITLE}
+              </h2>
+              <ul class="flex flex-col gap-2 font-medium text-gray-400">
+                {
+                  Object.entries({
+                    "": i18n.FOOTER.WEB_MAP.HOME,
+                    info: i18n.FOOTER.WEB_MAP.INFO,
+                    archivo: i18n.FOOTER.WEB_MAP.ARCHIVE,
+                  }).map(([slug, text]) => (
+                    <li>
+                      <Link
+                        href={slug}
+                        class="hover:underline hover:text-primary duration-300"
+                      >
+                        {text}
+                      </Link>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-0 text-sm font-semibold uppercase text-white">
+                {i18n.FOOTER.PRODUCED_BY}
+              </h2>
+              <a
+                class="hover:opacity-100 opacity-70 transition-opacity duration-300 block"
+                href="https://www.ubiq.ad/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Svg src="ubiq-logo" label="Logo Ubiq" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-white/10 sm:mx-auto lg:my-8" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-400 sm:text-center"
+            >{i18n.FOOTER.DISCLAIMER}
+          </span>
+          <div class="mt-4 flex sm:mt-0 sm:justify-center">
+            <a
+              href="https://github.com/midudev/esland-web"
+              class="text-gray-500 hover:text-white ms-5 duration-300"
+            >
+              <Svg src="github" class="h-4 w-4" hidden />
+              <span class="sr-only">GitHub account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <style is:global>
       :root {
         color-scheme: dark;
@@ -67,7 +272,6 @@ const { currentLocale } = Astro
         background: #151a36;
       }
 
-      
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -84,7 +288,6 @@ const { currentLocale } = Astro
       ::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.5);
       }
-      
 
       p {
         color: rgba(255, 255, 255, 0.9);

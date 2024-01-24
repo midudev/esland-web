@@ -1,20 +1,20 @@
 ---
 import Layout from "@/layouts/Layout.astro"
 import Img from "@/components/Img.astro"
-import HeroContainer from "@/components/HeroContainer.astro"
-import InfoKitPrensa from "@/components/InfoKitPrensa.astro"
+import Hero from "@/components/Hero.astro"
+import InfoKitPrensa from "@/components/info/InfoKitPrensa.astro"
 
 const { i18n } = Astro.locals;
 ---
 
 <Layout title={i18n.SEO.INFO_TITLE} description={i18n.SEO.INFO_DESCRIPTION}>
-  <HeroContainer img="info-background.png">
+  <Hero img="info-background.png">
     <h1
       class="lg:text-6xl text-5xl text-center uppercase font-tomaso tracking tracking-widest"
     >
       {i18n.INFO_TITLE}
     </h1>
-  </HeroContainer>
+  </Hero>
   <main class="pb-24">
     <section
       class="w-full max-w-[1400px] mx-auto my-24 gap-10 text-pretty px-6 text-left text-xl sm:px-20 flex flex-col md:flex-row items-center justify-between p-6 md:p-8"

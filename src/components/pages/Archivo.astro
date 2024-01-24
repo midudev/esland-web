@@ -1,10 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro"
-import HeroContainer from "@/components/HeroContainer.astro"
+import Hero from "@/components/Hero.astro"
 import Button from "@/components/Button.astro"
-import Palmares from "@/components/Palmares.astro"
-import Numeros from "@/components/Numeros.astro"
-import Galeria from "@/components/Galeria.astro"
+import Palmares from "@/components/archivo/Palmares.astro"
+import Numeros from "@/components/archivo/Numeros.astro"
+import Galeria from "@/components/archivo/Galeria.astro"
 
 const { i18n } = Astro.locals;
 const edicion = "2"
@@ -14,7 +14,7 @@ const edicion = "2"
   title={i18n.SEO.ARCHIVO_TITLE}
   description={i18n.SEO.ARCHIVO_DESCRIPTION}
 >
-  <HeroContainer img="archivo-background.png">
+  <Hero img="archivo-background.png">
     <h1
       class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
     >
@@ -27,7 +27,7 @@ const edicion = "2"
     >
       {i18n.ARCHIVO.HERO_BUTTON}
     </Button>
-  </HeroContainer>
+  </Hero>
 
   <main class="pb-24">
     <Palmares edicion={edicion} />

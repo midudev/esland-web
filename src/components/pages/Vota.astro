@@ -1,7 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { VoteSystem } from "@/components/VoteSystem.tsx";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { VoteSystem } from "@/components/vota/VoteSystem";
+import { getRelativeLocaleUrl } from "@/i18n/config";
 import Button from "@/components/Button.astro";
 import { getSession } from "auth-astro/server";
 import Svg from "@/components/Svg.astro";
@@ -114,7 +114,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
   </section>
 </Layout>
 <script>
-  import { auth } from "@/components/Auth";
+  import { auth } from "@/components/vota/Auth";
   auth("vote-button", "logout-button")
 </script>
 
@@ -125,3 +125,4 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
       0 0 10px rgba(0, 0, 0, 0.7);
   }
 </style>
+@/components/vota/VoteSystem

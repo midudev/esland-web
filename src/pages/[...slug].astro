@@ -1,6 +1,5 @@
 ---
-import i18n from '@/i18n';
-
+import i18n, { getRelativeLocaleUrl } from '@/i18n'; // si uso '@/i18n/config' falla
 export const prefixDefaultLocale = i18n.routing.prefixDefaultLocale;
 export const defaultLocale = i18n.defaultLocale;
 export const locales = i18n.locales;
@@ -8,6 +7,8 @@ export const locales = i18n.locales;
 interface Route {
   params: { slug: string | undefined };
 }
+
+export const INDEX_COMPONENT = 'inicio';
 
 export const components = (await Astro.glob("../components/pages/*.astro")).reduce((acc: { [key: string]: any }, entry) => {
   if (entry.url) {
@@ -23,15 +24,15 @@ export const routes = locales.reduce((acc: Route[], lang: string) => {
   const needPrefix = lang !== defaultLocale || prefixDefaultLocale;
   for (const [path, component] of Object.entries(components)) {
     let slug: string | undefined = path
-    if (slug === 'app') {
+    if (slug === INDEX_COMPONENT) {
       slug = needPrefix ? lang : undefined;
     } else if (needPrefix) {
-      slug = `${lang}/${slug}`
+      slug = getRelativeLocaleUrl(lang, slug).substring(1)
     }
     acc.push({
       params: { slug },
     });
-    pages[slug === undefined ? 'app' : slug] = component;
+    pages[slug === undefined ? INDEX_COMPONENT : slug] = component;
   }
   if (needPrefix && lang === defaultLocale) {
     acc.push({
@@ -57,6 +58,6 @@ if (slug?.endsWith('/')) {
   slug = slug.slice(0, -1);
 }
 
-const CustomPage = pages[!slug ? 'app' : slug];
+const CustomPage = pages[!slug ? INDEX_COMPONENT : slug];
 ---
 <CustomPage />

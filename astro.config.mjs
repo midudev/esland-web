@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 import preact from "@astrojs/preact";
-import i18n from "./src/i18n";
+import i18n from "./src/i18n/config";
 import auth from "auth-astro";
 
 // https://astro.build/config
