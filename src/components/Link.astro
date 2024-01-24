@@ -10,6 +10,6 @@ const { currentLocale = "es" } = Astro
 const { href, class: className } = Astro.props
 ---
 
-<a href={getRelativeLocaleUrl(currentLocale, href)} class:list={[className]}>
+<a href={href} class:list={[className]}>
   <slot />
 </a>

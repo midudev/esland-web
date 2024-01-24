@@ -5,7 +5,6 @@ interface Props {
   class?: string
 }
 
-const { currentLocale = "es" } = Astro
 const {
   href,
   class: className,
@@ -13,33 +12,16 @@ const {
   ...restOfProps
 } = Astro.props
 
-const LOCALES: Record<string, { code: string; baseHref: string }> = {
-  ca: {
-    code: "ca",
-    baseHref: "/ca",
-  },
-  en: {
-    code: "en",
-    baseHref: "/en",
-  },
-  es: {
-    code: "es",
-    baseHref: "",
-  },
-}
-
-const baseHref = LOCALES[currentLocale].baseHref
 
 const currentPath = Astro.url.pathname
-const destination = `${baseHref}${href}`
-const isActive = currentPath === destination && checkActive
+const isActive = currentPath === href && checkActive
 ---
 
 <a
-  href={destination}
+  href={href}
   class:list={[
     className,
-    "border-b-2",
+    "border-b-2 uppercase",
     isActive ? "border-white" : "border-transparent",
   ]}
   {...restOfProps}

@@ -2,6 +2,10 @@
 import { getI18N } from "@/i18n/"
 import Button from "@/components/Button.tsx"
 import Logo from "@/components/Logo.astro"
+import { getLangFromUrl, useTranslatedPath } from "@/i18n/utils"
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
@@ -39,7 +43,7 @@ const i18n = getI18N({ currentLocale })
       <Button
         target="_self"
         className="text-blue-950 animate-fade-up bg-white"
-        url="/vota"
+        url={translatePath('/vota/')}
       >
         {i18n.VIDEO_BUTTON}
       </Button>

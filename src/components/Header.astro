@@ -8,16 +8,21 @@ import MenuIcon from "@/components/icons/Menu.astro"
 import CloseIcon from "@/components/icons/Close.astro"
 
 import { getI18N } from "@/i18n/index"
+import { getLangFromUrl, useTranslations, useTranslatedPath, } from '../i18n/utils';
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
   <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
     <HeaderLink
       checkActive={false}
-      href="/"
+      href={translatePath('/')}
       class="relative z-10"
       aria-label={i18n.HEADER.LOGO}
     >
@@ -30,14 +35,14 @@ const i18n = getI18N({ currentLocale })
       id="header-menu"
       class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
     >
-      <HeaderLink class="text__glowing" href="/vota">
-        {i18n.HEADER_VOTE}
+      <HeaderLink class="text__glowing" href={translatePath('/vota/')}>
+        {t('nav.vota')}
       </HeaderLink>
-      <HeaderLink class="text__glowing" href="/info">
-        {i18n.HEADER_INFO}
+      <HeaderLink class="text__glowing" href={translatePath('/info/')}>
+        {t('nav.info')}
       </HeaderLink>
-      <HeaderLink class="text__glowing" href="/archivo">
-        {i18n.HEADER_ARCHIVE}
+      <HeaderLink class="text__glowing" href={translatePath('/archivo/')}>
+        {t('nav.archivo')}
       </HeaderLink>
       <LanguageSelector />
       <Button
