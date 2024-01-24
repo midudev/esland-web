@@ -354,35 +354,35 @@
       "DESCRIPTION_2": "UBIQ es reserva el dret de retirar de manera unilateral i en qualsevol moment els enllaços que apareguin al present Lloc Web."
     },
     "SOCIAL_NETWORKS": {
-      "TITLE": "REDES SOCIALES",
-      "DESCRIPTION_1": "Este Sitio Web puede contener enlaces que permiten a los Usuarios acceder a diferentes redes sociales pertenecientes y/o gestionadas por terceros (p.ej, Facebook, Instagram, YouTube). Estos enlaces en el Sitio Web tienen por único objeto facilitar a los Usuarios el acceso a redes sociales para informales sobre eventos organizados por UBIQ.",
-      "DESCRIPTION_2": "La activación y uso de estas aplicaciones puede conllevar la identificación y autenticación del Usuario (login/contraseña) en las plataformas correspondientes, completamente externas al Sitio Web y fuera del control de UBIQ. Al acceder a dichas redes externas, el Usuario ingresa en un entorno no controlado por UBIQ, de manera que ésta no asumirá ninguna responsabilidad sobre la configuración de seguridad de dichos entornos. Dichas redes sociales y plataformas disponen de sus propias políticas de privacidad y del tratamiento de las cookies. En este sentido, toda información y datos personales que el Usuario proporcione a estas plataformas será bajo su propia y exclusiva responsabilidad."
+      "TITLE": "XARXES SOCIALS",
+      "DESCRIPTION_1": "Aquest Lloc Web pot contenir enllaços que permeten als Usuaris accedir a diferents xarxes socials pertanyents i/o gestionades per tercers (p.ex, Facebook, Instagram, YouTube). Aquests enllaços al Lloc Web tenen per únic objecte facilitar als Usuaris l'accés a xarxes socials per a informals sobre esdeveniments organitzats per UBIQ.",
+      "DESCRIPTION_2": "L'activació i ús d'aquestes aplicacions pot comportar la identificació i l'autenticació de l'Usuari (login/contrasenya) a les plataformes corresponents, completament externes al Lloc Web i fora del control d'UBIQ. En accedir a les xarxes externes esmentades, l'Usuari ingressa en un entorn no controlat per UBIQ, de manera que aquesta no assumirà cap responsabilitat sobre la configuració de seguretat d'aquests entorns. Aquestes xarxes socials i plataformes disposen de les seves pròpies polítiques de privadesa i del tractament de les cookies. En aquest sentit, tota informació i dades personals que l'usuari proporcioni a aquestes plataformes serà sota la seva pròpia i exclusiva responsabilitat."
     },
     "DATA_PROTECTION": {
-      "TITLE": "PROTECCIÓN DE DATOS PERSONALES",
-      "DESCRIPTION_1": "UBIQ, como titular del Sitio Web, informa a los Usuarios que es el responsable de los tratamientos que se realicen de los datos personales solicitados y facilitados durante la utilización del Sitio Web.",
-      "DESCRIPTION_2": "De conformidad con lo establecido en la legislación aplicable en materia de protección de datos, UBIQ respeta la privacidad de los Usuarios y el secreto y seguridad de los datos personales, adoptando para ello las medidas técnicas y organizativas necesarias para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados, habida cuenta el estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.",
-      "DESCRIPTION_3": "Los datos personales de los Usuarios del Sitio Web, solo se obtendrán para ser tratados cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y las finalidades determinadas, explícitas, consentidas y/o legítimas para las que se hayan recabado. Cuando se recaben datos personales a través del Sitio Web, se informará previamente al Usuario de forma clara e inequívoca.",
-      "DESCRIPTION_4": "El Usuario deberá visitar la Política de Privacidad de UBIQ, en este mismo Sitio Web, donde encontrará información detallada respecto la protección de datos de carácter personal."
+      "TITLE": "PROTECCIÓ DE DADES PERSONALS",
+      "DESCRIPTION_1": "UBIQ, com a titular del Lloc Web, informa als Usuaris que és el responsable dels tractaments que es realitzin de les dades personals sol·licitades i facilitades durant la utilització del Lloc Web.",
+      "DESCRIPTION_2": "De conformitat amb el que estableix la legislació aplicable en matèria de protecció de dades, UBIQ respecta la privadesa dels Usuaris i el secret i seguretat de les dades personals, adoptant per a això les mesures tècniques i organitzatives necessàries per evitar la pèrdua, mal ús, alteració, accés no autoritzat i robatori de les dades personals facilitades, tenint en compte l'estat de la tecnologia, la naturalesa de les dades i els riscos a què estan exposats.",
+      "DESCRIPTION_3": "Les dades personals dels Usuaris del Lloc Web, només s'obtindran per ser tractades quan siguin adequades, pertinents i no excessives en relació amb l'àmbit i les finalitats determinades, explícites, consentides i/o legítimes per a les quals s'hagin demanat. Quan es demanin dades personals a través del Lloc Web, s'informarà prèviament a l'Usuari de forma clara i inequívoca.",
+      "DESCRIPTION_4": "L'Usuari haurà de visitar la Política de Privadesa d'UBIQ, en aquest mateix Lloc Web, on trobareu informació detallada respecte a la protecció de dades de caràcter personal."
     },
     "SITE_UPDATE": {
-      "TITLE": "ACTUALIZACIÓN DEL SITIO WEB",
-      "DESCRIPTION_1": "Para mejorar el servicio en beneficio de los Usuarios, UBIQ S.L.U se reserva el derecho a actualizar, modificar o eliminar sin previo aviso, la presentación y configuración del Sitio Web, los contenidos e información contenidos en él, así como modificar las Condiciones de Uso que entrarán en vigor desde el momento de su publicación en el Sitio Web siendo aplicables desde esa fecha."
+      "TITLE": "ACTUALITZACIÓ DEL LLOC WEB",
+      "DESCRIPTION_1": "Per millorar el servei en benefici dels Usuaris, UBIQ S.L.U es reserva el dret a actualitzar, modificar o eliminar sense previ avís, la presentació i configuració del Lloc Web, els continguts i informació continguts en ell, així com modificar les Condicions d'Ús que entraran en vigor des del moment de la seva publicació al Lloc Web sent aplicables des d'aquesta data."
     },
     "WEB_INTEROPERABILITY_AND_FUNCTIONALITY": {
-      "TITLE": "INTEROPERATIVIDAD Y FUNCIONALIDAD DEL SITIO WEB",
-      "DESCRIPTION_1": "El Sitio Web se ejecuta en las plataformas Safari, Firefox, Internet Explorer y Chrome actualizadas en 2019. Está especialmente optimizada para Chrome."
+      "TITLE": "INTEROPERATIVITAT I FUNCIONALITAT DEL LLOC WEB",
+      "DESCRIPTION_1": "El Lloc Web s'executa a les plataformes Safari, Firefox, Internet Explorer i Chrome actualitzades el 2019. Està especialment optimitzada per a Chrome."
     },
     "INTEGRITY": {
-      "TITLE": "INTEGRIDAD",
-      "DESCRIPTION_1": "Si alguna de las condiciones de uso del presente Aviso Legal fuera anulado o se considerase no válida, el resto de condiciones no se verán afectadas continuando con plena vigencia y validez."
+      "TITLE": "INTEGRITAT",
+      "DESCRIPTION_1": "Si alguna de les condicions dús del present Avís Legal fos anul·lat o es considerés no vàlida, la resta de condicions no es veuran afectades continuant amb plena vigència i validesa."
     },
     "APPLICABLE_LEGISLATION_AND_JURISDICTION": {
-      "TITLE": "LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
-      "DESCRIPTION_1": "Toda cuestión o controversia que pudiera surgir en referencia a la aplicación del presente Aviso Legal entre el Usuario y UBIQ se rige por la normativa española vigente aplicable en la materia. Y siempre que la normativa vigente al efecto prevea la posibilidad para las partes de someterse a un fuero determinado, el Usuario renuncia de forma expresa al fuero que pudiera corresponderle y se somete para la resolución de la controversia a los Juzgados y Tribunales de Barcelona."
+      "TITLE": "LEGISLACIÓ APLICABLE I JURISDICCIÓ",
+      "DESCRIPTION_1": "Tota qüestió o controvèrsia que pogués sorgir en referència a l'aplicació del present Avís Legal entre l'Usuari i l'UBIQ es regeix per la normativa espanyola vigent aplicable a la matèria. I sempre que la normativa vigent a aquest efecte prevegi la possibilitat per a les parts de sotmetre's a un fur determinat, l'Usuari renuncia de forma expressa al fur que li pogués correspondre i se sotmet per a la resolució de la controvèrsia als Jutjats i Tribunals de Barcelona."
     },
     "MODIFICATIONS": {
-        "LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
+        "LAST_UPDATE": "Data de la ultima actualització: 12 del 12 de 2023."
     }
 
   }
