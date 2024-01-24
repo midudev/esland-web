@@ -8,18 +8,18 @@ if (editionsVotesFilePath === undefined) {
 
 const editionsVotesFile = Bun.file(editionsVotesFilePath)
 const votes: [{
-  categoria: string,
-  candidatos: { nombre: string, imagen: string, enlace: string, id: string }[],
+  categoryName: string,
+  candidates: { name: string, image: string, link: string, id: string }[],
   id: string
 }] = JSON.parse(await editionsVotesFile.text())
 const inserts: string[] = []
 
-votes.forEach(({ categoria: categoryName, candidatos: categoryCandidates, id: categoryId }) => {
+votes.forEach(({ categoryName, candidates: categoryCandidates, id: categoryId }) => {
   inserts.push(
     `INSERT INTO Categories (category_id, category_name) VALUES ("${categoryId}", "${categoryName}")`
   )
   categoryCandidates.forEach((candidate) => {
-    const { id: candidateId, nombre: candidateName } = candidate
+    const { id: candidateId, name: candidateName } = candidate
     inserts.push(
       `INSERT INTO Options (option_id, category_id, option_name) VALUES ("${candidateId}", "${categoryId}", "${candidateName}")`
     )
