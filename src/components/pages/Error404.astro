@@ -2,8 +2,7 @@
 import Error404Layout from "@/layouts/Error404Layout.astro";
 import LogoTitle from "@/components/LogoTitle.astro";
 import { getI18N } from "@/i18n"
-import HeroContainer from "@/components/HeroContainer.astro";
-import Button from "@/components/Button.tsx"
+import styles from "@/components/styles/Button.module.css"
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale })
@@ -17,7 +16,7 @@ const i18n = getI18N({ currentLocale })
             <div class="mx-auto flex flex-col pt-20 relative justify-center items-center">
                 <LogoTitle class="w-[70%]" />
                 <div class="absolute">
-                    <h1 class="text-4xl font-bold text-white text-center pr-2 mt-2">
+                    <h1 class="text-4xl font-bold text-white text-center pr-2 mt-1">
                         404
                     </h1>
                     <p class="text-white text-[10px] md:text-xs text-center uppercase mt-2 ">
@@ -25,11 +24,22 @@ const i18n = getI18N({ currentLocale })
                         PÁGINA NO ENCONTRADA
                     </p>
                 </div>
-                <a href="/" class="hover:text-cyan-100 text__glowing text-sm">
-                    <span
-                        class="border-white inline-flex brightness-200 text-sm w-fit border-2 border-solid rounded-full py-2 px-12"
-                        > Volver a la página de inicio
-                    </span>
+                <a href="/" class={`
+                  hover:text-cyan-100
+                    text__glowing
+                    text-sm 
+                    ${styles.button} 
+                    w-fit
+                    font-medium
+                    no-underline
+                    px-5
+                    py-3
+                    border
+                    border-solid
+                    border-white
+                    rounded-full
+                    uppercase`}>
+                     Volver a la página de inicio
                 </a> 
             </div>
         </section>
