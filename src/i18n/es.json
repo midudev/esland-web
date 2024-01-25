@@ -7,7 +7,9 @@
 		"INFO_TITLE": "Información - Premios ESLAND 2024",
 		"INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios ESLAND 2024 y descarga el Kit de Prensa",
 		"VOTE_TITLE": "Vota por tus creadores de contenido favoritos - Premios ESLAND 2024",
-		"VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra"
+		"VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra",
+		"ERROR_404_TITLE": "404 Página no encontrada - Premios ESLAND 2024",
+		"ERROR_404_DESCRIPTION": "404 Página no encontrada - Premios ESLAND 2024"
 	},
 	"HEADER": {
 		"LOGO": "Volver a la página de inicio de los Premios ESLAND"
@@ -383,5 +385,9 @@
 		"MODIFICATIONS": {
 			"LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
 		}
+	},
+	"ERROR_404": {
+		"TITLE": "Página no encontrada",
+		"BACK_HOMEPAGE_BTN": "Volver a la página de inicio"
 	}
 }

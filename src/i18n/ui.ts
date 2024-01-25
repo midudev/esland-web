@@ -60,7 +60,7 @@ export const ui = {
 export const routes = {
 	es: {
 		vota: 'vota',
-		info: 'informacion',
+		info: 'info',
 		archivo: 'archivo',
 		'aviso-legal': 'aviso-legal',
 		privacidad: 'privacidad',
