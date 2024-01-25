@@ -1,0 +1,40 @@
+---
+interface Props {
+  id: string;
+  initial: number;
+  final: number;
+  decimals?: number;
+  duration?: number;
+}
+
+const { id, initial, final, decimals = 0, duration = 1500 } = Astro.props;
+---
+
+<span id={id}></span>
+
+<script>
+  import ProgressiveNumber from "@/components/ProgressiveNumber";
+  // @ts-ignore
+  window.ProgressiveNumber = ProgressiveNumber;
+</script>
+
+<script define:vars={{ id, initial, final, duration, decimals }}>
+  wayForGlobal("ProgressiveNumber", (ProgressiveNumber) => {
+    const el = document.getElementById(id);
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        observer.unobserve(el);
+        ProgressiveNumber.generate(
+          initial,
+          final,
+          (value) => {
+            el.innerText = value;
+          },
+          duration,
+          decimals
+        );
+      }
+    });
+    observer.observe(el);
+  });
+</script>

@@ -3,14 +3,19 @@ import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel/serverless";
 import preact from "@astrojs/preact";
 import i18n from "./src/i18n/config";
+import svelte from '@astrojs/svelte';
 import auth from "auth-astro";
 
+import vue from "@astrojs/vue";
 // https://astro.build/config
-const config = {
+
+export default defineConfig({
   integrations: [
     tailwind(),
     preact(),
-    auth()
+    auth(),
+    vue(),
+    svelte()
   ],
   i18n,
   trailingSlash: "never",
@@ -18,13 +23,8 @@ const config = {
   adapter: vercel(),
   build: {
     assets: 'assets'
-  }
-};
-
-if (i18n.routing.prefixDefaultLocale) {
-  config.redirects = {
+  },
+  redirects: i18n.routing.prefixDefaultLocale ? {
     '/': `/${i18n.defaultLocale}`
-  }
-}
-
-export default defineConfig(config);
+  } : undefined
+});

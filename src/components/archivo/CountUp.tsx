@@ -1,15 +1,23 @@
-import { useProgressiveNumber } from '@/hooks/useProgressiveNumber'
-import { useEffect } from 'preact/hooks'
+import { useState, useEffect, useRef } from "preact/hooks"
+import ProgressiveNumber from "@/components/ProgressiveNumber";
 
-export const CountUp = (
-  { initial, final, decimals, duration }:
+export default ({ initial, final, decimals, duration }:
   { initial: number, final: number, decimals?: number, duration?: number }
 ) => {
-  const [count, setCount] = useProgressiveNumber(initial, duration, decimals)
-
+  const [count, setCount] = useState(initial);
+  const [step, setStep] = useState(0);
+  const generator: any = useRef(null);
   useEffect(() => {
-    setCount(final)
-  }, [])
+    generator.current = new ProgressiveNumber(initial, duration, decimals);
+    generator.current.start(final)
+  }, []);
+  useEffect(() => {
+    const timeout = generator.current.schedule((value: number, step: number) => {
+      setCount(value);
+      setStep(step);
+    }, false)
+    return () => clearTimeout(timeout);
+  }, [step])
 
   return <span>{count}</span>
 }
