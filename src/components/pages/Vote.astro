@@ -19,7 +19,7 @@ const session = await getSession(Astro.request)
 const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp"
 ---
 
-<Layout title="Votar" description="Votar">
+<Layout title={i18n.SEO.VOTE_TITLE} description={i18n.SEO.VOTE_DESCRIPTION}>
   <section
     class="bg-no-repeat bg-cover relative pb-24 min-h-screen w-full max-w-[100vw]"
   >
