@@ -1,0 +1,26 @@
+{
+    "root": true,
+    "env": { "browser": true, "node": true, "es2020": true },
+    "extends": [
+        "eslint:recommended", 
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+    ],
+    "ignorePatterns": ["dist", ".eslintrc.json", "commitlint.config.js"],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "curly": ["error", "multi-line"],
+        "max-len": ["error", { "code": 160 }],
+        "indent": ["error", 2],
+        "no-console": "error",
+        "prettier/prettier": [ "error", 
+            { 
+                "endOfLine": "auto",
+                "tabWidth": 2,
+                "printWidth": 160
+            }
+          ]
+    }
+}

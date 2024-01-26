@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+}
+.container > header {
+  position: relative;
+  display: flex;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+  transition: box-shadow 0.3s ease-in-out;
+  font-size: 0.8rem;
+  gap: 1rem;
+}
+.container:nth-child(odd) > header {
+  background-image: linear-gradient(to right, #a9c9f311 0%, #6399e0 70%, #427ac2 100%);
+}
+.container > header:hover {
+  box-shadow: 0 0 1.5rem rgba(248, 45, 255, 0.9);
+  z-index: 1;
+}
+.container > header::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 0;
+  height: 80%;
+  background-color: #28d9e6;
+  border-radius: 0 100px 100px 0;
+  transition:
+    width 0.3s,
+    right 0.3s;
+}
+.container > header[data-selected="true"]::after {
+  width: 4px;
+  right: -4px;
+}
+.container .category {
+  position: relative;
+  flex: 1 1 0;
+}
+.container .winner {
+  position: relative;
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+}
+.container > section {
+  padding-left: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  height: 0;
+}
+@media (min-width: 520px) {
+  .container header {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .container header {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container header {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .container header {
+    font-size: 1.2rem;
+  }
+}
