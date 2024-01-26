@@ -6,6 +6,10 @@ type Locale = {
   routes: string[];
 };
 
+interface Route {
+  params: { slug: string | undefined };
+}
+
 const components = [
   "vota",
   "info",
@@ -14,6 +18,8 @@ const components = [
   "privacidad",
   "cookies",
 ];
+
+const INDEX_COMPONENT = "inicio";
 
 const LOCALES: Record<string, Locale> = {
   es: {
@@ -56,10 +62,7 @@ export function split(currentLocale: string) {
   const currentLocaleData = LOCALES[currentLocale];
   const otherLocales = structuredClone(LOCALES);
   delete otherLocales[currentLocale];
-  return [
-    currentLocaleData,
-    otherLocales
-  ]
+  return [currentLocaleData, otherLocales];
 }
 
 export function needPrefix(locale: string): boolean {
@@ -76,7 +79,7 @@ export function getComponentPath(locale: string, path: string) {
     path = path.substring(3);
   }
   const index = LOCALES[locale].routes.indexOf(path);
-  return index === -1 ? '/' : components[index];
+  return index === -1 ? "/" : components[index];
 }
 
 export function getRelativeLocaleUrl(locale: string, path: string) {
@@ -93,6 +96,62 @@ export function getRelativeLocaleUrl(locale: string, path: string) {
     path = `/${locale}${path}`;
   }
   return path !== "/" ? path.replace(/\/+$/, "") : path;
+}
+
+export async function getRoutesAndPages(
+  resolveComponents: () => Promise<Record<string, any>>
+) {
+  const components = (await resolveComponents()).reduce(
+    //@ts-ignore
+    (acc: { [key: string]: any }, entry) => {
+      if (entry.url) {
+        let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
+        acc[url] = entry.default;
+      }
+      return acc;
+    },
+    {}
+  );
+
+  const pages: Record<string, any> = {};
+
+  const routes = config.locales.reduce((acc: Route[], lang: string) => {
+    const needPrefix =
+      lang !== config.defaultLocale || config.routing.prefixDefaultLocale;
+    for (const [path, component] of Object.entries(components)) {
+      let slug: string | undefined = path;
+      if (slug === INDEX_COMPONENT) {
+        slug = needPrefix ? lang : undefined;
+      } else if (needPrefix) {
+        slug = getRelativeLocaleUrl(lang, slug).substring(1);
+      }
+      acc.push({
+        params: { slug },
+      });
+      pages[slug === undefined ? INDEX_COMPONENT : slug] = component;
+    }
+    if (needPrefix && lang === config.defaultLocale) {
+      acc.push({
+        params: { slug: undefined },
+      });
+    }
+    return acc;
+  }, []);
+
+  return [
+    {
+      resolve(slug?: string) {
+        if (slug?.endsWith('/')) {
+          slug = slug.slice(0, -1);
+        }
+        if (!slug) {
+          slug = INDEX_COMPONENT;
+        }
+        return pages[slug];
+      },
+    },
+    routes,
+  ];
 }
 
 export default config;
