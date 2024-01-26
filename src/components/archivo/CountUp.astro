@@ -15,26 +15,53 @@ const { id, initial, final, decimals = 0, duration = 1500 } = Astro.props;
 <script>
   import ProgressiveNumber from "@/components/ProgressiveNumber";
   // @ts-ignore
-  window.ProgressiveNumber = ProgressiveNumber;
+  window.ProgressiveNumber = function ({
+    id,
+    initial,
+    final,
+    duration,
+    decimals,
+  }: {
+    id: string;
+    initial: number;
+    final: number;
+    duration: number;
+    decimals: number;
+  }) {
+    const el = document.getElementById(id);
+    if (el !== null) {
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          // @ts-ignore
+          observer.unobserve(el);
+          ProgressiveNumber.generate(
+            initial,
+            final,
+            (value) => {
+              // @ts-ignore
+              el.innerText = value;
+            },
+            duration,
+            decimals
+          );
+        }
+      });
+      // @ts-ignore
+      observer.observe(el);
+    }
+  };
 </script>
 
 <script define:vars={{ id, initial, final, duration, decimals }}>
-  wayForGlobal("ProgressiveNumber", (ProgressiveNumber) => {
-    const el = document.getElementById(id);
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        observer.unobserve(el);
-        ProgressiveNumber.generate(
-          initial,
-          final,
-          (value) => {
-            el.innerText = value;
-          },
-          duration,
-          decimals
-        );
-      }
+  // Es la forma correcta cuando hay una variable global que se debe cargar
+  // ProgressiveNumber
+  document.addEventListener("astro:page-load", () => {
+    ProgressiveNumber({ // No esta global hasta que astro no lo carga.
+      id,
+      initial,
+      final,
+      duration,
+      decimals,
     });
-    observer.observe(el);
   });
 </script>

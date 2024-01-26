@@ -12,6 +12,8 @@ SEO:
   VOTE_TITLE: Vota por tus creadores de contenido favoritos - Premios ESLAND 2024
   VOTE_DESCRIPTION: Vota por tus creadores de contenido favoritos de España,
     Latinoamérica y Andorra
+  ERROR_404_TITLE: 404 Página no encontrada - Premios ESLAND 2024
+  ERROR_404_DESCRIPTION: 404 Página no encontrada - Premios ESLAND 2024
 HEADER:
   LOGO: Volver a la página de inicio de los Premios ESLAND
 HEADER_VOTE: VOTA
@@ -497,11 +499,10 @@ PRIVACY:
       Cuando se produzcan cambios significativos en esta Política, éstos se
       publicarán en el Sitio Web.
     LAST_UPDATE: "Fecha de la última actualización: 12 del 12 de 2023."
-INFO:
-  TITLE_HERO_1: Los premios
-  TITLE_HERO_2: ESLAND
-  GALLERY_TITLE: GALERÍA
-  GALLERY_TEXT: Algunos de los mejores momentos de la gala que pasarán a la historia.
+GALLERY:
+  TITLE: GALERÍA
+  TEXT: Algunos de los mejores momentos de la gala que pasarán a la historia.
+  LOAD_MORE: Descúbrelas todas
 LEGAL_NOTICE:
   TITLE: Aviso legal
   ACCESS_AND_USE:
@@ -740,3 +741,6 @@ LEGAL_NOTICE:
       controversia a los Juzgados y Tribunales de Barcelona.
   MODIFICATIONS:
     LAST_UPDATE: "Fecha de la última actualización: 12 del 12 de 2023."
+ERROR_404:
+  TITLE: Página no encontrada
+  BACK_HOMEPAGE_BTN: Volver a la página de inicio

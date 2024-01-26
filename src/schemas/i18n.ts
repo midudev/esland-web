@@ -10,6 +10,8 @@ export default z.object({
     INFO_DESCRIPTION: z.string(),
     VOTE_TITLE: z.string(),
     VOTE_DESCRIPTION: z.string(),
+    ERROR_404_TITLE: z.string(),
+    ERROR_404_DESCRIPTION: z.string(),
   }),
   HEADER: z.object({
     LOGO: z.string(),
@@ -259,11 +261,10 @@ export default z.object({
       LAST_UPDATE: z.string(),
     }),
   }),
-  INFO: z.object({
-    TITLE_HERO_1: z.string(),
-    TITLE_HERO_2: z.string(),
-    GALLERY_TITLE: z.string(),
-    GALLERY_TEXT: z.string(),
+  GALLERY: z.object({
+    TITLE: z.string(),
+    TEXT: z.string(),
+    LOAD_MORE: z.string(),
   }),
   LEGAL_NOTICE: z.object({
     TITLE: z.string(),
@@ -356,5 +357,9 @@ export default z.object({
     MODIFICATIONS: z.object({
       LAST_UPDATE: z.string(),
     }),
+  }),
+  ERROR_404: z.object({
+    TITLE: z.string(),
+    BACK_HOMEPAGE_BTN: z.string(),
   }),
 });

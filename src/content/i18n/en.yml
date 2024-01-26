@@ -11,6 +11,9 @@ SEO:
   VOTE_TITLE: Vote for Your Favorite Content Creators - ESLAND Awards 2024
   VOTE_DESCRIPTION: Support your favorite content creators from Spain, Latin
     America, and Andorra by voting for them.
+  ERROR_404_TITLE: 404 Page not found - ESLAND Awards 2024
+  ERROR_404_DESCRIPTION: Page not found (Error 404). Check the URL or explore our
+    sections. Need help? Contact us.
 HEADER:
   LOGO: Return to the ESLAND Awards Homepage
 HEADER_VOTE: VOTE
@@ -448,12 +451,11 @@ PRIVACY:
       review this policy. Any substantive changes to this Privacy Policy will be
       communicated on the Website.
     LAST_UPDATE: "Last update date: December 12, 2023."
-INFO:
-  TITLE_HERO_1: The ESLAND
-  TITLE_HERO_2: Awards
-  GALLERY_TITLE: GALLERY
-  GALLERY_TEXT: Capture some of the gala's most memorable moments that will go
-    down in history.
+GALLERY:
+  TITLE: GALLERY
+  TEXT: Capture some of the gala's most memorable moments that will go down in
+    history.
+  LOAD_MORE: Discover them all
 LEGAL_NOTICE:
   TITLE: Legal Notice
   ACCESS_AND_USE:
@@ -530,20 +532,21 @@ LEGAL_NOTICE:
       that may result from such access or use by the user. As the owner of the
       website, UBIQ is exempt from any liability that may arise from the actions
       of the user.
-    DESCRIPTION_8: Do not store, input, or disseminate on or from the Website any
-      defamatory, injurious, obscene, threatening, xenophobic, or
-      violence-inciting information or material, discriminating based on race,
-      gender, ideology, religion, or that violates morality, public order,
-      fundamental rights, public freedoms, honor, privacy, or the image of third
-      parties, and, in general, that infringes current regulations.
-    DESCRIPTION_9: The User is solely and exclusively responsible for accessing the
-      Website and using the information and data contained therein.
-    DESCRIPTION_10: UBIQ will not be held responsible for any consequences, damages,
-      or harm arising from the access or use of the Website and its content by
-      Users. UBIQ, as the owner of the Website, is exempt from any liability
-      that may arise from the actions of the User. Therefore, the User is solely
-      responsible for any claims initiated by third parties against UBIQ for the
-      access or use that the User makes of the Website.
+    DESCRIPTION_8: No almacenar, introducir o difundir en o desde el Sitio Web
+      información o material difamatorio, injurioso, obsceno, amenazador,
+      xenófogo o que incite a la violencia, discriminación por razón de raza,
+      sexo, ideología, religión, atente contra la moral, el orden público, los
+      derechos fundamentales, las libertades públicas, el honor, la intimidad o
+      la imagen de terceros, y en general que infrinja la normativa vigente.
+    DESCRIPTION_9: El Usuario es el único y exclusivo responsable del acceso al
+      Sitio Web y del uso que haga de la información y datos contenidos.
+    DESCRIPTION_10: UBIQ no responderá de ninguna consecuencia, daño o perjuicio
+      derivados del acceso o uso del Sitio Web y de su contenido por parte de
+      los Usuarios. UBIQ, como titular del Sitio Web, queda exonerado de
+      cualquier responsabilidad que pudiera derivarse de las acciones del
+      Usuario. De manera que el Usuario es el único responsable frente a
+      cualquier reclamación iniciada por terceras personas contra UBIQ por el
+      acceso o uso que el Usuario haga del Sitio Web.
   DISCLAIMER_OF_LIABILITY:
     TITLE: Disclaimer of Liability
     DESCRIPTION_1: While UBIQ strives to ensure the uninterrupted and error-free
@@ -563,23 +566,25 @@ LEGAL_NOTICE:
       Internet system or other electronic systems, nor for the inability to
       provide the service or allow access for reasons not attributable to UBIQ,
       due to the user, third parties, or force majeure.
-    DESCRIPTION_4: The invulnerability of the Website and/or the invulnerability of
-      the security measures adopted therein.
-    DESCRIPTION_5: The contents, services, errors, or omissions that the content of
-      the Website or the links or links that may be enabled could have.
-    DESCRIPTION_6: The existence of viruses or harmful programs in the content that
-      may cause alterations in the computer system, electronic documents, or
-      stored files of the Users.
-    DESCRIPTION_7: Phone or network breakdowns motivated by causes beyond the owner
-      of the Website.
-    DESCRIPTION_8: Delays or blockages in the operational functioning of the system
-      caused by deficiencies or overload in phone lines or the Internet.
-    DESCRIPTION_9: Illegitimate intrusions beyond the control of the owner of the
-      Website, such as unauthorized access, copying, alteration, or deletion of
-      information and data carried out by third parties on the Website.
-    DESCRIPTION_10: UBIQ employs all necessary technical resources to reduce this
-      type of risks. However, it is informed to the User that such risks exist,
-      and UBIQ is not responsible for the damages that may occur.
+    DESCRIPTION_4: ·La invulnerabilitat del Lloc Web i/o la invulnerabilitat de les
+      mesures de seguretat que s'adoptin en el mateix.
+    DESCRIPTION_5: ·Els continguts, serveis, errors o omissions que pogués tenir el
+      contingut del Lloc Web o dels enllaços que puguin estar habilitats.
+    DESCRIPTION_6: ·L'existència de virus o programes lesius en els continguts que
+      puguin produir alteracions en el sistema informàtic, en els documents
+      electrònics o en els fitxers emmagatzemats dels Usuaris.
+    DESCRIPTION_7: ·Avaries telefòniques o de xarxes motivades per causes alienes al
+      titular del Lloc Web.
+    DESCRIPTION_8: ·Retards o bloquejos en el funcionament operatiu del sistema
+      causat per deficiències o sobrecàrrega a les línies telefòniques o a
+      Internet.
+    DESCRIPTION_9: ·Les intromissions il·legítimes fora de control del titular del
+      Lloc Web, com els accessos no autoritzats, les còpies, l'alteració o la
+      supressió d'informació i dades realitzades per tercers en el Lloc Web.
+    DESCRIPTION_10: UBIQ empra tots els recursos tècnics necessaris per reduir
+      aquest tipus de riscos. No obstant això, s'informa a l'Usuari que aquests
+      riscos existeixen i que UBIQ no es responsabilitza dels danys que
+      poguessin ocasionar.
   INTELLECTUAL_AND_INDUSTRIAL_PROPERTY:
     TITLE: Intellectual and Industrial Property
     DESCRIPTION_1: The contents of the website, including text, images, graphic
@@ -591,26 +596,28 @@ LEGAL_NOTICE:
       prohibited from reproducing, transforming, distributing, publicly
       communicating, making available, extracting, and/or reusing the website or
       any of its parts without the express written permission of UBIQ.
-    DESCRIPTION_3: In no case shall the access and use of the Website by Users be
-      considered as a grant of a license or right to any asset of UBIQ or its
-      legitimate authors, and therefore, it shall not imply a transfer,
-      transmission, or any waiver of Intellectual Property or Industrial rights.
-    DESCRIPTION_4: Unless expressly authorized by UBIQ or the third-party rights
-      holders, all reproduction, copying, conversion, distribution,
-      modification, deletion or transformation, publication, commercialization,
-      use of reverse engineering techniques, or any other means to obtain the
-      source code, and any other activity that may be carried out with the data
-      and information contained on the Website, as well as its design and the
-      selection and presentation model, is strictly prohibited. The User may use
-      the information accessed through the use of the Website exclusively for
-      personal purposes and under no circumstances for commercial or business
-      purposes.
-    DESCRIPTION_5: Unauthorized use of the information contained on the Website, its
-      modification, or deletion of data, as well as the infringement upon the
-      Intellectual or Industrial Property Rights of UBIQ or third parties, will
-      result in legally established liabilities. UBIQ reserves the right to
-      exercise legal actions against Users who violate or infringe upon
-      intellectual or industrial property rights.
+    DESCRIPTION_3: En cap cas l'accés i ús al Lloc Web per part dels Usuaris, es
+      podrà considerar com una concessió de llicència d'ús o dret a cap actiu
+      d'UBIQ o dels seus autors legítims, pel que no implicarà una cessió, ni
+      transmissió, ni cap tipus de renúncia de drets de Propietat Intel·lectual
+      o Industrial.
+    DESCRIPTION_4: A menys que UBIQ o els tercers titulars dels drets ho autoritzin
+      expressament, queda prohibida tota reproducció, còpia, conversió,
+      distribució, modificació, supressió o transformació, publicació,
+      comercialització, utilització de tècniques d'enginyeria inversa o
+      qualsevol altre mitjà per obtenir el codi font i qualsevol altra activitat
+      que es pugui realitzar amb les dades i la informació continguda en el Lloc
+      Web, així com amb el seu disseny i la selecció i model de presentació.
+      L'Usuari utilitza la informació a la qual pugui accedir mitjançant l'ús
+      del Lloc Web, exclusivament per a fins personals i en cap cas per a fins
+      comercials o empresarials.
+    DESCRIPTION_5: La utilització no autoritzada de la informació continguda en el
+      Lloc Web, la seva modificació o supressió de dades, així com la lesió dels
+      Drets de Propietat Intel·lectual o Industrial d'UBIQ o de tercers, donarà
+      lloc a les responsabilitats legalment establertes, reservant-se UBIQ la
+      possibilitat d'exercir les accions judicials que procedeixin en dret
+      contra els Usuaris que violin o infringeixin els drets de propietat
+      intel·lectual o industrial.
   THIRD_PARTY_LINKS:
     TITLE: Third-Party Links
     DESCRIPTION_1: The website may contain links to third-party websites. The
@@ -661,13 +668,13 @@ LEGAL_NOTICE:
       este mismo Sitio Web, donde encontrará información detallada respecto la
       protección de datos de carácter personal.
   SITE_UPDATE:
-    TITLE: ACTUALIZACIÓN DEL SITIO WEB
-    DESCRIPTION_1: Para mejorar el servicio en beneficio de los Usuarios, UBIQ S.L.U
-      se reserva el derecho a actualizar, modificar o eliminar sin previo aviso,
-      la presentación y configuración del Sitio Web, los contenidos e
-      información contenidos en él, así como modificar las Condiciones de Uso
-      que entrarán en vigor desde el momento de su publicación en el Sitio Web
-      siendo aplicables desde esa fecha.
+    TITLE: WEBSITE UPDATE
+    DESCRIPTION_1: To improve the service for the benefit of Users, UBIQ S.L.U
+      reserves the right to update, modify or eliminate without prior notice,
+      the presentation and configuration of the Website, the contents and
+      information contained therein, as well as modify the Conditions of Use
+      that They will come into force from the moment of their publication on the
+      Website and will be applicable from that date.
   WEB_INTEROPERABILITY_AND_FUNCTIONALITY:
     TITLE: Web Interoperability and Functionality
     DESCRIPTION_1: The website is designed to support the latest versions of major
@@ -675,10 +682,10 @@ LEGAL_NOTICE:
       are optimized for these browsers, and users are recommended to use the
       latest versions for the best browsing experience.
   INTEGRITY:
-    TITLE: INTEGRIDAD
-    DESCRIPTION_1: Si alguna de las condiciones de uso del presente Aviso Legal
-      fuera anulado o se considerase no válida, el resto de condiciones no se
-      verán afectadas continuando con plena vigencia y validez.
+    TITLE: INTEGRITY
+    DESCRIPTION_1: If any of the conditions of use of this Legal Notice are annulled
+      or considered invalid, the rest of the conditions will not be affected and
+      will continue to be in full force and validity.
   APPLICABLE_LEGISLATION_AND_JURISDICTION:
     TITLE: Applicable Legislation and Jurisdiction
     DESCRIPTION_1: Any dispute or conflict that may arise from the interpretation or
@@ -688,4 +695,7 @@ LEGAL_NOTICE:
       jurisdiction that may correspond to them and submit to the Courts and
       Tribunals of the city of Barcelona.
   MODIFICATIONS:
-    LAST_UPDATE: "Fecha de la última actualización: 12 del 12 de 2023."
+    LAST_UPDATE: "Date of last update: 12 del 12 de 2023."
+ERROR_404:
+  TITLE: Page not found
+  BACK_HOMEPAGE_BTN: Back to homepage

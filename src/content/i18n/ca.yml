@@ -12,6 +12,9 @@ SEO:
   VOTE_TITLE: Vota pels teus creadors de contingut favorits - Premis ESLAND 2024
   VOTE_DESCRIPTION: Vota pels teus creadors de contingut favorits d'Espanya,
     Llatinoamèrica i Andorra
+  ERROR_404_TITLE: 404 Pàgina no trobada - Premis ESLAND 2024
+  ERROR_404_DESCRIPTION: Pàgina no trobada (Error 404). Verifica la URL o explora
+    les nostres seccions. Necessites ajuda? Contacta'ns.
 HEADER:
   LOGO: Tornar a la pàgina d'inici dels Premis ESLAND
 HEADER_VOTE: VOTA
@@ -494,11 +497,10 @@ PRIVACY:
       es produeixin canvis significatius en aquesta Política, aquests es
       publicaran al Lloc Web.
     LAST_UPDATE: "Data de la darrera actualització: 12 del 12 de 2023."
-INFO:
-  TITLE_HERO_1: Els premis
-  TITLE_HERO_2: ESLAND
-  GALLERY_TITLE: GALERÍA
-  GALLERY_TEXT: Alguns dels millors moments de la gala que passaran a la història.
+GALLERY:
+  TITLE: GALERIA
+  TEXT: Alguns dels millors moments de la gala que passaran a la història.
+  LOAD_MORE: Descobreix-les totes
 LEGAL_NOTICE:
   TITLE: Avís legal
   ACCESS_AND_USE:
@@ -734,3 +736,6 @@ LEGAL_NOTICE:
       controversia a los Juzgados y Tribunales de Barcelona.
   MODIFICATIONS:
     LAST_UPDATE: "Fecha de la última actualización: 12 del 12 de 2023."
+ERROR_404:
+  TITLE: Pàgina no trobadaa
+  BACK_HOMEPAGE_BTN: Tornar a la pàgina d'inici

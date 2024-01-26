@@ -37,17 +37,6 @@ const [currentLocaleData, otherLocales] = split(currentLocale);
     />
     <slot name="preload" />
     <ViewTransitions />
-    <script is:inline>
-      window.wayForGlobal = (property, callback, ...params) => {
-        return setTimeout(loop, 0);
-        function loop() {
-          if (!(property in window)) {
-            return setTimeout(loop, 10);
-          }
-          callback(window[property], ...params)
-        }
-      };
-    </script>
   </head>
 
   <body>
