@@ -1,5 +1,5 @@
 <script setup>
-import ProgressiveNumber from '@/components/ProgressiveNumber'
+import ProgressiveNumber from "./ProgressiveNumber";
 
 export let initial;
 export let final;

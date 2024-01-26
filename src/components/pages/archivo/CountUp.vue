@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import ProgressiveNumber from '@/components/ProgressiveNumber'
+import ProgressiveNumber from "./ProgressiveNumber";
 
 const { initial, final, duration, decimals } = defineProps({
   initial: {

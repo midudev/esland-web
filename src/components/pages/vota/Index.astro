@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { VoteSystem } from "@/components/vota/VoteSystem";
+import { VoteSystem } from "./VoteSystem";
 import { getRelativeLocaleUrl } from "@/i18n/config";
 import Button from "@/components/Button.astro";
 import { getSession } from "auth-astro/server";
@@ -114,7 +114,7 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
   </section>
 </Layout>
 <script>
-  import { auth } from "@/components/vota/Auth";
+  import { auth } from "./Auth";
   auth("vote-button", "logout-button")
 </script>
 

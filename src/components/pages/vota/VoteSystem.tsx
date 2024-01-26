@@ -1,6 +1,6 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
-import { VoteFinal } from "@/components/vota/VoteFinal"
+import { VoteFinal } from "./VoteFinal"
 
 export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n }) => {
   const {

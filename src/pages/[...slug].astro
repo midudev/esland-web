@@ -1,7 +1,7 @@
 ---
 import i18n, { getRoutesAndPages  } from '@/i18n'; // si uso '@/i18n/config' falla
 
-export const [pages, routes] = await getRoutesAndPages(() => Astro.glob("../components/pages/*.astro"));
+export const [pages, routes] = await getRoutesAndPages(() => Astro.glob("../components/pages/**/Index.astro"));
 
 export async function getStaticPaths() {
   return routes;

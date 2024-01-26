@@ -105,7 +105,10 @@ export async function getRoutesAndPages(
     //@ts-ignore
     (acc: { [key: string]: any }, entry) => {
       if (entry.url) {
-        let url = entry.url.replace("/", "").replace(".html", "").toLowerCase();
+        const url = entry.url.replace("/", "")
+          .replace(".html", "")
+          .toLowerCase()
+          .replace("/index", "");
         acc[url] = entry.default;
       }
       return acc;

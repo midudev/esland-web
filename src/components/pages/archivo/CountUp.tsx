@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "preact/hooks"
-import ProgressiveNumber from "@/components/ProgressiveNumber";
+import ProgressiveNumber from "./ProgressiveNumber";
 
 export default ({ initial, final, decimals, duration }:
   { initial: number, final: number, decimals?: number, duration?: number }
