@@ -82,7 +82,10 @@ export function getComponentPath(locale: string, path: string) {
   return index === -1 ? "/" : components[index];
 }
 
-export function getRelativeLocaleUrl(locale: string, path: string) {
+export function getRelativeLocaleUrl(locale: string | undefined, path: string) {
+  if (!locale || path.startsWith('#') || /^https?:\/\//.test(path)) {
+    return path
+  }
   path = trimSlash(path);
   if (locale in LOCALES) {
     const index = components.indexOf(path);

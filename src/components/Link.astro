@@ -9,12 +9,8 @@ interface Props extends HTMLAttributes<'a'> {
 
 const { currentLocale = "es" } = Astro
 const { href, locale, class: className, ...rest } = Astro.props
-let path = href as string;
-if (!/^https?:\/\//.test(path) && !path.startsWith('#')) {
-  path = getRelativeLocaleUrl(locale || currentLocale, path)
-}
 ---
 
-<a href={path} class:list={[className]} {...rest}>
+<a href={getRelativeLocaleUrl(locale || currentLocale, href as string)} class:list={[className]} {...rest}>
   <slot />
 </a>

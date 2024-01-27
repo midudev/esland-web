@@ -8,6 +8,7 @@
       ]
     },
     "jsx": "preserve",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+    "types": ["vitest/globals"],
   }
 }
