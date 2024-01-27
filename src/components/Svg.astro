@@ -8,39 +8,9 @@ interface Props {
   label?:string
 }
 
-declare global {
-  var __SVG__: any;
-}
+import { svg } from '@/components/Img/Resolver';
 
-import path from "node:path";
-import fs from "node:fs/promises";
 const { src, class: className, hidden, label, height, width } = Astro.props;
-let SVG = globalThis.__SVG__ || {};
-if (!Object.hasOwn(SVG, src as string)) {
-  SVG = await Astro.glob("/src/assets/images/*.svg");
-  const isProd = import.meta.env.MODE === "production";
-  SVG = await SVG.reduce(async (acc: Promise<Record<string, any>>, img: { default: { src: string } }) => {
-    let src = img.default.src;
-    const _acc = await acc;
-    if (typeof src === "string") {
-      src = src.replace("/@fs", "");
-      const parts = path.parse(src);
-      let name = parts.name;
-      if (isProd) {
-        src = `./dist${src}`;
-        name = name.substring(0, name.lastIndexOf("."));
-      } else {
-        src = src.substring(0, src.indexOf(".svg?")) + ".svg";
-      }
-      _acc[name] = await fs.readFile(src, "utf-8");
-      if (isProd) {
-        _acc[name] = _acc[name].replace(/\s+/g, ' ');
-      }
-    }
-    return _acc;
-  }, Promise.resolve({}));
-  globalThis.__SVG__ = SVG;
-}
 
 const inline = async (svg: string, attrs: Record<string, any>) => {
   let search: RegExpMatchArray | string | null = svg.match(/<svg([^>]+)/gi);
@@ -70,7 +40,8 @@ const inline = async (svg: string, attrs: Record<string, any>) => {
     return replace
   }
 };
-const content = inline(SVG[src], {
+
+const content = inline(await svg(src), {
   height,
   width,
   class: className,

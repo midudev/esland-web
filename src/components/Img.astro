@@ -1,38 +1,14 @@
 ---
 import type { HTMLAttributes } from "astro/types";
 import { Image } from "astro:assets";
+import { resolve } from "./Img/Resolver";
 
 interface Props extends HTMLAttributes<"img"> {}
 
-declare global {
-  var __IMAGES__: Record<string, any>;
-}
-
 const { src, alt = "", ...attrs } = Astro.props;
 
-export let IMAGES = globalThis.__IMAGES__ || {};
-
-if (!Object.hasOwn(IMAGES, src as string)) {
-  globalThis.__IMAGES__ = IMAGES = import.meta.glob(
-    "/src/assets/images/**/*.{png,jpg,webp}",
-    {
-      import: "default",
-      eager: true,
-    }
-  );
-}
-// export { IMAGES }
-
-export function resolve(src: string) {
-  if (!src.startsWith("/")) {
-    src = "/" + src;
-  }
-  return IMAGES[`/src/assets/images${src}`];
-}
 const img = resolve(src as string);
-if (!img) {
-  throw "error: not find image -> " + src
-}
+
 ---
 
 <Image src={img} alt={alt} {...Object.assign(attrs)} />
