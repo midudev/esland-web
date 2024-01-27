@@ -4,14 +4,14 @@ import Video from "./Video.astro"
 import Intro from "./Intro.astro"
 import Bento from "./Bento.astro"
 import PreFooter from "./PreFooter.astro"
-
+import jura from '@/assets/fonts/jura.woff2';
 const { i18n } = Astro.locals;
 ---
 
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <link
     rel="preload"
-    href="/fonts/jura.woff2"
+    href={jura}
     as="font"
     type="font/woff2"
     crossorigin

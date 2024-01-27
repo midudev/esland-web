@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 import SubtitleItem from "@/components/pages/aviso-legal/SubtitleItem.astro"
 import DescriptionItem from "@/components/pages/aviso-legal/DescriptionItem.astro"
+import jura from '@/assets/fonts/jura.woff2';
 
 const { i18n } = Astro.locals;
 
@@ -12,7 +13,7 @@ const H1_STYLES =
 <Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
   <link
     rel="preload"
-    href="/fonts/jura.woff2"
+    href={jura}
     as="font"
     type="font/woff2"
     crossorigin

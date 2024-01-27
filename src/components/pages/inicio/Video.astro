@@ -1,7 +1,8 @@
 ---
-import Button from "@/components/Button.astro"
+import Button from "@/components/Button.astro";
 import Svg from "@/components/Svg.astro";
-
+import mp4 from '@/assets/videos/video.mp4'
+import webm from '@/assets/videos/video.webm'
 const { i18n } = Astro.locals;
 ---
 
@@ -53,8 +54,8 @@ const { i18n } = Astro.locals;
       preload="metadata"
       class="video hidden cp-v h-full w-full object-cover object-top animate-duration-[2s] animate-ease-in-out"
     >
-      <source src="/video.webm" type="video/webm" />
-      <source src="/video.mp4" type="video/mp4" />
+      <source src={webm} type="video/webm" />
+      <source src={mp4} type="video/mp4" />
     </video>
   </div>
   <video
@@ -64,37 +65,39 @@ const { i18n } = Astro.locals;
     muted
     preload="metadata"
   >
-    <source src="/video.webm" type="video/webm" />
-    <source src="/video.mp4" type="video/mp4" />
+    <source src={webm} type="video/webm" />
+    <source src={mp4} type="video/mp4" />
   </video>
 </div>
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const firstVideo = document.querySelector("#main-video") as HTMLMediaElement
+    const firstVideo = document.querySelector(
+      "#main-video"
+    ) as HTMLMediaElement;
 
     if (firstVideo) {
       const videos = document.querySelectorAll(
         ".video"
-      ) as NodeListOf<HTMLMediaElement>
+      ) as NodeListOf<HTMLMediaElement>;
 
       if (firstVideo.readyState >= 3) {
         videos.forEach((videoEl) => {
-          videoEl.classList.remove("hidden")
-          videoEl.classList.add("animate-fade")
-        })
+          videoEl.classList.remove("hidden");
+          videoEl.classList.add("animate-fade");
+        });
 
-        return
+        return;
       }
 
       firstVideo.addEventListener("loadeddata", () => {
         videos.forEach((videoEl) => {
-          videoEl.classList.remove("hidden")
-          videoEl.classList.add("animate-fade")
-        })
-      })
+          videoEl.classList.remove("hidden");
+          videoEl.classList.add("animate-fade");
+        });
+      });
     }
-  })
+  });
 </script>
 
 <style>
@@ -103,7 +106,7 @@ const { i18n } = Astro.locals;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/jura.woff2") format("woff2");
+    src: url("../../../assets/fonts/jura.woff2") format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
       U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
       U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
