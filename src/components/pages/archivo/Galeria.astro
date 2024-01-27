@@ -2,6 +2,7 @@
 import "photoswipe/style.css"
 import editionsInfo from "@/content/meta/gallery.json"
 import Button from "@/components/Button.astro"
+import Img, { resolve } from "@/components/Img.astro"
 
 const offset = 10
 const { edicion } = Astro.props
@@ -29,24 +30,24 @@ const { i18n } = Astro.props
       photos.map(({ height, width }, i) => (
         <a
           class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
-          href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
+          href={resolve(`/archivo/${edicion}/gallery/img-${i + 1}.webp`, true)}
           target="_blank"
           data-cropped="true"
           data-pswp-width={width}
           data-pswp-height={height}
         >
-          <img
+          <Img
             class="rounded-xl object-cover w-full h-auto"
             loading="lazy"
-            src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+            src={`/archivo/${edicion}/gallery/thumbnails/img-${
               i + 1
             }.webp`}
             alt="Fotografía de los premios ESLAND"
           />
-          <img
+          <Img
             class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
             loading="lazy"
-            src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+            src={`/archivo/${edicion}/gallery/thumbnails/img-${
               i + 1
             }.webp`}
             alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
@@ -64,6 +65,9 @@ const { i18n } = Astro.props
 <script>
   import PhotoSwipeLightbox from "photoswipe/lightbox"
   import "@appnest/masonry-layout"
+  import { resolve } from "@/components/Img/Resolver"
+  //@ts-ignore
+  window.imageResolver = resolve;
 
   document.addEventListener("astro:page-load", () => {
     const lightbox = new PhotoSwipeLightbox({
@@ -97,22 +101,23 @@ const { i18n } = Astro.props
           $clone.setAttribute("data-pswp-height", img.height)
           $clone.setAttribute(
             "href",
-            `/archivo-page/${edicion}/gallery/img-${imgIndex}.webp`
+            imageResolver(`/archivo/${edicion}/gallery/img-${imgIndex}.webp`, true)
           )
           $clone.classList.add("animate-fade-up")
           $clone.classList.add("animate-delay-300")
           $clone.classList.add("opacity-0")
+          const src = imageResolver(`/archivo/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`, true);
           $clone
             .querySelector("img:first-child")
             .setAttribute(
               "src",
-              `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
+              src
             )
           $clone
             .querySelector("img:last-child")
             .setAttribute(
               "src",
-              `/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
+              src
             )
 
           return $clone?.outerHTML

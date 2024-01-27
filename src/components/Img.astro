@@ -3,6 +3,8 @@ import type { HTMLAttributes } from "astro/types";
 import { Image } from "astro:assets";
 import { resolve } from "./Img/Resolver";
 
+export { resolve }
+
 interface Props extends HTMLAttributes<"img"> {}
 
 const { src, alt = "", ...attrs } = Astro.props;
