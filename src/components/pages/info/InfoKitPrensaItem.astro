@@ -1,5 +1,6 @@
 ---
 const { link, title, image, download } = Astro.props
+import Img from "@/components/Img.astro"
 ---
 
 <article class="flex flex-col justify-center items-center">
@@ -8,12 +9,12 @@ const { link, title, image, download } = Astro.props
     class="relative group flex flex-col gap-y-4 text-center justify-center items-center mt-2 uppercase m-auto transition-all text__glowing"
     href={link}
   >
-    <img
+    <Img
       src={image}
       class="aspect-video rounded-lg w-full h-auto transition group-hover:scale-105"
       loading="lazy"
     />
-    <img
+    <Img
       src={image}
       class="absolute inset-0 opacity-0 brightness-200 blur-xl group-hover:opacity-40 scale-125 aspect-video rounded w-full h-auto -z-10 transition"
       loading="lazy"
