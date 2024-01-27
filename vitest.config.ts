@@ -13,6 +13,9 @@ export default getViteConfig({
     svelte({ hot: !process.env.VITEST }),
   ],
   resolve: {
+    // react-router-dom specifies "module" field in package.json for ESM entry
+    // if it's not mapped, it uses the "main" field which is CommonJS that redirects to CJS preact
+    mainFields: ['module'],
     alias: [
       {
         find: '@',

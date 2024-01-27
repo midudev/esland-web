@@ -115,7 +115,9 @@ const bkg = session ? "vote-system-bkg.webp" : "vota-bkg.webp";
 </Layout>
 <script>
   import { auth } from "./Auth";
-  auth("vote-button", "logout-button")
+  document.addEventListener("astro:page-load", () => {
+    auth("vote-button", "logout-button")
+  });
 </script>
 
 <style>
