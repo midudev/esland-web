@@ -26,7 +26,8 @@ function resolveSrc(src: string) {
 
 export function resolve(src: string, returnSrc: boolean = false) {
 
-  const img = IMAGES[resolveSrc(src)];
+  src = resolveSrc(src);
+  const img = IMAGES[src];
   if (!img) {
     throw "error: not find image -> " + src
   }
