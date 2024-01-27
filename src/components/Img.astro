@@ -7,8 +7,9 @@ interface Props extends HTMLAttributes<"img"> {}
 
 const { src, alt = "", ...attrs } = Astro.props;
 
-const img = resolve(src as string);
-
+const isWebp = src?.endsWith('.webp') ;
+const img = resolve(src as string, isWebp);
+const Element = isWebp ? 'img' : Image;
 ---
 
-<Image src={img} alt={alt} {...Object.assign(attrs)} />
+<Element src={img} alt={alt} {...Object.assign(attrs)} />
