@@ -1,16 +1,16 @@
 ---
-import { ViewTransitions } from "astro:transitions"
-import Header from "@/components/Header.astro"
-import Footer from "@/components/Footer.astro"
-import "@fontsource-variable/onest"
-import { getLangFromUrl } from "@/i18n/utils"
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+import "@fontsource-variable/onest";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
-  description: string
-  title: string
+  description: string;
+  title: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 ---
 
@@ -23,13 +23,7 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="robots" content="nofollow, noindex" />
     <title>{title}</title>
-    <link
-      rel="preload"
-      href="/fonts/tomaso.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    <link rel="preload" href="/fonts/tomaso.woff2" as="font" type="font/woff2" crossorigin />
     <slot name="preload" />
     <ViewTransitions />
   </head>
@@ -58,9 +52,8 @@ const lang = getLangFromUrl(Astro.url);
         font-weight: normal;
         font-display: swap;
         src: url("/fonts/tomaso.woff2") format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
-          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+          U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
 
       html {
@@ -68,7 +61,22 @@ const lang = getLangFromUrl(Astro.url);
         background: #151a36;
       }
 
-      
+      .textShadow {
+        transition: text-shadow 0.5s ease-out;
+      }
+      .textShadow:hover {
+        text-shadow:
+          0 0 10px rgba(255, 255, 255, 0.8),
+          0 0 20px rgba(255, 255, 255, 0.8),
+          0 0 22px rgba(255, 255, 255, 0.8),
+          0 0 40px rgba(66, 220, 219, 0.8),
+          0 0 60px rgba(66, 220, 219, 0.8),
+          0 0 80px rgba(66, 220, 219, 0.5),
+          0 0 100px rgba(66, 220, 219, 0.5),
+          0 0 140px rgba(66, 220, 219, 0.5),
+          0 0 200px rgba(66, 220, 219, 0.5);
+      }
+
       ::-webkit-scrollbar {
         width: 8px;
       }
@@ -85,7 +93,6 @@ const lang = getLangFromUrl(Astro.url);
       ::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 255, 0.5);
       }
-      
 
       p {
         color: rgba(255, 255, 255, 0.9);

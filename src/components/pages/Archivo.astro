@@ -1,37 +1,28 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import HeroContainer from "@/components/HeroContainer.astro"
-import Button from "@/components/Button.tsx"
+import Button from "@/components/Button.tsx";
+import HeroContainer from "@/components/HeroContainer.astro";
 
-import { getI18N } from "@/i18n"
-import Editions from "../Editions"
+import { getI18N } from "@/i18n";
+import Editions from "../Editions";
 
-const edicion = "2"
-const { currentLocale } = Astro
-const i18n = getI18N({ currentLocale })
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
-<Layout
-  title={i18n.SEO.ARCHIVO_TITLE}
-  description={i18n.SEO.ARCHIVO_DESCRIPTION}
->
+<Layout title={i18n.SEO.ARCHIVO_TITLE} description={i18n.SEO.ARCHIVO_DESCRIPTION}>
   <HeroContainer img="/archivo-background.webp">
-    <h1
-      class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest"
-    >
+    <h1 class="lg:text-6xl text-4xl text-center uppercase mb-20 font-tomaso tracking-widest">
       {i18n.ARCHIVO.HERO_TITLE}
     </h1>
 
-    <Button
-      className="animate-fade-up uppercase"
-      url="https://www.youtube.com/watch?v=1YmpPrqKP-g"
-    >
+    <Button className="animate-fade-up uppercase" url="https://www.youtube.com/watch?v=1YmpPrqKP-g">
       {i18n.ARCHIVO.HERO_BUTTON}
     </Button>
   </HeroContainer>
 
   <main class="pb-24">
-    <Editions i18n={i18n} client:load/>
+    <Editions locale={currentLocale || "es"} client:load />
   </main>
 </Layout>
