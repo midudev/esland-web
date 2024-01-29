@@ -12,7 +12,7 @@ const { currentLocale = "es" } = Astro;
 
 const session = await getSession(Astro.request);
 
-const bkg = session ? "votea/system-bkg.webp" : "vota/bkg.webp";
+const bkg = `/vota/${session ? "system-bkg" : "bkg"}.webp`;
 ---
 
 <Layout title={i18n.SEO.VOTE_TITLE} description={i18n.SEO.VOTE_DESCRIPTION}>

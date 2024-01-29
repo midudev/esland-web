@@ -1,12 +1,16 @@
-const lerp = (a: number, b: number, alpha: number): number => {
+type StepResolver = (current: number, step: number) => void;
+
+type Value = number | (() => number);
+
+function lerp(a: number, b: number, alpha: number): number {
   return a + alpha * (b - a);
-};
+}
 
 const easeOutCubic = (value: number): number => {
   return 1 - Math.pow(1 - value, 3);
 };
 
-function cal(value: number | (() => number)) {
+function cal(value: Value) {
   return typeof value === "function" ? value() : value;
 }
 
@@ -22,74 +26,61 @@ export default class ProgressiveNumber {
   private timer: number | NodeJS.Timeout = 0;
 
   constructor(
-    initial: number | (() => number),
+    initial: Value,
+    final: Value,
     duration: number = 1500,
     decimals: number = 0,
     delay: number = 5
   ) {
     initial = cal(initial);
-    this.target = initial;
+    this.target = cal(final);
     this.current = initial;
     this.initial = initial;
     this.duration = duration;
     this.decimals = decimals;
     this.delay = delay;
+    this.steps = Math.max(Math.floor(this.duration / this.delay), 1);
   }
 
-  static generate(initial: number, final: number, resolve: ((value?: number) => void),  duration: number = 1500, decimals: number = 0, delay: number = 5) {
-    new this(initial, duration, decimals, delay).generate(final, resolve);
+  static generate(initial: number, final: number, resolve: StepResolver,  duration: number = 1500, decimals: number = 0, delay: number = 5) {
+    new this(initial, final, duration, decimals, delay).generate(resolve);
   }
 
   generate(
-    value: number | ((prevTarget: number) => number),
     resolve: (count: number, step: number) => void
   ): void {
-    this.start(value)
     resolve(this.value, this.currentStep);
     this.schedule(resolve);
   }
 
-  start(value: number | ((prevTarget: number) => number)) {
-    const nextTarget = typeof value === "function" ? value(this.target) : value;
-    const steps = Math.max(Math.floor(this.duration / this.delay), 1);
-    this.steps = steps;
-    this.target = nextTarget;
-    this.currentStep = 1;
-    this.current = lerp(this.initial, nextTarget, easeOutCubic(1 / steps));
-    return this.value;
+  schedule(resolve: StepResolver, loop: boolean = true) {
+    const callback = loop ? this.loop : this.next;
+    return this.timer = setTimeout(callback.bind(this, resolve), this.delay);
   }
 
-  schedule(resolve: ((value: number, step: number) => void), loop: boolean = true) {
-    if (loop) {
-      return this.timer = setTimeout(this.loop.bind(this, resolve), this.delay);
-    }
-    // ideal para react aun tengo conocimiento del mismo
-    return this.timer = setTimeout(this.next.bind(this, resolve), this.delay)
-  }
-
-  next(resolve: (value: number, step: number) => void) {
-    const progress = this.currentStep / this.steps;
+  next(resolve: StepResolver) {
+    const progress = this.progress;
     let next = true;
-    if (progress === 1) {
+    if (progress >= 1) {
       this.current = this.target;
       next = false;
     } else {
-      this.current = lerp(
-        this.initial,
-        this.target,
-        easeOutCubic(progress)
-      );
+      this.current = lerp(this.initial, this.target, easeOutCubic(progress));
       this.currentStep++;
     }
     resolve(this.value, this.currentStep);
     return next;
   }
 
-  loop(resolve: (value: number, step: number) => void) {
+  loop(resolve: StepResolver) {
     clearTimeout(this.timer);
     if (this.next(resolve)) {
       this.schedule(resolve)
     }
+  }
+
+  get progress() {
+    return this.currentStep / this.steps
   }
 
   get value() {

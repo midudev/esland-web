@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "preact/hooks"
 import { type default as CandidatesType } from "@/content/editions/vote.json"
 import confetti from 'canvas-confetti'
+import { resolve as img } from '@/components/Img/Resolver'
 
 const RESULT_STATUS = {
   ERROR: -1,
@@ -100,7 +101,7 @@ export const VoteFinal = (
 
                           return (
                             <li>
-                              <img class="aspect-video w-full" src={`/voting-assets/${image}`} alt={name} />
+                              <img class="aspect-video w-full" src={img(`/vota/${image}`, true)} alt={name} />
                             </li>
                           )
                         })

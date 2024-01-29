@@ -1,6 +1,7 @@
 import type { FunctionComponent } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
+import { resolve as img } from '@/components/Img/Resolver'
 
 export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n }) => {
   const {
@@ -75,7 +76,7 @@ export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n })
                     )
                   }
 
-                  <img class="group-hover:mix-blend-normal transition-all rounded mix-blend-luminosity w-full h-auto" src={`/voting-assets/${imagen}`} alt={nombre} />
+                  <img class="group-hover:mix-blend-normal transition-all rounded mix-blend-luminosity w-full h-auto" src={img(`/vota/${imagen}`, true)} alt={nombre} />
                   <h2 class="font-semibold text-xs">{nombre}</h2>
                 </button>
               </li>

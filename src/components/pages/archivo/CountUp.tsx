@@ -8,8 +8,7 @@ export default ({ initial, final, decimals, duration }:
   const [step, setStep] = useState(0);
   const generator: any = useRef(null);
   useEffect(() => {
-    generator.current = new ProgressiveNumber(initial, duration, decimals);
-    generator.current.start(final)
+    generator.current = new ProgressiveNumber(initial, final, duration, decimals);
   }, []);
   useEffect(() => {
     const timeout = generator.current.schedule((value: number, step: number) => {

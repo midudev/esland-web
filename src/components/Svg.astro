@@ -8,40 +8,11 @@ interface Props {
   label?:string
 }
 
-import { svg } from '@/components/Img/Resolver';
+import { resolve } from '@/components/Img/SVG';
 
 const { src, class: className, hidden, label, height, width } = Astro.props;
 
-const inline = async (svg: string, attrs: Record<string, any>) => {
-  let search: RegExpMatchArray | string | null = svg.match(/<svg([^>]+)/gi);
-  if (search === null) {
-    return svg;
-  }
-  search = search[0];
-  let replace = search;
-  for (const [key, value] of Object.entries(attrs)) {
-    if (value !== undefined) {
-      replace = replaceString(
-        replace,
-        new RegExp(`${key}="([^"]+)"`, "g"),
-        `${key}="${value}"`
-      )
-    }
-  }
-  return svg.replace(search, replace);
-
-  function replaceString(replace: string, regx: RegExp, value: string) {
-    const res = replace.replace(regx, value);
-    if (res !== replace) {
-      replace = res;
-    } else {
-      replace += ` ${value}`;
-    }
-    return replace
-  }
-};
-
-const content = inline(await svg(src), {
+const content = resolve(src, {
   height,
   width,
   class: className,
