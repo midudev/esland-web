@@ -8,7 +8,7 @@ export const CountUp = (
   const [count, setCount] = useProgressiveNumber(initial, duration, decimals)
 
   useEffect(() => {
-    setCount(final)
+    setCount(String(final))
   }, [final])
 
   return <span>{count}</span>
