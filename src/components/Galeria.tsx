@@ -100,13 +100,7 @@ export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
       <Button onClick={LoadMore} id="load-more" url="#">Descúbrelas todas</Button>
       }
       </div>
-    </section>
-      <div class="text-center mx-auto">
-      {
-      !isExpanded && 
-      <Button onClick={LoadMore} id="load-more" url="#">Descúbrelas todas</Button>
-      }
-      </div>
+
     </section>
   )
 }
