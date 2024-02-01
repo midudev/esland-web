@@ -13,41 +13,34 @@ declare global {
 	}
 }
 
-export default function Galeria({
-	i18n,
-	edicion,
-}: {
-	i18n: any;
-	edicion: string;
-}) {
-	const offset = 10;
+export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
+  const offset = 10
 
-	const edictionIndex = Number(edicion) - 1;
-	const photos = editionsInfo[edictionIndex].slice(0, offset);
-	const first = useRef<HTMLAnchorElement>(null);
-	const [isExpanded, setIsExpanded] = useState(false);
+  const editionIndex = Number(edicion) - 1
+  const photos = editionsInfo[editionIndex].slice(0, offset)
+  const first = useRef<HTMLAnchorElement>(null)
+  const [isExpanded, setIsExpanded] = useState(false)
 
-	useEffect(() => {
-		const init = async () => {
-			await import('@appnest/masonry-layout');
-			const module = await import('photoswipe/lightbox');
-			const PhotoSwipeLightbox = module.default;
-			const lightbox = new PhotoSwipeLightbox({
-				gallery: '#gallery',
-				children: 'a',
-				pswpModule: () => import('photoswipe'),
-			});
-			lightbox.init();
-			console.log('Masonry loaded');
-		};
-		init();
-	}, []);
+  useEffect(() => {
+    const init = async () => {
+        await import('@appnest/masonry-layout')
+        const module = await import("photoswipe/lightbox")
+        const PhotoSwipeLightbox = module.default
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: "#gallery",
+          children: "a",
+          pswpModule: () => import("photoswipe"),
+        })
+        lightbox.init()
+    }
+    init()
+  }, [])
 
-	const handleLoadMore = async (e: MouseEvent) => {
-		e.preventDefault();
-
-		const res = await fetch('/api/gallery.json?edition=1&offset=9');
-		const images = await res.json();
+  const handleLoadMore = async (e:MouseEvent) => {
+    e.preventDefault()
+   
+    const res = await fetch("/api/gallery.json?edition=1&offset=9")
+    const images = await res.json()
 
 		const html = images
 			.map((img: any, index: number) => {
@@ -89,89 +82,59 @@ export default function Galeria({
 		setIsExpanded(true);
 	};
 
-	return (
-		<section class='max-w-8xl mx-auto py-20 px-20'>
-			<h2 class='mx-auto mb-8 text-center text-3xl lg:text-6xl font-semibold tracking-wide'>
-				{i18n.GALLERY.TITLE}
-			</h2>
-			<p class='text-center text-2xl'>{i18n.GALLERY.TEXT}</p>
+  return ( 
+    <section class="max-w-8xl mx-auto py-20 px-20">
+      <h2
+        class="mx-auto mb-8 text-center text-3xl lg:text-6xl font-semibold tracking-wide"
+      >
+        {i18n.INFO.GALLERY_TITLE}
+      </h2>
+      <p class="text-center text-2xl">{i18n.INFO.GALLERY_TEXT}</p>
 
-			<masonry-layout
-				gap='24'
-				maxcolwidth='600'
-				class='lg:mx-auto mx-4 py-20'
-				id='gallery'
-			>
-				{photos.map(({ height, width }, i) => (
-					<a
-						class='group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative'
-						href={`/archivo-page/${edicion}/gallery/img-${
-							i + 1
-						}.webp`}
-						target='_blank'
-						data-cropped='true'
-						data-pswp-width={width}
-						data-pswp-height={height}
-						ref={!first.current ? first : undefined}
-					>
-						<img
-							class='rounded-xl object-cover w-full h-auto'
-							loading='lazy'
-							src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
-								i + 1
-							}.webp`}
-							alt='Fotografía de los premios ESLAND'
-						/>
-						<img
-							class='blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover'
-							loading='lazy'
-							src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
-								i + 1
-							}.webp`}
-							alt='Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND'
-						/>
-					</a>
-				))}
-			</masonry-layout>
+      <masonry-layout
+        gap="24"
+        maxcolwidth="600"
+        class="lg:mx-auto mx-4 py-20"
+        id="gallery"
+      >
+        {
+          photos.map(({ height, width }, i) => (
+            <a
+              class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
+              href={`/archivo-page/${edicion}/gallery/img-${i + 1}.webp`}
+              target="_blank"
+              data-cropped="true"
+              data-pswp-width={width}
+              data-pswp-height={height}
+              ref={!first.current ? first : undefined}  
+            >
+              <img
+                class="rounded-xl object-cover w-full h-auto"
+                loading="lazy"
+                src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+                  i + 1
+                }.webp`}
+                alt="Fotografía de los premios ESLAND"
+              />
+              <img
+                class="blur-md opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
+                loading="lazy"
+                src={`/archivo-page/${edicion}/gallery/thumbnails/img-${
+                  i + 1
+                }.webp`}
+                alt="Imagen con efecto blur para hacer de sombra de una fotografía de los premios ESLAND"
+              />
+            </a>
+          ))
+        }
+      </masonry-layout>
 
-			<div class='text-center mx-auto'>
-				{!isExpanded && (
-					<Button onClick={handleLoadMore} id='load-more' url='#'>
-						{i18n.GALLERY.LOAD_MORE}
-					</Button>
-				)}
-			</div>
-		</section>
-	);
-}
-
-{
-	/*
-
-<style is:global>
-  .pswp {
-    --pswp-bg: #00012a;
-  }
-
-  #gallery a {
-    cursor: zoom-in;
-    animation: fade-up-images linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 20%;
-  }
-
-  @keyframes fade-up-images {
-    0% {
-      opacity: 0;
-      translate: 0 50px;
-      scale: .7;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
-      scale: 1;
-    }
-  }
-
-</style> */
+      <div class="text-center mx-auto">
+      {
+      !isExpanded && 
+      <Button onClick={handleLoadMore} id="load-more" url="#">Descúbrelas todas</Button>
+      }
+      </div>
+    </section>
+  )
 }
