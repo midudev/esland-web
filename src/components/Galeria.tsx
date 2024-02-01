@@ -1,20 +1,9 @@
 import "photoswipe/style.css"
 
 import Button from "@/components/Button.tsx"
-import { useEffect, useRef, useState } from "preact/hooks"
 import "@/components/styles/Galeria.css"
 import { useGallery } from "@/hooks/useGallery"
-
-type Masory<T> = T & {gap:string, maxcolwidth:string}
-declare global {
-  namespace preact.createElement.JSX {
-    interface IntrinsicElements {
-      ['masonry-layout']: Masory<JSX.HTMLAttributes>
-    }
-  }
-}
-
-
+import { type Masory } from "@/types/gallery"
 
 export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
   
