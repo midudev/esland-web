@@ -1,7 +1,8 @@
 import 'photoswipe/style.css';
-import editionsInfo from '@/data/meta-gallery.json';
+
 import Button from '@/components/Button.tsx';
 import { useEffect, useRef, useState } from 'preact/hooks';
+import { useGallery } from "@/hooks/useGallery"
 import '@/components/styles/Galeria.css';
 
 type Masory<T> = T & { gap: string; maxcolwidth: string };
@@ -14,73 +15,8 @@ declare global {
 }
 
 export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
-  const offset = 10
-
-  const editionIndex = Number(edicion) - 1
-  const photos = editionsInfo[editionIndex].slice(0, offset)
-  const first = useRef<HTMLAnchorElement>(null)
-  const [isExpanded, setIsExpanded] = useState(false)
-
-  useEffect(() => {
-    const init = async () => {
-        await import('@appnest/masonry-layout')
-        const module = await import("photoswipe/lightbox")
-        const PhotoSwipeLightbox = module.default
-        const lightbox = new PhotoSwipeLightbox({
-          gallery: "#gallery",
-          children: "a",
-          pswpModule: () => import("photoswipe"),
-        })
-        lightbox.init()
-    }
-    init()
-  }, [])
-
-  const handleLoadMore = async (e:MouseEvent) => {
-    e.preventDefault()
-   
-    const res = await fetch("/api/gallery.json?edition=1&offset=9")
-    const images = await res.json()
-
-		const html = images
-			.map((img: any, index: number) => {
-				const imgIndex = index + offset;
-				if (!first.current) return;
-
-				const clone = first.current.cloneNode(true) as HTMLElement;
-				if (!clone) return;
-				clone.setAttribute('data-pswp-width', img.width);
-				clone.setAttribute('data-pswp-height', img.height);
-				clone.setAttribute(
-					'href',
-					`/archivo-page/${edicion}/gallery/img-${imgIndex}.webp`
-				);
-				clone.classList.add('animate-fade-up');
-				clone.classList.add('animate-delay-300');
-				clone.classList.add('opacity-0');
-				clone
-					.querySelector('img:first-child')
-					?.setAttribute(
-						'src',
-						`/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
-					);
-				clone
-					.querySelector('img:last-child')
-					?.setAttribute(
-						'src',
-						`/archivo-page/${edicion}/gallery/thumbnails/img-${imgIndex}.webp`
-					);
-
-				return clone?.outerHTML;
-			})
-			.join('');
-
-		document
-			.querySelector('#gallery')
-			?.insertAdjacentHTML('beforeend', html);
-		document.querySelector('masonry-layout')?.scheduleLayout();
-		setIsExpanded(true);
-	};
+  
+  const {first,isExpanded,photos,LoadMore} = useGallery({edicion})
 
   return ( 
     <section class="max-w-8xl mx-auto py-20 px-20">
@@ -132,7 +68,7 @@ export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
       <div class="text-center mx-auto">
       {
       !isExpanded && 
-      <Button onClick={handleLoadMore} id="load-more" url="#">Descúbrelas todas</Button>
+      <Button onClick={LoadMore} id="load-more" url="#">Descúbrelas todas</Button>
       }
       </div>
     </section>
