@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import ProgressiveNumber from "./ProgressiveNumber";
+import ProgressiveNumber from "./Up";
 
 const { initial, final, duration, decimals } = defineProps({
   initial: {
@@ -29,11 +29,9 @@ ProgressiveNumber.generate(
   (value) => {
     count.value = value;
   },
+  decimals,
   duration,
-  decimals
 );
 </script>
 
-<template>
-  <span>{{ count }}</span>
-</template>
+<template><span>{{ count }}</span></template>

@@ -2,5 +2,18 @@
     "cSpell.words": [
         "fontsource",
         "premiosesland"
-    ]
+    ],
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.format.enable": true,
 }

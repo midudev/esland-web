@@ -13,20 +13,20 @@ const { id, initial, final, decimals = 0, duration = 1500 } = Astro.props;
 <span id={id}></span>
 
 <script>
-  import ProgressiveNumber from "./ProgressiveNumber";
+  import ProgressiveNumber from "./Up";
   // @ts-ignore
   window.ProgressiveNumber = function ({
     id,
     initial,
     final,
-    duration,
     decimals,
+    duration,
   }: {
     id: string;
     initial: number;
     final: number;
-    duration: number;
     decimals: number;
+    duration: number;
   }) {
     const el = document.getElementById(id);
     if (el !== null) {
@@ -41,8 +41,8 @@ const { id, initial, final, decimals = 0, duration = 1500 } = Astro.props;
               // @ts-ignore
               el.innerText = value;
             },
+            decimals,
             duration,
-            decimals
           );
         }
       });
@@ -60,8 +60,8 @@ const { id, initial, final, decimals = 0, duration = 1500 } = Astro.props;
       id,
       initial,
       final,
-      duration,
       decimals,
+      duration,
     });
   });
 </script>

@@ -1,4 +1,7 @@
-type StepResolver = (current: number, step: number) => void;
+type StepResolver = (
+  current: number | string,
+  step: number
+) => void | undefined;
 
 type Value = number | (() => number);
 
@@ -28,8 +31,8 @@ export default class ProgressiveNumber {
   constructor(
     initial: Value,
     final: Value,
-    duration: number = 1500,
     decimals: number = 0,
+    duration: number = 1500,
     delay: number = 5
   ) {
     initial = cal(initial);
@@ -42,23 +45,34 @@ export default class ProgressiveNumber {
     this.steps = Math.max(Math.floor(this.duration / this.delay), 1);
   }
 
-  static generate(initial: number, final: number, resolve: StepResolver,  duration: number = 1500, decimals: number = 0, delay: number = 5) {
-    new this(initial, final, duration, decimals, delay).generate(resolve);
+  static generate(
+    initial: number,
+    final: number,
+    resolve?: StepResolver,
+    decimals: number = 0,
+    duration: number = 1500,
+    delay: number = 5
+  ) {
+    new this(initial, final, decimals, duration, delay).generate(resolve);
   }
 
-  generate(
-    resolve: (count: number, step: number) => void
-  ): void {
-    resolve(this.value, this.currentStep);
+  generate(resolve?: StepResolver): void {
+    this.resolve(resolve);
     this.schedule(resolve);
   }
 
-  schedule(resolve: StepResolver, loop: boolean = true) {
+  schedule(resolve?: StepResolver, loop: boolean = true) {
     const callback = loop ? this.loop : this.next;
-    return this.timer = setTimeout(callback.bind(this, resolve), this.delay);
+    return (this.timer = setTimeout(callback.bind(this, resolve), this.delay));
   }
 
-  next(resolve: StepResolver) {
+  resolve(resolve?: StepResolver) {
+    if (resolve) {
+      resolve(this.value, this.currentStep);
+    }
+  }
+
+  next(resolve?: StepResolver) {
     const progress = this.progress;
     let next = true;
     if (progress >= 1) {
@@ -68,22 +82,26 @@ export default class ProgressiveNumber {
       this.current = lerp(this.initial, this.target, easeOutCubic(progress));
       this.currentStep++;
     }
-    resolve(this.value, this.currentStep);
+    this.resolve(resolve);
     return next;
   }
 
-  loop(resolve: StepResolver) {
+  loop(resolve?: StepResolver) {
     clearTimeout(this.timer);
     if (this.next(resolve)) {
-      this.schedule(resolve)
+      this.schedule(resolve);
     }
   }
 
   get progress() {
-    return this.currentStep / this.steps
+    return this.currentStep / this.steps;
   }
 
   get value() {
-    return Number(this.current.toFixed(this.decimals));
+    return this.current.toFixed(this.decimals);
+  }
+
+  get step() {
+    return this.currentStep;
   }
 }

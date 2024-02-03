@@ -1,5 +1,14 @@
 import { normalize } from "./Resolver";
 
+export interface Props {
+  src: string;
+  width?: number | string;
+  height?: number | string;
+  class?: string;
+  hidden?: boolean;
+  label?:string
+}
+
 const CACHE: Record<string, any> = import.meta.glob(
   "/src/assets/images/**/*.svg",
   {
@@ -19,7 +28,33 @@ function replaceString(replace: string, regex: RegExp, value: string) {
   return replace
 }
 
-export function resolve(src: string, attrs: Record<string, any>) {
+function toObject(svg: string) {
+  const regex = new RegExp(/<svg([^>]+)>(.+?)<\/svg>/, 'gis');
+  const match = regex.exec(svg);
+  const object: { attrs: Record<string, string | number>, children: string } = {
+    attrs: {},
+    children: ''
+  }
+  if (match !== null) {
+    const [, attrs, content] = match;
+    object.attrs = attrs.trim().match(/(\S+)="(.+?)"/g)?.reduce((
+      acc: Record<string, string | number>,
+      attr: string
+    ) => {
+      const [name, value] = attr.split("=")
+
+      return {
+        ...acc,
+        [name]: value.replace(/"/g, '')
+      };
+    }, {}) as Record<string, string | number>
+    object.children = content
+  }
+
+  return object
+}
+
+export function resolve(src: string, attrs: Record<string, any> = {}, asString = true) {
   if (!src.endsWith('.svg')) {
     src = src + '.svg';
   }
@@ -43,5 +78,7 @@ export function resolve(src: string, attrs: Record<string, any>) {
       )
     }
   }
-  return svg.replace(search, replace);
+  const content = svg.replace(search, replace);
+
+  return asString ? content : toObject(content)
 }

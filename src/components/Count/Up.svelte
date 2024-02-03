@@ -1,5 +1,5 @@
 <script setup>
-import ProgressiveNumber from "./ProgressiveNumber";
+import ProgressiveNumber from "./Up";
 
 export let initial;
 export let final;
@@ -14,8 +14,8 @@ ProgressiveNumber.generate(
   (value) => {
     count = value;
   },
-  duration,
-  decimals
+  decimals,
+  duration
 );
 </script>
 

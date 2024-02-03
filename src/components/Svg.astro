@@ -1,13 +1,5 @@
 ---
-interface Props {
-  src: string;
-  width?: number | string;
-  height?: number | string;
-  class?: string;
-  hidden?: boolean;
-  label?:string
-}
-
+import type { Props } from '@/components/Img/SVG';
 import { resolve } from '@/components/Img/SVG';
 
 const { src, class: className, hidden, label, height, width } = Astro.props;

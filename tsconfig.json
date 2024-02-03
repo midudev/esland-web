@@ -7,7 +7,7 @@
         "src/*"
       ]
     },
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "preact",
     "types": ["vitest/globals"],
   }
