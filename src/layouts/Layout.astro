@@ -1,16 +1,8 @@
 ---
-import "@fontsource-variable/onest";
-import { ViewTransitions } from "astro:transitions";
 import { getRelativeLocaleUrl, getComponentPath, split } from "@/i18n/config";
 import Button from "@/components/Button.astro";
 import Link from "@/components/Link.astro";
 import Svg from "@/components/Svg.astro";
-import tomaso from '@/assets/fonts/tomaso.woff2';
-
-interface Props {
-  description: string;
-  title: string;
-}
 
 const { description, title } = Astro.props;
 const { currentLocale = "es" } = Astro;
@@ -18,320 +10,226 @@ const { pathname } = Astro.url;
 const { i18n } = Astro.locals;
 const page = getComponentPath(currentLocale, pathname);
 const [currentLocaleData, otherLocales] = split(currentLocale);
+import BaseLayout from "./Base.astro";
 ---
+<BaseLayout title={title} description={description}>
+  <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
+      <!-- LOGO -->
 
-<!doctype html>
-<html lang={currentLocale}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="robots" content="nofollow, noindex" />
-    <title>{title}</title>
-    <link
-      rel="preload"
-      href={tomaso}
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <slot name="preload" />
-    <ViewTransitions />
-  </head>
+      <Link
+        href="/"
+        class="relative z-10 border-b-2 border-transparent"
+        aria-label={i18n.HEADER.LOGO}
+      >
+        <Svg
+          src="logo"
+          class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
+        />
+        <Svg src="logo" class="w-10" />
+      </Link>
 
-  <body>
-    <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
-      <div class="max-w-7xl mx-auto flex items-center justify-between gap-16">
-        <!-- LOGO -->
+      <!-- NAVIGATION -->
 
-        <Link
-          href="/"
-          class="relative z-10 border-b-2 border-transparent"
-          aria-label={i18n.HEADER.LOGO}
-        >
-          <Svg
-            src="logo"
-            class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
-          />
-          <Svg src="logo" class="w-10" />
-        </Link>
-
-        <!-- NAVIGATION -->
-
-        <nav
-          id="header-menu"
-          class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
-        >
-          {
-            Object.entries({
-              vota: i18n.HEADER_VOTE,
-              info: i18n.HEADER_INFO,
-              archivo: i18n.HEADER_ARCHIVE,
-            }).map(([slug, text]) => (
-              <Link
-                href={slug}
-                class:list={[
-                  "text__glowing",
-                  "border-b-2",
-                  getRelativeLocaleUrl(currentLocale, slug) === pathname
-                    ? "border-white"
-                    : "border-transparent",
-                ]}
-              >
-                {text}
-              </Link>
-            ))
-          }
-
-          <!-- LANGUAGE SELECTOR -->
-
-          <div class="relative inline-block text-left">
-            <div
-              class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
+      <nav
+        id="header-menu"
+        class="fixed w-full h-dvh inset-0 bg-[#151a36]/90 text-2xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:text-xl md:flex-row md:translate-y-[initial]"
+      >
+        {
+          Object.entries({
+            vota: i18n.HEADER_VOTE,
+            info: i18n.HEADER_INFO,
+            archivo: i18n.HEADER_ARCHIVE,
+          }).map(([slug, text]) => (
+            <Link
+              href={slug}
+              class:list={[
+                "text__glowing",
+                "border-b-2",
+                getRelativeLocaleUrl(currentLocale, slug) === pathname
+                  ? "border-white"
+                  : "border-transparent",
+              ]}
             >
-              <button
-                type="button"
-                class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-                aria-expanded="true"
-                aria-haspopup="true"
-              >
-                <Svg src={`flag-${currentLocale}`} class="w-4 h-auto" />
-                {currentLocaleData.name}
-                <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
-              </button>
-              <ul
-                class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
-              >
-                {
-                  Object.entries(otherLocales).map(([code, locale]) => (
-                    <li class="py-0.5">
-                      <Link
-                        class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-                        href={page}
-                        locale={code}
-                      >
-                        <Svg src={`flag-${code}`} class="w-4 h-auto" />
-                        {locale.name}
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </div>
+              {text}
+            </Link>
+          ))
+        }
 
-          <Button
-            class="md:py-2 md:ml-auto md:text-base lg:text-base"
-            url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+        <!-- LANGUAGE SELECTOR -->
+
+        <div class="relative inline-block text-left">
+          <div
+            class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all"
           >
-            {i18n.HEADER_BUTTON}
-          </Button>
+            <button
+              type="button"
+              class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+              aria-expanded="true"
+              aria-haspopup="true"
+            >
+              <Svg src={`flag-${currentLocale}`} class="w-4 h-auto" />
+              {currentLocaleData.name}
+              <Svg src="chevron" class="-mr-1 h-5 w-5 text-white" />
+            </button>
+            <ul
+              class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+            >
+              {
+                Object.entries(otherLocales).map(([code, locale]) => (
+                  <li class="py-0.5">
+                    <Link
+                      class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+                      href={page}
+                      locale={code}
+                    >
+                      <Svg src={`flag-${code}`} class="w-4 h-auto" />
+                      {locale.name}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
 
-          <a href="#header-nav" class="md:hidden absolute top-6 right-6">
-            <Svg src="close" />
+        <Button
+          class="md:py-2 md:ml-auto md:text-base lg:text-base"
+          url="https://drive.google.com/file/d/1D7IvIqMyqAoG58fuk8bc0JvhAmrWBbOK/view"
+        >
+          {i18n.HEADER_BUTTON}
+        </Button>
+
+        <a href="#header-nav" class="md:hidden absolute top-6 right-6">
+          <Svg src="close" />
+        </a>
+      </nav>
+
+      <a href="#header-menu" class="md:hidden"><Svg src="menu" /></a>
+    </div>
+  </header>
+
+  <slot />
+
+  <footer class="bg-black/40">
+    <div class="mx-auto w-full max-w-screen-xl p-4 px-6 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 flex flex-col md:mb-0">
+          <a
+            href="https://premiosesland.com/"
+            class="-mt-14 flex items-center justify-center"
+          >
+            <Svg src="logo" class="h-auto w-24" label="Inicio" />
           </a>
-        </nav>
-
-        <a href="#header-menu" class="md:hidden"><Svg src="menu" /></a>
-      </div>
-    </header>
-
-    <slot />
-
-    <footer class="bg-black/40">
-      <div class="mx-auto w-full max-w-screen-xl p-4 px-6 py-6 lg:py-8">
-        <div class="md:flex md:justify-between">
-          <div class="mb-6 flex flex-col md:mb-0">
-            <a
-              href="https://premiosesland.com/"
-              class="-mt-14 flex items-center justify-center"
-            >
-              <Svg src="logo" class="h-auto w-24" label="Inicio" />
+          <div class="mt-6 flex justify-center gap-x-4">
+            <a href="#" class="text-white hover:text-primary duration-300">
+              <Svg src="twitter" class="size-6" hidden />
+              <span class="sr-only">Twitter</span>
             </a>
-            <div class="mt-6 flex justify-center gap-x-4">
-              <a href="#" class="text-white hover:text-primary duration-300">
-                <Svg src="twitter" class="size-6" hidden />
-                <span class="sr-only">Twitter</span>
-              </a>
-              <a href="#" class="text-white hover:text-primary duration-300">
-                <Svg src="instagram" class="size-6" width="256" height="256" />
-                <span class="sr-only">Instagram</span>
-              </a>
-              <a href="#" class="text-white hover:text-primary duration-300">
-                <Svg src="reddit" class="size-6" width="24" height="24" />
-                <span class="sr-only">Reddit</span>
-              </a>
-            </div>
-          </div>
-          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
-            <div>
-              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
-                {i18n.FOOTER.LEGAL.TITLE}
-              </h2>
-              <ul class="flex flex-col gap-2 font-medium text-gray-400">
-                {
-                  Object.entries({
-                    "aviso-legal": i18n.FOOTER.LEGAL.NOTICE,
-                    privacidad: i18n.FOOTER.LEGAL.PRIVACY,
-                    cookies: i18n.FOOTER.LEGAL.COOKIES,
-                  }).map(([slug, text]) => (
-                    <li>
-                      <Link
-                        href={slug}
-                        class="hover:underline hover:text-primary duration-300"
-                      >
-                        {text}
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold uppercase text-white">
-                {i18n.FOOTER.WEB_MAP.TITLE}
-              </h2>
-              <ul class="flex flex-col gap-2 font-medium text-gray-400">
-                {
-                  Object.entries({
-                    "": i18n.FOOTER.WEB_MAP.HOME,
-                    info: i18n.FOOTER.WEB_MAP.INFO,
-                    archivo: i18n.FOOTER.WEB_MAP.ARCHIVE,
-                  }).map(([slug, text]) => (
-                    <li>
-                      <Link
-                        href={slug}
-                        class="hover:underline hover:text-primary duration-300"
-                      >
-                        {text}
-                      </Link>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-            <div>
-              <h2 class="mb-0 text-sm font-semibold uppercase text-white">
-                {i18n.FOOTER.PRODUCED_BY}
-              </h2>
-              <a
-                class="hover:opacity-100 opacity-70 transition-opacity duration-300 block"
-                href="https://www.ubiq.ad/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Svg src="ubiq-logo" label="Logo Ubiq" />
-              </a>
-            </div>
+            <a href="#" class="text-white hover:text-primary duration-300">
+              <Svg src="instagram" class="size-6" width="256" height="256" />
+              <span class="sr-only">Instagram</span>
+            </a>
+            <a href="#" class="text-white hover:text-primary duration-300">
+              <Svg src="reddit" class="size-6" width="24" height="24" />
+              <span class="sr-only">Reddit</span>
+            </a>
           </div>
         </div>
-        <hr class="my-6 border-white/10 sm:mx-auto lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-400 sm:text-center"
-            >{i18n.FOOTER.DISCLAIMER}
-          </span>
-          <div class="mt-4 flex sm:mt-0 sm:justify-center">
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+              {i18n.FOOTER.LEGAL.TITLE}
+            </h2>
+            <ul class="flex flex-col gap-2 font-medium text-gray-400">
+              {
+                Object.entries({
+                  "aviso-legal": i18n.FOOTER.LEGAL.NOTICE,
+                  privacidad: i18n.FOOTER.LEGAL.PRIVACY,
+                  cookies: i18n.FOOTER.LEGAL.COOKIES,
+                }).map(([slug, text]) => (
+                  <li>
+                    <Link
+                      href={slug}
+                      class="hover:underline hover:text-primary duration-300"
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+              {i18n.FOOTER.WEB_MAP.TITLE}
+            </h2>
+            <ul class="flex flex-col gap-2 font-medium text-gray-400">
+              {
+                Object.entries({
+                  "": i18n.FOOTER.WEB_MAP.HOME,
+                  info: i18n.FOOTER.WEB_MAP.INFO,
+                  archivo: i18n.FOOTER.WEB_MAP.ARCHIVE,
+                }).map(([slug, text]) => (
+                  <li>
+                    <Link
+                      href={slug}
+                      class="hover:underline hover:text-primary duration-300"
+                    >
+                      {text}
+                    </Link>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-0 text-sm font-semibold uppercase text-white">
+              {i18n.FOOTER.PRODUCED_BY}
+            </h2>
             <a
-              href="https://github.com/midudev/esland-web"
-              class="text-gray-500 hover:text-white ms-5 duration-300"
+              class="hover:opacity-100 opacity-70 transition-opacity duration-300 block"
+              href="https://www.ubiq.ad/"
+              target="_blank"
+              rel="noreferrer"
             >
-              <Svg src="github" class="h-4 w-4" hidden />
-              <span class="sr-only">GitHub account</span>
+              <Svg src="ubiq-logo" label="Logo Ubiq" />
             </a>
           </div>
         </div>
       </div>
-    </footer>
-    <style is:global>
-      :root {
-        color-scheme: dark;
-        --entry-animation: -20px;
-        --cover-animation: 20px;
-      }
+      <hr class="my-6 border-white/10 sm:mx-auto lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-400 sm:text-center"
+          >{i18n.FOOTER.DISCLAIMER}
+        </span>
+        <div class="mt-4 flex sm:mt-0 sm:justify-center">
+          <a
+            href="https://github.com/midudev/esland-web"
+            class="text-gray-500 hover:text-white ms-5 duration-300"
+          >
+            <Svg src="github" class="h-4 w-4" hidden />
+            <span class="sr-only">GitHub account</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <style is:global>
+    #header-nav {
+      animation: blur linear both;
+      animation-timeline: scroll();
+      animation-range: 0 500px;
+    }
 
-      @media (min-width: 1400px) {
-        :root {
-          --entry-animation: -100px;
-          --cover-animation: 100px;
-        }
-      }
-
-      @font-face {
-        font-family: "Tomaso";
-        font-style: normal;
-        font-weight: normal;
-        font-display: swap;
-        src: url("../assets/fonts/tomaso.woff2") format("woff2");
-        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
-          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-      }
-
-      html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        background: #151a36;
-      }
-
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
+    @keyframes blur {
+      to {
+        box-shadow:
+          0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+          0px 0px 0 1px rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
-        border-radius: 5px;
       }
-      ::-webkit-scrollbar-thumb {
-        background: rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
-        border-radius: 5px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 255, 255, 0.5);
-      }
-
-      p {
-        color: rgba(255, 255, 255, 0.9);
-        line-height: 1.4;
-        margin-bottom: 1em;
-        font-weight: 100;
-        font-size: 1em;
-        letter-spacing: 0.5px;
-      }
-
-      p strong {
-        color: white;
-        font-weight: 700;
-      }
-
-      .text__glowing {
-        transition: text-shadow 0.3s ease;
-      }
-
-      .text__glowing:hover {
-        text-shadow:
-          0 0 10px #fff,
-          0 0 20px #fff,
-          0 0 40px #fff,
-          0 0 80px #fff,
-          0 0 120px #fff;
-      }
-
-      #header-nav {
-        animation: blur linear both;
-        animation-timeline: scroll();
-        animation-range: 0 500px;
-      }
-
-      @keyframes blur {
-        to {
-          box-shadow:
-            0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-            0px 0px 0 1px rgba(0, 0, 0, 0.3);
-          background: rgba(0, 0, 0, 0.3);
-          backdrop-filter: blur(10px);
-        }
-      }
-    </style>
-  </body>
-</html>
+    }
+  </style>
+</BaseLayout>

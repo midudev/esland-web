@@ -1,12 +1,13 @@
 ---
 interface Props {
-  img: string
+  img: string,
+  class?: string
 }
 import Img from "@/components/Img.astro"
-const { img } = Astro.props
+const { img, class: className } = Astro.props
 ---
 
-<div class="bg-no-repeat bg-cover relative h-[90vh] w-full max-w-[100vw]">
+<div class:list={["bg-no-repeat bg-cover relative h-[90vh] w-full max-w-[100vw", className]}>
   <div
     class="absolute inset-0 m-auto w-full h-full flex justify-center flex-col items-center"
   >

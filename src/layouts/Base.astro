@@ -1,0 +1,113 @@
+---
+import "@fontsource-variable/onest";
+import { ViewTransitions } from "astro:transitions";
+import tomaso from '@/assets/fonts/tomaso.woff2';
+
+interface Props {
+  description: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+const { currentLocale = "es" } = Astro;
+---
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="robots" content="nofollow, noindex" />
+    <title>{title}</title>
+    <link
+      rel="preload"
+      href={tomaso}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <slot name="preload" />
+    <ViewTransitions />
+  </head>
+
+  <body>
+
+    <slot />
+
+    <style is:global>
+      :root {
+        color-scheme: dark;
+        --entry-animation: -20px;
+        --cover-animation: 20px;
+      }
+
+      @media (min-width: 1400px) {
+        :root {
+          --entry-animation: -100px;
+          --cover-animation: 100px;
+        }
+      }
+
+      @font-face {
+        font-family: "Tomaso";
+        font-style: normal;
+        font-weight: normal;
+        font-display: swap;
+        src: url("../assets/fonts/tomaso.woff2") format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      html {
+        font-family: "Onest Variable", system-ui, sans-serif;
+        background: #151a36;
+      }
+
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.4;
+        margin-bottom: 1em;
+        font-weight: 100;
+        font-size: 1em;
+        letter-spacing: 0.5px;
+      }
+
+      p strong {
+        color: white;
+        font-weight: 700;
+      }
+
+      .text__glowing {
+        transition: text-shadow 0.3s ease;
+      }
+
+      .text__glowing:hover {
+        text-shadow:
+          0 0 10px #fff,
+          0 0 20px #fff,
+          0 0 40px #fff,
+          0 0 80px #fff,
+          0 0 120px #fff;
+      }
+    </style>
+  </body>
+</html>

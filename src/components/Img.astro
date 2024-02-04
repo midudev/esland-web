@@ -10,8 +10,14 @@ interface Props extends HTMLAttributes<"img"> {}
 const { src, alt = "", ...attrs } = Astro.props;
 
 const isWebp = src?.endsWith('.webp') ;
-const img = resolve(src as string, isWebp);
+const img = resolve(src as string);
+for (const prop of ['width', 'height']) {
+    if (!Object.hasOwn(attrs, prop)) {
+        // @ts-ignore
+        attrs[prop] = img[prop];
+    }
+}
 const Element = isWebp ? 'img' : Image;
 ---
 
-<Element src={img} alt={alt} {...Object.assign(attrs)} />
+<Element src={isWebp ? img.src : img} alt={alt} {...Object.assign(attrs)} />

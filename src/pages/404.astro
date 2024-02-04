@@ -1,0 +1,40 @@
+---
+import Layout from "@/layouts/Base.astro";
+import Hero from "@/components/Hero.astro";
+import Svg from "@/components/Svg.astro";
+import Button from "@/components/Button.astro";
+
+const { i18n } = Astro.locals;
+---
+
+<Layout
+  title={i18n.SEO.ERROR_404_TITLE}
+  description={i18n.SEO.ERROR_404_DESCRIPTION}
+>
+<main class="h-screen">
+  <Hero img="/404/bkg.webp" class="h-full">
+    <Svg src="logo-title" class="w-[70%]" />
+    <div class="absolute">
+      <h1
+        class="lg:text-6xl text-4xl text-center uppercase font-tomaso tracking-widest"
+      >
+        404
+      </h1>
+
+      <p class="text-white text-[10px] md:text-xs text-center uppercase">
+        {i18n.ERROR_404.TITLE}
+      </p>
+    </div>
+
+    <Button class="animate-fade-up uppercase lg:text-sm" url="/">
+      {i18n.ERROR_404.BACK_HOMEPAGE_BTN}
+    </Button>
+  </Hero>
+</main>
+<style>
+    html {
+        overflow: hidden;
+    }
+</style>
+
+</Layout>
