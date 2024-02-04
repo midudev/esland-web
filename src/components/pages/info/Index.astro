@@ -2,7 +2,7 @@
 import Layout from "@/layouts/Layout.astro"
 import Img from "@/components/Img.astro"
 import Hero from "@/components/Hero.astro"
-import InfoKitPrensa from "@/components/pages/info/InfoKitPrensa.astro"
+import KitPrensa from "@/components/pages/info/KitPrensa.astro"
 
 const { i18n } = Astro.locals;
 ---
@@ -67,7 +67,26 @@ const { i18n } = Astro.locals;
         <p set:html={i18n.INFO_CONTENT_2_2} />
       </div>
     </section>
-    <InfoKitPrensa />
+    <KitPrensa title={i18n.MEDIA_KIT_TITLE} kits={[
+      {
+        title: i18n.MEDIA_KIT_SUBTITLE_1,
+        image: "/info/logo-y-trofeo.webp",
+        link: "https://premiosesland.com/ESLAND_MEDIA_KIT_2022.rar",
+        button: i18n.DOWNLOAD_BUTTON
+      },
+      {
+        title: i18n.MEDIA_KIT_SUBTITLE_2,
+        image: "/info/fondos-de-pantalla.webp",
+        link: "https://premiosesland.com/ESLAND_FONDOS.zip",
+        button: i18n.DOWNLOAD_BUTTON
+      },
+      {
+        title: i18n.MEDIA_KIT_SUBTITLE_3,
+        image: "/info/nota-de-prensa.webp",
+        link: "https://premiosesland.com/Nota%20Prensa-ESLAND.pdf",
+        button: i18n.DOWNLOAD_BUTTON
+      }
+    ]} />
   </main>
 </Layout>
 

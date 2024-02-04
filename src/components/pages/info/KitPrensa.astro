@@ -1,0 +1,25 @@
+---
+import KitPrensaItem from "@/components/pages/info/KitPrensaItem.astro"
+
+type Kit = {title: string, image: string, link: string, button: string};
+
+interface Props {
+  title: string,
+  kits: Kit[]
+}
+
+const { kits, title } = Astro.props
+---
+
+<section class="flex flex-col items-center justify-center p-4">
+  <h2 class="text-6xl font-bold mb-14 mt-4">{title}</h2>
+  <div class="flex flex-col gap-16 lg:flex-row lg:gap-8">
+    {kits.map(({ title, image, link, button}) => {
+    <KitPrensaItem
+      title={title}
+      download={button}
+      image={image}
+      link={link}
+    />})}
+  </div>
+</section>
