@@ -3,9 +3,9 @@ import { render as mountSvelte } from "@testing-library/svelte";
 import * as react from "@testing-library/preact";
 import { h } from "preact";
 
-import LinkReact from "@/components/Link/$";
-import LinkVue from "@/components/Link/$.vue";
-import LinkSvelte from "@/components/Link/$.svelte";
+import LinkReact from "@/components/Link/Self";
+import LinkVue from "@/components/Link/Self.vue";
+import LinkSvelte from "@/components/Link/Self.svelte";
 
 describe("Vue", () => {
   test("mount component with locale(ca) link", () => {
