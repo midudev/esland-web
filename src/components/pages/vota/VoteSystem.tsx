@@ -1,7 +1,7 @@
 import type { FunctionComponent, } from "preact"
 import { useVoteSystem } from "@/hooks/useVoteSystem"
 import { VoteFinal } from "./VoteFinal"
-import Svg from '@/components/Svg.tsx'
+import Svg from '@/components/Img/Svg.tsx'
 import { resolve as img } from '@/components/Img/Resolver'
 
 export const VoteSystem: FunctionComponent<{ i18n: any }> = ({ children, i18n }) => {

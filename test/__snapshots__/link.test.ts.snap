@@ -1,5 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`React > mount component with external link, locale not has effect 1`] = `"<a href="https://www.google.com/">This is a test</a>"`;
+
+exports[`React > mount component with external link, locale not has effect 2`] = `"<a href="#more-d">This is a test</a>"`;
+
+exports[`React > mount component with locale(ca) link 1`] = `"<a href="/ca/vota">This is a test</a>"`;
+
+exports[`React > mount component with locale(default) link 1`] = `"<a href="/vota">This is a test</a>"`;
+
 exports[`Svelte > mount component with locale(ca) link 1`] = `"<a href="/ca/vota"></a>"`;
 
 exports[`Vue > mount component with external link, locale not has effect 1`] = `"<a href="https://www.google.com/">This is a test</a>"`;
