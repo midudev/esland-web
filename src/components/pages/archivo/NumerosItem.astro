@@ -1,4 +1,6 @@
 ---
+import styles from '@/assets/styles/NumerosItem.module.css'
+
 interface Props {
   title: string
 }
@@ -7,7 +9,7 @@ const { title } = Astro.props
 ---
 
 <div class="flex flex-col justify-center items-center">
-  <span class="number text-7xl font-bold tabular-nums tracking-tighter">
+  <span class="[text-shadow:0_0_10px_rgba(197,225,255,0.5)] text-7xl font-bold tabular-nums tracking-tighter">
     <slot />
   </span>
   <span class="uppercase opacity-70">{title}</span>
