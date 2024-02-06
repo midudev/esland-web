@@ -19,7 +19,6 @@ export default function Button({ children, onClick,url, target, className, ...re
   onClick={onClick}
   class={`
   w-fit
-  lg:text-2xl
   font-medium
   no-underline
   px-5

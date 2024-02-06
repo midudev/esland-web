@@ -1,14 +1,22 @@
 {
-	"SEO_TITLE": "ESLAND Awards 2024 - Celebrating the Best of Streaming and Content Creation",
+	"SEO_TITLE_1": "ESLAND Awards",
+	"SEO_TITLE_2": "- Celebrating the Best of Streaming and Content Creation",
 	"SEO_DESCRIPTION": "Discover the top content creators from Spain, Latin America, and Andorra. Vote for your favorites and celebrate the innovation and talent on Twitch, YouTube, and more.",
 	"SEO": {
-		"ARCHIVO_TITLE": "Archive of Previous Editions - ESLAND Awards 2024",
+		"ARCHIVO_TITLE": "Archive of Previous Editions - ESLAND Awards",
 		"ARCHIVO_DESCRIPTION": "Relive the best moments from past editions.",
-		"INFO_TITLE": "Information - ESLAND Awards 2024",
-		"INFO_DESCRIPTION": "Learn everything you need to know about the ESLAND Awards 2024 and download the Press Kit.",
-		"VOTE_TITLE": "Vote for Your Favorite Content Creators - ESLAND Awards 2024",
+		"INFO_TITLE": "Information - ESLAND Awards",
+		"INFO_DESCRIPTION_1": "Learn everything you need to know about the ESLAND Awards",
+		"INFO_DESCRIPTION_2": "and download the Press Kit.",
+		"VOTE_TITLE": "Vote for Your Favorite Content Creators - ESLAND Awards",
 		"VOTE_DESCRIPTION": "Support your favorite content creators from Spain, Latin America, and Andorra by voting for them.",
-		"ERROR_404_TITLE": "404 Page not found - ESLAND Awards 2024",
+		"LEGAL_NOTICE_TITLE": "Legal Notice - ESLAND Awards",
+		"LEGAL_NOTICE_DESCRIPTION": "The legal notice establishes the legal provisions and responsibilities related to the ESLAND Awards, addressing aspects such as terms of use, legal responsibilities, and agreements between the user and the responsible entity.",
+		"PRIVACY_POLICY_TITLE": "Privacy Policy - ESLAND Awards",
+		"PRIVACY_POLICY_DESCRIPTION": "The Privacy Policy of the ESLAND Awards describes how personal data of users is collected, used, protected, and shared.",
+		"COOKIES_TITLE":"Cookie Policy - ESLAND Awards",
+		"COOKIES_DESCRIPTION":"The Cookie Policy of the ESLAND Awards informs about the use of cookies and similar technologies on the website.",
+		"ERROR_404_TITLE": "404 Page not found - ESLAND Awards",
 		"ERROR_404_DESCRIPTION": "Page not found (Error 404). Check the URL or explore our sections. Need help? Contact us."
 	},
 	"HEADER": {
@@ -61,7 +69,7 @@
 	"CATEGORY": "Category",
 	"LOG_OUT": "Log Out",
 	"FOOTER": {
-		"DISCLAIMER": "© ESLAND 2021 - 2024 All rights reserved. - This is not the official website, developed by @midudev for educational purposes.",
+		"DISCLAIMER": "All rights reserved. - This is not the official website, developed by @midudev for educational purposes.",
 		"LEGAL": {
 			"TITLE": "Legal",
 			"NOTICE": "Legal Notice",
@@ -324,47 +332,47 @@
 			"DESCRIPTION_5": "Users must not reverse engineer, decompile, disassemble the website software, or attempt to discover its source code.",
 			"DESCRIPTION_6": "It is forbidden to store, disseminate, or publish any content that is defamatory, obscene, threatening, xenophobic, incites violence, discrimination, or any content that violates morals, public order, rights, or public freedoms, including intellectual property rights.",
 			"DESCRIPTION_7": "UBIQ shall not be liable for any consequence, damage, or harm that may result from such access or use by the user. As the owner of the website, UBIQ is exempt from any liability that may arise from the actions of the user.",
-			"DESCRIPTION_8": "No almacenar, introducir o difundir en o desde el Sitio Web información o material difamatorio, injurioso, obsceno, amenazador, xenófogo o que incite a la violencia, discriminación por razón de raza, sexo, ideología, religión, atente contra la moral, el orden público, los derechos fundamentales, las libertades públicas, el honor, la intimidad o la imagen de terceros, y en general que infrinja la normativa vigente.",
-			"DESCRIPTION_9": "El Usuario es el único y exclusivo responsable del acceso al Sitio Web y del uso que haga de la información y datos contenidos.",
-			"DESCRIPTION_10": "UBIQ no responderá de ninguna consecuencia, daño o perjuicio derivados del acceso o uso del Sitio Web y de su contenido por parte de los Usuarios. UBIQ, como titular del Sitio Web, queda exonerado de cualquier responsabilidad que pudiera derivarse de las acciones del Usuario. De manera que el Usuario es el único responsable frente a cualquier reclamación iniciada por terceras personas contra UBIQ por el acceso o uso que el Usuario haga del Sitio Web."
+			"DESCRIPTION_8": "Not to store, introduce, or disseminate on or from the Website defamatory, injurious, obscene, threatening, xenophobic information or material or incitement to violence, discrimination on grounds of race, sex, ideology, religion, that violates morality, public order, fundamental rights, public liberties, honor, privacy, or the image of third parties, and in general that violates current regulations.",
+			"DESCRIPTION_9": "The User is solely and exclusively responsible for accessing the Website and using the contained information and data.",
+			"DESCRIPTION_10": "UBIQ shall not be liable for any consequences, damages, or harm arising from the access or use of the Website and its content by Users. UBIQ, as the owner of the Website, is exempt from any responsibility that may arise from the actions of the User. Thus, the User is solely responsible for any claims initiated by third parties against UBIQ for the access or use the User makes of the Website."
 		},
 		"DISCLAIMER_OF_LIABILITY": {
 			"TITLE": "Disclaimer of Liability",
 			"DESCRIPTION_1": "While UBIQ strives to ensure the uninterrupted and error-free operation of the website, it does not guarantee the absence of errors in its content, nor does it guarantee continuous access. UBIQ may temporarily suspend access to the website without notice for technical reasons.",
-			"DESCRIPTION_2": "UBIQ is not responsible for failures in communication, problems arising from the malfunction or use of non-optimized versions of any browser, possible security errors that may occur, or possible damage that may be caused to the user’s computer system, files, or documents stored therein, as a result of viruses in the user's computer used to connect to the services and contents of the website, telephone malfunctions, interferences, omissions, or disconnections in the operational functioning of the electronic system due to causes unrelated to UBIQ.",
-			"DESCRIPTION_3": "UBIQ is not liable for delays or blockages in the operational functioning of the system caused by deficiencies or overload in the Internet system or other electronic systems, nor for the inability to provide the service or allow access for reasons not attributable to UBIQ, due to the user, third parties, or force majeure.",
-			"DESCRIPTION_4": "·La invulnerabilitat del Lloc Web i/o la invulnerabilitat de les mesures de seguretat que s'adoptin en el mateix.",
-			"DESCRIPTION_5": "·Els continguts, serveis, errors o omissions que pogués tenir el contingut del Lloc Web o dels enllaços que puguin estar habilitats.",
-			"DESCRIPTION_6": "·L'existència de virus o programes lesius en els continguts que puguin produir alteracions en el sistema informàtic, en els documents electrònics o en els fitxers emmagatzemats dels Usuaris.",
-			"DESCRIPTION_7": "·Avaries telefòniques o de xarxes motivades per causes alienes al titular del Lloc Web.",
-			"DESCRIPTION_8": "·Retards o bloquejos en el funcionament operatiu del sistema causat per deficiències o sobrecàrrega a les línies telefòniques o a Internet.",
-			"DESCRIPTION_9": "·Les intromissions il·legítimes fora de control del titular del Lloc Web, com els accessos no autoritzats, les còpies, l'alteració o la supressió d'informació i dades realitzades per tercers en el Lloc Web.",
-			"DESCRIPTION_10": "UBIQ empra tots els recursos tècnics necessaris per reduir aquest tipus de riscos. No obstant això, s'informa a l'Usuari que aquests riscos existeixen i que UBIQ no es responsabilitza dels danys que poguessin ocasionar."
+			"DESCRIPTION_2": "·Any failure or interruption of communication, lack of availability, timeliness, maintenance, and effective operation of the Website and/or its services or content.",
+			"DESCRIPTION_3": "·Failure to meet the expectations of Users regarding the Website or the server that supplies it.",
+			"DESCRIPTION_4": "·The invulnerability of the Website and/or the invulnerability of the security measures adopted therein.",
+			"DESCRIPTION_5": "·The contents, services, errors, or omissions that the content of the Website or the links or links that may be enabled may have.",
+			"DESCRIPTION_6": "·The existence of viruses or harmful programs in the content that may cause alterations in the computer system, electronic documents, or files stored by Users.",
+			"DESCRIPTION_7": "·Telephone or network breakdowns caused by reasons beyond the control of the owner of the Website.",
+			"DESCRIPTION_8": "·Delays or blockages in the operational functioning of the system caused by deficiencies or overload in telephone lines or on the Internet.",
+			"DESCRIPTION_9": "·Unauthorized intrusions beyond the control of the owner of the Website, such as unauthorized access, copies, alteration, or deletion of information and data made by third parties on the Website.",
+			"DESCRIPTION_10": "UBIQ uses all necessary technical resources to reduce such risks. However, Users are informed that such risks exist, and UBIQ is not responsible for any damages that may occur."
 		},
 		"INTELLECTUAL_AND_INDUSTRIAL_PROPERTY": {
 			"TITLE": "Intellectual and Industrial Property",
 			"DESCRIPTION_1": "The contents of the website, including text, images, graphic design, source code, logos, brands, trade names, and other distinctive signs, are owned by UBIQ or its licensors, and are protected by corresponding intellectual and industrial property rights.",
 			"DESCRIPTION_2": "The use of the website by the user does not imply the transfer of any intellectual or industrial property rights. The user is expressly prohibited from reproducing, transforming, distributing, publicly communicating, making available, extracting, and/or reusing the website or any of its parts without the express written permission of UBIQ.",
-			"DESCRIPTION_3": "En cap cas l'accés i ús al Lloc Web per part dels Usuaris, es podrà considerar com una concessió de llicència d'ús o dret a cap actiu d'UBIQ o dels seus autors legítims, pel que no implicarà una cessió, ni transmissió, ni cap tipus de renúncia de drets de Propietat Intel·lectual o Industrial.",
-			"DESCRIPTION_4": "A menys que UBIQ o els tercers titulars dels drets ho autoritzin expressament, queda prohibida tota reproducció, còpia, conversió, distribució, modificació, supressió o transformació, publicació, comercialització, utilització de tècniques d'enginyeria inversa o qualsevol altre mitjà per obtenir el codi font i qualsevol altra activitat que es pugui realitzar amb les dades i la informació continguda en el Lloc Web, així com amb el seu disseny i la selecció i model de presentació. L'Usuari utilitza la informació a la qual pugui accedir mitjançant l'ús del Lloc Web, exclusivament per a fins personals i en cap cas per a fins comercials o empresarials.",
-			"DESCRIPTION_5": "La utilització no autoritzada de la informació continguda en el Lloc Web, la seva modificació o supressió de dades, així com la lesió dels Drets de Propietat Intel·lectual o Industrial d'UBIQ o de tercers, donarà lloc a les responsabilitats legalment establertes, reservant-se UBIQ la possibilitat d'exercir les accions judicials que procedeixin en dret contra els Usuaris que violin o infringeixin els drets de propietat intel·lectual o industrial."
+			"DESCRIPTION_3": "In no case shall the access and use of the Website by Users be considered as a grant of a license to use or right to any asset of UBIQ or its legitimate authors, so it shall not imply a transfer, transmission, or any kind of waiver of Intellectual or Industrial Property rights.",
+			"DESCRIPTION_4": "Unless expressly authorized by UBIQ or the third-party rights holders, all reproduction, copying, conversion, distribution, modification, deletion, or transformation, publication, marketing, use of reverse engineering techniques, or any other means to obtain the source code and any other activity that may be carried out with the data and information contained on the Website, as well as with its design and selection and presentation model, is prohibited. The User uses the information that may be accessed through the use of the Website, exclusively for personal purposes and under no circumstances for commercial or business purposes.",
+			"DESCRIPTION_5": "The unauthorized use of the information contained on the Website, its modification or deletion of data, as well as the violation of UBIQ's or third parties' Intellectual or Industrial Property Rights, will give rise to the legally established liabilities, reserving UBIQ the possibility of exercising the legal actions that correspond against Users who violate or infringe intellectual or industrial property rights."
 		},
 		"THIRD_PARTY_LINKS": {
 			"TITLE": "Third-Party Links",
 			"DESCRIPTION_1": "The website may contain links to third-party websites. The inclusion of these links does not imply any type of association, merger, or participation with the connected entities. UBIQ does not guarantee the legality, reliability, usefulness, truthfulness, or accuracy of the services or information that may be provided through such links.",
-			"DESCRIPTION_2": "UBIQ se reserva el derecho de retirar de modo unilateral y en cualquier momento los enlaces que aparezcan en el presente Sitio Web."
+			"DESCRIPTION_2": "UBIQ reserves the right to unilaterally withdraw the links that appear on this Website at any time."
 		},
 		"SOCIAL_NETWORKS": {
 			"TITLE": "Social Networks",
 			"DESCRIPTION_1": "The website may provide links or access to social network pages that are beyond UBIQ's control. These pages may collect and process personal information, have their own privacy policies, and UBIQ is not responsible for their operations or the information contained therein.",
-			"DESCRIPTION_2": "La activación y uso de estas aplicaciones puede conllevar la identificación y autenticación del Usuario (login/contraseña) en las plataformas correspondientes, completamente externas al Sitio Web y fuera del control de UBIQ. Al acceder a dichas redes externas, el Usuario ingresa en un entorno no controlado por UBIQ, de manera que ésta no asumirá ninguna responsabilidad sobre la configuración de seguridad de dichos entornos. Dichas redes sociales y plataformas disponen de sus propias políticas de privacidad y del tratamiento de las cookies. En este sentido, toda información y datos personales que el Usuario proporcione a estas plataformas será bajo su propia y exclusiva responsabilidad."
+			"DESCRIPTION_2": "The activation and use of these applications may involve the identification and authentication of the User (login/password) on the corresponding platforms, completely external to the Website and beyond UBIQ's control. By accessing these external networks, the User enters an environment not controlled by UBIQ, so it will not assume any responsibility for the security configuration of such environments. These social networks and platforms have their own privacy policies and cookie treatment. In this sense, all information and personal data that the User provides to these platforms will be under their own and exclusive responsibility."
 		},
 		"DATA_PROTECTION": {
 			"TITLE": "Data Protection",
 			"DESCRIPTION_1": "UBIQ is the owner of the database generated with the personal data provided by users. UBIQ commits to fulfilling its obligation to keep personal data secret and to process it confidentially, and to this end, has implemented the necessary measures to prevent alteration, loss, processing, or unauthorized access in accordance with the provisions of applicable legislation.",
-			"DESCRIPTION_2": "De conformidad con lo establecido en la legislación aplicable en materia de protección de datos, UBIQ respeta la privacidad de los Usuarios y el secreto y seguridad de los datos personales, adoptando para ello las medidas técnicas y organizativas necesarias para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos personales facilitados, habida cuenta el estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.",
-			"DESCRIPTION_3": "Los datos personales de los Usuarios del Sitio Web, solo se obtendrán para ser tratados cuando sean adecuados, pertinentes y no excesivos en relación con el ámbito y las finalidades determinadas, explícitas, consentidas y/o legítimas para las que se hayan recabado. Cuando se recaben datos personales a través del Sitio Web, se informará previamente al Usuario de forma clara e inequívoca.",
-			"DESCRIPTION_4": "El Usuario deberá visitar la Política de Privacidad de UBIQ, en este mismo Sitio Web, donde encontrará información detallada respecto la protección de datos de carácter personal."
+			"DESCRIPTION_2": "In accordance with the provisions of applicable data protection legislation, UBIQ respects the privacy of Users and the secrecy and security of personal data, adopting the necessary technical and organizational measures to prevent loss, misuse, alteration, unauthorized access, and theft of the personal data provided, taking into account the state of technology, the nature of the data, and the risks to which they are exposed.",
+			"DESCRIPTION_3": "The personal data of Website Users will only be obtained for processing when they are adequate, relevant, and not excessive in relation to the scope and specific, explicit, consented, and/or legitimate purposes for which they have been collected. When personal data is collected through the Website, the User will be informed in advance in a clear and unequivocal manner.",
+			"DESCRIPTION_4": "Users must visit UBIQ's Privacy Policy on this same Website, where they will find detailed information regarding the protection of personal data."
 		},
 		"SITE_UPDATE": {
 			"TITLE": "WEBSITE UPDATE",
@@ -383,7 +391,7 @@
 			"DESCRIPTION_1": "Any dispute or conflict that may arise from the interpretation or execution of this Legal Notice shall be resolved under the laws of Spain. In cases where the law allows parties to submit to a particular jurisdiction, both UBIQ and the user expressly waive any other jurisdiction that may correspond to them and submit to the Courts and Tribunals of the city of Barcelona."
 		},
 		"MODIFICATIONS": {
-			"LAST_UPDATE": "Date of last update: 12 del 12 de 2023."
+			"LAST_UPDATE": "Date of last update: December 12, 2023."
 		}
 	},
 	"ERROR_404": {

@@ -1,15 +1,23 @@
 {
-	"SEO_TITLE": "Premios ESLAND 2024 - Celebrando lo mejor del streaming y los creadores de contenido",
+	"SEO_TITLE_1": "Premios ESLAND",
+	"SEO_TITLE_2": "- Celebrando lo mejor del streaming y los creadores de contenido",
 	"SEO_DESCRIPTION": "Descubre a los mejores creadores de contenido de España, Latinoamérica y Andorra. ¡Vota por tus favoritos! Celebra la innovación y el talento de Twitch, YouTube y más",
 	"SEO": {
-		"ARCHIVO_TITLE": "Archivo de las ediciones anteriores - Premios ESLAND 2024",
+		"ARCHIVO_TITLE": "Archivo de las ediciones anteriores - Premios ESLAND",
 		"ARCHIVO_DESCRIPTION": "Repasa los mejores momentos de ediciones anteriores",
-		"INFO_TITLE": "Información - Premios ESLAND 2024",
-		"INFO_DESCRIPTION": "Descubre todo lo que necesitas saber sobre los Premios ESLAND 2024 y descarga el Kit de Prensa",
-		"VOTE_TITLE": "Vota por tus creadores de contenido favoritos - Premios ESLAND 2024",
+		"INFO_TITLE": "Información - Premios ESLAND",
+		"INFO_DESCRIPTION_1": "Descubre todo lo que necesitas saber sobre los Premios ESLAND",
+		"INFO_DESCRIPTION_2": "y descarga el Kit de Prensa",
+		"VOTE_TITLE": "Vota por tus creadores de contenido favoritos - Premios ESLAND",
 		"VOTE_DESCRIPTION": "Vota por tus creadores de contenido favoritos de España, Latinoamérica y Andorra",
-		"ERROR_404_TITLE": "404 Página no encontrada - Premios ESLAND 2024",
-		"ERROR_404_DESCRIPTION": "404 Página no encontrada - Premios ESLAND 2024"
+		"LEGAL_NOTICE_TITLE": "Aviso legal - Premios ESLAND",
+		"LEGAL_NOTICE_DESCRIPTION": "El aviso legal establece las disposiciones legales y las responsabilidades relacionadas con los Premios ESLAND, abordando aspectos como términos de uso, responsabilidades legales y acuerdos entre el usuario y la entidad responsable",
+		"PRIVACY_POLICY_TITLE": "Política de privacidad - Premios ESLAND",
+		"PRIVACY_POLICY_DESCRIPTION": "La Política de Privacidad de los Premios ESLAND describe cómo se recopilan, utilizan, protegen y comparten los datos personales de los usuarios",
+		"COOKIES_TITLE":"Política de cookies - Premios ESLAND",
+		"COOKIES_DESCRIPTION":"La Política de Cookies de los Premios ESLAND informa sobre el uso de cookies y tecnologías similares en el sitio web",
+		"ERROR_404_TITLE": "404 Página no encontrada - Premios ESLAND",
+		"ERROR_404_DESCRIPTION": "Página no encontrada (Error 404). Verifica la URL o explora nuestras secciones. ¿Necesitas ayuda? Contáctenos."
 	},
 	"HEADER": {
 		"LOGO": "Volver a la página de inicio de los Premios ESLAND"
@@ -61,7 +69,7 @@
 	"CATEGORY": "Categoría",
 	"LOG_OUT": "Cerrar sesión",
 	"FOOTER": {
-		"DISCLAIMER": "© ESLAND 2021 - 2024 Todos los derechos reservados. - Esta no es la web oficial, desarrollada por @midudev para fines educativos",
+		"DISCLAIMER": "Todos los derechos reservados. - Esta no es la web oficial, desarrollada por @midudev para fines educativos",
 		"LEGAL": {
 			"TITLE": "Legal",
 			"NOTICE": "Aviso Legal",
@@ -217,7 +225,7 @@
 		},
 		"RESPONSIBLE": {
 			"TITLE": "Responsable del tratamiento",
-			"DESCRIPTION_1": "UBIQ S.L.U (en adelante, UBIQ) sociedad andorrana con NRT L-718097-X, con domicilio social en la calle Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita en el Registro de Sociedades del Gobierno de Andorra con nº 23023, con correo electrónico [info@ubiq.ad………….], es la titular de la página Web www.premiosesland.com (en adelante, Sitio Web).",
+			"DESCRIPTION_1": "UBIQ S.L.U (en adelante, UBIQ) sociedad andorrana con NRT L-718097-X, con domicilio social en la calle Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita en el Registro de Sociedades del Gobierno de Andorra con nº 23023, con correo electrónico [info@ubiq.ad], es la titular de la página Web www.premiosesland.com (en adelante, Sitio Web).",
 			"DESCRIPTION_2": "Los Usuarios pueden contactar con el Responsable del Tratamiento a través de la siguiente dirección de correo electrónico: info@ubiq.ad"
 		},
 		"DEFINITIONS": {
@@ -302,7 +310,7 @@
 		},
 		"OWNERSHIP_AND_CONTACT_DATA": {
 			"TITLE": "Titularidad  y datos de contacto",
-			"DESCRIPTION_1": "UBIQ S.L.U (en adelante, UBIQ) sociedad andorrana con NRT L-718097-X, con domicilio social en la calle Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita en el Registro de Sociedades del Gobierno de Andorra con nº 23023, con correo electrónico [info@ubiq.ad………….], es la titular de la página Web www.premiosesland.com (en adelante, Sitio Web). Los Usuarios del Sitio Web podrán contactar con UBIQ mediante el envío de un correo electrónico a: info@ubiq.ad"
+			"DESCRIPTION_1": "UBIQ S.L.U (en adelante, UBIQ) sociedad andorrana con NRT L-718097-X, con domicilio social en la calle Josep Viladomat, 4, Ed Sogas, 1-1 AD700 Escaldes Engordany (Andorra), inscrita en el Registro de Sociedades del Gobierno de Andorra con nº 23023, con correo electrónico [info@ubiq.ad], es la titular de la página Web www.premiosesland.com (en adelante, Sitio Web). Los Usuarios del Sitio Web podrán contactar con UBIQ mediante el envío de un correo electrónico a: info@ubiq.ad"
 		},
 		"PURPOSE_AND_CONTENT_WEBSITE": {
 			"TITLE": "Objeto y contenido del sitio web",

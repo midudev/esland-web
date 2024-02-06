@@ -10,7 +10,7 @@ const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
-<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION}>
+<Layout title=`${i18n.SEO_TITLE_1}&nbsp;${new Date().getFullYear()}&nbsp;${i18n.SEO_TITLE_2}`  description={i18n.SEO_DESCRIPTION}>
   <link
     rel="preload"
     href="/fonts/jura.woff2"

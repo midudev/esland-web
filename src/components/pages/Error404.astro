@@ -13,7 +13,7 @@ const lang = getLangFromUrl(Astro.url);
 const translatePath = useTranslatedPath(lang);
 
 ---
-<Error404Layout title={i18n.SEO.ERROR_404_TITLE} description={i18n.SEO.ERROR_404_DESCRIPTION}>
+<Error404Layout title=`${i18n.SEO.ERROR_404_TITLE}&nbsp;${new Date().getFullYear()}` description={i18n.SEO.ERROR_404_DESCRIPTION}>
         <section
         class="flex relative pb-24 min-h-screen"
         >
@@ -28,7 +28,6 @@ const translatePath = useTranslatedPath(lang);
                     </p>
                 </div>
                 <a href={translatePath('/')} class={`
-                  hover:text-cyan-100
                     text__glowing
                     text-sm 
                     ${styles.button} 

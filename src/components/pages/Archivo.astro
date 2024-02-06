@@ -13,7 +13,7 @@ const i18n = getI18N({ currentLocale })
 ---
 
 <Layout
-  title={i18n.SEO.ARCHIVO_TITLE}
+  title=`${i18n.SEO.ARCHIVO_TITLE}&nbsp;${new Date().getFullYear()}`
   description={i18n.SEO.ARCHIVO_DESCRIPTION}
 >
   <HeroContainer img="/archivo-background.webp">
