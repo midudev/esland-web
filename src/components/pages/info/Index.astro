@@ -3,6 +3,7 @@ import Layout from "@/layouts/Layout.astro"
 import Img from "@/components/Img.astro"
 import Hero from "@/components/Hero.astro"
 import KitPrensa from "@/components/pages/info/KitPrensa.astro"
+import "@/assets/styles/info.css";
 
 const { i18n } = Astro.locals;
 ---
@@ -89,56 +90,3 @@ const { i18n } = Astro.locals;
     ]} />
   </main>
 </Layout>
-
-<style>
-  #theater,
-  #trophies-text h1,
-  #trophies-text p {
-    animation: cover-animation linear both;
-    animation-timeline: view();
-  }
-  #theater-text h1,
-  #theater-text p,
-  #trophies {
-    animation: entry-animation linear both;
-    animation-timeline: view();
-  }
-  #theater {
-    animation-range: entry 10% cover 40%;
-  }
-  #theater-text h1 {
-    animation-range: entry 10% cover 30%;
-  }
-  #theater-text p {
-    animation-range: entry 10% cover 20%;
-  }
-  #trophies {
-    animation-range: entry 30% cover 50%;
-  }
-  #trophies-text h1 {
-    animation-range: entry 30% cover 40%;
-  }
-  #trophies-text p {
-    animation-range: entry 20% cover 30%;
-  }
-  @keyframes entry-animation {
-    0% {
-      opacity: 0;
-      translate: var(--entry-animation) 0;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
-  @keyframes cover-animation {
-    0% {
-      opacity: 0;
-      translate: var(--cover-animation) 0;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
-</style>

@@ -1,4 +1,5 @@
 ---
+import BaseLayout from "./Base.astro";
 import { getRelativeLocaleUrl, getComponentPath, split } from "@/i18n/config";
 import Button from "@/components/Button.astro";
 import Link from "@/components/Link.astro";
@@ -10,7 +11,6 @@ const { pathname } = Astro.url;
 const { i18n } = Astro.locals;
 const page = getComponentPath(currentLocale, pathname);
 const [currentLocaleData, otherLocales] = split(currentLocale);
-import BaseLayout from "./Base.astro";
 ---
 <BaseLayout title={title} description={description}>
   <header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
@@ -27,7 +27,6 @@ import BaseLayout from "./Base.astro";
           class="absolute w-10 m-auto blur-sm opacity-0 transition-opacity duration-300 hover:opacity-100"
         />
         <Svg src="logo" class="w-10" />
-        <span class="sr-only">{i18n.FOOTER.FOOTER.HOME}</span>
       </Link>
 
       <!-- NAVIGATION -->
@@ -46,6 +45,7 @@ import BaseLayout from "./Base.astro";
               href={slug}
               class:list={[
                 "text__glowing",
+                "uppercase",
                 "border-b-2",
                 getRelativeLocaleUrl(currentLocale, slug) === pathname
                   ? "border-white"
@@ -66,7 +66,7 @@ import BaseLayout from "./Base.astro";
             <button
               type="button"
               class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-haspopup="true"
             >
               <Svg src={`flag-${currentLocale}`} class="w-4 h-auto" />
@@ -216,21 +216,4 @@ import BaseLayout from "./Base.astro";
       </div>
     </div>
   </footer>
-  <style is:global>
-    #header-nav {
-      animation: blur linear both;
-      animation-timeline: scroll();
-      animation-range: 0 500px;
-    }
-
-    @keyframes blur {
-      to {
-        box-shadow:
-          0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-          0px 0px 0 1px rgba(0, 0, 0, 0.3);
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-      }
-    }
-  </style>
 </BaseLayout>

@@ -1,4 +1,6 @@
 .button {
+  @apply w-fit lg:text-2xl font-medium no-underline px-5 py-3 border border-solid border-white rounded-full uppercase;
+
   transition:
     text-shadow 0.5s ease-out,
     box-shadow 0.3s ease-out;

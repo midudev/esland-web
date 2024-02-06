@@ -1,0 +1,12 @@
+:root {
+  color-scheme: dark;
+  --entry-animation: -20px;
+  --cover-animation: 20px;
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --entry-animation: -100px;
+    --cover-animation: 100px;
+  }
+}
