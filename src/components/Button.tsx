@@ -18,6 +18,7 @@ export default function Button({ children, onClick,url, target, className, ...re
   rel="noopener noreferrer"
   onClick={onClick}
   class={`
+  lg:text-2xl
   w-fit
   font-medium
   no-underline
