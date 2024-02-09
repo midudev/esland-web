@@ -70,7 +70,7 @@ export const routes = {
 		vota: 'vote',
 		info: 'information',
 		archivo: 'archive',
-		'aviso-legal': 'legalnotice',
+		'aviso-legal': 'legal-notice',
 		privacidad: 'privacy',
 		cookies: 'cookies',
 	},

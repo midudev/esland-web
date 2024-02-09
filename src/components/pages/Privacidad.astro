@@ -10,7 +10,7 @@ const SECTION_STYLES =
   "max-w-5xl mx-auto my-10 text-pretty px-6 text-left text-lg leading-relaxed sm:px-20"
 ---
 
-<Layout title={i18n.SEO.INFO_TITLE} description={i18n.SEO.INFO_DESCRIPTION}>
+<Layout title=`${i18n.SEO.PRIVACY_POLICY_TITLE}&nbsp;${new Date().getFullYear()}` description={i18n.SEO.PRIVACY_POLICY_DESCRIPTION}>
   <main class="py-8">
     <section class=`${SECTION_STYLES}`>
       <h2 class=`${HEADING_STYLES}`>{i18n.PRIVACY.POLICY.TITLE}</h2>
