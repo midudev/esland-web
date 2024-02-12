@@ -29,7 +29,7 @@ export default function Editions({i18n}:{i18n:any}) {
             }
             </div>
 
-            <Palmares edicion={edicion} />
+            <Palmares i18n={i18n} edicion={edicion} />
             <Galeria i18n={i18n} edicion={edicion} />
             <Numeros i18n={i18n} edicion={edicion}/>
         </>

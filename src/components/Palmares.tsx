@@ -2,17 +2,13 @@ import StreamerCard from "@/components/StreamerCard.tsx"
 import palmares from "@/data/editions-info.json"
 import styles from "@/components/styles/Palmares.module.css"
 
-interface Props {
-  edicion: string
-}
-
-export default function Palmares({edicion}:Props) {
+export default function Palmares({i18n,edicion}:{i18n:any,edicion:string}) {
   let index = 3
 
   let datosSeleccionados = palmares.find((palmar) => palmar.edition === edicion)
 
   if (!datosSeleccionados) {
-    return <h1>Edicion no encontrada</h1>
+    return <h1>{i18n.AWARDS.NOT_FOUND}</h1>
   }
 
   const {
@@ -36,7 +32,7 @@ export default function Palmares({edicion}:Props) {
       <h2
         class="text-4xl lg:text-6xl text-center mb-10 lg:mb-20 uppercase font-tomaso"
       >
-        Palmarés
+        {i18n.AWARDS.TITLE}
       </h2>
       <div class="flex flex-col lg:flex-row gap-10">
         <div class="flex flex-col gap-2">
