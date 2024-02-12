@@ -5,7 +5,7 @@ export const useProgressiveNumber = (
 	duration = 1500,
 	decimals = 0,
 	delay = 5
-): [number, (value: number | ((prevTarget: number) => number)) => void] => {
+): [string, (value: string | ((prevTarget: number) => number)) => void] => {
 	const [target, setTarget] = useState(initialValue)
 	const [current, setCurrent] = useState(initialValue)
 	const [steps, setSteps] = useState(1)
@@ -14,14 +14,13 @@ export const useProgressiveNumber = (
 	const initial = typeof initialValue === 'function' ? initialValue() : initialValue;
 	
 	const setValue = useCallback(
-		(value: number | ((prevTarget: number) => number)) => {
+		(value: string | ((prevTarget: number) => number)) => {
 			const nextTarget = typeof value === 'function' ? value(target) : value
 			const steps = Math.max(Math.floor(duration / delay), 1)
-
 			setSteps(steps)
-			setTarget(nextTarget)
+			setTarget(Number(nextTarget))
 			setCurrentStep(1);
-			setCurrent(lerp(initial, nextTarget, easeOutCubic(1 / steps)))
+			setCurrent(lerp(initial, Number(nextTarget), easeOutCubic(1 / steps)))
 		},
 		[delay, duration, target]
 	)
@@ -42,9 +41,7 @@ export const useProgressiveNumber = (
 
 		return () => clearTimeout(timeout)
 	}, [delay, currentStep, target])
-
-	const value = Number(current.toFixed(decimals))
-
+	const value = current.toFixed(decimals)
 	return [value, setValue]
 }
 
