@@ -15,9 +15,9 @@ export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
       <h2
         class="mx-auto mb-8 text-center text-3xl lg:text-6xl font-semibold tracking-wide"
       >
-        {i18n.INFO.GALLERY_TITLE}
+        {i18n.GALLERY_TITLE}
       </h2>
-      <p class="text-center text-2xl">{i18n.INFO.GALLERY_TEXT}</p>
+      <p class="text-center text-2xl">{i18n.GALLERY_TEXT}</p>
 
       <masonry-layout
         gap="24"
