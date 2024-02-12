@@ -19,10 +19,13 @@ export default function Button({ children, onClick,url, target, className, ...re
   onClick={onClick}
   class={`
   lg:text-2xl
+  md:px-5
+  md:text-xl
+  text-xs
   w-fit
   font-medium
   no-underline
-  px-5
+  px-3
     py-3
     border
     border-solid
