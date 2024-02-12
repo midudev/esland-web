@@ -297,6 +297,10 @@
 			"LAST_UPDATE": "Fecha de la última actualización: 12 del 12 de 2023."
 		}
 	},
+	"AWARDS": {
+		"TITLE": "PALMARÉS",
+		"NOT_FOUND" : "Edición no encontrada"
+	},
 	"GALLERY": {
 		"TITLE": "GALERÍA",
 		"TEXT": "Algunos de los mejores momentos de la gala que pasarán a la historia.",
