@@ -1,7 +1,7 @@
 <div align="center">
 <img src="public/favicon.svg" height="50px" width="auto" /> 
 <h3>
- The ESLAND page reimagined
+ The ESLAND page re-imagined
 </h3>
 <p>Created for didactic and educational purposes.</p>
 </div>
@@ -107,7 +107,7 @@ pnpm dev
   <img src="https://contrib.rocks/image?repo=midudev/esland-web" />
 </a>
 
-## 🔑 Get your Twicth client ID and secret
+## 🔑 Get your Twitch client ID and secret
 
 Before being able to initialize the application, you will need to obtain your ***client ID*** and ***client secret*** from Twitch.
 
@@ -117,11 +117,11 @@ Once you're there, you should to click on the button that says **'your console'*
 
 ![home page of dev.twitch.tv](resourses/consola.png)
 
-When you're in the console page. You create a new app in the **'apps'** section and press the button that say's 'regist your app'
+When you're in the console page. You create a new app in the **'apps'** section and press the button that say's 'register your app'
 
 ![create your twitch app](resourses/crear-aplicacion.png)
 
-Then you'll need to regist your app. Fill the fields as teh follow example and click the **'create'** button.
+Then you'll need to register your app. Fill the fields as teh follow example and click the **'create'** button.
 
 ![fill the fields](resourses/campos.png)
 
