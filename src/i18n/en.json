@@ -297,6 +297,10 @@
 			"LAST_UPDATE": "Last update date: December 12, 2023."
 		}
 	},
+	"AWARDS": {
+		"TITLE": "AWARDS",
+		"NOT_FOUND" : "Edition not found"
+	},
 	"GALLERY": {
 		"TITLE": "GALLERY",
 		"TEXT": "Capture some of the gala's most memorable moments that will go down in history.",
