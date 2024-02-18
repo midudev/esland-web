@@ -109,7 +109,7 @@ pnpm dev
 
 ## 🔑 Get your Twitch client ID and secret
 
-Before being able to initialize the application, you will need to obtain your ***client ID*** and ***client secret*** from Twitch.
+Before being able to initialize the application, you will need to obtain your **_client ID_** and **_client secret_** from Twitch.
 
 First, you must to go to [dev.twitch.tv](https://dev.twitch.tv)
 
@@ -117,7 +117,7 @@ Once you're there, you should to click on the button that says **'your console'*
 
 ![home page of dev.twitch.tv](resourses/consola.png)
 
-When you're in the console page. You create a new app in the **'apps'** section and press the button that say's 'register your app'
+When you're in the console page. You create a new app in the **'apps'** section and press the button that say's **'register your app'**
 
 ![create your twitch app](resourses/crear-aplicacion.png)
 
@@ -129,11 +129,11 @@ After that, the page will redirect you to the admin panel. Look for the applicat
 
 ![control panel](resourses/panel_de_admin.png)
 
-You'll go to the same page where you were when you registered your app. Scroll down, and you'll find your ***client ID*** as shown below:
+You'll go to the same page where you were when you registered your app. Scroll down, and you'll find your **_client ID_** as shown below:
 
 ![get the id](resourses/cliente_id.png)
 
-Finally, you'll need your ***client secret***. Below the place where you obtained your ***client ID***, you'll find the **'new secret'** button; click on it to get your secret.
+Finally, you'll need your **_client secret_**. Below the place where you obtained your **_client ID_**, you'll find the **'new secret'** button; click on it to get your secret.
 
 ![get the secret](resourses/secreto.png)
 
@@ -153,12 +153,12 @@ Don't forget that add it to your `.env` file
 
 ## ✅ Por hacer...
 
-- [ ] Mejorar diseño de la página "Info"
-- [ ] Añadir funcionalidad de ganadores de pasadas ediciones
-- [ ] Mejorar la precarga de las imágenes de las siguientes secciones en idle
-- [ ] Pestaña para cambiar entre ediciones en la página "Archivo"
+- [x] Mejorar diseño de la página "Info"
+- [x] Añadir funcionalidad de ganadores de pasadas ediciones
+- [ ] Mejorar la pre-carga de las imágenes de las siguientes secciones en idle
+- [x] Pestaña para cambiar entre ediciones en la página "Archivo"
 
 ### 👀 Lo haremos en directo en Twitch
 
-- [ ] Base de datos para las votaciones
-- [ ] Backend para las votaciones
+- [x] Base de datos para las votaciones
+- [x] Backend para las votaciones
