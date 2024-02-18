@@ -9,10 +9,11 @@ import { Card } from "./card";
 import { Category } from "./category";
 import { useI18n } from "@/hooks/useI18n";
 
-export const Palmares = ({ edition }: { edition: string }) => {
+export const Palmares = ({ edition }: PalmaresProps) => {
   const { i18n } = useI18n();
+  console.log(i18n);
   const [categorySelected, setCategorySelected] = useState(0);
-  const [edicion, setEdicion] = useState(
+  const [selectedEdition, setEditionSelected] = useState(
     palmares.find((p) => p.edition === edition)
   );
   const [isMobile, setIsMobile] = useState(false);
@@ -27,7 +28,7 @@ export const Palmares = ({ edition }: { edition: string }) => {
 
   useEffect(() => {
     setCategorySelected(0);
-    setEdicion(palmares.find((p) => p.edition === edition));
+    setEditionSelected(palmares.find((p) => p.edition === edition));
   }, [edition]);
 
   useEffect(() => {
@@ -60,12 +61,12 @@ export const Palmares = ({ edition }: { edition: string }) => {
 
   return (
     <>
-      {!edicion && (
+      {!selectedEdition && (
         <NoDataSection>
           <h1>{i18n.AWARDS.NOT_FOUND}</h1>
         </NoDataSection>
       )}
-      {edicion && (
+      {selectedEdition && (
         <Container>
           <Title
             tag="h2"
@@ -78,7 +79,7 @@ export const Palmares = ({ edition }: { edition: string }) => {
           </Title>
           <section className={Styles.container}>
             <div className={Styles.info}>
-              {edicion.info.map((inf, index) => (
+              {selectedEdition.info.map((inf, index) => (
                 <Category
                   key={`${index}-${inf.categoria}`}
                   edition={edition}
@@ -97,12 +98,12 @@ export const Palmares = ({ edition }: { edition: string }) => {
                   <Card
                     edition={edition}
                     position={1}
-                    info={edicion.info[categorySelected]}
+                    info={selectedEdition.info[categorySelected]}
                   />
                   <Card
                     edition={edition}
                     position={2}
-                    info={edicion.info[categorySelected]}
+                    info={selectedEdition.info[categorySelected]}
                   />
                 </div>
               </div>
@@ -113,3 +114,7 @@ export const Palmares = ({ edition }: { edition: string }) => {
     </>
   );
 };
+
+interface PalmaresProps {
+  edition: string;
+}

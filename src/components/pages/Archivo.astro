@@ -32,6 +32,6 @@ const i18n = getI18N({ currentLocale })
   </HeroContainer>
 
   <main class="pb-24">
-    <Editions i18n={i18n} client:load/>
+    <Editions locale={currentLocale || "es"} client:load/>
   </main>
 </Layout>
