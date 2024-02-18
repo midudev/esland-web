@@ -11,7 +11,6 @@ import { useI18n } from "@/hooks/useI18n";
 
 export const Palmares = ({ edition }: PalmaresProps) => {
   const { i18n } = useI18n();
-  console.log(i18n);
   const [categorySelected, setCategorySelected] = useState(0);
   const [selectedEdition, setEditionSelected] = useState(
     palmares.find((p) => p.edition === edition)
