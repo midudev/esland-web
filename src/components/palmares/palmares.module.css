@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  padding: 2rem 5.29vw;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+}
+.container > div {
+  position: relative;
+  flex: 1 0 50%;
+}
+.info {
+  position: relative;
+}
+.details {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.details > div {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.details > div > article {
+  opacity: 0;
+}
+.details > div[data-show="true"] > article {
+  animation: slideIn 0.4s ease-in-out forwards;
+}
+.details > div[data-hide="true"] > article {
+  animation: slideOut 0.4s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0) rotate(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, 0) rotate(-20deg);
+  }
+}

@@ -299,7 +299,10 @@
 	},
 	"AWARDS": {
 		"TITLE": "PALMARÉS",
-		"NOT_FOUND" : "Edición no encontrada"
+		"NOT_FOUND": "Edición no encontrada",
+		"COMMUNITY": "Comunidad",
+		"STREAMERS": "Streamers",
+		"TOTAL": "Total"
 	},
 	"GALLERY": {
 		"TITLE": "GALERÍA",
