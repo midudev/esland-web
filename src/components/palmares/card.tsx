@@ -1,14 +1,15 @@
 import Styles from "./card.module.css";
 import { CountUp } from "@/components/CountUp";
 import palmares from "@/data/editions-info.json";
+import { useI18n } from "@/hooks/useI18n";
 
 export const Card = ({
-  i18n,
   edition,
   info,
   isMobile = false,
   position,
 }: CardProps) => {
+  const { i18n } = useI18n();
   const isWinnerInfoAvailable = position === 1 && info?.ganador && info?.foto1;
   const isFinalistInfoAvailable =
     position !== 1 && info?.finalista && info?.foto2;
@@ -86,5 +87,4 @@ interface CardProps {
   info: (typeof palmares)[0]["info"][0];
   isMobile?: boolean;
   position: number;
-  i18n: any;
 }

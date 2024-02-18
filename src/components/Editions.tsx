@@ -5,11 +5,14 @@ import { Palmares } from "./palmares/palmares";
 import editions from "@/data/editions-info.json"
 import styles from "@/components/styles/Editions.module.css"
 
-export default function Editions({i18n}:{i18n:any}) {
+import { I18nProvider } from "@/providers/i18n";
+
+export default function Editions({locale}:{locale: string}) {
     const [edicion, setEdicion] = useState("1")
 
     return (
         <>
+        <I18nProvider locale={locale}>
             <div className="flex h-24 mt-4">
 
             {
@@ -29,9 +32,11 @@ export default function Editions({i18n}:{i18n:any}) {
             }
             </div>
 
-            <Palmares i18n={i18n} edition={edicion} />
-            <Galeria i18n={i18n} edicion={edicion} />
-            <Numeros i18n={i18n} edicion={edicion}/>
+            <Palmares edition={edicion} />
+            <Galeria edicion={edicion} />
+            <Numeros edicion={edicion}/>
+            </I18nProvider>
+
         </>
     )
 }

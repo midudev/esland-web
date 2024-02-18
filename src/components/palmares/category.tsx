@@ -3,7 +3,6 @@ import Styles from "./category.module.css";
 import palmares from "@/data/editions-info.json";
 import { useEffect, useRef, useState } from "preact/hooks";
 import { Card } from "./card";
-import { getI18N } from "@/i18n";
 
 export const Category = ({
   info,
@@ -74,14 +73,12 @@ export const Category = ({
           <section ref={cardsRef} style={{ height }}>
             <div>
               <Card
-                i18n={getI18N}
                 edition={edition}
                 position={1}
                 info={info}
                 isMobile={isMobile}
               />
               <Card
-                i18n={getI18N}
                 edition={edition}
                 position={2}
                 info={info}
