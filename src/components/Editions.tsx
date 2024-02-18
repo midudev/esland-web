@@ -5,11 +5,13 @@ import { I18nProvider } from "@/providers/i18n";
 import Galeria from "./Galeria";
 import Numeros from "./Numeros";
 import { Palmares } from "./palmares/palmares";
+import { useI18n } from "@/hooks/useI18n";
 
 import styles from "@/components/styles/Editions.module.css";
 
 export default function Editions({locale}: EditionsProps) {
     const [editionSelected, setEditionSelected] = useState("1")
+    const { i18n } = useI18n();
 
     return (
         <>

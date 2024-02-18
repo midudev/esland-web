@@ -27,10 +27,10 @@
   opacity: 0;
 }
 .details > div[data-show="true"] > article {
-  animation: slideIn 0.4s ease-in-out forwards;
+  animation: slideIn 0.3s ease-in-out forwards;
 }
 .details > div[data-hide="true"] > article {
-  animation: slideOut 0.4s ease-in-out forwards;
+  animation: slideOut 0.3s ease-in-out forwards;
 }
 
 @keyframes slideIn {
