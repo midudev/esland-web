@@ -38,11 +38,9 @@ export default function Editions({locale}: EditionsProps) {
             <Numeros edicion={editionSelected}/>
             </I18nProvider>
 
-
         </>
     );
 }
-console.log(I18nProvider);
 
 interface EditionsProps {
     locale: string;
