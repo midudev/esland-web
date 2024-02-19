@@ -2,10 +2,12 @@
 import { CountUp } from "@/components/CountUp"
 import NumerosItem from "@/components/NumerosItem.tsx"
 import { useMetrics } from "@/hooks/useMetrics"
+import { useI18n } from "@/hooks/useI18n";
 
 
-export default function Numeros({i18n,edicion}:{i18n:any,edicion:string}) {
+export default function Numeros({edicion}:{edicion:string}) {
   const { metrics, numerosRef } = useMetrics({edicion})
+  const { i18n } = useI18n();
 
   return (
     <section class="max-w-6xl mx-auto py-20 px-20">

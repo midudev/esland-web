@@ -7,7 +7,6 @@ import Button from "@/components/Button.tsx"
 import { getI18N } from "@/i18n"
 import Editions from "../Editions"
 
-const edicion = "2"
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
@@ -32,6 +31,6 @@ const i18n = getI18N({ currentLocale })
   </HeroContainer>
 
   <main class="pb-24">
-    <Editions i18n={i18n} client:load/>
+    <Editions locale={currentLocale || "es"} client:load/>
   </main>
 </Layout>

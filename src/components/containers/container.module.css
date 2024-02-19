@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.noDataSection {
+  text-align: center;
+}
+.noDataSection,
+.noDataSection h1,
+.noDataSection h2,
+.noDataSection h3,
+.noDataSection h4,
+.noDataSection h5,
+.noDataSection h6,
+.noDataSection p {
+  margin: 0;
+  padding: 5rem 0;
+  font-weight: lighter;
+  color: rgb(200, 200, 200);
+  font-size: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 90vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+  }
+}
