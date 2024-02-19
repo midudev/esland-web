@@ -155,11 +155,11 @@ Don't forget that add it to your `.env` file
 
 - [x] Mejorar diseño de la página "Info"
 - [x] Añadir funcionalidad de ganadores de pasadas ediciones
+- [x] Pestaña para cambiar entre ediciones en la página "Archivo"
 - [ ] Mejorar el rendimiento de la funcionalidad de ganadores de pasadas ediciones
 - [ ] Agregar traducciones a las categorías de las votaciones
 - [ ] Agregar traducciones a las categorías de los ganadores de pasadas ediciones
 - [ ] Mejorar la pre-carga de las imágenes de las siguientes secciones en idle
-- [x] Pestaña para cambiar entre ediciones en la página "Archivo"
 
 ### 👀 Lo haremos en directo en Twitch
 
