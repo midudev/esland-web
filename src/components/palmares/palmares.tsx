@@ -1,5 +1,7 @@
 import Styles from "./palmares.module.css";
 import palmares from "@/data/editions-info.json";
+import palmaresEn from "@/data/editions-info-en.json";
+import palmaresCa from "@/data/editions-info-ca.json";
 
 import { useEffect, useState } from "preact/hooks";
 import { Container } from "../containers/container";
@@ -9,7 +11,7 @@ import { Card } from "./card";
 import { Category } from "./category";
 import { useI18n } from "@/hooks/useI18n";
 
-export const Palmares = ({ edition }: PalmaresProps) => {
+export const Palmares = ({ edition, locale }: PalmaresProps) => {
   const { i18n } = useI18n();
   const [categorySelected, setCategorySelected] = useState(0);
   const [selectedEdition, setEditionSelected] = useState(
@@ -27,8 +29,17 @@ export const Palmares = ({ edition }: PalmaresProps) => {
 
   useEffect(() => {
     setCategorySelected(0);
-    setEditionSelected(palmares.find((p) => p.edition === edition));
-  }, [edition]);
+    switch (locale) {
+      case "en":
+        setEditionSelected(palmaresEn.find((p) => p.edition === edition));
+        break;
+      case "ca":
+        setEditionSelected(palmaresCa.find((p) => p.edition === edition));
+        break;
+      default:
+        setEditionSelected(palmares.find((p) => p.edition === edition));
+    }
+  }, [edition, locale]);
 
   useEffect(() => {
     setShowCards(true);
@@ -116,4 +127,5 @@ export const Palmares = ({ edition }: PalmaresProps) => {
 
 interface PalmaresProps {
   edition: string;
+  locale: string;
 }
