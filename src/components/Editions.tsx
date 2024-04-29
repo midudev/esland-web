@@ -15,7 +15,6 @@ export default function Editions({locale}: EditionsProps) {
     const [editionSelected, setEditionSelected] = useState("1")
     const [currentEditions, setCurrentEditions] = useState(editions);
     useEffect(() => {
-        // Actualizar las ediciones actuales según el idioma seleccionado
         switch (locale) {
             case 'en':
                 setCurrentEditions(editionsEn);
