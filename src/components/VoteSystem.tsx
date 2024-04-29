@@ -6,7 +6,7 @@ import { VoteFinal } from './VoteFinal';
 
 export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 	children,
-	currentLocale = 'es',
+	currentLocale,
 }) => {
 	const i18n = getI18N({ currentLocale });
 	const containerRef = useRef<HTMLUListElement>(null);

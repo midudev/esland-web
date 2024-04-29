@@ -1,6 +1,7 @@
 import { useEffect, useState } from "preact/hooks";
 import candidatesByCategory from "@/data/editions-vote.json";
 import type { Votes } from "@/types/votes";
+import { useI18n } from "./useI18n";
 
 interface PageInfo {
   categoryName: string;
@@ -23,6 +24,7 @@ export const useVoteSystem = () => {
   const [votes, setVotes] = useState<Votes>(
     Array.from({ length: MAX_CATEGORIES }, () => [])
   );
+  const { i18n } = useI18n();
 
   useEffect(() => {
     let item = localStorage.getItem("votes");
@@ -62,7 +64,7 @@ export const useVoteSystem = () => {
         (votesCategory) => votesCategory.length < MAX_VOTES_PER_CATEGORY
       );
       if (missingVotes) {
-        alert("Debes votar 4 candidatos por categoría");
+        alert(`${i18n.VOTE.VOTE_MISSING}`);
         return;
       }
     }

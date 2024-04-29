@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "preact/hooks"
 import { type default as CandidatesType } from "@/data/editions-vote.json"
 import confetti from 'canvas-confetti'
 import type { Votes } from "@/types/votes"
+import { useI18n } from "@/hooks/useI18n"
 
 const RESULT_STATUS = {
   ERROR: -1,
@@ -15,6 +16,7 @@ export const VoteFinal = (
   { candidates: typeof CandidatesType, votes: Votes, setCategory: Function, categoryNames: string[] }
 ) => {
   const [result, setResult] = useState(RESULT_STATUS.IDLE)
+  const { i18n } = useI18n();
 
   useEffect(() => {
     // scroll to top with smooth scroll
@@ -69,14 +71,14 @@ export const VoteFinal = (
       {
         result === RESULT_STATUS.SUCCESS && (
           <h1 class="pt-24 pb-10 mx-auto text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide">
-            Gracias por votar
+            {i18n.VOTE.VOTE_SUBMITED}
           </h1>
         )
       }
 
       {
         result === RESULT_STATUS.ERROR && (
-          'Hubo un error al enviar tus votos, intenta nuevamente'
+          `${i18n.VOTE.VOTE_ERROR}`
         )
       }
 
@@ -84,7 +86,7 @@ export const VoteFinal = (
         (result === RESULT_STATUS.IDLE || isLoading) && (
           <>
           <h1 class="pt-24 pb-10 mx-auto text-balance text-left text-3xl lg:text-5xl font-semibold tracking-wide">
-              Tus votos finales
+            {i18n.VOTE.FINAL_VOTE}
             </h1>
           <div class={`${isLoading ? 'opacity-50' : ''} transition grid grid-cols-2 md:grid-cols-6 gap-2 p-4`}>
             
@@ -129,12 +131,12 @@ export const VoteFinal = (
               }
               {
                 result === RESULT_STATUS.IDLE && (
-                  'Enviar mis votos'
+                  `${i18n.VOTE.VOTE_SENT}`
                 )
               }
             </button>
             <button class="animate-fade animate-delay-200 hover:underline hover:text-yellow-200 transition" onClick={() => setCategory(0)}>
-              Quiero editar mis votos
+              {i18n.VOTE.VOTE_EDIT}
             </button>
           </div>
         </>
