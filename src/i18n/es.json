@@ -64,7 +64,13 @@
 		"ADVICE_5": "<strong>Recuerda compartir tus votos</strong> en redes sociales.",
 		"ADVICE_6": "Elige sabiamente y <strong>revisa tus votos</strong>, solo tienes una oportunidad.",
 		"TIME_LIMIT": "Las votaciones estarán abiertas hasta el domingo 14 de enero a las 24:00h (hora española)",
-		"VOTES_CASTED": "Votos realizados"
+		"VOTES_CASTED": "Votos realizados",
+		"VOTE_MISSING": "Debes votar 4 candidatos por categoría",
+		"VOTE_SENT": "Enviar mis votos",
+		"VOTE_EDIT": "Quiero editar mis votos",
+		"VOTE_SUBMITED": "Gracias por votar",
+		"VOTE_ERROR": "Hubo un error al enviar tus votos, intenta nuevamente",
+		"FINAL_VOTE": "Tus votos finales"
 	},
 	"CATEGORY": "Categoría",
 	"LOG_OUT": "Cerrar sesión",

@@ -64,7 +64,13 @@
 		"ADVICE_5": "<strong>Recorda compartir els teus vots</strong> a les xarxes socials.",
 		"ADVICE_6": "Tria sabiament i <strong>revisa els teus vots</strong>, només tens una oportunitat.",
 		"TIME_LIMIT": "Les votacions estaran obertes fins al diumenge 14 de gener a les 24:00h (hora espanyola).",
-		"VOTES_CASTED": "Vots realitzats"
+		"VOTES_CASTED": "Vots realitzats",
+		"VOTE_MISSING": "Has de votar 4 candidats per categoria",
+		"VOTE_SENT": "Enviar els meus vots",
+		"VOTE_EDIT": "Vull editar els meus vots",
+		"VOTE_SUBMITED": "Gràcies per votar",
+		"VOTE_ERROR": "Hi va haver un error en enviar els teus vots, intenta novament",
+		"FINAL_VOTE": "Els teus vots finals"
 	},
 	"CATEGORY": "Categoria",
 	"LOG_OUT": "Tancar sessió",
