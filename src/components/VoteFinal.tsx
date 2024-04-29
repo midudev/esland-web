@@ -12,11 +12,12 @@ const RESULT_STATUS = {
 }
 
 export const VoteFinal = (
-  { candidates, votes, setCategory, categoryNames }:
-  { candidates: typeof CandidatesType, votes: Votes, setCategory: Function, categoryNames: string[] }
+  { candidates, votes, setCategory, categoryNames, locale }:
+  { candidates: typeof CandidatesType, votes: Votes, setCategory: Function, categoryNames: string[], locale: string | undefined }
 ) => {
   const [result, setResult] = useState(RESULT_STATUS.IDLE)
   const { i18n } = useI18n();
+  
 
   useEffect(() => {
     // scroll to top with smooth scroll
@@ -67,6 +68,7 @@ export const VoteFinal = (
   const isLoading = result === RESULT_STATUS.LOADING
 
   return (
+    
     <section class="flex flex-col">
       {
         result === RESULT_STATUS.SUCCESS && (
@@ -142,7 +144,6 @@ export const VoteFinal = (
         </>
         )
       }
-
       
     </section>
   )

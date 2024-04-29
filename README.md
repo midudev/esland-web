@@ -158,7 +158,7 @@ Don't forget that add it to your `.env` file
 - [x] Pestaña para cambiar entre ediciones en la página "Archivo"
 - [x] Mejorar el rendimiento de la funcionalidad de ganadores de pasadas ediciones
 - [x] Agregar traducciones a las categorías de los ganadores de pasadas ediciones
-- [ ] Agregar traducciones a las categorías de las votaciones
+- [x] Agregar traducciones a las categorías de las votaciones
 - [ ] Mejorar la pre-carga de las imágenes de las siguientes secciones en idle
 
 ### 👀 Lo haremos en directo en Twitch
