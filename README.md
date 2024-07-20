@@ -147,10 +147,6 @@ Don't forget that add it to your `.env` file
 | ⚙️  | `build`          | Build your production site to `./dist/`.      |
 | ⚙️  | `preview`        | Preview your build locally, before deploying. |
 
-## 🔑 License
-
-[MIT](#) - Created by [**midu.dev**](https://midu.dev).
-
 ## ✅ Por hacer...
 
 - [ ] Mejorar diseño de la página "Info"
