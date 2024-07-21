@@ -147,10 +147,6 @@ Don't forget that add it to your `.env` file
 | ⚙️  | `build`          | Build your production site to `./dist/`.      |
 | ⚙️  | `preview`        | Preview your build locally, before deploying. |
 
-## 🔑 License
-
-[MIT](#) - Created by [**midu.dev**](https://midu.dev).
-
 ## ✅ Por hacer...
 
 - [x] Mejorar diseño de la página "Info"
@@ -163,5 +159,5 @@ Don't forget that add it to your `.env` file
 
 ### 👀 Lo haremos en directo en Twitch
 
-- [x] Base de datos para las votaciones
-- [x] Backend para las votaciones
+- [ ] Base de datos para las votaciones
+- [ ] Backend para las votaciones
