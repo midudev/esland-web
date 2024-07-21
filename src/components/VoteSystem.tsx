@@ -4,15 +4,15 @@ import type { FunctionComponent } from 'preact';
 import { useEffect, useRef } from 'preact/hooks';
 import { VoteFinal } from './VoteFinal';
 
-export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
+export const VoteSystem: FunctionComponent<{ currentLocale: string | undefined }> = ({
 	children,
-	currentLocale = 'es',
+	currentLocale,
 }) => {
 	const i18n = getI18N({ currentLocale });
 	const containerRef = useRef<HTMLUListElement>(null);
 
 	const {
-		candidatesByCategory,
+		getCandidatesByLocale,
 		votes,
 		pageInfo,
 		categoryCode,
@@ -24,7 +24,7 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 		setPrevCategory,
 		setCategoryCode,
 		setVotesCategory,
-	} = useVoteSystem();
+	} = useVoteSystem(currentLocale);
 
 	const { categoryName = '', candidates } = pageInfo ?? {};
 
@@ -57,10 +57,11 @@ export const VoteSystem: FunctionComponent<{ currentLocale?: string }> = ({
 	if (categoryCode === MAX_CATEGORIES) {
 		return (
 			<VoteFinal
-				candidates={candidatesByCategory}
+				candidates={getCandidatesByLocale()}
 				votes={votes}
 				setCategory={setCategoryCode}
-				categoryNames={candidatesByCategory.map(
+				locale={currentLocale}
+				categoryNames={getCandidatesByLocale().map(
 					({ categoryName }) => categoryName
 				)}
 			/>

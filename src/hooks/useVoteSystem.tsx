@@ -1,6 +1,9 @@
 import { useEffect, useState } from "preact/hooks";
 import candidatesByCategory from "@/data/editions-vote.json";
+import candidatesByCategoryEn from "@/data/editions-vote-en.json";
+import candidatesByCategoryCa from "@/data/editions-vote-ca.json";
 import type { Votes } from "@/types/votes";
+import { useI18n } from "@/hooks/useI18n";
 
 interface PageInfo {
   categoryName: string;
@@ -17,12 +20,13 @@ interface Candidate {
 const MAX_CATEGORIES = 12;
 const MAX_VOTES_PER_CATEGORY = 4;
 
-export const useVoteSystem = () => {
+export const useVoteSystem = (locale: string | undefined) => {
   const [pageInfo, setPageInfo] = useState<PageInfo>();
   const [categoryCode, setCategoryCode] = useState(0);
   const [votes, setVotes] = useState<Votes>(
     Array.from({ length: MAX_CATEGORIES }, () => [])
   );
+  const { i18n } = useI18n();
 
   useEffect(() => {
     let item = localStorage.getItem("votes");
@@ -43,7 +47,7 @@ export const useVoteSystem = () => {
 
   useEffect(() => {
     setIsChanging(true);
-    setPageInfo(candidatesByCategory[categoryCode]);
+    setPageInfo(getCandidatesByLocale()[categoryCode]);
     setTimeout(() => setIsChanging(false), 500);
   }, [categoryCode]);
 
@@ -62,7 +66,7 @@ export const useVoteSystem = () => {
         (votesCategory) => votesCategory.length < MAX_VOTES_PER_CATEGORY
       );
       if (missingVotes) {
-        alert("Debes votar 4 candidatos por categoría");
+        alert(`${i18n.VOTE.VOTE_MISSING}`);
         return;
       }
     }
@@ -70,7 +74,7 @@ export const useVoteSystem = () => {
     setCategoryCode(nextCategory);
   };
 
-  const setVotesCategory = ({ candidate }: { candidate: string }) => {
+  const setVotesCategory = ({ candidate  }: { candidate: string}) => {
     const votesCategory = votes[categoryCode];
 
     // if it was already voted the item, remove it
@@ -88,8 +92,18 @@ export const useVoteSystem = () => {
     setVotes((prevVotes) => prevVotes.with(categoryCode, newVotes));
   };
 
+  const getCandidatesByLocale = () => {
+    switch (locale) {
+      case "en":
+        return candidatesByCategoryEn;
+      case "ca":
+        return candidatesByCategoryCa;
+      default:
+        return candidatesByCategory;
+    }
+  };
+
   return {
-    candidatesByCategory,
     categoryCode,
     pageInfo,
     votes,
@@ -101,5 +115,6 @@ export const useVoteSystem = () => {
     setVotesCategory,
     MAX_CATEGORIES,
     MAX_VOTES_PER_CATEGORY,
+    getCandidatesByLocale,
   };
 };

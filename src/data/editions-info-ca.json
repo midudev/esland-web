@@ -1,7 +1,7 @@
 [
   {
     "edition": "1",
-    "name": "Primera edición",
+    "name": "Primera edició",
     "metrics":{
       "news": 227,
       "media": 3.2,
@@ -9,7 +9,7 @@
     },
     "info": [
       {
-        "categoria": "Streamer del año",
+        "categoria": "Streamer de l'any",
         "ganador": "Ibai",
         "foto1": "streamer1",
         "comunidad1": 41.05,
@@ -22,7 +22,7 @@
         "total2": 20.48
       },
       {
-        "categoria": "Serie de contenido del año",
+        "categoria": "Sèrie de contingut de l'any",
         "ganador": "Tortillaland",
         "foto1": "serie1",
         "comunidad1": 39.92,
@@ -35,7 +35,7 @@
         "total2": 33.35
       },
       {
-        "categoria": "Streamer revelación del año",
+        "categoria": "Streamer revelació de l'any",
         "ganador": "elXokas",
         "foto1": "revelacion1",
         "comunidad1": 27.74,
@@ -48,7 +48,7 @@
         "total2": 28.69
       },
       {
-        "categoria": "Evento del año",
+        "categoria": "Esdeveniment de l'any",
         "ganador": "La velada del año",
         "foto1": "evento1",
         "comunidad1": 48.78,
@@ -61,7 +61,7 @@
         "total2": 23.1
       },
       {
-        "categoria": "Mejor trayectoria",
+        "categoria": "Millor trajectòria",
         "ganador": "Fernanfloo",
         "foto1": "trayectoria1",
         "comunidad1": 60.25,
@@ -74,7 +74,7 @@
         "total2": 28.74
       },
       {
-        "categoria": "Talk show del año",
+        "categoria": "Talk show de l'any",
         "ganador": "The Wild Project",
         "foto1": "talkshow1",
         "comunidad1": 43.81,
@@ -87,7 +87,7 @@
         "total2": 18.83
       },
       {
-        "categoria": "Canción del año",
+        "categoria": "Cançó de l'any",
         "ganador": "El cuarteto de Ibai",
         "foto1": "cancion1",
         "comunidad1": 54.6,
@@ -100,7 +100,7 @@
         "total2": 20.1
       },
       {
-        "categoria": "Jägger del año",
+        "categoria": "Jägger de l'any",
         "ganador": "Jägger boxeador",
         "foto1": "jagger1",
         "comunidad1": 36.09,
@@ -113,7 +113,7 @@
         "total2": 29.25
       },
       {
-        "categoria": "Streamer IRL del año",
+        "categoria": "Streamer IRL de l'any",
         "ganador": "Kidi",
         "foto1": "irl1",
         "comunidad1": 20.81,
@@ -126,7 +126,7 @@
         "total2": 33.79
       },
       {
-        "categoria": "Caster del año",
+        "categoria": "Caster de l'any",
         "ganador": "Kaquka",
         "foto1": "caster1",
         "comunidad1": 40.48,
@@ -139,7 +139,7 @@
         "total2": 27.1
       },
       {
-        "categoria": "Reportero/a de esports del año",
+        "categoria": "Reporter/a d'esports de l'any",
         "ganador": "Cristinini",
         "foto1": "reportero1",
         "comunidad1": 66.01,
@@ -152,7 +152,7 @@
         "total2": 31
       },
       {
-        "categoria": "Jugador/a de esports del año",
+        "categoria": "Jugador/a d'esports de l'any",
         "ganador": "Mixwell",
         "foto1": "jugador1",
         "comunidad1": 32.92,
@@ -165,7 +165,7 @@
         "total2": 32.31
       },
       {
-        "categoria": "Roleplayer del año",
+        "categoria": "Roleplayer de l'any",
         "ganador": "AgenteMaxo",
         "foto1": "roleplayer1",
         "comunidad1": 23.14,
@@ -178,7 +178,7 @@
         "total2": 29.11
       },
       {
-        "categoria": "Baile del año",
+        "categoria": "Ball de l'any",
         "ganador": "Papi Gavi",
         "foto1": "baile1",
         "comunidad1": 45.96,
@@ -191,7 +191,7 @@
         "total2": 39.57
       },
       {
-        "categoria": "Enfadado/a del año",
+        "categoria": "Enfadat/da de l'any",
         "ganador": "Agustin51",
         "foto1": "enfadado1",
         "comunidad1": 34.16,
@@ -204,7 +204,7 @@
         "total2": 20.98
       },
       {
-        "categoria": "Fail del año",
+        "categoria": "Fail de l'any",
         "ganador": "Ibai",
         "foto1": "fail1",
         "comunidad1": 47.59,
@@ -217,7 +217,7 @@
         "total2": 35.46
       },
       {
-        "categoria": "Clip del año",
+        "categoria": "Clip de l'any",
         "ganador": "El Kun",
         "foto1": "clip1",
         "comunidad1": 42.61,
@@ -233,7 +233,7 @@
   },
   {
     "edition": "2",
-    "name": "Segunda edición",
+    "name": "Segona edició",
     "metrics":{
       "news": 616,
       "media": 6.6,
@@ -241,7 +241,7 @@
     },
     "info": [
       {
-        "categoria": "Streamer del año",
+        "categoria": "Streamer de l'any",
         "ganador": "Ibai",
         "foto1": "streamer1",
         "comunidad1": 21,
@@ -254,7 +254,7 @@
         "total2": 22.34
       },
       {
-        "categoria": "Mejor miniserie de contenido",
+        "categoria": "Millor minisèrie de contingut",
         "ganador": "Squid Craft Games",
         "foto1": "miniserie1",
         "comunidad1": 82,
@@ -267,12 +267,12 @@
         "total2": 5.5
       },
       {
-        "categoria": "Mejor trayectoria",
+        "categoria": "Millor trajectòria",
         "ganador": "Germán Garmendia",
         "foto1": "trayectoria"
       },
       {
-        "categoria": "Mejor serie de contenido",
+        "categoria": "Millor sèrie de contingut",
         "ganador": "Dedsafio 2",
         "foto1": "serie1",
         "comunidad1": 28,
@@ -285,7 +285,7 @@
         "total2": 25.5
       },
       {
-        "categoria": "Streamer revelación",
+        "categoria": "Streamer revelació",
         "ganador": "Spreen",
         "foto1": "revelacion1",
         "comunidad1": 29,
@@ -298,7 +298,7 @@
         "total2": 35.11
       },
       {
-        "categoria": "VTuber del año",
+        "categoria": "VTuber de l'any",
         "ganador": "Zilverk",
         "foto1": "vtuber1",
         "comunidad1": 62,
@@ -311,7 +311,7 @@
         "total2": 36.45
       },
       {
-        "categoria": "Evento del año",
+        "categoria": "Esdeveniment de l'any",
         "ganador": "La velada del año II",
         "foto1": "evento1",
         "comunidad1": 92,
@@ -324,7 +324,7 @@
         "total2": 2.4
       },
       {
-        "categoria": "Talk Show del año",
+        "categoria": "Talk Show de l'any",
         "ganador": "The Wild Project",
         "foto1": "talkshow1",
         "comunidad1": 52,
@@ -337,7 +337,7 @@
         "total2": 18
       },
       {
-        "categoria": "Canción del año",
+        "categoria": "Cançó de l'any",
         "ganador": "Solo - Robleis",
         "foto1": "cancion1",
         "comunidad1": 34,
@@ -350,7 +350,7 @@
         "total2": 30.02
       },
       {
-        "categoria": "Streamer IRL del año",
+        "categoria": "Streamer IRL de l'any",
         "ganador": "Kidi",
         "foto1": "irl1",
         "comunidad1": 21,
@@ -363,7 +363,7 @@
         "total2": 26.82
       },
       {
-        "categoria": "Mejor cobertura informativa",
+        "categoria": "Millor cobertura informativa",
         "ganador": "Gerard Romero",
         "foto1": "cobertura1",
         "comunidad1": 52,
@@ -376,7 +376,7 @@
         "total2": 19.75
       },
       {
-        "categoria": "Caster del año",
+        "categoria": "Caster de l'any",
         "ganador": "Vicky Palami",
         "foto1": "caster1",
         "comunidad1": 44,
@@ -389,7 +389,7 @@
         "total2": 26.51
       },
       {
-        "categoria": "Jugador de Esports del año",
+        "categoria": "Jugador d'Esports de l'any",
         "ganador": "Jelty",
         "foto1": "esports1",
         "comunidad1": 34,
@@ -402,7 +402,7 @@
         "total2": 25.78
       },
       {
-        "categoria": "Roleplayer del año",
+        "categoria": "Roleplayer de l'any",
         "ganador": "JuanSGuarnizo",
         "foto1": "roleplayer1",
         "comunidad1": 45,
@@ -415,7 +415,7 @@
         "total2": 27.76
       },
       {
-        "categoria": "Baile del año",
+        "categoria": "Ball de l'any",
         "ganador": "El Woody - Carreraaa",
         "foto1": "baile1",
         "comunidad1": 34,
@@ -428,7 +428,7 @@
         "total2": 22.83
       },
       {
-        "categoria": "Enfadado del año",
+        "categoria": "Moment enfadat de l'any",
         "ganador": "Luzu",
         "foto1": "enfadado1",
         "comunidad1": 49,
@@ -441,7 +441,7 @@
         "total2": 24.84
       },
       {
-        "categoria": "Fail del año",
+        "categoria": "Fail de l'any",
         "ganador": "Ahí va mi burst - Manute",
         "foto1": "fail1",
         "comunidad1": 27,

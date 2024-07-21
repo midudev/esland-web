@@ -64,7 +64,13 @@
 		"ADVICE_5": "<strong>Remember to share your votes</strong> on social media.",
 		"ADVICE_6": "Choose wisely and <strong>double-check your votes</strong>; you only get one chance.",
 		"TIME_LIMIT": "Voting will be open until Sunday, January 14, at 12:00 p.m. (Spanish time)",
-		"VOTES_CASTED": "Votes Submitted"
+		"VOTES_CASTED": "Votes Submitted",
+		"VOTE_MISSING": "You must vote for 4 candidates per category",
+		"VOTE_SENT": "Send my votes",
+		"VOTE_EDIT": "I want to edit my votes",
+		"VOTE_SUBMITED": "Thank you for voting",
+		"VOTE_ERROR": "There was an error sending your votes, try again",
+		"FINAL_VOTE": "Your final votes"
 	},
 	"CATEGORY": "Category",
 	"LOG_OUT": "Log Out",
@@ -299,7 +305,10 @@
 	},
 	"AWARDS": {
 		"TITLE": "AWARDS",
-		"NOT_FOUND" : "Edition not found"
+		"NOT_FOUND" : "Edition not found",
+		"COMMUNITY": "Community",
+		"STREAMERS": "Streamers",
+		"TOTAL": "Total"
 	},
 	"GALLERY": {
 		"TITLE": "GALLERY",

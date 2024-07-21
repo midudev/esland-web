@@ -1,4 +1,5 @@
 import 'photoswipe/style.css';
+import { useI18n } from "@/hooks/useI18n";
 
 import Button from '@/components/Button.tsx';
 import { useGallery } from "@/hooks/useGallery"
@@ -6,7 +7,8 @@ import '@/components/styles/Galeria.css';
 
 import { type Masory } from "@/types/gallery"
 
-export default function Galeria({i18n,edicion}:{i18n:any,edicion:string}) {
+export default function Galeria({edicion}:{edicion:string}) {
+  const { i18n } = useI18n();
   
   const {first,isExpanded,photos,LoadMore} = useGallery({edicion})
 
